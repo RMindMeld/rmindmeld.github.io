@@ -1,0 +1,49 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "MindMeld"
+  site-url: "https://rmindmeld.github.io"
+  description: "A Personal Journey Through AI-Human Content Creation"
+  favicon: "assets/favicon.png"
+  
+  navbar:
+    background: dark
+    search: true
+    left:
+      - text: Home
+        href: index.qmd
+      - text: About
+        href: about.qmd
+      - text: Blog
+        href: blog/index.qmd
+      - text: Podcasts
+        href: podcasts/index.qmd
+      - text: AI Gallery
+        href: gallery/index.qmd
+      - text: Experiments
+        href: experiments/index.qmd
+
+  page-footer:
+    left: "© 2024 MindMeld by FRA. All rights reserved."
+    right: 
+      - icon: github
+        href: https://github.com
+      - icon: twitter
+        href: https://twitter.com
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles/light.scss]
+      dark: [cosmo, styles/dark.scss]
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    css: styles/custom.css
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">

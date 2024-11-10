@@ -1,0 +1,32 @@
+---
+title: "Blog"
+subtitle: "Exploring AI Content Creation"
+listing:
+  contents: "posts"
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [date, title, reading-time, description, categories, image]
+  feed: true
+page-layout: full
+---
+
+:::{.column-page}
+# Welcome to the MindMeld Blog
+
+This is where I share my experiments, insights, and discoveries in AI content creation. Each post documents a specific aspect of working with AI, from generating creative content to understanding the limitations and possibilities of current AI technology.
+
+:::{.callout-note}
+## What to Expect
+- Detailed breakdowns of AI experiments
+- Raw AI outputs with analysis
+- Tips and techniques for AI content creation
+- Honest discussions about successes and failures
+:::
+
+## Latest Posts
+
+The posts below are sorted by date, with the most recent appearing first. Use the filter and sort options to find specific topics or browse through different categories.
+:::

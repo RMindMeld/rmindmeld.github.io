@@ -1,0 +1,114 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: 'Space Grotesk', sans-serif;
+$primary: #7B8FFF;
+$secondary: #9CA3AF;
+$success: #34D399;
+$info: #60A5FA;
+$warning: #FBBF24;
+$danger: #EF4444;
+$light: #F3F4F6;
+$dark: #111827;
+
+$body-bg: #0F172A;
+$body-color: #E5E7EB;
+$link-color: $primary;
+$selection-bg: rgba(123, 143, 255, 0.3);
+
+/*-- scss:rules --*/
+.hero-banner {
+    padding: 2rem 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    background: linear-gradient(165deg, rgba(123,143,255,0.1) 0%, rgba(123,143,255,0.05) 100%);
+    border-radius: 0.5rem;
+}
+
+.card {
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    height: 100%;
+    transition: transform 0.2s ease-in-out;
+    background: rgba(17, 24, 39, 0.8);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    
+    &:hover {
+        transform: translateY(-5px);
+        border-color: rgba(123,143,255,0.3);
+    }
+}
+
+.btn {
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    transition: all 0.2s ease-in-out;
+    
+    &-primary {
+        background-color: $primary;
+        border-color: $primary;
+        color: $dark;
+        
+        &:hover {
+            background-color: lighten($primary, 10%);
+            border-color: lighten($primary, 10%);
+        }
+    }
+    
+    &-secondary {
+        background-color: transparent;
+        border-color: $primary;
+        color: $primary;
+        
+        &:hover {
+            background-color: rgba(123,143,255,0.2);
+        }
+    }
+}
+
+.callout {
+    border-radius: 0.5rem;
+    border-left-width: 4px;
+    background-color: rgba(123,143,255,0.1);
+}
+
+.grid {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+// Dark mode specific overrides
+body {
+    background-color: $body-bg;
+    color: $body-color;
+}
+
+a {
+    color: $primary;
+    
+    &:hover {
+        color: lighten($primary, 15%);
+    }
+}
+
+pre {
+    background-color: $dark !important;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+code {
+    color: #FF79C6;
+}
+
+.navbar {
+    background-color: rgba(15, 23, 42, 0.95) !important;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: $body-color;
+    
+    &:hover {
+        color: $primary;
+    }
+}

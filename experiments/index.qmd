@@ -1,0 +1,77 @@
+---
+title: "AI Experiments"
+subtitle: "Technical Explorations in AI Content Generation"
+listing:
+  contents: "posts"
+  type: default
+  sort: "date desc"
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [date, title, reading-time, description, categories]
+page-layout: full
+---
+
+:::{.column-page}
+# AI Experiments Lab
+
+Welcome to my AI experiments documentation. This section focuses on the technical side of AI content generation, where I explore different models, techniques, and approaches.
+
+:::{.callout-note}
+## What You'll Find Here
+- Detailed technical documentation of AI experiments
+- Analysis of different AI models and their capabilities
+- Prompt engineering techniques and best practices
+- Performance comparisons and insights
+:::
+
+## Experiment Categories
+
+:::{.grid}
+
+:::{.g-col-12 .g-col-md-4}
+### Model Exploration
+Testing different AI models and understanding their strengths and limitations.
+:::
+
+:::{.g-col-12 .g-col-md-4}
+### Prompt Engineering
+Developing and testing various prompt techniques for better results.
+:::
+
+:::{.g-col-12 .g-col-md-4}
+### Technical Analysis
+Deep dives into the technical aspects of AI content generation.
+:::
+
+:::
+
+## Documentation Format
+
+Each experiment is documented with:
+
+1. **Objective**: Clear statement of what I'm trying to achieve
+2. **Methodology**: Detailed description of the approach
+3. **Results**: Raw outputs and analysis
+4. **Insights**: Key learnings and observations
+5. **Technical Details**: Model parameters, settings, and configurations
+
+## Latest Experiments
+
+Below you'll find my most recent technical experiments. Use the filter and sort options to find specific topics or browse through different categories.
+
+:::{.callout-tip}
+## Reproducibility
+All experiments include the exact parameters and settings used, allowing you to replicate the results if you wish.
+:::
+
+## Technical Notes
+
+- All code snippets are provided when relevant
+- Parameters and configurations are clearly documented
+- Results include both successes and failures
+- Each experiment includes suggestions for future exploration
+
+:::{.callout-warning}
+Remember that AI models are constantly updating, so results may vary over time. Each experiment notes the specific model versions used.
+:::
