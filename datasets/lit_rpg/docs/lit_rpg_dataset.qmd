@@ -1,0 +1,270 @@
+---
+title: "Lit-RPG Dataset: Sword and Magic"
+author: "Data Science Team"
+date: "2024-01-20"
+format:
+  html:
+    toc: true
+    code-fold: true
+---
+
+## Overview
+
+This dataset simulates a Lit-RPG (Literary Role-Playing Game) universe with interconnected data about characters, items, and skills. The data is generated with realistic correlations and distributions that mirror common RPG game mechanics.
+
+## Data Generation Methodology
+
+The dataset is generated using Python with the following key packages:
+- NumPy for random number generation and statistical operations
+- Pandas for data manipulation and storage
+- SciPy for probability distributions
+
+### Key Features
+- Correlated character statistics
+- Realistic level and experience progression
+- Rarity-based item distribution
+- Level-gated skill system
+- Time-based item acquisition
+
+## Assumptions
+
+1. Character Statistics
+   - Stats are normally distributed with correlations between attributes
+   - Strength and vitality are positively correlated
+   - Intelligence has a negative correlation with strength
+   - Agility has a slight negative correlation with strength
+   - All stats are normalized to a 1-100 range
+
+2. Items
+   - Rarity follows a weighted distribution (more common items appear more frequently)
+   - Item power correlates with rarity
+   - Item value exponentially increases with power
+   - Characters obtain items based on their level
+
+3. Skills
+   - Skill availability is level-gated
+   - Higher-level skills tend to be more powerful
+   - Mana cost correlates with skill power
+   - Skill acquisition is influenced by character class
+
+## Data Dictionary
+
+### Characters Table
+| Column | Type | Description |
+|--------|------|-------------|
+| character_id | INTEGER | Primary key |
+| name | TEXT | Character name |
+| class | TEXT | Character class (Warrior, Mage, Rogue, Paladin, Warlock) |
+| level | INTEGER | Character level (1-50) |
+| strength | INTEGER | Physical power (1-100) |
+| vitality | INTEGER | Health and endurance (1-100) |
+| intelligence | INTEGER | Magical ability (1-100) |
+| agility | INTEGER | Speed and dexterity (1-100) |
+| experience | INTEGER | Total experience points |
+
+### Items Table
+| Column | Type | Description |
+|--------|------|-------------|
+| item_id | INTEGER | Primary key |
+| name | TEXT | Item name |
+| type | TEXT | Item type (Weapon, Armor, Accessory, Consumable) |
+| rarity | TEXT | Item rarity (Common, Uncommon, Rare, Epic, Legendary) |
+| power | INTEGER | Item power level |
+| durability | INTEGER | Item durability |
+| value | INTEGER | Item value in gold |
+
+### Skills Table
+| Column | Type | Description |
+|--------|------|-------------|
+| skill_id | INTEGER | Primary key |
+| name | TEXT | Skill name |
+| type | TEXT | Skill type (Attack, Defense, Support, Magic) |
+| power | INTEGER | Skill power level |
+| mana_cost | INTEGER | Mana required to use skill |
+| level_requirement | INTEGER | Minimum level required (1-50) |
+
+### Character_Items Table
+| Column | Type | Description |
+|--------|------|-------------|
+| character_id | INTEGER | Foreign key to Characters |
+| item_id | INTEGER | Foreign key to Items |
+| acquisition_date | DATE | When the item was acquired |
+
+### Character_Skills Table
+| Column | Type | Description |
+|--------|------|-------------|
+| character_id | INTEGER | Foreign key to Characters |
+| skill_id | INTEGER | Foreign key to Skills |
+| mastery_level | INTEGER | Skill mastery level |
+
+## Table Relationships
+
+```mermaid
+erDiagram
+    Characters ||--o{ Character_Items : has
+    Characters ||--o{ Character_Skills : knows
+    Items ||--o{ Character_Items : owned_by
+    Skills ||--o{ Character_Skills : learned_by
+```
+
+## SQL Questions and Projects
+
+1. Character Power Analysis
+```sql
+-- Find the top 10 most powerful characters based on total stats
+SELECT 
+    character_id, name, class, level,
+    (strength + vitality + intelligence + agility) as total_power
+FROM Characters
+ORDER BY total_power DESC
+LIMIT 10;
+```
+
+2. Rare Item Distribution
+```sql
+-- Analyze the distribution of legendary items among character classes
+SELECT 
+    c.class,
+    COUNT(i.item_id) as legendary_items,
+    AVG(i.power) as avg_item_power
+FROM Characters c
+JOIN Character_Items ci ON c.character_id = ci.character_id
+JOIN Items i ON ci.item_id = i.item_id
+WHERE i.rarity = 'Legendary'
+GROUP BY c.class
+ORDER BY legendary_items DESC;
+```
+
+3. Skill Mastery Progression
+```sql
+-- Calculate average skill mastery by character level
+SELECT 
+    c.level,
+    AVG(cs.mastery_level) as avg_mastery,
+    COUNT(DISTINCT c.character_id) as num_characters
+FROM Characters c
+JOIN Character_Skills cs ON c.character_id = cs.character_id
+GROUP BY c.level
+ORDER BY c.level;
+```
+
+4. Class Balance Analysis
+```sql
+-- Compare average stats across different classes
+SELECT 
+    class,
+    AVG(strength) as avg_strength,
+    AVG(vitality) as avg_vitality,
+    AVG(intelligence) as avg_intelligence,
+    AVG(agility) as avg_agility
+FROM Characters
+GROUP BY class;
+```
+
+5. Item Acquisition Timeline
+```sql
+-- Analyze item acquisition patterns over time
+SELECT 
+    DATE_TRUNC('month', acquisition_date) as month,
+    i.rarity,
+    COUNT(*) as items_acquired
+FROM Character_Items ci
+JOIN Items i ON ci.item_id = i.item_id
+GROUP BY month, i.rarity
+ORDER BY month, i.rarity;
+```
+
+6. Skill Type Distribution
+```sql
+-- Analyze skill type preferences by character class
+SELECT 
+    c.class,
+    s.type as skill_type,
+    COUNT(*) as skill_count
+FROM Characters c
+JOIN Character_Skills cs ON c.character_id = cs.character_id
+JOIN Skills s ON cs.skill_id = s.skill_id
+GROUP BY c.class, s.type
+ORDER BY c.class, skill_count DESC;
+```
+
+7. Character Progression Analysis
+```sql
+-- Calculate experience gain rate by level
+SELECT 
+    level,
+    AVG(experience) as avg_exp,
+    MIN(experience) as min_exp,
+    MAX(experience) as max_exp
+FROM Characters
+GROUP BY level
+ORDER BY level;
+```
+
+8. Item Value Analysis
+```sql
+-- Find the average value of items by type and rarity
+SELECT 
+    type,
+    rarity,
+    AVG(value) as avg_value,
+    COUNT(*) as item_count
+FROM Items
+GROUP BY type, rarity
+ORDER BY avg_value DESC;
+```
+
+9. Character Equipment Value
+```sql
+-- Calculate total equipment value per character
+SELECT 
+    c.character_id,
+    c.name,
+    c.class,
+    SUM(i.value) as total_equipment_value
+FROM Characters c
+JOIN Character_Items ci ON c.character_id = ci.character_id
+JOIN Items i ON ci.item_id = i.item_id
+GROUP BY c.character_id, c.name, c.class
+ORDER BY total_equipment_value DESC;
+```
+
+10. Skill Power vs Level Requirement
+```sql
+-- Analyze the relationship between skill power and level requirements
+SELECT 
+    level_requirement,
+    AVG(power) as avg_power,
+    AVG(mana_cost) as avg_mana_cost,
+    COUNT(*) as skill_count
+FROM Skills
+GROUP BY level_requirement
+ORDER BY level_requirement;
+```
+
+## Project Ideas
+
+1. Character Build Optimizer
+   - Analyze optimal stat distributions for different classes
+   - Recommend skill combinations based on character stats
+   - Suggest item loadouts for maximum effectiveness
+
+2. Progression Path Analysis
+   - Track character development patterns
+   - Identify common skill acquisition sequences
+   - Analyze item upgrade patterns
+
+3. Economy Analysis
+   - Study item value distribution
+   - Analyze rarity-value relationships
+   - Track item acquisition patterns
+
+4. Class Balance Dashboard
+   - Compare class performance metrics
+   - Analyze stat distributions
+   - Track skill usage patterns
+
+5. Power Level Predictor
+   - Build a model to predict character effectiveness
+   - Consider stats, items, and skills
+   - Provide build recommendations

@@ -1,0 +1,301 @@
+---
+title: "Pokemon Dataset: First Generation"
+author: "Data Science Team"
+date: "2024-01-20"
+format:
+  html:
+    toc: true
+    code-fold: true
+---
+
+## Overview
+
+This dataset simulates the First Generation Pokemon game data with realistic correlations and distributions. It includes information about Pokemon, their types, moves, and relationships between these entities.
+
+## Data Generation Methodology
+
+The dataset is generated using Python with the following key packages:
+- NumPy for random number generation and statistical operations
+- Pandas for data manipulation and storage
+- SciPy for probability distributions
+
+### Key Features
+- Realistic stat distributions based on Gen 1 mechanics
+- Type effectiveness matrix following original game rules
+- Move properties with appropriate correlations
+- Pokemon-Move relationships based on type compatibility
+
+## Assumptions
+
+1. Pokemon Statistics
+   - Base stats follow normal distributions with realistic means
+   - Defense correlates positively with Attack
+   - Speed has a moderate correlation with Attack
+   - Catch rates are inversely proportional to total stats
+   - Stats are normalized to match Gen 1 ranges (20-180)
+
+2. Types
+   - All 15 original types are included
+   - Type effectiveness follows Gen 1 rules exactly
+   - Dual-typing probability is 50%
+   - Type assignments consider move compatibility
+
+3. Moves
+   - Power follows a gamma distribution
+   - Accuracy negatively correlates with power
+   - PP values are discrete and inverse to power
+   - 20% of moves are status moves (0 power)
+   - Move types are distributed based on Pokemon type compatibility
+
+4. Pokemon-Move Relationships
+   - Pokemon learn 2-7 moves each
+   - Move selection favors same-type moves
+   - Learn methods include Level Up, TM/HM, and Starting moves
+   - Level-up moves have realistic level requirements
+
+## Data Dictionary
+
+### Pokemon Table
+| Column | Type | Description |
+|--------|------|-------------|
+| pokemon_id | INTEGER | Primary key |
+| name | TEXT | Pokemon name |
+| type1 | TEXT | Primary type |
+| type2 | TEXT | Secondary type (can be NULL) |
+| hp | INTEGER | Hit Points (20-180) |
+| attack | INTEGER | Attack stat (20-180) |
+| defense | INTEGER | Defense stat (20-180) |
+| special | INTEGER | Special stat (20-180) |
+| speed | INTEGER | Speed stat (20-180) |
+| catch_rate | INTEGER | Base catch rate (1-255) |
+
+### Types Table
+| Column | Type | Description |
+|--------|------|-------------|
+| type_id | INTEGER | Primary key |
+| name | TEXT | Type name |
+
+### Type Effectiveness Table
+| Column | Type | Description |
+|--------|------|-------------|
+| attacking_type | TEXT | The attacking move's type |
+| defending_type | TEXT | The defending Pokemon's type |
+| multiplier | FLOAT | Damage multiplier (0, 0.5, 1, or 2) |
+
+### Moves Table
+| Column | Type | Description |
+|--------|------|-------------|
+| move_id | INTEGER | Primary key |
+| name | TEXT | Move name |
+| type | TEXT | Move type |
+| category | TEXT | Physical/Special/Status |
+| power | INTEGER | Base power (0-100) |
+| accuracy | INTEGER | Accuracy percentage (0-100) |
+| pp | INTEGER | Power Points (15-35) |
+
+### Pokemon_Moves Table
+| Column | Type | Description |
+|--------|------|-------------|
+| pokemon_id | INTEGER | Foreign key to Pokemon |
+| move_id | INTEGER | Foreign key to Moves |
+| learn_method | TEXT | How the move is learned |
+| learn_level | INTEGER | Level required (NULL for TM/HM/Start) |
+
+## Table Relationships
+
+```mermaid
+erDiagram
+    Pokemon ||--o{ Pokemon_Moves : learns
+    Moves ||--o{ Pokemon_Moves : learned_by
+    Types ||--o{ Pokemon : has
+    Types ||--o{ Moves : has
+    Types ||--o{ Type_Effectiveness : affects
+```
+
+## SQL Questions and Projects
+
+1. Type Advantage Analysis
+```sql
+-- Find Pokemon with the best defensive type combinations
+SELECT 
+    p.name,
+    p.type1,
+    p.type2,
+    COUNT(*) as resistances
+FROM Pokemon p
+JOIN Type_Effectiveness te ON 
+    p.type1 = te.defending_type OR 
+    p.type2 = te.defending_type
+WHERE te.multiplier < 1
+GROUP BY p.pokemon_id
+ORDER BY resistances DESC
+LIMIT 10;
+```
+
+2. Move Coverage Analysis
+```sql
+-- Analyze Pokemon's move type coverage
+SELECT 
+    p.name,
+    COUNT(DISTINCT m.type) as type_coverage,
+    GROUP_CONCAT(DISTINCT m.type) as types_covered
+FROM Pokemon p
+JOIN Pokemon_Moves pm ON p.pokemon_id = pm.pokemon_id
+JOIN Moves m ON pm.move_id = m.move_id
+GROUP BY p.pokemon_id
+ORDER BY type_coverage DESC;
+```
+
+3. Stat Distribution
+```sql
+-- Compare average stats by primary type
+SELECT 
+    type1,
+    AVG(hp) as avg_hp,
+    AVG(attack) as avg_attack,
+    AVG(defense) as avg_defense,
+    AVG(special) as avg_special,
+    AVG(speed) as avg_speed,
+    COUNT(*) as pokemon_count
+FROM Pokemon
+GROUP BY type1
+ORDER BY (AVG(hp) + AVG(attack) + AVG(defense) + AVG(special) + AVG(speed)) DESC;
+```
+
+4. Move Learning Patterns
+```sql
+-- Analyze move learning patterns by type
+SELECT 
+    p.type1,
+    pm.learn_method,
+    COUNT(*) as move_count,
+    AVG(m.power) as avg_power
+FROM Pokemon p
+JOIN Pokemon_Moves pm ON p.pokemon_id = pm.pokemon_id
+JOIN Moves m ON pm.move_id = m.move_id
+GROUP BY p.type1, pm.learn_method
+ORDER BY p.type1, move_count DESC;
+```
+
+5. Type Effectiveness Coverage
+```sql
+-- Find Pokemon with the best offensive coverage
+WITH MoveCoverage AS (
+    SELECT 
+        p.name,
+        COUNT(DISTINCT te.defending_type) as types_hit_super_effective
+    FROM Pokemon p
+    JOIN Pokemon_Moves pm ON p.pokemon_id = pm.pokemon_id
+    JOIN Moves m ON pm.move_id = m.move_id
+    JOIN Type_Effectiveness te ON m.type = te.attacking_type
+    WHERE te.multiplier > 1
+    GROUP BY p.pokemon_id
+)
+SELECT * FROM MoveCoverage
+ORDER BY types_hit_super_effective DESC
+LIMIT 10;
+```
+
+6. Balanced Pokemon Analysis
+```sql
+-- Find the most balanced Pokemon (similar stats)
+SELECT 
+    name,
+    hp, attack, defense, special, speed,
+    STDDEV(value) as stat_deviation
+FROM Pokemon
+CROSS JOIN LATERAL (VALUES
+    (hp), (attack), (defense), (special), (speed)
+) as stats(value)
+GROUP BY pokemon_id
+ORDER BY stat_deviation
+LIMIT 10;
+```
+
+7. Move Power Analysis
+```sql
+-- Analyze move power distribution by type
+SELECT 
+    type,
+    COUNT(*) as move_count,
+    AVG(power) as avg_power,
+    AVG(accuracy) as avg_accuracy,
+    AVG(pp) as avg_pp
+FROM Moves
+WHERE category != 'Status'
+GROUP BY type
+ORDER BY avg_power DESC;
+```
+
+8. Learning Curve Analysis
+```sql
+-- Analyze move learning progression
+SELECT 
+    learn_level,
+    COUNT(*) as moves_learned,
+    AVG(m.power) as avg_power
+FROM Pokemon_Moves pm
+JOIN Moves m ON pm.move_id = m.move_id
+WHERE learn_level IS NOT NULL
+GROUP BY learn_level
+ORDER BY learn_level;
+```
+
+9. Type Synergy Analysis
+```sql
+-- Find most common type combinations
+SELECT 
+    type1,
+    type2,
+    COUNT(*) as combination_count,
+    AVG(hp + attack + defense + special + speed) as avg_total_stats
+FROM Pokemon
+WHERE type2 IS NOT NULL
+GROUP BY type1, type2
+ORDER BY combination_count DESC;
+```
+
+10. Catch Rate Analysis
+```sql
+-- Analyze catch rates relative to stats
+SELECT 
+    CASE 
+        WHEN catch_rate <= 50 THEN 'Very Hard'
+        WHEN catch_rate <= 100 THEN 'Hard'
+        WHEN catch_rate <= 150 THEN 'Medium'
+        WHEN catch_rate <= 200 THEN 'Easy'
+        ELSE 'Very Easy'
+    END as catch_difficulty,
+    COUNT(*) as pokemon_count,
+    AVG(hp + attack + defense + special + speed) as avg_total_stats
+FROM Pokemon
+GROUP BY catch_difficulty
+ORDER BY avg_total_stats DESC;
+```
+
+## Project Ideas
+
+1. Battle Simulator
+   - Implement type effectiveness calculations
+   - Consider stats and move damage
+   - Simulate battle outcomes
+
+2. Team Builder
+   - Analyze type coverage
+   - Consider stat balance
+   - Recommend complementary Pokemon
+
+3. Move Set Optimizer
+   - Analyze move type coverage
+   - Consider STAB bonus
+   - Optimize for different strategies
+
+4. Evolution Chain Analysis
+   - Track stat changes
+   - Analyze type changes
+   - Study move learning patterns
+
+5. Catch Rate Calculator
+   - Consider Pokemon stats
+   - Implement status effects
+   - Calculate optimal ball usage

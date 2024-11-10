@@ -1,0 +1,305 @@
+---
+title: "Star Trek Dataset: Starships and Missions"
+author: "Data Science Team"
+date: "2024-01-20"
+format:
+  html:
+    toc: true
+    code-fold: true
+---
+
+## Overview
+
+This dataset simulates the Star Trek universe with interconnected data about starships, crew members, missions, and ship systems. The data is generated with realistic correlations and distributions that mirror Star Trek canon and logical relationships between different aspects of starship operations.
+
+## Data Generation Methodology
+
+The dataset is generated using Python with the following key packages:
+- NumPy for random number generation and statistical operations
+- Pandas for data manipulation and storage
+- SciPy for probability distributions
+
+### Key Features
+- Era-appropriate ship specifications
+- Realistic crew distributions
+- Mission types and durations
+- Ship system efficiencies
+- Temporal mission logs
+
+## Assumptions
+
+1. Starship Specifications
+   - Ship dimensions correlate with class size
+   - Crew capacity is based on canonical sources
+   - Warp capabilities vary by era (TNG era ships are generally more advanced)
+   - Shield and weapon power correlate with ship size and era
+   - System efficiency correlates with ship era
+
+2. Crew Distribution
+   - Rank distribution follows a pyramid structure
+   - Department assignments reflect ship operations needs
+   - Species distribution favors humans with realistic minority representations
+   - Experience correlates with rank
+   - Crew assignments respect ship capacity limits
+
+3. Missions
+   - Duration correlates with mission type
+   - Ship assignments consider mission requirements
+   - Mission status probabilities reflect realistic outcomes
+   - Priority levels affect resource allocation
+   - Stardates follow TNG-era conventions
+
+4. Ship Systems
+   - Efficiency correlates with ship era and maintenance
+   - System types are consistent across ships
+   - Maintenance schedules affect performance
+   - Critical systems have higher baseline efficiency
+
+## Data Dictionary
+
+### Starships Table
+| Column | Type | Description |
+|--------|------|-------------|
+| ship_id | INTEGER | Primary key |
+| name | TEXT | Ship name (USS_*) |
+| class | TEXT | Ship class |
+| registry | TEXT | Registry number (NCC-*) |
+| era | TEXT | TOS or TNG era |
+| length | INTEGER | Ship length in meters |
+| width | INTEGER | Ship width in meters |
+| height | INTEGER | Ship height in meters |
+| crew_capacity | INTEGER | Maximum crew capacity |
+| max_warp | FLOAT | Maximum warp speed |
+| shield_strength | INTEGER | Shield capacity |
+| weapon_power | INTEGER | Weapons capacity |
+
+### Crew Members Table
+| Column | Type | Description |
+|--------|------|-------------|
+| crew_id | INTEGER | Primary key |
+| name | TEXT | Crew member name |
+| rank | TEXT | Starfleet rank |
+| department | TEXT | Ship department |
+| species | TEXT | Crew member species |
+| years_experience | INTEGER | Years of service |
+| ship_id | INTEGER | Assigned ship (FK) |
+
+### Missions Table
+| Column | Type | Description |
+|--------|------|-------------|
+| mission_id | INTEGER | Primary key |
+| ship_id | INTEGER | Assigned ship (FK) |
+| type | TEXT | Mission type |
+| status | TEXT | Current status |
+| stardate | FLOAT | Mission stardate |
+| duration_days | INTEGER | Mission duration |
+| priority | INTEGER | Mission priority (1-5) |
+
+### Mission Logs Table
+| Column | Type | Description |
+|--------|------|-------------|
+| log_id | INTEGER | Primary key |
+| mission_id | INTEGER | Related mission (FK) |
+| type | TEXT | Log entry type |
+| stardate | FLOAT | Log stardate |
+| content | TEXT | Log content |
+
+### Ship Systems Table
+| Column | Type | Description |
+|--------|------|-------------|
+| system_id | INTEGER | Primary key |
+| ship_id | INTEGER | Ship (FK) |
+| type | TEXT | System type |
+| efficiency | FLOAT | Current efficiency % |
+| last_maintenance | FLOAT | Last maintenance stardate |
+
+## Table Relationships
+
+```mermaid
+erDiagram
+    Starships ||--o{ Crew_Members : assigns
+    Starships ||--o{ Missions : performs
+    Starships ||--o{ Ship_Systems : has
+    Missions ||--o{ Mission_Logs : records
+```
+
+## SQL Questions and Projects
+
+1. Fleet Capability Analysis
+```sql
+-- Analyze fleet combat readiness by era
+SELECT 
+    era,
+    COUNT(*) as ship_count,
+    AVG(shield_strength) as avg_shields,
+    AVG(weapon_power) as avg_weapons,
+    AVG(max_warp) as avg_max_warp
+FROM Starships
+GROUP BY era
+ORDER BY era;
+```
+
+2. Crew Diversity Study
+```sql
+-- Analyze species distribution across departments
+SELECT 
+    department,
+    species,
+    COUNT(*) as crew_count,
+    AVG(years_experience) as avg_experience
+FROM Crew_Members
+GROUP BY department, species
+ORDER BY department, crew_count DESC;
+```
+
+3. Mission Success Analysis
+```sql
+-- Calculate mission success rates by ship class
+SELECT 
+    s.class,
+    COUNT(*) as total_missions,
+    SUM(CASE WHEN m.status = 'Completed' THEN 1 ELSE 0 END) as successful_missions,
+    ROUND(SUM(CASE WHEN m.status = 'Completed' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) as success_rate
+FROM Starships s
+JOIN Missions m ON s.ship_id = m.ship_id
+GROUP BY s.class
+ORDER BY success_rate DESC;
+```
+
+4. System Performance Tracking
+```sql
+-- Analyze system efficiency across ship classes
+SELECT 
+    s.class,
+    ss.type as system_type,
+    AVG(ss.efficiency) as avg_efficiency,
+    MIN(ss.efficiency) as min_efficiency,
+    MAX(ss.efficiency) as max_efficiency
+FROM Starships s
+JOIN Ship_Systems ss ON s.ship_id = ss.ship_id
+GROUP BY s.class, ss.type
+ORDER BY s.class, avg_efficiency DESC;
+```
+
+5. Mission Duration Analysis
+```sql
+-- Analyze average mission duration by type and priority
+SELECT 
+    type,
+    priority,
+    COUNT(*) as mission_count,
+    AVG(duration_days) as avg_duration,
+    MIN(duration_days) as min_duration,
+    MAX(duration_days) as max_duration
+FROM Missions
+GROUP BY type, priority
+ORDER BY type, priority;
+```
+
+6. Crew Experience Distribution
+```sql
+-- Analyze experience levels across ranks and departments
+SELECT 
+    rank,
+    department,
+    COUNT(*) as crew_count,
+    AVG(years_experience) as avg_experience,
+    MIN(years_experience) as min_experience,
+    MAX(years_experience) as max_experience
+FROM Crew_Members
+GROUP BY rank, department
+ORDER BY rank, department;
+```
+
+7. Ship Utilization Analysis
+```sql
+-- Calculate ship mission loads and crew utilization
+SELECT 
+    s.name,
+    s.class,
+    COUNT(DISTINCT m.mission_id) as total_missions,
+    COUNT(DISTINCT c.crew_id) as current_crew,
+    s.crew_capacity,
+    ROUND(COUNT(DISTINCT c.crew_id) * 100.0 / s.crew_capacity, 2) as crew_utilization
+FROM Starships s
+LEFT JOIN Missions m ON s.ship_id = m.ship_id
+LEFT JOIN Crew_Members c ON s.ship_id = c.ship_id
+GROUP BY s.ship_id
+ORDER BY total_missions DESC;
+```
+
+8. System Maintenance Impact
+```sql
+-- Analyze relationship between maintenance and system efficiency
+SELECT 
+    type,
+    COUNT(*) as system_count,
+    AVG(efficiency) as avg_efficiency,
+    AVG(stardate - last_maintenance) as avg_days_since_maintenance,
+    CORR(efficiency, stardate - last_maintenance) as maintenance_efficiency_correlation
+FROM Ship_Systems
+GROUP BY type
+ORDER BY avg_efficiency DESC;
+```
+
+9. Mission Log Analysis
+```sql
+-- Analyze log entry patterns during missions
+SELECT 
+    m.type as mission_type,
+    ml.type as log_type,
+    COUNT(*) as log_count,
+    COUNT(DISTINCT m.mission_id) as mission_count,
+    ROUND(COUNT(*) * 1.0 / COUNT(DISTINCT m.mission_id), 2) as avg_logs_per_mission
+FROM Missions m
+JOIN Mission_Logs ml ON m.mission_id = ml.mission_id
+GROUP BY m.type, ml.type
+ORDER BY m.type, log_count DESC;
+```
+
+10. Fleet Composition Analysis
+```sql
+-- Analyze fleet composition and capabilities
+SELECT 
+    class,
+    COUNT(*) as ship_count,
+    AVG(length) as avg_length,
+    AVG(crew_capacity) as avg_crew,
+    AVG(max_warp) as avg_warp,
+    SUM(crew_capacity) as total_crew_capacity
+FROM Starships
+GROUP BY class
+ORDER BY ship_count DESC;
+```
+
+## Project Ideas
+
+1. Fleet Operations Dashboard
+   - Real-time ship status monitoring
+   - Crew assignment tracking
+   - Mission progress visualization
+   - System efficiency monitoring
+
+2. Mission Planning Optimizer
+   - Ship-to-mission matching
+   - Crew requirement analysis
+   - Resource allocation optimization
+   - Risk assessment
+
+3. Maintenance Scheduler
+   - Predictive maintenance modeling
+   - System efficiency forecasting
+   - Maintenance impact analysis
+   - Resource allocation planning
+
+4. Crew Management System
+   - Assignment optimization
+   - Experience tracking
+   - Department balance analysis
+   - Career progression modeling
+
+5. Mission Success Predictor
+   - Ship capability analysis
+   - Crew experience consideration
+   - Historical success patterns
+   - Risk factor identification

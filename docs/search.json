@@ -530,5 +530,236 @@
     "title": "EP001: Getting Started with AI Content Generation",
     "section": "",
     "text": "Download additional resources for this episode: - Episode Transcript (PDF) - Prompt Examples (TXT) - Show Notes (PDF)"
+  },
+  {
+    "objectID": "datasets/index.html",
+    "href": "datasets/index.html",
+    "title": "Simulated Datasets Collection",
+    "section": "",
+    "text": "This collection contains three simulated datasets with realistic correlations and distributions, each based on a different theme. The datasets are designed for practicing SQL queries, data analysis, and exploring relationships between different entities within each theme."
+  },
+  {
+    "objectID": "datasets/index.html#overview",
+    "href": "datasets/index.html#overview",
+    "title": "Simulated Datasets Collection",
+    "section": "",
+    "text": "This collection contains three simulated datasets with realistic correlations and distributions, each based on a different theme. The datasets are designed for practicing SQL queries, data analysis, and exploring relationships between different entities within each theme."
+  },
+  {
+    "objectID": "datasets/index.html#available-datasets",
+    "href": "datasets/index.html#available-datasets",
+    "title": "Simulated Datasets Collection",
+    "section": "Available Datasets",
+    "text": "Available Datasets\n\n1. Lit-RPG: Sword and Magic\nA fantasy RPG dataset featuring: - Character statistics and progression - Items with various properties and rarities - Skills and abilities - Character-item relationships - Character-skill relationships\nPerfect for analyzing: - Character progression and balance - Item distribution patterns - Skill acquisition patterns - Equipment strategies - Character build optimization\n\n\n2. Pokemon: First Generation\nA dataset based on the first generation of Pokemon games, including: - Pokemon statistics and types - Move properties and effects - Type effectiveness relationships - Pokemon-move relationships - Battle mechanics data\nIdeal for studying: - Type advantage patterns - Move effectiveness analysis - Pokemon stat distributions - Team composition strategies - Battle outcome predictions\n\n\n3. Star Trek: Starships and Missions\nA Star Trek universe dataset containing: - Starship specifications - Crew member details - Mission records - Ship systems status - Mission logs\nGreat for analyzing: - Fleet operations - Mission success patterns - Crew assignment optimization - System maintenance impacts - Resource allocation"
+  },
+  {
+    "objectID": "datasets/index.html#dataset-generation",
+    "href": "datasets/index.html#dataset-generation",
+    "title": "Simulated Datasets Collection",
+    "section": "Dataset Generation",
+    "text": "Dataset Generation\nEach dataset is generated using Python scripts that ensure: - Realistic correlations between attributes - Appropriate distributions for different properties - Logical relationships between entities - Theme-appropriate constraints and rules - Consistent internal logic\nThe generation code is available in each dataset’s directory: - lit_rpg/generate_lit_rpg_data.py - pokemon/generate_pokemon_data.py - star_trek/generate_trek_data.py"
+  },
+  {
+    "objectID": "datasets/index.html#using-the-datasets",
+    "href": "datasets/index.html#using-the-datasets",
+    "title": "Simulated Datasets Collection",
+    "section": "Using the Datasets",
+    "text": "Using the Datasets\nEach dataset comes with: 1. Detailed documentation of the data structure 2. Comprehensive data dictionaries 3. Example SQL queries 4. Project ideas and suggestions 5. Analysis of relationships and correlations\n\nPrerequisites\nTo use these datasets, you’ll need: - A SQL database system (PostgreSQL recommended) - Basic SQL knowledge - Understanding of the respective theme (helpful but not required)\n\n\nGetting Started\n\nChoose a dataset based on your interests or learning goals\nReview the documentation to understand the data structure\nGenerate the data using the provided Python scripts\nLoad the data into your preferred database system\nStart exploring with the example queries\nDevelop your own queries and analyses"
+  },
+  {
+    "objectID": "datasets/index.html#contributing",
+    "href": "datasets/index.html#contributing",
+    "title": "Simulated Datasets Collection",
+    "section": "Contributing",
+    "text": "Contributing\nFeel free to: - Suggest improvements to the data generation - Add new example queries - Propose new project ideas - Report any issues or inconsistencies - Share your analyses and findings"
+  },
+  {
+    "objectID": "datasets/index.html#future-additions",
+    "href": "datasets/index.html#future-additions",
+    "title": "Simulated Datasets Collection",
+    "section": "Future Additions",
+    "text": "Future Additions\nPotential future datasets might include: - More fantasy RPG settings - Additional Pokemon generations - Other sci-fi universes - Sports statistics - Historical events"
+  },
+  {
+    "objectID": "datasets/index.html#contact",
+    "href": "datasets/index.html#contact",
+    "title": "Simulated Datasets Collection",
+    "section": "Contact",
+    "text": "Contact\nFor questions, suggestions, or feedback about these datasets, please: 1. Open an issue in the repository 2. Submit a pull request with improvements 3. Contact the data science team directly"
+  },
+  {
+    "objectID": "datasets/index.html#license",
+    "href": "datasets/index.html#license",
+    "title": "Simulated Datasets Collection",
+    "section": "License",
+    "text": "License\nThese datasets are provided for educational and practice purposes. They are not affiliated with or endorsed by the original properties they are based on."
+  },
+  {
+    "objectID": "datasets/star_trek/docs/star_trek_dataset.html",
+    "href": "datasets/star_trek/docs/star_trek_dataset.html",
+    "title": "Star Trek Dataset: Starships and Missions",
+    "section": "",
+    "text": "This dataset simulates the Star Trek universe with interconnected data about starships, crew members, missions, and ship systems. The data is generated with realistic correlations and distributions that mirror Star Trek canon and logical relationships between different aspects of starship operations."
+  },
+  {
+    "objectID": "datasets/star_trek/docs/star_trek_dataset.html#overview",
+    "href": "datasets/star_trek/docs/star_trek_dataset.html#overview",
+    "title": "Star Trek Dataset: Starships and Missions",
+    "section": "",
+    "text": "This dataset simulates the Star Trek universe with interconnected data about starships, crew members, missions, and ship systems. The data is generated with realistic correlations and distributions that mirror Star Trek canon and logical relationships between different aspects of starship operations."
+  },
+  {
+    "objectID": "datasets/star_trek/docs/star_trek_dataset.html#data-generation-methodology",
+    "href": "datasets/star_trek/docs/star_trek_dataset.html#data-generation-methodology",
+    "title": "Star Trek Dataset: Starships and Missions",
+    "section": "Data Generation Methodology",
+    "text": "Data Generation Methodology\nThe dataset is generated using Python with the following key packages: - NumPy for random number generation and statistical operations - Pandas for data manipulation and storage - SciPy for probability distributions\n\nKey Features\n\nEra-appropriate ship specifications\nRealistic crew distributions\nMission types and durations\nShip system efficiencies\nTemporal mission logs"
+  },
+  {
+    "objectID": "datasets/star_trek/docs/star_trek_dataset.html#assumptions",
+    "href": "datasets/star_trek/docs/star_trek_dataset.html#assumptions",
+    "title": "Star Trek Dataset: Starships and Missions",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nStarship Specifications\n\nShip dimensions correlate with class size\nCrew capacity is based on canonical sources\nWarp capabilities vary by era (TNG era ships are generally more advanced)\nShield and weapon power correlate with ship size and era\nSystem efficiency correlates with ship era\n\nCrew Distribution\n\nRank distribution follows a pyramid structure\nDepartment assignments reflect ship operations needs\nSpecies distribution favors humans with realistic minority representations\nExperience correlates with rank\nCrew assignments respect ship capacity limits\n\nMissions\n\nDuration correlates with mission type\nShip assignments consider mission requirements\nMission status probabilities reflect realistic outcomes\nPriority levels affect resource allocation\nStardates follow TNG-era conventions\n\nShip Systems\n\nEfficiency correlates with ship era and maintenance\nSystem types are consistent across ships\nMaintenance schedules affect performance\nCritical systems have higher baseline efficiency"
+  },
+  {
+    "objectID": "datasets/star_trek/docs/star_trek_dataset.html#data-dictionary",
+    "href": "datasets/star_trek/docs/star_trek_dataset.html#data-dictionary",
+    "title": "Star Trek Dataset: Starships and Missions",
+    "section": "Data Dictionary",
+    "text": "Data Dictionary\n\nStarships Table\n\n\n\nColumn\nType\nDescription\n\n\n\n\nship_id\nINTEGER\nPrimary key\n\n\nname\nTEXT\nShip name (USS_*)\n\n\nclass\nTEXT\nShip class\n\n\nregistry\nTEXT\nRegistry number (NCC-*)\n\n\nera\nTEXT\nTOS or TNG era\n\n\nlength\nINTEGER\nShip length in meters\n\n\nwidth\nINTEGER\nShip width in meters\n\n\nheight\nINTEGER\nShip height in meters\n\n\ncrew_capacity\nINTEGER\nMaximum crew capacity\n\n\nmax_warp\nFLOAT\nMaximum warp speed\n\n\nshield_strength\nINTEGER\nShield capacity\n\n\nweapon_power\nINTEGER\nWeapons capacity\n\n\n\n\n\nCrew Members Table\n\n\n\nColumn\nType\nDescription\n\n\n\n\ncrew_id\nINTEGER\nPrimary key\n\n\nname\nTEXT\nCrew member name\n\n\nrank\nTEXT\nStarfleet rank\n\n\ndepartment\nTEXT\nShip department\n\n\nspecies\nTEXT\nCrew member species\n\n\nyears_experience\nINTEGER\nYears of service\n\n\nship_id\nINTEGER\nAssigned ship (FK)\n\n\n\n\n\nMissions Table\n\n\n\nColumn\nType\nDescription\n\n\n\n\nmission_id\nINTEGER\nPrimary key\n\n\nship_id\nINTEGER\nAssigned ship (FK)\n\n\ntype\nTEXT\nMission type\n\n\nstatus\nTEXT\nCurrent status\n\n\nstardate\nFLOAT\nMission stardate\n\n\nduration_days\nINTEGER\nMission duration\n\n\npriority\nINTEGER\nMission priority (1-5)\n\n\n\n\n\nMission Logs Table\n\n\n\nColumn\nType\nDescription\n\n\n\n\nlog_id\nINTEGER\nPrimary key\n\n\nmission_id\nINTEGER\nRelated mission (FK)\n\n\ntype\nTEXT\nLog entry type\n\n\nstardate\nFLOAT\nLog stardate\n\n\ncontent\nTEXT\nLog content\n\n\n\n\n\nShip Systems Table\n\n\n\nColumn\nType\nDescription\n\n\n\n\nsystem_id\nINTEGER\nPrimary key\n\n\nship_id\nINTEGER\nShip (FK)\n\n\ntype\nTEXT\nSystem type\n\n\nefficiency\nFLOAT\nCurrent efficiency %\n\n\nlast_maintenance\nFLOAT\nLast maintenance stardate"
+  },
+  {
+    "objectID": "datasets/star_trek/docs/star_trek_dataset.html#table-relationships",
+    "href": "datasets/star_trek/docs/star_trek_dataset.html#table-relationships",
+    "title": "Star Trek Dataset: Starships and Missions",
+    "section": "Table Relationships",
+    "text": "Table Relationships\nerDiagram\n    Starships ||--o{ Crew_Members : assigns\n    Starships ||--o{ Missions : performs\n    Starships ||--o{ Ship_Systems : has\n    Missions ||--o{ Mission_Logs : records"
+  },
+  {
+    "objectID": "datasets/star_trek/docs/star_trek_dataset.html#sql-questions-and-projects",
+    "href": "datasets/star_trek/docs/star_trek_dataset.html#sql-questions-and-projects",
+    "title": "Star Trek Dataset: Starships and Missions",
+    "section": "SQL Questions and Projects",
+    "text": "SQL Questions and Projects\n\nFleet Capability Analysis\n\n-- Analyze fleet combat readiness by era\nSELECT \n    era,\n    COUNT(*) as ship_count,\n    AVG(shield_strength) as avg_shields,\n    AVG(weapon_power) as avg_weapons,\n    AVG(max_warp) as avg_max_warp\nFROM Starships\nGROUP BY era\nORDER BY era;\n\nCrew Diversity Study\n\n-- Analyze species distribution across departments\nSELECT \n    department,\n    species,\n    COUNT(*) as crew_count,\n    AVG(years_experience) as avg_experience\nFROM Crew_Members\nGROUP BY department, species\nORDER BY department, crew_count DESC;\n\nMission Success Analysis\n\n-- Calculate mission success rates by ship class\nSELECT \n    s.class,\n    COUNT(*) as total_missions,\n    SUM(CASE WHEN m.status = 'Completed' THEN 1 ELSE 0 END) as successful_missions,\n    ROUND(SUM(CASE WHEN m.status = 'Completed' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) as success_rate\nFROM Starships s\nJOIN Missions m ON s.ship_id = m.ship_id\nGROUP BY s.class\nORDER BY success_rate DESC;\n\nSystem Performance Tracking\n\n-- Analyze system efficiency across ship classes\nSELECT \n    s.class,\n    ss.type as system_type,\n    AVG(ss.efficiency) as avg_efficiency,\n    MIN(ss.efficiency) as min_efficiency,\n    MAX(ss.efficiency) as max_efficiency\nFROM Starships s\nJOIN Ship_Systems ss ON s.ship_id = ss.ship_id\nGROUP BY s.class, ss.type\nORDER BY s.class, avg_efficiency DESC;\n\nMission Duration Analysis\n\n-- Analyze average mission duration by type and priority\nSELECT \n    type,\n    priority,\n    COUNT(*) as mission_count,\n    AVG(duration_days) as avg_duration,\n    MIN(duration_days) as min_duration,\n    MAX(duration_days) as max_duration\nFROM Missions\nGROUP BY type, priority\nORDER BY type, priority;\n\nCrew Experience Distribution\n\n-- Analyze experience levels across ranks and departments\nSELECT \n    rank,\n    department,\n    COUNT(*) as crew_count,\n    AVG(years_experience) as avg_experience,\n    MIN(years_experience) as min_experience,\n    MAX(years_experience) as max_experience\nFROM Crew_Members\nGROUP BY rank, department\nORDER BY rank, department;\n\nShip Utilization Analysis\n\n-- Calculate ship mission loads and crew utilization\nSELECT \n    s.name,\n    s.class,\n    COUNT(DISTINCT m.mission_id) as total_missions,\n    COUNT(DISTINCT c.crew_id) as current_crew,\n    s.crew_capacity,\n    ROUND(COUNT(DISTINCT c.crew_id) * 100.0 / s.crew_capacity, 2) as crew_utilization\nFROM Starships s\nLEFT JOIN Missions m ON s.ship_id = m.ship_id\nLEFT JOIN Crew_Members c ON s.ship_id = c.ship_id\nGROUP BY s.ship_id\nORDER BY total_missions DESC;\n\nSystem Maintenance Impact\n\n-- Analyze relationship between maintenance and system efficiency\nSELECT \n    type,\n    COUNT(*) as system_count,\n    AVG(efficiency) as avg_efficiency,\n    AVG(stardate - last_maintenance) as avg_days_since_maintenance,\n    CORR(efficiency, stardate - last_maintenance) as maintenance_efficiency_correlation\nFROM Ship_Systems\nGROUP BY type\nORDER BY avg_efficiency DESC;\n\nMission Log Analysis\n\n-- Analyze log entry patterns during missions\nSELECT \n    m.type as mission_type,\n    ml.type as log_type,\n    COUNT(*) as log_count,\n    COUNT(DISTINCT m.mission_id) as mission_count,\n    ROUND(COUNT(*) * 1.0 / COUNT(DISTINCT m.mission_id), 2) as avg_logs_per_mission\nFROM Missions m\nJOIN Mission_Logs ml ON m.mission_id = ml.mission_id\nGROUP BY m.type, ml.type\nORDER BY m.type, log_count DESC;\n\nFleet Composition Analysis\n\n-- Analyze fleet composition and capabilities\nSELECT \n    class,\n    COUNT(*) as ship_count,\n    AVG(length) as avg_length,\n    AVG(crew_capacity) as avg_crew,\n    AVG(max_warp) as avg_warp,\n    SUM(crew_capacity) as total_crew_capacity\nFROM Starships\nGROUP BY class\nORDER BY ship_count DESC;"
+  },
+  {
+    "objectID": "datasets/star_trek/docs/star_trek_dataset.html#project-ideas",
+    "href": "datasets/star_trek/docs/star_trek_dataset.html#project-ideas",
+    "title": "Star Trek Dataset: Starships and Missions",
+    "section": "Project Ideas",
+    "text": "Project Ideas\n\nFleet Operations Dashboard\n\nReal-time ship status monitoring\nCrew assignment tracking\nMission progress visualization\nSystem efficiency monitoring\n\nMission Planning Optimizer\n\nShip-to-mission matching\nCrew requirement analysis\nResource allocation optimization\nRisk assessment\n\nMaintenance Scheduler\n\nPredictive maintenance modeling\nSystem efficiency forecasting\nMaintenance impact analysis\nResource allocation planning\n\nCrew Management System\n\nAssignment optimization\nExperience tracking\nDepartment balance analysis\nCareer progression modeling\n\nMission Success Predictor\n\nShip capability analysis\nCrew experience consideration\nHistorical success patterns\nRisk factor identification"
+  },
+  {
+    "objectID": "datasets/lit_rpg/docs/lit_rpg_dataset.html",
+    "href": "datasets/lit_rpg/docs/lit_rpg_dataset.html",
+    "title": "Lit-RPG Dataset: Sword and Magic",
+    "section": "",
+    "text": "This dataset simulates a Lit-RPG (Literary Role-Playing Game) universe with interconnected data about characters, items, and skills. The data is generated with realistic correlations and distributions that mirror common RPG game mechanics."
+  },
+  {
+    "objectID": "datasets/lit_rpg/docs/lit_rpg_dataset.html#overview",
+    "href": "datasets/lit_rpg/docs/lit_rpg_dataset.html#overview",
+    "title": "Lit-RPG Dataset: Sword and Magic",
+    "section": "",
+    "text": "This dataset simulates a Lit-RPG (Literary Role-Playing Game) universe with interconnected data about characters, items, and skills. The data is generated with realistic correlations and distributions that mirror common RPG game mechanics."
+  },
+  {
+    "objectID": "datasets/lit_rpg/docs/lit_rpg_dataset.html#data-generation-methodology",
+    "href": "datasets/lit_rpg/docs/lit_rpg_dataset.html#data-generation-methodology",
+    "title": "Lit-RPG Dataset: Sword and Magic",
+    "section": "Data Generation Methodology",
+    "text": "Data Generation Methodology\nThe dataset is generated using Python with the following key packages: - NumPy for random number generation and statistical operations - Pandas for data manipulation and storage - SciPy for probability distributions\n\nKey Features\n\nCorrelated character statistics\nRealistic level and experience progression\nRarity-based item distribution\nLevel-gated skill system\nTime-based item acquisition"
+  },
+  {
+    "objectID": "datasets/lit_rpg/docs/lit_rpg_dataset.html#assumptions",
+    "href": "datasets/lit_rpg/docs/lit_rpg_dataset.html#assumptions",
+    "title": "Lit-RPG Dataset: Sword and Magic",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nCharacter Statistics\n\nStats are normally distributed with correlations between attributes\nStrength and vitality are positively correlated\nIntelligence has a negative correlation with strength\nAgility has a slight negative correlation with strength\nAll stats are normalized to a 1-100 range\n\nItems\n\nRarity follows a weighted distribution (more common items appear more frequently)\nItem power correlates with rarity\nItem value exponentially increases with power\nCharacters obtain items based on their level\n\nSkills\n\nSkill availability is level-gated\nHigher-level skills tend to be more powerful\nMana cost correlates with skill power\nSkill acquisition is influenced by character class"
+  },
+  {
+    "objectID": "datasets/lit_rpg/docs/lit_rpg_dataset.html#data-dictionary",
+    "href": "datasets/lit_rpg/docs/lit_rpg_dataset.html#data-dictionary",
+    "title": "Lit-RPG Dataset: Sword and Magic",
+    "section": "Data Dictionary",
+    "text": "Data Dictionary\n\nCharacters Table\n\n\n\n\n\n\n\n\nColumn\nType\nDescription\n\n\n\n\ncharacter_id\nINTEGER\nPrimary key\n\n\nname\nTEXT\nCharacter name\n\n\nclass\nTEXT\nCharacter class (Warrior, Mage, Rogue, Paladin, Warlock)\n\n\nlevel\nINTEGER\nCharacter level (1-50)\n\n\nstrength\nINTEGER\nPhysical power (1-100)\n\n\nvitality\nINTEGER\nHealth and endurance (1-100)\n\n\nintelligence\nINTEGER\nMagical ability (1-100)\n\n\nagility\nINTEGER\nSpeed and dexterity (1-100)\n\n\nexperience\nINTEGER\nTotal experience points\n\n\n\n\n\nItems Table\n\n\n\n\n\n\n\n\nColumn\nType\nDescription\n\n\n\n\nitem_id\nINTEGER\nPrimary key\n\n\nname\nTEXT\nItem name\n\n\ntype\nTEXT\nItem type (Weapon, Armor, Accessory, Consumable)\n\n\nrarity\nTEXT\nItem rarity (Common, Uncommon, Rare, Epic, Legendary)\n\n\npower\nINTEGER\nItem power level\n\n\ndurability\nINTEGER\nItem durability\n\n\nvalue\nINTEGER\nItem value in gold\n\n\n\n\n\nSkills Table\n\n\n\nColumn\nType\nDescription\n\n\n\n\nskill_id\nINTEGER\nPrimary key\n\n\nname\nTEXT\nSkill name\n\n\ntype\nTEXT\nSkill type (Attack, Defense, Support, Magic)\n\n\npower\nINTEGER\nSkill power level\n\n\nmana_cost\nINTEGER\nMana required to use skill\n\n\nlevel_requirement\nINTEGER\nMinimum level required (1-50)\n\n\n\n\n\nCharacter_Items Table\n\n\n\nColumn\nType\nDescription\n\n\n\n\ncharacter_id\nINTEGER\nForeign key to Characters\n\n\nitem_id\nINTEGER\nForeign key to Items\n\n\nacquisition_date\nDATE\nWhen the item was acquired\n\n\n\n\n\nCharacter_Skills Table\n\n\n\nColumn\nType\nDescription\n\n\n\n\ncharacter_id\nINTEGER\nForeign key to Characters\n\n\nskill_id\nINTEGER\nForeign key to Skills\n\n\nmastery_level\nINTEGER\nSkill mastery level"
+  },
+  {
+    "objectID": "datasets/lit_rpg/docs/lit_rpg_dataset.html#table-relationships",
+    "href": "datasets/lit_rpg/docs/lit_rpg_dataset.html#table-relationships",
+    "title": "Lit-RPG Dataset: Sword and Magic",
+    "section": "Table Relationships",
+    "text": "Table Relationships\nerDiagram\n    Characters ||--o{ Character_Items : has\n    Characters ||--o{ Character_Skills : knows\n    Items ||--o{ Character_Items : owned_by\n    Skills ||--o{ Character_Skills : learned_by"
+  },
+  {
+    "objectID": "datasets/lit_rpg/docs/lit_rpg_dataset.html#sql-questions-and-projects",
+    "href": "datasets/lit_rpg/docs/lit_rpg_dataset.html#sql-questions-and-projects",
+    "title": "Lit-RPG Dataset: Sword and Magic",
+    "section": "SQL Questions and Projects",
+    "text": "SQL Questions and Projects\n\nCharacter Power Analysis\n\n-- Find the top 10 most powerful characters based on total stats\nSELECT \n    character_id, name, class, level,\n    (strength + vitality + intelligence + agility) as total_power\nFROM Characters\nORDER BY total_power DESC\nLIMIT 10;\n\nRare Item Distribution\n\n-- Analyze the distribution of legendary items among character classes\nSELECT \n    c.class,\n    COUNT(i.item_id) as legendary_items,\n    AVG(i.power) as avg_item_power\nFROM Characters c\nJOIN Character_Items ci ON c.character_id = ci.character_id\nJOIN Items i ON ci.item_id = i.item_id\nWHERE i.rarity = 'Legendary'\nGROUP BY c.class\nORDER BY legendary_items DESC;\n\nSkill Mastery Progression\n\n-- Calculate average skill mastery by character level\nSELECT \n    c.level,\n    AVG(cs.mastery_level) as avg_mastery,\n    COUNT(DISTINCT c.character_id) as num_characters\nFROM Characters c\nJOIN Character_Skills cs ON c.character_id = cs.character_id\nGROUP BY c.level\nORDER BY c.level;\n\nClass Balance Analysis\n\n-- Compare average stats across different classes\nSELECT \n    class,\n    AVG(strength) as avg_strength,\n    AVG(vitality) as avg_vitality,\n    AVG(intelligence) as avg_intelligence,\n    AVG(agility) as avg_agility\nFROM Characters\nGROUP BY class;\n\nItem Acquisition Timeline\n\n-- Analyze item acquisition patterns over time\nSELECT \n    DATE_TRUNC('month', acquisition_date) as month,\n    i.rarity,\n    COUNT(*) as items_acquired\nFROM Character_Items ci\nJOIN Items i ON ci.item_id = i.item_id\nGROUP BY month, i.rarity\nORDER BY month, i.rarity;\n\nSkill Type Distribution\n\n-- Analyze skill type preferences by character class\nSELECT \n    c.class,\n    s.type as skill_type,\n    COUNT(*) as skill_count\nFROM Characters c\nJOIN Character_Skills cs ON c.character_id = cs.character_id\nJOIN Skills s ON cs.skill_id = s.skill_id\nGROUP BY c.class, s.type\nORDER BY c.class, skill_count DESC;\n\nCharacter Progression Analysis\n\n-- Calculate experience gain rate by level\nSELECT \n    level,\n    AVG(experience) as avg_exp,\n    MIN(experience) as min_exp,\n    MAX(experience) as max_exp\nFROM Characters\nGROUP BY level\nORDER BY level;\n\nItem Value Analysis\n\n-- Find the average value of items by type and rarity\nSELECT \n    type,\n    rarity,\n    AVG(value) as avg_value,\n    COUNT(*) as item_count\nFROM Items\nGROUP BY type, rarity\nORDER BY avg_value DESC;\n\nCharacter Equipment Value\n\n-- Calculate total equipment value per character\nSELECT \n    c.character_id,\n    c.name,\n    c.class,\n    SUM(i.value) as total_equipment_value\nFROM Characters c\nJOIN Character_Items ci ON c.character_id = ci.character_id\nJOIN Items i ON ci.item_id = i.item_id\nGROUP BY c.character_id, c.name, c.class\nORDER BY total_equipment_value DESC;\n\nSkill Power vs Level Requirement\n\n-- Analyze the relationship between skill power and level requirements\nSELECT \n    level_requirement,\n    AVG(power) as avg_power,\n    AVG(mana_cost) as avg_mana_cost,\n    COUNT(*) as skill_count\nFROM Skills\nGROUP BY level_requirement\nORDER BY level_requirement;"
+  },
+  {
+    "objectID": "datasets/lit_rpg/docs/lit_rpg_dataset.html#project-ideas",
+    "href": "datasets/lit_rpg/docs/lit_rpg_dataset.html#project-ideas",
+    "title": "Lit-RPG Dataset: Sword and Magic",
+    "section": "Project Ideas",
+    "text": "Project Ideas\n\nCharacter Build Optimizer\n\nAnalyze optimal stat distributions for different classes\nRecommend skill combinations based on character stats\nSuggest item loadouts for maximum effectiveness\n\nProgression Path Analysis\n\nTrack character development patterns\nIdentify common skill acquisition sequences\nAnalyze item upgrade patterns\n\nEconomy Analysis\n\nStudy item value distribution\nAnalyze rarity-value relationships\nTrack item acquisition patterns\n\nClass Balance Dashboard\n\nCompare class performance metrics\nAnalyze stat distributions\nTrack skill usage patterns\n\nPower Level Predictor\n\nBuild a model to predict character effectiveness\nConsider stats, items, and skills\nProvide build recommendations"
+  },
+  {
+    "objectID": "datasets/pokemon/docs/pokemon_dataset.html",
+    "href": "datasets/pokemon/docs/pokemon_dataset.html",
+    "title": "Pokemon Dataset: First Generation",
+    "section": "",
+    "text": "This dataset simulates the First Generation Pokemon game data with realistic correlations and distributions. It includes information about Pokemon, their types, moves, and relationships between these entities."
+  },
+  {
+    "objectID": "datasets/pokemon/docs/pokemon_dataset.html#overview",
+    "href": "datasets/pokemon/docs/pokemon_dataset.html#overview",
+    "title": "Pokemon Dataset: First Generation",
+    "section": "",
+    "text": "This dataset simulates the First Generation Pokemon game data with realistic correlations and distributions. It includes information about Pokemon, their types, moves, and relationships between these entities."
+  },
+  {
+    "objectID": "datasets/pokemon/docs/pokemon_dataset.html#data-generation-methodology",
+    "href": "datasets/pokemon/docs/pokemon_dataset.html#data-generation-methodology",
+    "title": "Pokemon Dataset: First Generation",
+    "section": "Data Generation Methodology",
+    "text": "Data Generation Methodology\nThe dataset is generated using Python with the following key packages: - NumPy for random number generation and statistical operations - Pandas for data manipulation and storage - SciPy for probability distributions\n\nKey Features\n\nRealistic stat distributions based on Gen 1 mechanics\nType effectiveness matrix following original game rules\nMove properties with appropriate correlations\nPokemon-Move relationships based on type compatibility"
+  },
+  {
+    "objectID": "datasets/pokemon/docs/pokemon_dataset.html#assumptions",
+    "href": "datasets/pokemon/docs/pokemon_dataset.html#assumptions",
+    "title": "Pokemon Dataset: First Generation",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nPokemon Statistics\n\nBase stats follow normal distributions with realistic means\nDefense correlates positively with Attack\nSpeed has a moderate correlation with Attack\nCatch rates are inversely proportional to total stats\nStats are normalized to match Gen 1 ranges (20-180)\n\nTypes\n\nAll 15 original types are included\nType effectiveness follows Gen 1 rules exactly\nDual-typing probability is 50%\nType assignments consider move compatibility\n\nMoves\n\nPower follows a gamma distribution\nAccuracy negatively correlates with power\nPP values are discrete and inverse to power\n20% of moves are status moves (0 power)\nMove types are distributed based on Pokemon type compatibility\n\nPokemon-Move Relationships\n\nPokemon learn 2-7 moves each\nMove selection favors same-type moves\nLearn methods include Level Up, TM/HM, and Starting moves\nLevel-up moves have realistic level requirements"
+  },
+  {
+    "objectID": "datasets/pokemon/docs/pokemon_dataset.html#data-dictionary",
+    "href": "datasets/pokemon/docs/pokemon_dataset.html#data-dictionary",
+    "title": "Pokemon Dataset: First Generation",
+    "section": "Data Dictionary",
+    "text": "Data Dictionary\n\nPokemon Table\n\n\n\nColumn\nType\nDescription\n\n\n\n\npokemon_id\nINTEGER\nPrimary key\n\n\nname\nTEXT\nPokemon name\n\n\ntype1\nTEXT\nPrimary type\n\n\ntype2\nTEXT\nSecondary type (can be NULL)\n\n\nhp\nINTEGER\nHit Points (20-180)\n\n\nattack\nINTEGER\nAttack stat (20-180)\n\n\ndefense\nINTEGER\nDefense stat (20-180)\n\n\nspecial\nINTEGER\nSpecial stat (20-180)\n\n\nspeed\nINTEGER\nSpeed stat (20-180)\n\n\ncatch_rate\nINTEGER\nBase catch rate (1-255)\n\n\n\n\n\nTypes Table\n\n\n\nColumn\nType\nDescription\n\n\n\n\ntype_id\nINTEGER\nPrimary key\n\n\nname\nTEXT\nType name\n\n\n\n\n\nType Effectiveness Table\n\n\n\nColumn\nType\nDescription\n\n\n\n\nattacking_type\nTEXT\nThe attacking move’s type\n\n\ndefending_type\nTEXT\nThe defending Pokemon’s type\n\n\nmultiplier\nFLOAT\nDamage multiplier (0, 0.5, 1, or 2)\n\n\n\n\n\nMoves Table\n\n\n\nColumn\nType\nDescription\n\n\n\n\nmove_id\nINTEGER\nPrimary key\n\n\nname\nTEXT\nMove name\n\n\ntype\nTEXT\nMove type\n\n\ncategory\nTEXT\nPhysical/Special/Status\n\n\npower\nINTEGER\nBase power (0-100)\n\n\naccuracy\nINTEGER\nAccuracy percentage (0-100)\n\n\npp\nINTEGER\nPower Points (15-35)\n\n\n\n\n\nPokemon_Moves Table\n\n\n\nColumn\nType\nDescription\n\n\n\n\npokemon_id\nINTEGER\nForeign key to Pokemon\n\n\nmove_id\nINTEGER\nForeign key to Moves\n\n\nlearn_method\nTEXT\nHow the move is learned\n\n\nlearn_level\nINTEGER\nLevel required (NULL for TM/HM/Start)"
+  },
+  {
+    "objectID": "datasets/pokemon/docs/pokemon_dataset.html#table-relationships",
+    "href": "datasets/pokemon/docs/pokemon_dataset.html#table-relationships",
+    "title": "Pokemon Dataset: First Generation",
+    "section": "Table Relationships",
+    "text": "Table Relationships\nerDiagram\n    Pokemon ||--o{ Pokemon_Moves : learns\n    Moves ||--o{ Pokemon_Moves : learned_by\n    Types ||--o{ Pokemon : has\n    Types ||--o{ Moves : has\n    Types ||--o{ Type_Effectiveness : affects"
+  },
+  {
+    "objectID": "datasets/pokemon/docs/pokemon_dataset.html#sql-questions-and-projects",
+    "href": "datasets/pokemon/docs/pokemon_dataset.html#sql-questions-and-projects",
+    "title": "Pokemon Dataset: First Generation",
+    "section": "SQL Questions and Projects",
+    "text": "SQL Questions and Projects\n\nType Advantage Analysis\n\n-- Find Pokemon with the best defensive type combinations\nSELECT \n    p.name,\n    p.type1,\n    p.type2,\n    COUNT(*) as resistances\nFROM Pokemon p\nJOIN Type_Effectiveness te ON \n    p.type1 = te.defending_type OR \n    p.type2 = te.defending_type\nWHERE te.multiplier &lt; 1\nGROUP BY p.pokemon_id\nORDER BY resistances DESC\nLIMIT 10;\n\nMove Coverage Analysis\n\n-- Analyze Pokemon's move type coverage\nSELECT \n    p.name,\n    COUNT(DISTINCT m.type) as type_coverage,\n    GROUP_CONCAT(DISTINCT m.type) as types_covered\nFROM Pokemon p\nJOIN Pokemon_Moves pm ON p.pokemon_id = pm.pokemon_id\nJOIN Moves m ON pm.move_id = m.move_id\nGROUP BY p.pokemon_id\nORDER BY type_coverage DESC;\n\nStat Distribution\n\n-- Compare average stats by primary type\nSELECT \n    type1,\n    AVG(hp) as avg_hp,\n    AVG(attack) as avg_attack,\n    AVG(defense) as avg_defense,\n    AVG(special) as avg_special,\n    AVG(speed) as avg_speed,\n    COUNT(*) as pokemon_count\nFROM Pokemon\nGROUP BY type1\nORDER BY (AVG(hp) + AVG(attack) + AVG(defense) + AVG(special) + AVG(speed)) DESC;\n\nMove Learning Patterns\n\n-- Analyze move learning patterns by type\nSELECT \n    p.type1,\n    pm.learn_method,\n    COUNT(*) as move_count,\n    AVG(m.power) as avg_power\nFROM Pokemon p\nJOIN Pokemon_Moves pm ON p.pokemon_id = pm.pokemon_id\nJOIN Moves m ON pm.move_id = m.move_id\nGROUP BY p.type1, pm.learn_method\nORDER BY p.type1, move_count DESC;\n\nType Effectiveness Coverage\n\n-- Find Pokemon with the best offensive coverage\nWITH MoveCoverage AS (\n    SELECT \n        p.name,\n        COUNT(DISTINCT te.defending_type) as types_hit_super_effective\n    FROM Pokemon p\n    JOIN Pokemon_Moves pm ON p.pokemon_id = pm.pokemon_id\n    JOIN Moves m ON pm.move_id = m.move_id\n    JOIN Type_Effectiveness te ON m.type = te.attacking_type\n    WHERE te.multiplier &gt; 1\n    GROUP BY p.pokemon_id\n)\nSELECT * FROM MoveCoverage\nORDER BY types_hit_super_effective DESC\nLIMIT 10;\n\nBalanced Pokemon Analysis\n\n-- Find the most balanced Pokemon (similar stats)\nSELECT \n    name,\n    hp, attack, defense, special, speed,\n    STDDEV(value) as stat_deviation\nFROM Pokemon\nCROSS JOIN LATERAL (VALUES\n    (hp), (attack), (defense), (special), (speed)\n) as stats(value)\nGROUP BY pokemon_id\nORDER BY stat_deviation\nLIMIT 10;\n\nMove Power Analysis\n\n-- Analyze move power distribution by type\nSELECT \n    type,\n    COUNT(*) as move_count,\n    AVG(power) as avg_power,\n    AVG(accuracy) as avg_accuracy,\n    AVG(pp) as avg_pp\nFROM Moves\nWHERE category != 'Status'\nGROUP BY type\nORDER BY avg_power DESC;\n\nLearning Curve Analysis\n\n-- Analyze move learning progression\nSELECT \n    learn_level,\n    COUNT(*) as moves_learned,\n    AVG(m.power) as avg_power\nFROM Pokemon_Moves pm\nJOIN Moves m ON pm.move_id = m.move_id\nWHERE learn_level IS NOT NULL\nGROUP BY learn_level\nORDER BY learn_level;\n\nType Synergy Analysis\n\n-- Find most common type combinations\nSELECT \n    type1,\n    type2,\n    COUNT(*) as combination_count,\n    AVG(hp + attack + defense + special + speed) as avg_total_stats\nFROM Pokemon\nWHERE type2 IS NOT NULL\nGROUP BY type1, type2\nORDER BY combination_count DESC;\n\nCatch Rate Analysis\n\n-- Analyze catch rates relative to stats\nSELECT \n    CASE \n        WHEN catch_rate &lt;= 50 THEN 'Very Hard'\n        WHEN catch_rate &lt;= 100 THEN 'Hard'\n        WHEN catch_rate &lt;= 150 THEN 'Medium'\n        WHEN catch_rate &lt;= 200 THEN 'Easy'\n        ELSE 'Very Easy'\n    END as catch_difficulty,\n    COUNT(*) as pokemon_count,\n    AVG(hp + attack + defense + special + speed) as avg_total_stats\nFROM Pokemon\nGROUP BY catch_difficulty\nORDER BY avg_total_stats DESC;"
+  },
+  {
+    "objectID": "datasets/pokemon/docs/pokemon_dataset.html#project-ideas",
+    "href": "datasets/pokemon/docs/pokemon_dataset.html#project-ideas",
+    "title": "Pokemon Dataset: First Generation",
+    "section": "Project Ideas",
+    "text": "Project Ideas\n\nBattle Simulator\n\nImplement type effectiveness calculations\nConsider stats and move damage\nSimulate battle outcomes\n\nTeam Builder\n\nAnalyze type coverage\nConsider stat balance\nRecommend complementary Pokemon\n\nMove Set Optimizer\n\nAnalyze move type coverage\nConsider STAB bonus\nOptimize for different strategies\n\nEvolution Chain Analysis\n\nTrack stat changes\nAnalyze type changes\nStudy move learning patterns\n\nCatch Rate Calculator\n\nConsider Pokemon stats\nImplement status effects\nCalculate optimal ball usage"
   }
 ]
