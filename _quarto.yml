@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: mdocs
+  output-dir: docs
 
 website:
   title: "MindMeld"
