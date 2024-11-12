@@ -35,9 +35,10 @@ Below you'll find all podcast episodes, with the most recent first. Each entry i
 - Show notes and references
 - Related resources and links
 
-:::{.grid}
+::::{.grid}
 
 :::{.g-col-12 .g-col-md-6}
+
 ### Series Overview
 The podcast focuses on practical explorations of AI tools and techniques, with each episode documenting real experiments and their results. Episodes typically run 15-30 minutes.
 
@@ -46,9 +47,11 @@ The podcast focuses on practical explorations of AI tools and techniques, with e
 - Experiment documentation and results
 - Technical deep-dives into AI tools
 - Occasional guest conversations
+
 :::
 
 :::{.g-col-12 .g-col-md-6}
+
 ### How to Listen
 You can listen to episodes:
 - Directly on this website
@@ -59,9 +62,10 @@ You can listen to episodes:
 - [RSS Feed](/podcasts/feed.xml)
 - [Spotify](https://spotify.com)
 - [Apple Podcasts](https://podcasts.apple.com)
-:::
 
 :::
+
+::::
 
 ## Episode Structure
 

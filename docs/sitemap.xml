@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rmindmeld.github.io/podcasts/index.html</loc>
-    <lastmod>2024-11-10T03:18:42.270Z</lastmod>
+    <lastmod>2024-11-12T02:38:29.776Z</lastmod>
   </url>
   <url>
     <loc>https://rmindmeld.github.io/index.html</loc>
-    <lastmod>2024-11-10T03:41:03.376Z</lastmod>
+    <lastmod>2024-11-12T02:46:28.675Z</lastmod>
   </url>
   <url>
     <loc>https://rmindmeld.github.io/gallery/exhibits/abstract-exploration.html</loc>
@@ -17,12 +17,20 @@
     <lastmod>2024-11-10T03:15:01.271Z</lastmod>
   </url>
   <url>
+    <loc>https://rmindmeld.github.io/datasets/pokemon/docs/pokemon_dataset.html</loc>
+    <lastmod>2024-11-10T04:09:57.811Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rmindmeld.github.io/datasets/index.html</loc>
+    <lastmod>2024-11-10T04:12:32.831Z</lastmod>
+  </url>
+  <url>
     <loc>https://rmindmeld.github.io/blog/index.html</loc>
     <lastmod>2024-11-10T03:13:26.376Z</lastmod>
   </url>
   <url>
     <loc>https://rmindmeld.github.io/about.html</loc>
-    <lastmod>2024-11-10T03:29:44.780Z</lastmod>
+    <lastmod>2024-11-12T03:30:44.679Z</lastmod>
   </url>
   <url>
     <loc>https://rmindmeld.github.io/assets/prompts.html</loc>
@@ -31,6 +39,14 @@
   <url>
     <loc>https://rmindmeld.github.io/blog/posts/ai-content-exploration.html</loc>
     <lastmod>2024-11-10T03:13:51.227Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rmindmeld.github.io/datasets/lit_rpg/docs/lit_rpg_dataset.html</loc>
+    <lastmod>2024-11-10T04:06:06.280Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rmindmeld.github.io/datasets/star_trek/docs/star_trek_dataset.html</loc>
+    <lastmod>2024-11-10T04:11:50.242Z</lastmod>
   </url>
   <url>
     <loc>https://rmindmeld.github.io/experiments/posts/prompt-engineering-study.html</loc>
@@ -43,21 +59,5 @@
   <url>
     <loc>https://rmindmeld.github.io/podcasts/episodes/001-ai-content-generation.html</loc>
     <lastmod>2024-11-10T03:45:46.120Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rmindmeld.github.io/datasets/index.html</loc>
-    <lastmod>2024-11-10T04:12:32.831Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rmindmeld.github.io/datasets/star_trek/docs/star_trek_dataset.html</loc>
-    <lastmod>2024-11-10T04:11:50.242Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rmindmeld.github.io/datasets/lit_rpg/docs/lit_rpg_dataset.html</loc>
-    <lastmod>2024-11-10T04:06:06.280Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rmindmeld.github.io/datasets/pokemon/docs/pokemon_dataset.html</loc>
-    <lastmod>2024-11-10T04:09:57.811Z</lastmod>
   </url>
 </urlset>
