@@ -1,0 +1,130 @@
+---
+title: "About the Author"
+subtitle: "The Mind Behind The Crystal Codex"
+---
+
+::: {.content-section}
+# Meet the Author
+
+![Author Portrait](images/author-portrait.jpg)
+
+::: {.lead}
+Alex Morgan is an award-winning author who combines their background in computer science and love for fantasy literature to create immersive LitRPG experiences.
+:::
+:::
+
+::: {.content-section}
+## Background
+
+With over a decade of experience in software development and a lifelong passion for gaming, Alex brings a unique perspective to the LitRPG genre. Their work in artificial intelligence and virtual reality systems has informed the technical aspects of The Crystal Codex series, while their deep appreciation for traditional fantasy storytelling helps create rich, compelling narratives.
+
+### Education
+- Ph.D. in Computer Science, Stanford University
+- M.S. in Game Design, DigiPen Institute of Technology
+- B.S. in Software Engineering, MIT
+
+### Professional Experience
+- Senior AI Researcher at TechFusion Labs (2018-2021)
+- Lead Game Designer at Virtual Worlds Inc. (2015-2018)
+- Software Developer at Reality Games (2012-2015)
+:::
+
+::: {.content-section .bg-dark}
+## Writing Journey
+
+Alex's journey into writing began during their graduate studies, where they wrote technical articles about the intersection of gaming and artificial intelligence. This naturally evolved into creating fiction that explored the possibilities of future gaming technology.
+
+### Influences
+- Classic science fiction authors
+- Modern game design principles
+- Eastern and Western RPG systems
+- Contemporary LitRPG pioneers
+
+### Writing Philosophy
+"I believe the best stories are those that not only entertain but also make us think about the relationship between technology and humanity. The Crystal Codex series explores how virtual worlds might change us, for better or worse."
+:::
+
+::: {.content-section}
+## Awards and Recognition
+
+### Literary Achievements
+- Best New LitRPG Author, 2023
+- Innovation in Science Fiction Award, 2024
+- Digital Storytelling Excellence Award
+
+### Industry Recognition
+- Featured Speaker at GamesCon 2023
+- Keynote at LitRPG Writers' Conference
+- Regular contributor to Virtual Reality Monthly
+:::
+
+::: {.content-section .bg-dark}
+## Current Projects
+
+Beyond The Crystal Codex series, Alex is involved in several initiatives to promote the LitRPG genre and support emerging writers:
+
+### Ongoing Work
+- The Crystal Codex series (Books 2 and 3 in progress)
+- LitRPG Writers' Workshop Program
+- Gaming and Literature Podcast
+- Technical Consulting for Game Studios
+
+### Community Involvement
+- Mentor at Digital Storytellers Association
+- Founder of the Annual LitRPG Writers' Retreat
+- Regular participant in online gaming communities
+:::
+
+::: {.content-section}
+## Connect with the Author
+
+### Social Media
+- Twitter: @AlexMorganAuthor
+- Instagram: @CrystalCodexWriter
+- Discord: Crystal Codex Community
+
+### Events
+- Monthly virtual book clubs
+- Quarterly live Q&A sessions
+- Annual fan conventions
+
+### Contact
+For business inquiries:
+- Literary Agent: Sarah Williams
+- Email: contact@alexmorganauthor.com
+- Speaking Engagements: speaking@alexmorganauthor.com
+:::
+
+::: {.content-section .bg-dark}
+## Writing Process
+
+Alex's approach to writing combines technical precision with creative storytelling:
+
+### Research
+- Extensive gaming experience
+- Technical documentation
+- Player psychology studies
+- Market analysis
+
+### Development
+- Detailed world-building
+- Character progression systems
+- Technical accuracy in gaming mechanics
+- Beta reader feedback integration
+
+### Publication
+- Regular chapter releases
+- Community feedback incorporation
+- Continuous world expansion
+- Cross-platform storytelling
+:::
+
+::: {.content-section}
+## Future Vision
+
+"The future of storytelling lies at the intersection of traditional narrative and interactive media. Through The Crystal Codex series, I hope to push the boundaries of what's possible in LitRPG while creating characters and worlds that resonate with readers on a personal level."
+
+::: {.magic-text}
+Join me on this journey as we explore the future of gaming, technology, and human connection through the lens of The Crystal Codex.
+:::
+:::

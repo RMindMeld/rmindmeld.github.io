@@ -1,0 +1,183 @@
+---
+title: "Job Listings"
+format: 
+  html:
+    page-layout: full
+    css: styles/custom.scss
+---
+
+
+```{=html}
+
+<div class="container py-5">
+  <div class="row mb-4">
+    <div class="col-md-8">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search jobs...">
+    </div>
+    <div class="col-md-4">
+      <select id="categoryFilter" class="form-control">
+        <option value="all">All Categories</option>
+        <option value="hero">Hero Positions</option>
+        <option value="sidekick">Sidekick Positions</option>
+        <option value="villain">Villain Positions</option>
+        <option value="henchman">Henchman Positions</option>
+        <option value="support">Support Staff</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="directory-grid" id="jobListings">
+    <!-- Hero Positions -->
+    <div class="job-card" data-category="hero">
+      <h3>Senior Superhero</h3>
+      <p class="company">Justice League</p>
+      <p class="location">📍 Watchtower, Earth Orbit</p>
+      <div class="requirements">
+        <h4>Requirements:</h4>
+        <ul>
+          <li>10+ years of crime-fighting experience</li>
+          <li>At least one superpower or advanced tech suit</li>
+          <li>Team player mentality</li>
+          <li>Willing to work holidays during world-ending events</li>
+        </ul>
+      </div>
+      <div class="benefits">
+        <h4>Benefits:</h4>
+        <ul>
+          <li>Full medical coverage (including supervillain battles)</li>
+          <li>401k with dimension-traveling benefits</li>
+          <li>Unlimited cape cleaning</li>
+        </ul>
+      </div>
+      <button class="btn btn-hero">Apply Now</button>
+    </div>
+
+    <!-- Sidekick Position -->
+    <div class="job-card" data-category="sidekick">
+      <h3>Junior Sidekick</h3>
+      <p class="company">Wayne Enterprises</p>
+      <p class="location">📍 Gotham City</p>
+      <div class="requirements">
+        <h4>Requirements:</h4>
+        <ul>
+          <li>Gymnastics or martial arts background</li>
+          <li>Comfortable with night shifts</li>
+          <li>Basic detective skills</li>
+          <li>Must provide own costume</li>
+        </ul>
+      </div>
+      <div class="benefits">
+        <h4>Benefits:</h4>
+        <ul>
+          <li>Advanced gadget training</li>
+          <li>Mentorship program</li>
+          <li>Cave parking included</li>
+        </ul>
+      </div>
+      <button class="btn btn-hero">Apply Now</button>
+    </div>
+
+    <!-- Villain Position -->
+    <div class="job-card" data-category="villain">
+      <h3>Evil Scientist</h3>
+      <p class="company">Legion of Doom</p>
+      <p class="location">📍 Secret Underground Lab</p>
+      <div class="requirements">
+        <h4>Requirements:</h4>
+        <ul>
+          <li>PhD in Mad Science or equivalent</li>
+          <li>Experience with doomsday devices</li>
+          <li>Maniacal laugh required</li>
+          <li>Must bring own lab coat</li>
+        </ul>
+      </div>
+      <div class="benefits">
+        <h4>Benefits:</h4>
+        <ul>
+          <li>Unlimited funding for evil experiments</li>
+          <li>Minion assistance</li>
+          <li>Volcano lair access</li>
+        </ul>
+      </div>
+      <button class="btn btn-hero">Apply Now</button>
+    </div>
+
+    <!-- Henchman Position -->
+    <div class="job-card" data-category="henchman">
+      <h3>Senior Henchman</h3>
+      <p class="company">Hydra Industries</p>
+      <p class="location">📍 Various Secret Bases</p>
+      <div class="requirements">
+        <h4>Requirements:</h4>
+        <ul>
+          <li>5+ years henching experience</li>
+          <li>Ability to work in teams</li>
+          <li>Basic combat training</li>
+          <li>Willing to wear uniform</li>
+        </ul>
+      </div>
+      <div class="benefits">
+        <h4>Benefits:</h4>
+        <ul>
+          <li>Health insurance</li>
+          <li>Paid vacation</li>
+          <li>Uniform provided</li>
+        </ul>
+      </div>
+      <button class="btn btn-hero">Apply Now</button>
+    </div>
+
+    <!-- Support Staff -->
+    <div class="job-card" data-category="support">
+      <h3>Superhero Equipment Manager</h3>
+      <p class="company">Stark Industries</p>
+      <p class="location">📍 New York City</p>
+      <div class="requirements">
+        <h4>Requirements:</h4>
+        <ul>
+          <li>Experience with advanced tech</li>
+          <li>Inventory management skills</li>
+          <li>Security clearance required</li>
+          <li>Available for emergency calls</li>
+        </ul>
+      </div>
+      <div class="benefits">
+        <h4>Benefits:</h4>
+        <ul>
+          <li>Competitive salary</li>
+          <li>Tech training provided</li>
+          <li>Employee discount on gear</li>
+        </ul>
+      </div>
+      <button class="btn btn-hero">Apply Now</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const jobCards = document.querySelectorAll('.job-card');
+
+    function filterJobs() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const selectedCategory = categoryFilter.value;
+
+        jobCards.forEach(card => {
+            const cardText = card.textContent.toLowerCase();
+            const cardCategory = card.dataset.category;
+            
+            const matchesSearch = cardText.includes(searchTerm);
+            const matchesCategory = selectedCategory === 'all' || cardCategory === selectedCategory;
+
+            card.style.display = matchesSearch && matchesCategory ? 'block' : 'none';
+        });
+    }
+
+    searchInput.addEventListener('input', filterJobs);
+    categoryFilter.addEventListener('change', filterJobs);
+});
+</script>
+
+```

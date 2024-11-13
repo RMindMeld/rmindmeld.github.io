@@ -1,0 +1,32 @@
+---
+title: "The Mana Feast: A World of Warcraft Culinary Adventure"
+image: assets/images/restaurant_ext.jpeg
+about:
+  template: solana
+---
+
+# Welcome to The Mana Feast! 🍽️🐉
+
+Greetings, brave adventurers and culinary heroes! Step into The Mana Feast, where every meal is an epic quest for your taste buds.
+
+## Our Story
+
+Nestled in the heart of Azeroth's most vibrant culinary district, The Mana Feast is more than just a restaurant—it's a gastronomic journey that transcends realms. Founded by a retired Pandaren chef and a wandering Tauren cook, our establishment brings together flavors from across the World of Warcraft.
+
+## What Makes Us Unique
+
+- **Faction-Neutral Cuisine**: Enjoy dishes that unite Alliance and Horde alike!
+- **Magical Ingredients**: Sourced from the most exotic locations in Azeroth
+- **Legendary Dining Experience**: Each meal tells a story of adventure
+
+## Today's Special: Dalaran Delight
+
+![Dalaran Delight Dish](assets/images/dalaran_delight.jpeg)
+
+A mystical fusion of Pandaren spices and Dalaran arcane cuisine. Guaranteed to restore more hit points than a healing potion! 🧙‍♂️🍲
+
+## Reservation Portals Open!
+
+[Book Your Culinary Quest](/reservations.qmd){.btn .btn-primary}
+
+*Disclaimer: No actual dragons were harmed in the making of our menu.*

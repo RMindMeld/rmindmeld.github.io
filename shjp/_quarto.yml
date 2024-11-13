@@ -1,0 +1,46 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Metropolis Job Board"
+  navbar:
+    logo: assets/hero-logo.svg
+    left:
+      - href: index.qmd
+        text: Home
+      - href: jobs.qmd
+        text: Job Listings
+      - href: heroes.qmd
+        text: Heroes Directory
+      - href: villains.qmd
+        text: Villains Directory
+      - href: submit.qmd
+        text: Post a Job
+      - href: instructions.qmd
+        text: Update Instructions
+  search: 
+    location: navbar
+    type: overlay
+
+  page-footer:
+    left: "© 2024 Metropolis Job Board. For the greater good of our city."
+    right: 
+      - icon: github
+        href: https://github.com
+
+format:
+  html:
+    theme: 
+      - superhero
+      - styles/custom.scss
+    css: styles/custom.scss
+    toc: true
+    page-layout: full
+    code-tools: true
+    code-copy: true
+    
+metadata-files: 
+  - _listings.yml  # This will store our job listings data
+  - _heroes.yml    # This will store our heroes directory data
+  - _villains.yml  # This will store our villains directory data

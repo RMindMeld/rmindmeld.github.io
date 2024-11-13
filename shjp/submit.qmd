@@ -1,0 +1,212 @@
+---
+title: "Post a Job"
+format: 
+  html:
+    page-layout: full
+    css: styles/custom.scss
+---
+
+
+```{=html}
+
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="job-form">
+        <h2 class="text-center mb-4">Post Your Job Opening</h2>
+        
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="needs-validation" novalidate>
+          <!-- Organization Details -->
+          <div class="mb-4">
+            <h3>Organization Details</h3>
+            <div class="form-group">
+              <label for="orgName">Organization Name *</label>
+              <input type="text" class="form-control" id="orgName" name="orgName" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="orgType">Organization Type *</label>
+              <select class="form-control" id="orgType" name="orgType" required>
+                <option value="">Select organization type...</option>
+                <option value="hero">Hero Organization</option>
+                <option value="villain">Villain Organization</option>
+                <option value="neutral">Neutral Organization</option>
+                <option value="government">Government Agency</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="location">Base Location *</label>
+              <input type="text" class="form-control" id="location" name="location" required>
+            </div>
+          </div>
+
+          <!-- Job Details -->
+          <div class="mb-4">
+            <h3>Job Details</h3>
+            <div class="form-group">
+              <label for="position">Position Title *</label>
+              <input type="text" class="form-control" id="position" name="position" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="jobType">Job Type *</label>
+              <select class="form-control" id="jobType" name="jobType" required>
+                <option value="">Select job type...</option>
+                <option value="hero">Hero</option>
+                <option value="sidekick">Sidekick</option>
+                <option value="villain">Villain</option>
+                <option value="henchman">Henchman</option>
+                <option value="support">Support Staff</option>
+                <option value="intern">Intern</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="experience">Experience Required *</label>
+              <select class="form-control" id="experience" name="experience" required>
+                <option value="">Select experience level...</option>
+                <option value="entry">Entry Level (0-2 years)</option>
+                <option value="intermediate">Intermediate (3-5 years)</option>
+                <option value="senior">Senior (5+ years)</option>
+                <option value="veteran">Veteran (10+ years)</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="powers">Required Powers/Skills (comma-separated) *</label>
+              <input type="text" class="form-control" id="powers" name="powers" required>
+              <small class="form-text text-muted">e.g., Flight, Super Strength, Hacking, Evil Laugh</small>
+            </div>
+          </div>
+
+          <!-- Job Description -->
+          <div class="mb-4">
+            <h3>Job Description</h3>
+            <div class="form-group">
+              <label for="description">Detailed Description *</label>
+              <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="responsibilities">Key Responsibilities *</label>
+              <textarea class="form-control" id="responsibilities" name="responsibilities" rows="4" required></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="benefits">Benefits</label>
+              <textarea class="form-control" id="benefits" name="benefits" rows="3"></textarea>
+            </div>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="mb-4">
+            <h3>Contact Information</h3>
+            <div class="form-group">
+              <label for="contactName">Contact Person *</label>
+              <input type="text" class="form-control" id="contactName" name="contactName" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="contactEmail">Contact Email *</label>
+              <input type="email" class="form-control" id="contactEmail" name="contactEmail" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="contactPhone">Contact Phone</label>
+              <input type="tel" class="form-control" id="contactPhone" name="contactPhone">
+            </div>
+          </div>
+
+          <!-- Additional Options -->
+          <div class="mb-4">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="urgent" name="urgent">
+              <label class="form-check-label" for="urgent">Mark as Urgent</label>
+            </div>
+            
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="confidential" name="confidential">
+              <label class="form-check-label" for="confidential">Keep Organization Anonymous</label>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-hero btn-lg">Submit Job Posting</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Form validation
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    
+    form.addEventListener('submit', function(event) {
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        
+        form.classList.add('was-validated');
+    });
+});
+</script>
+
+<style>
+.job-form {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.job-form h3 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--accent-color);
+    color: white;
+    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+}
+
+.form-text {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-hero {
+    margin-top: 1rem;
+    padding: 0.75rem 2rem;
+}
+
+.was-validated .form-control:invalid {
+    border-color: #dc3545;
+    background-image: none;
+}
+
+.was-validated .form-control:valid {
+    border-color: #28a745;
+    background-image: none;
+}
+</style>
+
+```

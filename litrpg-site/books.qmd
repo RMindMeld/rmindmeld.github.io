@@ -1,0 +1,132 @@
+---
+title: "Books"
+subtitle: "The Crystal Codex Saga Series"
+---
+
+::: {.content-section}
+# The Crystal Codex Saga
+
+Dive into a world where virtual reality meets ancient magic, where every level gained could mean the difference between survival and deletion, and where the boundaries between the digital and physical realms blur with each passing moment.
+:::
+
+::: {.content-section}
+## Book 1: Initialization
+
+::: {.book-card}
+![Book 1 Cover](images/book1-cover.jpg)
+
+### The Crystal Codex: Initialization
+
+**Release Date:** 2024
+**Pages:** 384
+**Status:** Available Now
+
+#### Synopsis
+When brilliant programmer Sarah Chen accepts an invitation to beta test The Crystal Codex, she expects cutting-edge VR gaming. Instead, she discovers an ancient system that bridges technology and magic, where player progression doesn't just affect avatars—it transforms reality itself.
+
+As Sarah delves deeper into the game's mysteries, she uncovers a terrifying truth: the crystals powering the game are awakening, and their power could either revolutionize both worlds or destroy them completely.
+
+#### Key Features
+- Detailed progression system
+- Unique blend of programming and magic
+- Real-world consequences
+- Complex character relationships
+- Multiple story paths
+
+[Read Sample Chapter]{.btn .btn-primary .glow-effect}
+[Purchase Now]{.btn .btn-secondary}
+:::
+:::
+
+::: {.content-section .bg-dark}
+## Upcoming Releases
+
+::: {.row}
+::: {.col-md-6}
+::: {.book-card}
+### Book 2: Integration
+
+**Expected Release:** Late 2024
+
+#### Preview
+The battle for control of the Crystal Network escalates as Sarah and her allies discover ancient debugging protocols that could either stabilize or crash both realities. But with rival factions emerging and system corruption spreading, time is running out.
+
+[Pre-order]{.btn .btn-secondary}
+:::
+:::
+
+::: {.col-md-6}
+::: {.book-card}
+### Book 3: Compilation
+
+**Expected Release:** Early 2025
+
+#### Preview
+The final confrontation looms as the boundaries between virtual and physical worlds collapse. Sarah must make the ultimate choice: reset the system and lose everything, or risk a complete merger of realities with unknown consequences.
+
+[Join Waitlist]{.btn .btn-secondary}
+:::
+:::
+:::
+:::
+
+::: {.content-section}
+## Reading Order
+
+1. The Crystal Codex: Initialization
+   - Bonus Novella: "Debug Mode"
+2. The Crystal Codex: Integration
+   - Side Story: "Network Protocols"
+3. The Crystal Codex: Compilation
+   - Prequel Story: "System Architecture"
+
+## Series Features
+
+::: {.row}
+::: {.col-md-4}
+### Progression System
+- Detailed character stats
+- Unique skill trees
+- Multiple class combinations
+- Real-world skill integration
+:::
+
+::: {.col-md-4}
+### World Building
+- Rich cyberpunk fantasy setting
+- Complex magic system
+- Technological advancement
+- Historical mysteries
+:::
+
+::: {.col-md-4}
+### Character Development
+- Deep character progression
+- Meaningful choices
+- Relationship dynamics
+- Personal growth arcs
+:::
+:::
+:::
+
+::: {.content-section .bg-dark}
+## Companion Materials
+
+::: {.row}
+::: {.col-md-6}
+### Digital Extras
+- Character sheets
+- World maps
+- Skill trees
+- Concept art
+:::
+
+::: {.col-md-6}
+### Bonus Content
+- Author's notes
+- Behind-the-scenes
+- Development logs
+- Fan art gallery
+:::
+:::
+:::

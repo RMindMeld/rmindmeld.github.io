@@ -1,0 +1,212 @@
+---
+title: "Heroes Directory"
+format: 
+  html:
+    page-layout: full
+    css: styles/custom.scss
+---
+
+
+ 
+
+```{=html}
+
+<div class="container py-5">
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search heroes...">
+    </div>
+    <div class="col-md-3">
+      <select id="powerFilter" class="form-control">
+        <option value="all">All Powers</option>
+        <option value="strength">Super Strength</option>
+        <option value="flight">Flight</option>
+        <option value="tech">Technology</option>
+        <option value="magic">Magic</option>
+        <option value="speed">Super Speed</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <select id="experienceFilter" class="form-control">
+        <option value="all">All Experience Levels</option>
+        <option value="rookie">Rookie (0-2 years)</option>
+        <option value="experienced">Experienced (3-5 years)</option>
+        <option value="veteran">Veteran (5+ years)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="directory-grid" id="heroProfiles">
+    <!-- Strength Hero -->
+    <div class="profile-card" data-power="strength" data-experience="veteran">
+      <div class="profile-header">
+        <div class="profile-image" style="background-color: #FF4B4B;">
+          <span class="hero-initial">M</span>
+        </div>
+        <h3>Mighty Marvel</h3>
+        <span class="status-badge available">Available</span>
+      </div>
+      <div class="profile-details">
+        <p><strong>Powers:</strong> Super Strength, Invulnerability</p>
+        <p><strong>Experience:</strong> 7 years</p>
+        <p><strong>Location:</strong> Metropolis</p>
+        <p><strong>Specialties:</strong></p>
+        <ul>
+          <li>Building Demolition Control</li>
+          <li>Disaster Response</li>
+          <li>Team Leadership</li>
+        </ul>
+      </div>
+      <button class="btn btn-hero">Contact Hero</button>
+    </div>
+
+    <!-- Tech Hero -->
+    <div class="profile-card" data-power="tech" data-experience="experienced">
+      <div class="profile-header">
+        <div class="profile-image" style="background-color: #4B7BFF;">
+          <span class="hero-initial">T</span>
+        </div>
+        <h3>Tech Knight</h3>
+        <span class="status-badge busy">On Mission</span>
+      </div>
+      <div class="profile-details">
+        <p><strong>Powers:</strong> Advanced Technology, Genius Intellect</p>
+        <p><strong>Experience:</strong> 4 years</p>
+        <p><strong>Location:</strong> Silicon City</p>
+        <p><strong>Specialties:</strong></p>
+        <ul>
+          <li>Cybercrime Prevention</li>
+          <li>AI Threat Response</li>
+          <li>Gadget Innovation</li>
+        </ul>
+      </div>
+      <button class="btn btn-hero">Contact Hero</button>
+    </div>
+
+    <!-- Magic Hero -->
+    <div class="profile-card" data-power="magic" data-experience="veteran">
+      <div class="profile-header">
+        <div class="profile-image" style="background-color: #9B4BFF;">
+          <span class="hero-initial">M</span>
+        </div>
+        <h3>Mystic Mind</h3>
+        <span class="status-badge available">Available</span>
+      </div>
+      <div class="profile-details">
+        <p><strong>Powers:</strong> Sorcery, Telepathy</p>
+        <p><strong>Experience:</strong> 10 years</p>
+        <p><strong>Location:</strong> Mystical Realm</p>
+        <p><strong>Specialties:</strong></p>
+        <ul>
+          <li>Dimensional Threats</li>
+          <li>Magical Artifacts</li>
+          <li>Mind Protection</li>
+        </ul>
+      </div>
+      <button class="btn btn-hero">Contact Hero</button>
+    </div>
+
+    <!-- Speed Hero -->
+    <div class="profile-card" data-power="speed" data-experience="rookie">
+      <div class="profile-header">
+        <div class="profile-image" style="background-color: #FFD700;">
+          <span class="hero-initial">Q</span>
+        </div>
+        <h3>Quick Silver</h3>
+        <span class="status-badge training">In Training</span>
+      </div>
+      <div class="profile-details">
+        <p><strong>Powers:</strong> Super Speed, Quick Healing</p>
+        <p><strong>Experience:</strong> 1 year</p>
+        <p><strong>Location:</strong> Central City</p>
+        <p><strong>Specialties:</strong></p>
+        <ul>
+          <li>Rapid Response</li>
+          <li>Evacuation</li>
+          <li>Message Delivery</li>
+        </ul>
+      </div>
+      <button class="btn btn-hero">Contact Hero</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const powerFilter = document.getElementById('powerFilter');
+    const experienceFilter = document.getElementById('experienceFilter');
+    const heroCards = document.querySelectorAll('.profile-card');
+
+    function filterHeroes() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const selectedPower = powerFilter.value;
+        const selectedExperience = experienceFilter.value;
+
+        heroCards.forEach(card => {
+            const cardText = card.textContent.toLowerCase();
+            const cardPower = card.dataset.power;
+            const cardExperience = card.dataset.experience;
+            
+            const matchesSearch = cardText.includes(searchTerm);
+            const matchesPower = selectedPower === 'all' || cardPower === selectedPower;
+            const matchesExperience = selectedExperience === 'all' || cardExperience === selectedExperience;
+
+            card.style.display = matchesSearch && matchesPower && matchesExperience ? 'block' : 'none';
+        });
+    }
+
+    searchInput.addEventListener('input', filterHeroes);
+    powerFilter.addEventListener('change', filterHeroes);
+    experienceFilter.addEventListener('change', filterHeroes);
+});
+</script>
+
+<style>
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.hero-initial {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.available {
+    background-color: #28a745;
+    color: white;
+}
+
+.busy {
+    background-color: #dc3545;
+    color: white;
+}
+
+.training {
+    background-color: #ffc107;
+    color: black;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+</style>
+
+```
+
+ 

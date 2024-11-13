@@ -1,0 +1,148 @@
+---
+title: "The Crystal Codex Saga"
+page-layout: custom
+format:
+  html:
+    css: styles.css
+---
+
+::: {.main-container}
+
+::: {.hero-banner}
+# THE CRYSTAL CODEX SAGA {.hero-title}
+
+::: {.hero-text}
+Where Reality Meets Virtual Evolution
+:::
+
+::: {.hero-description}
+Step into 2045, where the boundaries between virtual reality and our world dissolve. Ancient crystals pulse with mysterious power, and your next login could alter the course of two worlds.
+:::
+
+::: {.cta-container}
+[ENTER THE CODEX]{.cta-button}
+:::
+:::
+
+
+
+::: {.feature-grid}
+::: {.feature-card}
+### Virtual Evolution
+The line between reality and digital existence blurs in this groundbreaking MMORPG where every choice echoes across dimensions.
+:::
+
+::: {.feature-card}
+### Crystal Power
+Harness ancient crystals that transcend the digital realm, unlocking abilities that challenge the very nature of existence.
+:::
+
+::: {.feature-card}
+### Dual Worlds
+Your actions ripple through both the virtual and physical realms, where the stakes are more real than anyone imagined.
+:::
+:::
+
+::: {.book-showcase}
+## LATEST RELEASE
+
+::: {.book-container}
+### The Crystal Codex: Initialization
+
+::: {.book-description}
+Follow Sarah Chen's journey as she uncovers the truth behind The Crystal Codex - a game that holds the key to an ancient power capable of reshaping reality itself.
+:::
+
+[DISCOVER THE STORY →]{.book-cta}
+:::
+:::
+
+
+
+:::: {.class-section}
+
+## CHOOSE YOUR PATH
+
+:::{.class-grid}
+
+:::{.class-card .crystal-mage}
+
+### Crystal Mage
+
+Master of ancient digital energies
+
+:::
+
+:::{.class-card .techno-warrior}
+
+### Techno Warrior
+
+Fusion of strength and technology
+
+:::
+
+:::{.class-card .data-rogue}
+
+### Data Rogue
+
+Shadow walker of the digital realm
+
+:::
+
+:::{.class-card .quantum-knight}
+
+### Quantum Knight
+
+Guardian of virtual dimensions
+
+:::
+
+:::{.class-card .neural-healer}
+
+### Neural Healer
+
+Mender of code and consciousness
+
+:::
+
+:::
+
+::::
+
+:::{.features-section}
+## FORGE YOUR LEGEND
+
+::: {.features-list}
+- Intricate character progression systems
+- Expansive skill trees with unique combinations
+- Rich, immersive world-building
+- Actions that impact both virtual and real worlds
+- Multiple branching story paths
+:::
+:::
+
+::: {.community-section}
+## JOIN THE NETWORK
+
+::: {.community-grid}
+::: {.community-card}
+### DISCORD
+Connect with fellow adventurers
+[JOIN →]{.community-link}
+:::
+
+::: {.community-card}
+### NEWSLETTER
+Receive exclusive content
+[SUBSCRIBE →]{.community-link}
+:::
+
+::: {.community-card}
+### SOCIAL MEDIA
+Follow the saga
+[CONNECT →]{.community-link}
+:::
+:::
+:::
+
+:::

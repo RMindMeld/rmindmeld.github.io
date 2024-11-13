@@ -1,0 +1,122 @@
+# Villains Directory Data
+# Last updated: 2024-01-20
+
+- id: dr_doomsday
+  name: "Dr. Doomsday"
+  specialty: "Mad Science"
+  threat_level: "global"
+  base: "Volcanic Lair"
+  status: "recruiting"
+  seeking:
+    - "Lab Assistants"
+    - "Security Personnel"
+    - "Doomsday Device Engineers"
+  image: "villain_dr_doomsday.jpg"
+  requirements:
+    education: "PhD in Evil Sciences"
+    experience: "3+ years in doomsday device operation"
+    skills:
+      - "Advanced robotics"
+      - "Quantum mechanics"
+      - "Doomsday device maintenance"
+  benefits:
+    - "Comprehensive evil health insurance"
+    - "Volcano-view office"
+    - "Minion dental plan"
+    - "Evil 401k matching"
+
+- id: shadow_master
+  name: "Shadow Master"
+  specialty: "Criminal Enterprise"
+  threat_level: "national"
+  base: "Underground Network"
+  status: "planning"
+  seeking:
+    - "Stealth Operatives"
+    - "Tech Specialists"
+    - "Intelligence Analysts"
+  image: "villain_shadow_master.jpg"
+  requirements:
+    education: "Masters in Criminal Arts"
+    experience: "5+ years in stealth operations"
+    skills:
+      - "Advanced infiltration"
+      - "Cyber security"
+      - "Strategic planning"
+  benefits:
+    - "Competitive salary"
+    - "Stealth training program"
+    - "Identity protection services"
+    - "Remote work options"
+
+- id: the_trickster
+  name: "The Trickster"
+  specialty: "Chaos Creation"
+  threat_level: "local"
+  base: "Mobile Operations"
+  status: "active"
+  seeking:
+    - "Chaos Agents"
+    - "Distraction Specialists"
+    - "Prank Designers"
+  image: "villain_trickster.jpg"
+  requirements:
+    education: "Bachelor in Chaos Theory"
+    experience: "2+ years in practical jokes"
+    skills:
+      - "Creative thinking"
+      - "Quick improvisation"
+      - "Escape artistry"
+  benefits:
+    - "Flexible hours"
+    - "Prank supply allowance"
+    - "Legal defense coverage"
+    - "Chaos training workshops"
+
+- id: nightmare_lord
+  name: "Nightmare Lord"
+  specialty: "Supernatural"
+  threat_level: "cosmic"
+  base: "Dream Dimension"
+  status: "dormant"
+  seeking:
+    - "Dream Weavers"
+    - "Reality Warpers"
+    - "Nightmare Crafters"
+  image: "villain_nightmare_lord.jpg"
+  requirements:
+    education: "Doctorate in Dream Manipulation"
+    experience: "7+ years in reality warping"
+    skills:
+      - "Dream manipulation"
+      - "Reality distortion"
+      - "Fear amplification"
+  benefits:
+    - "Dream realm housing"
+    - "Reality bending powers"
+    - "Immortality package"
+    - "Dimensional travel allowance"
+
+- id: cyber_overlord
+  name: "Cyber Overlord"
+  specialty: "Technology Domination"
+  threat_level: "global"
+  base: "Digital Fortress"
+  status: "recruiting"
+  seeking:
+    - "AI Programmers"
+    - "Network Infiltrators"
+    - "Robot Engineers"
+  image: "villain_cyber_overlord.jpg"
+  requirements:
+    education: "PhD in Artificial Intelligence"
+    experience: "10+ years in cyber warfare"
+    skills:
+      - "AI development"
+      - "System hacking"
+      - "Robot army management"
+  benefits:
+    - "Cybernetic enhancements"
+    - "Digital immortality"
+    - "Virtual reality office"
+    - "Tech upgrade allowance"

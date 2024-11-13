@@ -1,0 +1,124 @@
+/*-- scss:defaults --*/
+// World of Warcraft Themed Styling - Enhanced Edition
+
+// Core Colors
+$dalaran-purple: #5B3A89;  // Rich magical purple
+$alliance-blue: #1F4C7D;   // Deep royal blue
+$horde-red: #8C1616;       // Deep crimson
+$ancient-gold: #DAA520;    // Rich, deeper gold
+$mystic-white: #E6E0FF;    // Slight purple tint for text
+$arcane-accent: #A056F7;   // Bright magical purple for highlights
+
+// Background Colors
+$bg-primary: #1A1A2E;      // Base dark color
+$bg-gradient-start: #1A1A2E;
+$bg-gradient-end: #2A2A4E;
+
+// Applying Styles
+body {
+  background: linear-gradient(135deg, $bg-gradient-start 0%, $bg-gradient-end 100%);
+  color: $mystic-white;
+  font-family: 'Morpheus', 'Trebuchet MS', sans-serif;
+}
+
+.navbar {
+  background: linear-gradient(180deg, rgba(26,26,46,0.95) 0%, rgba(42,42,78,0.95) 100%);
+  border-bottom: 2px solid $ancient-gold;
+  box-shadow: 0 2px 15px rgba($arcane-accent, 0.15);
+}
+
+.navbar-brand {
+  color: $ancient-gold !important;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba($arcane-accent, 0.5);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: lighten($ancient-gold, 10%) !important;
+    text-shadow: 0 0 15px rgba($arcane-accent, 0.8);
+  }
+}
+
+.nav-link {
+  color: $mystic-white !important;
+  transition: all 0.3s ease;
+  position: relative;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: $ancient-gold;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  &:hover {
+    color: $ancient-gold !important;
+    text-shadow: 0 0 8px rgba($arcane-accent, 0.5);
+    
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, $dalaran-purple 0%, $arcane-accent 100%);
+  border: 1px solid $ancient-gold;
+  box-shadow: 0 0 10px rgba($arcane-accent, 0.2);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: linear-gradient(135deg, lighten($dalaran-purple, 10%) 0%, lighten($arcane-accent, 10%) 100%);
+    border-color: lighten($ancient-gold, 10%);
+    box-shadow: 0 0 15px rgba($arcane-accent, 0.4);
+    transform: translateY(-1px);
+  }
+}
+
+// Headers with magical styling
+h1, h2, h3 {
+  color: $ancient-gold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5),
+               0 0 15px rgba($arcane-accent, 0.3);
+  position: relative;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, $ancient-gold, transparent);
+  }
+}
+
+// Card styling for content boxes
+.card {
+  background: rgba($bg-gradient-end, 0.7);
+  border: 1px solid rgba($ancient-gold, 0.3);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  
+  &:hover {
+    box-shadow: 0 8px 20px rgba($arcane-accent, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+}
+
+// Links within content
+a:not(.nav-link):not(.navbar-brand) {
+  color: $ancient-gold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: $arcane-accent;
+    text-shadow: 0 0 8px rgba($arcane-accent, 0.5);
+  }
+}

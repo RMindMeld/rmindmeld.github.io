@@ -1,0 +1,216 @@
+---
+title: "Villains Directory"
+format: 
+  html:
+    page-layout: full
+    css: styles/custom.scss
+---
+
+
+
+```{=html}
+
+<div class="container py-5">
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search villains...">
+    </div>
+    <div class="col-md-3">
+      <select id="specialtyFilter" class="form-control">
+        <option value="all">All Specialties</option>
+        <option value="mad-science">Mad Science</option>
+        <option value="world-domination">World Domination</option>
+        <option value="chaos">Chaos Creation</option>
+        <option value="criminal">Criminal Enterprise</option>
+        <option value="supernatural">Supernatural</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <select id="threatFilter" class="form-control">
+        <option value="all">All Threat Levels</option>
+        <option value="local">Local Threat</option>
+        <option value="national">National Threat</option>
+        <option value="global">Global Threat</option>
+        <option value="cosmic">Cosmic Threat</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="directory-grid" id="villainProfiles">
+    <!-- Mad Scientist Villain -->
+    <div class="profile-card" data-specialty="mad-science" data-threat="global">
+      <div class="profile-header">
+        <div class="profile-image" style="background-color: #4B7BFF;">
+          <span class="villain-initial">D</span>
+        </div>
+        <h3>Dr. Doomsday</h3>
+        <span class="status-badge recruiting">Recruiting</span>
+      </div>
+      <div class="profile-details">
+        <p><strong>Specialty:</strong> Mad Science, Doomsday Devices</p>
+        <p><strong>Threat Level:</strong> Global</p>
+        <p><strong>Base:</strong> Volcanic Lair</p>
+        <p><strong>Seeking:</strong></p>
+        <ul>
+          <li>Lab Assistants</li>
+          <li>Security Personnel</li>
+          <li>Doomsday Device Engineers</li>
+        </ul>
+      </div>
+      <button class="btn btn-hero">Submit Application</button>
+    </div>
+
+    <!-- Criminal Mastermind -->
+    <div class="profile-card" data-specialty="criminal" data-threat="national">
+      <div class="profile-header">
+        <div class="profile-image" style="background-color: #FF4B4B;">
+          <span class="villain-initial">S</span>
+        </div>
+        <h3>Shadow Master</h3>
+        <span class="status-badge planning">Planning Phase</span>
+      </div>
+      <div class="profile-details">
+        <p><strong>Specialty:</strong> Criminal Enterprise, Stealth Operations</p>
+        <p><strong>Threat Level:</strong> National</p>
+        <p><strong>Base:</strong> Underground Network</p>
+        <p><strong>Seeking:</strong></p>
+        <ul>
+          <li>Stealth Operatives</li>
+          <li>Tech Specialists</li>
+          <li>Intelligence Analysts</li>
+        </ul>
+      </div>
+      <button class="btn btn-hero">Submit Application</button>
+    </div>
+
+    <!-- Chaos Creator -->
+    <div class="profile-card" data-specialty="chaos" data-threat="local">
+      <div class="profile-header">
+        <div class="profile-image" style="background-color: #9B4BFF;">
+          <span class="villain-initial">T</span>
+        </div>
+        <h3>The Trickster</h3>
+        <span class="status-badge active">Active Recruitment</span>
+      </div>
+      <div class="profile-details">
+        <p><strong>Specialty:</strong> Chaos Creation, Pranks</p>
+        <p><strong>Threat Level:</strong> Local</p>
+        <p><strong>Base:</strong> Mobile Operations</p>
+        <p><strong>Seeking:</strong></p>
+        <ul>
+          <li>Chaos Agents</li>
+          <li>Distraction Specialists</li>
+          <li>Prank Designers</li>
+        </ul>
+      </div>
+      <button class="btn btn-hero">Submit Application</button>
+    </div>
+
+    <!-- Supernatural Villain -->
+    <div class="profile-card" data-specialty="supernatural" data-threat="cosmic">
+      <div class="profile-header">
+        <div class="profile-image" style="background-color: #FFD700;">
+          <span class="villain-initial">N</span>
+        </div>
+        <h3>Nightmare Lord</h3>
+        <span class="status-badge dormant">Dormant</span>
+      </div>
+      <div class="profile-details">
+        <p><strong>Specialty:</strong> Supernatural Powers, Dream Manipulation</p>
+        <p><strong>Threat Level:</strong> Cosmic</p>
+        <p><strong>Base:</strong> Dream Dimension</p>
+        <p><strong>Seeking:</strong></p>
+        <ul>
+          <li>Dream Weavers</li>
+          <li>Reality Warpers</li>
+          <li>Nightmare Crafters</li>
+        </ul>
+      </div>
+      <button class="btn btn-hero">Submit Application</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const specialtyFilter = document.getElementById('specialtyFilter');
+    const threatFilter = document.getElementById('threatFilter');
+    const villainCards = document.querySelectorAll('.profile-card');
+
+    function filterVillains() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const selectedSpecialty = specialtyFilter.value;
+        const selectedThreat = threatFilter.value;
+
+        villainCards.forEach(card => {
+            const cardText = card.textContent.toLowerCase();
+            const cardSpecialty = card.dataset.specialty;
+            const cardThreat = card.dataset.threat;
+            
+            const matchesSearch = cardText.includes(searchTerm);
+            const matchesSpecialty = selectedSpecialty === 'all' || cardSpecialty === selectedSpecialty;
+            const matchesThreat = selectedThreat === 'all' || cardThreat === selectedThreat;
+
+            card.style.display = matchesSearch && matchesSpecialty && matchesThreat ? 'block' : 'none';
+        });
+    }
+
+    searchInput.addEventListener('input', filterVillains);
+    specialtyFilter.addEventListener('change', filterVillains);
+    threatFilter.addEventListener('change', filterVillains);
+});
+</script>
+
+<style>
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.villain-initial {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.recruiting {
+    background-color: #28a745;
+    color: white;
+}
+
+.planning {
+    background-color: #ffc107;
+    color: black;
+}
+
+.active {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.dormant {
+    background-color: #6c757d;
+    color: white;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+</style>
+
+
+```

@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "The Mana Feast"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: menu.qmd
+        text: Menu
+      - href: about.qmd
+        text: About Us
+      - href: reservations.qmd
+        text: Reservations
+
+  favicon: assets/wow-icon.svg
+
+format:
+  html:
+    theme: 
+      - darkly
+      - styles/custom.scss
+    css: styles/custom.css

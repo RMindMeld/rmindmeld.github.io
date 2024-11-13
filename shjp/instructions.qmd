@@ -1,0 +1,230 @@
+---
+title: "Update Instructions"
+format: 
+  html:
+    page-layout: full
+    css: styles/custom.scss
+---
+
+```{=html}
+
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="content-section">
+        <h1 class="text-center mb-5">How to Update the Job Board</h1>
+
+        <div class="section mb-5">
+          <h2>1. File Structure</h2>
+          <div class="code-block">
+            <pre>
+shjp/
+├── _data/
+│   ├── heroes.yml      # Heroes directory data
+│   ├── villains.yml    # Villains directory data
+│   └── jobs.yml        # Job listings data
+├── assets/
+│   └── images/         # Profile and listing images
+└── pages/
+    ├── heroes.qmd      # Heroes page template
+    ├── villains.qmd    # Villains page template
+    └── jobs.qmd        # Jobs page template</pre>
+          </div>
+        </div>
+
+        <div class="section mb-5">
+          <h2>2. Data File Formats</h2>
+          
+          <h3>heroes.yml Format</h3>
+          <div class="code-block">
+            <pre>
+- id: hero_1
+  name: "Hero Name"
+  powers: ["Power1", "Power2"]
+  experience: "5 years"
+  location: "City Name"
+  status: "available"
+  specialties:
+    - "Specialty 1"
+    - "Specialty 2"
+  image: "hero1.jpg"</pre>
+          </div>
+
+          <h3>villains.yml Format</h3>
+          <div class="code-block">
+            <pre>
+- id: villain_1
+  name: "Villain Name"
+  specialty: "Evil Specialty"
+  threat_level: "global"
+  base: "Secret Location"
+  status: "recruiting"
+  seeking:
+    - "Position 1"
+    - "Position 2"
+  image: "villain1.jpg"</pre>
+          </div>
+
+          <h3>jobs.yml Format</h3>
+          <div class="code-block">
+            <pre>
+- id: job_1
+  title: "Job Title"
+  organization: "Organization Name"
+  type: "hero/villain/support"
+  location: "Job Location"
+  experience_required: "X years"
+  skills_required:
+    - "Skill 1"
+    - "Skill 2"
+  benefits:
+    - "Benefit 1"
+    - "Benefit 2"
+  status: "open/closed"</pre>
+          </div>
+        </div>
+
+        <div class="section mb-5">
+          <h2>3. Adding New Entries</h2>
+          
+          <h3>Step-by-Step Process:</h3>
+          <ol class="instruction-list">
+            <li>Navigate to the appropriate YAML file in the _data directory</li>
+            <li>Copy an existing entry as a template</li>
+            <li>Modify all fields with new information</li>
+            <li>Ensure all required fields are filled</li>
+            <li>Maintain proper YAML indentation</li>
+            <li>Save the file</li>
+          </ol>
+
+          <div class="alert alert-info">
+            <strong>Note:</strong> Always maintain the exact indentation and format structure to prevent errors.
+          </div>
+        </div>
+
+        <div class="section mb-5">
+          <h2>4. Updating Existing Entries</h2>
+          
+          <h3>To update an entry:</h3>
+          <ol class="instruction-list">
+            <li>Locate the entry by its ID in the appropriate YAML file</li>
+            <li>Modify only the fields that need updating</li>
+            <li>Keep all other fields unchanged</li>
+            <li>Save the file</li>
+          </ol>
+
+          <div class="alert alert-warning">
+            <strong>Important:</strong> Do not change the ID of existing entries as they may be referenced elsewhere.
+          </div>
+        </div>
+
+        <div class="section mb-5">
+          <h2>5. Image Guidelines</h2>
+          
+          <h3>Image Requirements:</h3>
+          <ul class="requirement-list">
+            <li>Format: JPG or PNG</li>
+            <li>Size: Maximum 1MB</li>
+            <li>Dimensions: 800x800 pixels (square) recommended</li>
+            <li>Resolution: 72 DPI minimum</li>
+          </ul>
+
+          <h3>Image Naming Convention:</h3>
+          <div class="code-block">
+            <pre>
+hero_[id].jpg    # For hero images
+villain_[id].jpg # For villain images
+job_[id].jpg     # For job listing images</pre>
+          </div>
+        </div>
+
+        <div class="section mb-5">
+          <h2>6. Best Practices</h2>
+          
+          <ul class="best-practices-list">
+            <li>Always backup data files before making major changes</li>
+            <li>Use clear, descriptive names for all entries</li>
+            <li>Keep descriptions concise but informative</li>
+            <li>Update status fields promptly</li>
+            <li>Remove or archive outdated entries</li>
+            <li>Test changes in a development environment first</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>7. Need Help?</h2>
+          
+          <p>If you encounter any issues or need assistance:</p>
+          <ul class="help-list">
+            <li>Check the error messages in the build logs</li>
+            <li>Verify YAML syntax using a YAML validator</li>
+            <li>Contact the technical team for support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.content-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section {
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.code-block {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+.code-block pre {
+    margin: 0;
+    color: #e9ecef;
+}
+
+.instruction-list, .requirement-list, .best-practices-list, .help-list {
+    padding-left: 1.5rem;
+}
+
+.instruction-list li, .requirement-list li, .best-practices-list li, .help-list li {
+    margin-bottom: 0.5rem;
+}
+
+.alert {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: inherit;
+}
+
+.alert-info {
+    border-left: 4px solid var(--accent-color);
+}
+
+.alert-warning {
+    border-left: 4px solid #ffc107;
+}
+
+h2 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 1.5rem 0 1rem;
+}
+</style>
+
+```

@@ -1,0 +1,44 @@
+---
+title: "Reserve Your Culinary Adventure"
+---
+
+# Book Your Table at The Mana Feast
+
+## Reservation Ritual
+
+Fill out the magical form below to secure your dining quest! Choose your preferred time portal carefully.
+
+```{=html}
+<form>
+  <div class="mb-3">
+    <label for="name" class="form-label">Adventurer's Name</label>
+    <input type="text" class="form-control" id="name" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Magical Communication Crystal (Email)</label>
+    <input type="email" class="form-control" id="email" required>
+  </div>
+  <div class="mb-3">
+    <label for="date" class="form-label">Preferred Dining Time</label>
+    <input type="date" class="form-control" id="date" required>
+  </div>
+  <div class="mb-3">
+    <label for="guests" class="form-label">Number of Adventurers</label>
+    <input type="number" class="form-control" id="guests" min="1" max="10" required>
+  </div>
+  <div class="mb-3">
+    <label for="specialRequests" class="form-label">Special Requests (Dietary Restrictions, Allergies)</label>
+    <textarea class="form-control" id="specialRequests" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Summon Reservation</button>
+</form>
+```
+
+## Reservation Guidelines
+
+- Reservations are binding magical contracts
+- Cancellations must be made at least 24 hours before your scheduled time
+- Maximum party size: 10 adventurers
+- We accommodate most dietary restrictions and magical dietary needs
+
+*Teleportation and portal services not included.*

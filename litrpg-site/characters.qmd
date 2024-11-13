@@ -1,0 +1,162 @@
+---
+title: "Characters"
+subtitle: "Meet the Heroes of The Crystal Codex"
+---
+
+::: {.content-section}
+# Main Characters
+
+Discover the key players in The Crystal Codex Saga, each with their own unique abilities, motivations, and role in the story.
+:::
+
+::: {.content-section}
+## Protagonists
+
+::: {.character-profile}
+![Sarah Chen](images/character-sarah.jpg)
+
+### Sarah Chen
+**Class:** Crystal Mage / Code Weaver
+**Level:** 42
+**Specialization:** Crystal Interface Programming
+
+::: {.stat-box}
+#### Key Stats
+- Programming: 98/100
+- Crystal Affinity: 87/100
+- Neural Integration: 92/100
+- Physical Endurance: 65/100
+:::
+
+A brilliant programmer who discovers she can manipulate the fabric of reality through the Crystal Codex's unique interface. Sarah's ability to understand both the technical and magical aspects of the system makes her uniquely qualified to uncover its secrets.
+
+::: {.magic-text}
+Signature Ability: "Code Crystallization" - Transforms written code into crystalline structures that can alter reality.
+:::
+:::
+
+::: {.character-profile}
+![Marcus Vale](images/character-marcus.jpg)
+
+### Marcus Vale
+**Class:** Quantum Knight
+**Level:** 38
+**Specialization:** Crystal-Enhanced Combat
+
+::: {.stat-box}
+#### Key Stats
+- Combat Prowess: 95/100
+- Quantum Manipulation: 88/100
+- Shield Generation: 91/100
+- Leadership: 85/100
+:::
+
+A former military programmer turned virtual knight, Marcus combines his combat training with an understanding of quantum mechanics to protect the digital realm.
+
+::: {.magic-text}
+Signature Ability: "Quantum Shield Matrix" - Creates an impenetrable barrier using quantum entanglement and crystal energy.
+:::
+:::
+
+::: {.character-profile}
+![Dr. Elena Santos](images/character-elena.jpg)
+
+### Dr. Elena Santos
+**Class:** Neural Healer
+**Level:** 45
+**Specialization:** Bio-Digital Integration
+
+::: {.stat-box}
+#### Key Stats
+- Healing: 96/100
+- Neural Science: 94/100
+- Crystal Medicine: 89/100
+- Research: 93/100
+:::
+
+A pioneering researcher in neural interface technology who discovered the therapeutic applications of crystal energy in both digital and physical healing.
+
+::: {.magic-text}
+Signature Ability: "Neural Restoration Wave" - Heals both code corruption and physical injuries using crystal-enhanced neural patterns.
+:::
+:::
+:::
+
+::: {.content-section .bg-dark}
+## Supporting Characters
+
+::: {.row}
+::: {.col-md-6}
+::: {.character-profile}
+### Kai Zhang
+**Class:** Data Rogue
+**Level:** 36
+**Role:** Information Broker
+
+A mysterious figure who moves between the physical and digital worlds, trading in valuable information about the Crystal Codex's hidden features.
+:::
+:::
+
+::: {.col-md-6}
+::: {.character-profile}
+### Diana Wright
+**Class:** Techno Warrior
+**Level:** 39
+**Role:** Security Specialist
+
+A corporate security expert who becomes crucial in defending against hostile takeover attempts of the Crystal Network.
+:::
+:::
+:::
+:::
+
+::: {.content-section}
+## Character Relationships
+
+::: {.relationship-map}
+### Core Team Dynamics
+- Sarah & Marcus: Strategic partnership evolving into trust
+- Elena & Sarah: Mentor/student relationship
+- Marcus & Elena: Mutual respect and professional alliance
+- Kai & Diana: Complex rivalry with occasional collaboration
+
+### Key Interactions
+- Training sequences
+- Team missions
+- Personal conflicts
+- Character growth moments
+:::
+:::
+
+::: {.content-section .bg-dark}
+## Character Progression
+
+### Level System
+- Starting Level: 1
+- Current Max Level: 50
+- Skill Points per Level: 3
+- Specialization Unlocks: Every 5 levels
+- Unique Abilities: Every 10 levels
+
+### Class Synergies
+- Crystal Mage + Neural Healer: Enhanced healing algorithms
+- Quantum Knight + Techno Warrior: Advanced combat systems
+- Data Rogue + Code Weaver: Improved system infiltration
+:::
+
+::: {.content-section}
+## Character Development
+
+### Growth Metrics
+- Personal story arcs
+- Skill advancement
+- Relationship development
+- Quest completion
+- Achievement unlocks
+
+### Future Potential
+- Advanced class evolutions
+- New ability combinations
+- Cross-class training
+- Special event participation
+:::

@@ -1,0 +1,23 @@
+{
+  "assets/images/image_prompts.md": {
+    "image_prompts.html": "844b53ad"
+  },
+  "heroes.qmd": {
+    "heroes.html": "1965d0a5"
+  },
+  "index.qmd": {
+    "index.html": "053d3215"
+  },
+  "instructions.qmd": {
+    "instructions.html": "0af47196"
+  },
+  "jobs.qmd": {
+    "jobs.html": "bea0d481"
+  },
+  "submit.qmd": {
+    "submit.html": "27223ea6"
+  },
+  "villains.qmd": {
+    "villains.html": "ac58519d"
+  }
+}

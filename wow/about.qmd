@@ -1,0 +1,38 @@
+---
+title: "About The Mana Feast"
+about:
+    template: jolla
+    image: assets/images/chef_team.jpeg
+---
+
+# Our Culinary Saga
+
+## The Founders
+
+Meet the masterminds behind The Mana Feast:
+
+### Chef Brewmaster Thunderhoof (Tauren)
+A retired warrior turned culinary artist, Chef Thunderhoof brings robust flavors and hearty recipes from the plains of Mulgore.
+
+### Sous Chef Whisperwind (Night Elf)
+With centuries of culinary experience, Chef Whisperwind adds delicate, arcane-infused techniques to our menu.
+
+## Our Philosophy
+
+At The Mana Feast, we believe food is more than sustenance—it's an adventure. Our chefs draw inspiration from every corner of Azeroth, creating dishes that tell stories, heal wounds, and bring factions together.
+
+## Sustainability and Sourcing
+
+We pride ourselves on:
+- Locally sourced ingredients from Azeroth's finest farms
+- Ethical hunting practices
+- Supporting small agricultural communities
+- Minimal magical waste
+
+## Awards and Recognitions
+
+- "Best Faction-Neutral Cuisine" - Dalaran Culinary Guild, 3 years running
+- "Most Innovative Menu" - Stormwind Gastronomy Society
+- "Safest Dining Experience" - Ironforge Health Commission
+
+*Come for the food, stay for the adventure!*

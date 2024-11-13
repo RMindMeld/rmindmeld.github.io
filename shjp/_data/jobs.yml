@@ -1,0 +1,142 @@
+# Job Listings Data
+# Last updated: 2024-01-20
+
+- id: senior_hero_jl
+  title: "Senior Superhero"
+  organization: "Justice League"
+  type: "hero"
+  location: "Watchtower, Earth Orbit"
+  status: "open"
+  posted_date: "2024-01-15"
+  deadline: "2024-02-15"
+  experience_required: "10+ years"
+  requirements:
+    - "10+ years of crime-fighting experience"
+    - "At least one superpower or advanced tech suit"
+    - "Team player mentality"
+    - "Willing to work holidays during world-ending events"
+  skills_required:
+    - "Leadership"
+    - "Crisis management"
+    - "Combat expertise"
+    - "Public relations"
+  benefits:
+    - "Full medical coverage (including supervillain battles)"
+    - "401k with dimension-traveling benefits"
+    - "Unlimited cape cleaning"
+  salary_range: "Competitive cosmic-level compensation"
+  application_url: "https://justice-league.org/careers"
+  contact_email: "recruiting@justice-league.org"
+  priority: "high"
+
+- id: sidekick_wayne
+  title: "Junior Sidekick"
+  organization: "Wayne Enterprises"
+  type: "sidekick"
+  location: "Gotham City"
+  status: "open"
+  posted_date: "2024-01-18"
+  deadline: "2024-02-28"
+  experience_required: "0-2 years"
+  requirements:
+    - "Gymnastics or martial arts background"
+    - "Comfortable with night shifts"
+    - "Basic detective skills"
+    - "Must provide own costume"
+  skills_required:
+    - "Acrobatics"
+    - "Investigation"
+    - "Combat training"
+    - "Stealth operations"
+  benefits:
+    - "Advanced gadget training"
+    - "Mentorship program"
+    - "Cave parking included"
+  salary_range: "Entry-level hero compensation"
+  application_url: "https://wayne-enterprises.com/careers"
+  contact_email: "bat-recruiting@wayne-enterprises.com"
+  priority: "medium"
+
+- id: evil_scientist
+  title: "Evil Scientist"
+  organization: "Legion of Doom"
+  type: "villain"
+  location: "Secret Underground Lab"
+  status: "open"
+  posted_date: "2024-01-10"
+  deadline: "2024-03-01"
+  experience_required: "5+ years"
+  requirements:
+    - "PhD in Mad Science or equivalent"
+    - "Experience with doomsday devices"
+    - "Maniacal laugh required"
+    - "Must bring own lab coat"
+  skills_required:
+    - "Doomsday device creation"
+    - "Evil plan development"
+    - "Minion management"
+    - "Dramatic monologuing"
+  benefits:
+    - "Unlimited funding for evil experiments"
+    - "Minion assistance"
+    - "Volcano lair access"
+  salary_range: "Villainous compensation package"
+  application_url: "https://legion-of-doom.evil/careers"
+  contact_email: "evil.hr@legion-of-doom.evil"
+  priority: "high"
+
+- id: senior_henchman
+  title: "Senior Henchman"
+  organization: "Hydra Industries"
+  type: "henchman"
+  location: "Various Secret Bases"
+  status: "open"
+  posted_date: "2024-01-20"
+  deadline: "2024-02-20"
+  experience_required: "5+ years"
+  requirements:
+    - "5+ years henching experience"
+    - "Ability to work in teams"
+    - "Basic combat training"
+    - "Willing to wear uniform"
+  skills_required:
+    - "Team coordination"
+    - "Base security"
+    - "Equipment maintenance"
+    - "Evil organization protocols"
+  benefits:
+    - "Health insurance"
+    - "Paid vacation"
+    - "Uniform provided"
+  salary_range: "Competitive henchman package"
+  application_url: "https://hydra-industries.com/careers"
+  contact_email: "hench.hiring@hydra-industries.com"
+  priority: "medium"
+
+- id: equipment_manager
+  title: "Superhero Equipment Manager"
+  organization: "Stark Industries"
+  type: "support"
+  location: "New York City"
+  status: "open"
+  posted_date: "2024-01-17"
+  deadline: "2024-02-17"
+  experience_required: "3+ years"
+  requirements:
+    - "Experience with advanced tech"
+    - "Inventory management skills"
+    - "Security clearance required"
+    - "Available for emergency calls"
+  skills_required:
+    - "Advanced technology maintenance"
+    - "Inventory control"
+    - "Emergency response"
+    - "Technical documentation"
+  benefits:
+    - "Competitive salary"
+    - "Tech training provided"
+    - "Employee discount on gear"
+  salary_range: "Industry competitive"
+  application_url: "https://stark-industries.com/careers"
+  contact_email: "tech.jobs@stark-industries.com"
+  priority: "low"

@@ -1,0 +1,33 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "The Crystal Codex Saga"
+  navbar:
+    background: dark
+    search: true
+    left:
+      - href: index.qmd
+        text: Home
+      - href: books.qmd
+        text: Books
+      - href: characters.qmd
+        text: Characters
+      - href: about.qmd
+        text: About the Author
+
+format:
+  html:
+    theme: 
+      dark: [darkly, custom.scss]
+    css: styles.css
+    toc: true
+    page-layout: full
+    code-copy: true
+    code-overflow: wrap
+    mainfont: "Roboto, sans-serif"
+    monofont: "Fira Code, monospace"
+
+execute:
+  freeze: auto

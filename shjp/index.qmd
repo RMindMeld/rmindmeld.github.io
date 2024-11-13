@@ -1,0 +1,102 @@
+---
+title: "Metropolis Job Board"
+format: 
+  html:
+    page-layout: custom
+---
+
+::: {.hero-section .animate-fade-in}
+# Welcome to Metropolis Job Board
+
+Your gateway to extraordinary career opportunities in the superhero industry.
+
+[Post a Job]{.btn .btn-hero} [Browse Listings]{.btn .btn-hero}
+:::
+
+::: {.container .py-5}
+## Featured Opportunities {.text-center .mb-5}
+
+::: {.directory-grid}
+::: {.job-card}
+### Sidekick Position - Batman Enterprises
+- Location: Gotham City
+- Experience: 1-3 years in vigilante assistance
+- Skills: Acrobatics, Detective Work, Gadget Proficiency
+- Status: Urgent Hiring
+
+[Apply Now]{.btn .btn-hero}
+:::
+
+::: {.job-card}
+### Henchman Team Lead - Villains United
+- Location: Secret Lair, Metropolitan Area
+- Experience: 5+ years in evil schemes
+- Skills: Minion Management, Evil Laughter, Doomsday Device Operation
+- Status: Multiple Positions
+
+[Apply Now]{.btn .btn-hero}
+:::
+
+::: {.job-card}
+### Lab Assistant - Stark Industries
+- Location: New York City
+- Experience: PhD in Advanced Technologies
+- Skills: AI Development, Quantum Mechanics, Coffee Making
+- Status: Open Until Filled
+
+[Apply Now]{.btn .btn-hero}
+:::
+:::
+
+## Why Choose Metropolis Job Board? {.text-center .mt-5 .mb-4}
+
+::: {.row .text-center .g-4}
+::: {.col-md-4}
+### Verified Employers
+All our job listings come from verified superhero organizations and supervillain enterprises.
+:::
+
+::: {.col-md-4}
+### Secure Applications
+Your secret identity is safe with our encrypted application process.
+:::
+
+::: {.col-md-4}
+### Global Reach
+Connect with opportunities across multiple dimensions and parallel universes.
+:::
+:::
+
+## Latest Statistics {.text-center .mt-5}
+
+::: {.row .text-center .g-4}
+::: {.col-md-3}
+### 500+
+Active Job Listings
+:::
+
+::: {.col-md-3}
+### 1000+
+Registered Heroes
+:::
+
+::: {.col-md-3}
+### 300+
+Verified Organizations
+:::
+
+::: {.col-md-3}
+### 95%
+Success Rate
+:::
+:::
+:::
+
+::: {.container .py-5 .text-center}
+## Ready to Find Your Next Adventure?
+
+Whether you're a hero seeking a sidekick position or a villain looking to expand your organization, 
+we have the perfect opportunity for you.
+
+[Create Account]{.btn .btn-hero .mx-2} [Learn More]{.btn .btn-hero .mx-2}
+:::

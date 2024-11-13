@@ -1,0 +1,107 @@
+# Heroes Directory Data
+# Last updated: 2024-01-20
+
+- id: mighty_marvel
+  name: "Mighty Marvel"
+  powers: 
+    - "Super Strength"
+    - "Invulnerability"
+    - "Flight"
+  experience: "7 years"
+  location: "Metropolis"
+  status: "available"
+  specialties:
+    - "Building Demolition Control"
+    - "Disaster Response"
+    - "Team Leadership"
+  image: "hero_mighty_marvel.jpg"
+  contact_info:
+    email: "mighty@heroes.org"
+    response_time: "24 hours"
+  availability:
+    schedule: "Full-time"
+    emergency_response: true
+
+- id: tech_knight
+  name: "Tech Knight"
+  powers:
+    - "Advanced Technology"
+    - "Genius Intellect"
+    - "Power Armor"
+  experience: "4 years"
+  location: "Silicon City"
+  status: "on_mission"
+  specialties:
+    - "Cybercrime Prevention"
+    - "AI Threat Response"
+    - "Gadget Innovation"
+  image: "hero_tech_knight.jpg"
+  contact_info:
+    email: "tech.knight@heroes.org"
+    response_time: "48 hours"
+  availability:
+    schedule: "Part-time"
+    emergency_response: true
+
+- id: mystic_mind
+  name: "Mystic Mind"
+  powers:
+    - "Sorcery"
+    - "Telepathy"
+    - "Dimensional Travel"
+  experience: "10 years"
+  location: "Mystical Realm"
+  status: "available"
+  specialties:
+    - "Dimensional Threats"
+    - "Magical Artifacts"
+    - "Mind Protection"
+  image: "hero_mystic_mind.jpg"
+  contact_info:
+    email: "mystic@heroes.org"
+    response_time: "12 hours"
+  availability:
+    schedule: "On-call"
+    emergency_response: true
+
+- id: quick_silver
+  name: "Quick Silver"
+  powers:
+    - "Super Speed"
+    - "Quick Healing"
+    - "Time Perception"
+  experience: "1 year"
+  location: "Central City"
+  status: "training"
+  specialties:
+    - "Rapid Response"
+    - "Evacuation"
+    - "Message Delivery"
+  image: "hero_quick_silver.jpg"
+  contact_info:
+    email: "quicksilver@heroes.org"
+    response_time: "1 hour"
+  availability:
+    schedule: "Weekdays"
+    emergency_response: false
+
+- id: nature_guardian
+  name: "Nature Guardian"
+  powers:
+    - "Plant Control"
+    - "Weather Manipulation"
+    - "Animal Communication"
+  experience: "15 years"
+  location: "Amazon Rainforest"
+  status: "available"
+  specialties:
+    - "Environmental Protection"
+    - "Natural Disaster Prevention"
+    - "Wildlife Rescue"
+  image: "hero_nature_guardian.jpg"
+  contact_info:
+    email: "guardian@heroes.org"
+    response_time: "6 hours"
+  availability:
+    schedule: "Always Available"
+    emergency_response: true
