@@ -2,13 +2,14 @@
   {
     "listing": "/podcasts/index.html",
     "items": [
-      "/podcasts/episodes/001-ai-content-generation.html"
+      "/podcasts/episodes/001-ai-content-generation.html",
+      "/podcasts/episodes/002-ai-content-generation.html"
     ]
   },
   {
-    "listing": "/experiments/index.html",
+    "listing": "/gallery/index.html",
     "items": [
-      "/experiments/posts/prompt-engineering-study.html"
+      "/gallery/exhibits/abstract-exploration.html"
     ]
   },
   {
@@ -18,9 +19,9 @@
     ]
   },
   {
-    "listing": "/gallery/index.html",
+    "listing": "/experiments/index.html",
     "items": [
-      "/gallery/exhibits/abstract-exploration.html"
+      "/experiments/posts/prompt-engineering-study.html"
     ]
   }
 ]
