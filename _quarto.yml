@@ -20,10 +20,6 @@ website:
         href: blog/index.qmd
       - text: Podcasts
         href: podcasts/index.qmd
-      - text: AI Gallery
-        href: gallery/index.qmd
-      - text: Experiments
-        href: experiments/index.qmd
 
   page-footer:
     left: "© 2024 MindMeld by FRA. All rights reserved."
@@ -35,6 +31,7 @@ website:
 
 format:
   html:
+    include-before-body: _welcome.html
     theme:
       light: [cosmo, styles/light.scss]
       dark: [cosmo, styles/dark.scss]

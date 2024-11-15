@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="FRA">
+<meta name="dcterms.date" content="2024-01-17">
+<meta name="description" content="A detailed analysis of different prompt engineering techniques and their impact on AI-generated content">
 
-<title>AI Experiments – MindMeld</title>
+<title>Prompt Engineering: A Systematic Study – MindMeld</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,30 +23,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../assets/favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8b864f0777c60eecff11d75b6b2e1175.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c317f4e2cda59582947d469ba41a9865.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-3a6d30365a1138f69a61d96706983317.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8b864f0777c60eecff11d75b6b2e1175.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c317f4e2cda59582947d469ba41a9865.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-3a6d30365a1138f69a61d96706983317.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,70 +106,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-reading-time','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles/custom.css">
+<link rel="stylesheet" href="../../styles/custom.css">
 </head>
 
 <body class="nav-fixed">
@@ -144,7 +121,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">MindMeld</span>
     </a>
   </div>
@@ -155,28 +132,20 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html"> 
+    <a class="nav-link" href="../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../podcasts/index.html"> 
+    <a class="nav-link" href="../../podcasts/index.html"> 
 <span class="menu-text">Podcasts</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../gallery/index.html"> 
-<span class="menu-text">AI Gallery</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="../experiments/index.html" aria-current="page"> 
-<span class="menu-text">Experiments</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -187,7 +156,7 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -195,30 +164,383 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#ai-experiments-lab" id="toc-ai-experiments-lab" class="nav-link active" data-scroll-target="#ai-experiments-lab">AI Experiments Lab</a>
+  <li><a href="#prompt-engineering-a-systematic-study" id="toc-prompt-engineering-a-systematic-study" class="nav-link active" data-scroll-target="#prompt-engineering-a-systematic-study">Prompt Engineering: A Systematic Study</a>
   <ul class="collapse">
-  <li><a href="#experiment-categories" id="toc-experiment-categories" class="nav-link" data-scroll-target="#experiment-categories">Experiment Categories</a></li>
-  <li><a href="#documentation-format" id="toc-documentation-format" class="nav-link" data-scroll-target="#documentation-format">Documentation Format</a></li>
-  <li><a href="#latest-experiments" id="toc-latest-experiments" class="nav-link" data-scroll-target="#latest-experiments">Latest Experiments</a></li>
-  <li><a href="#technical-notes" id="toc-technical-notes" class="nav-link" data-scroll-target="#technical-notes">Technical Notes</a></li>
+  <li><a href="#experiment-objective" id="toc-experiment-objective" class="nav-link" data-scroll-target="#experiment-objective">Experiment Objective</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a>
+  <ul class="collapse">
+  <li><a href="#test-setup" id="toc-test-setup" class="nav-link" data-scroll-target="#test-setup">Test Setup</a></li>
+  <li><a href="#test-cases" id="toc-test-cases" class="nav-link" data-scroll-target="#test-cases">Test Cases</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#output-analysis" id="toc-output-analysis" class="nav-link" data-scroll-target="#output-analysis">Output Analysis</a></li>
+  <li><a href="#sample-outputs" id="toc-sample-outputs" class="nav-link" data-scroll-target="#sample-outputs">Sample Outputs</a></li>
+  </ul></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a>
+  <ul class="collapse">
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
+  </ul></li>
+  <li><a href="#technical-insights" id="toc-technical-insights" class="nav-link" data-scroll-target="#technical-insights">Technical Insights</a>
+  <ul class="collapse">
+  <li><a href="#prompt-engineering-best-practices" id="toc-prompt-engineering-best-practices" class="nav-link" data-scroll-target="#prompt-engineering-best-practices">Prompt Engineering Best Practices</a></li>
+  </ul></li>
+  <li><a href="#future-experiments" id="toc-future-experiments" class="nav-link" data-scroll-target="#future-experiments">Future Experiments</a></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">Conclusions</a></li>
+  <li><a href="#technical-appendix" id="toc-technical-appendix" class="nav-link" data-scroll-target="#technical-appendix">Technical Appendix</a>
+  <ul class="collapse">
+  <li><a href="#complete-test-parameters" id="toc-complete-test-parameters" class="nav-link" data-scroll-target="#complete-test-parameters">Complete Test Parameters</a></li>
+  <li><a href="#data-collection-method" id="toc-data-collection-method" class="nav-link" data-scroll-target="#data-collection-method">Data Collection Method</a></li>
+  <li><a href="#tools-used" id="toc-tools-used" class="nav-link" data-scroll-target="#tools-used">Tools Used</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R1BULTQ=">GPT-4 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHJvbXB0IEVuZ2luZWVyaW5n">Prompt Engineering <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGVjaG5pY2FsIEFuYWx5c2lz">Technical Analysis <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to MindMeld</title>
+
+    <style>
+
+        :root {
+
+            --transition-duration: 1000ms;
+
+        }
+
+        
+
+        body, html {
+
+            margin: 0;
+
+            padding: 0;
+
+            height: 100%;
+
+            font-family: system-ui, -apple-system, sans-serif;
+
+        }
+
+        
+
+        .welcome-container {
+
+            position: absolute; /* Changed from fixed to absolute */
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100vh;
+
+            z-index: 1000; /* Add high z-index to show above content initially */
+
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+
+                        url('assets/welcome-bg.jpg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            text-align: center;
+
+            transition: opacity var(--transition-duration) ease-in-out,
+
+                        visibility var(--transition-duration) ease-in-out; /* Add visibility transition */
+
+        }
+
+        
+
+        .welcome-content {
+
+            max-width: 800px;
+
+            padding: 2rem;
+
+        }
+
+        
+
+        .title {
+
+            font-size: 3.5rem;
+
+            margin-bottom: 1rem;
+
+            font-weight: 700;
+
+        }
+
+        
+
+        .subtitle {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 2rem;
+
+            opacity: 0.9;
+
+        }
+
+        
+
+        .enter-button {
+
+            background-color: transparent;
+
+            border: 2px solid white;
+
+            color: white;
+
+            padding: 1rem 2rem;
+
+            font-size: 1.2rem;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            text-decoration: none;
+
+            border-radius: 4px;
+
+        }
+
+        
+
+        .enter-button:hover {
+
+            background-color: white;
+
+            color: black;
+
+        }
+
+        
+
+        /* Fade out animation class */
+
+        .fade-out {
+
+            opacity: 0;
+
+            visibility: hidden; /* Hide completely when faded out */
+
+            z-index: -1; /* Move behind content when faded out */
+
+        }
+
+        
+
+        /* Main content container */
+
+        #main-content {
+
+            position: relative;
+
+            z-index: 1; /* Lower than welcome screen but above 0 */
+
+            opacity: 0;
+
+            transition: opacity var(--transition-duration) ease-in-out;
+
+        }
+
+        
+
+        /* Main content visible state */
+
+        #main-content.visible {
+
+            opacity: 1;
+
+        }
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+        .welcome-container.hidden-welcome {
+
+            display: none;
+
+        }
+
+    </style>
+
+
+
+
+
+    <div id="welcome" class="welcome-container hidden-welcome">
+
+        <div class="welcome-content">
+
+            <h1 class="title">MindMeld</h1>
+
+            <p class="subtitle">Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.</p>
+
+            <button id="enter-btn" class="enter-button">Enter MindMeld</button>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        // Only run this script on the index page
+
+        if (window.location.pathname === '/' || 
+
+            window.location.pathname === '/index.html' || 
+
+            window.location.pathname.endsWith('/')) {
+
+            
+
+            // Check if this is the first visit
+
+            const hasVisited = sessionStorage.getItem('hasVisited');
+
+            
+
+            if (!hasVisited) {
+
+                // First visit - show welcome screen
+
+                const welcome = document.getElementById('welcome');
+
+                welcome.classList.remove('hidden-welcome');
+
+                
+
+                // Mark as visited
+
+                sessionStorage.setItem('hasVisited', 'true');
+
+                
+
+                // Add click handler for enter button
+
+                document.getElementById('enter-btn').addEventListener('click', function() {
+
+                    welcome.classList.add('fade-out');
+
+                    
+
+                    const mainContent = document.getElementById('main-content');
+
+                    setTimeout(() => {
+
+                        mainContent.classList.add('visible');
+
+                    }, 500);
+
+                    
+
+                    setTimeout(() => {
+
+                        welcome.style.display = 'none';
+
+                    }, 1000);
+
+                });
+
+            } else {
+
+                // Not first visit - show main content immediately
+
+                const mainContent = document.getElementById('main-content');
+
+                mainContent.classList.add('visible');
+
+            }
+
+        } else {
+
+            // Not on index page - show main content immediately
+
+            const mainContent = document.getElementById('main-content');
+
+            mainContent.classList.add('visible');
+
+        }
+
+    </script>
+
+
+
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AI Experiments</h1>
-<p class="subtitle lead">Technical Explorations in AI Content Generation</p>
+<h1 class="title">Prompt Engineering: A Systematic Study</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Technical Analysis</div>
+    <div class="quarto-category">Prompt Engineering</div>
+    <div class="quarto-category">GPT-4</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A detailed analysis of different prompt engineering techniques and their impact on AI-generated content
+  </div>
 </div>
 
 
+<div class="quarto-title-meta">
 
-<div class="quarto-title-meta column-page-left">
-
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>FRA </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 17, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -228,162 +550,259 @@ window.Quarto = {
 </header>
 
 
-<section id="ai-experiments-lab" class="level1">
-<h1>AI Experiments Lab</h1>
-<p>Welcome to my AI experiments documentation. This section focuses on the technical side of AI content generation, where I explore different models, techniques, and approaches.</p>
+<section id="prompt-engineering-a-systematic-study" class="level1">
+<h1>Prompt Engineering: A Systematic Study</h1>
+<p>This experiment explores how different prompt engineering techniques affect the quality and consistency of AI-generated content. I’ll be testing various approaches using GPT-4 as the base model.</p>
+<section id="experiment-objective" class="level2">
+<h2 class="anchored" data-anchor-id="experiment-objective">Experiment Objective</h2>
+<p>To quantitatively and qualitatively assess how different prompt structures influence: 1. Output consistency 2. Content relevance 3. Response specificity 4. Creative variation</p>
+</section>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<section id="test-setup" class="level3">
+<h3 class="anchored" data-anchor-id="test-setup">Test Setup</h3>
+<p>I used GPT-4 with the following parameters:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"gpt-4"</span><span class="fu">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"temperature"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">7</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"max_tokens"</span><span class="fu">:</span> <span class="dv">500</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"top_p"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"frequency_penalty"</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"presence_penalty"</span><span class="fu">:</span> <span class="dv">0</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="test-cases" class="level3">
+<h3 class="anchored" data-anchor-id="test-cases">Test Cases</h3>
+<p>I tested three different prompt structures:</p>
+<ol type="1">
+<li><strong>Basic Prompt</strong></li>
+</ol>
+<pre class="text"><code>Write a short story about a robot learning to cook.</code></pre>
+<ol start="2" type="1">
+<li><strong>Structured Prompt</strong></li>
+</ol>
+<pre class="text"><code>Task: Write a short story
+Topic: A robot learning to cook
+Requirements:
+- Include sensory details
+- Show character development
+- Maximum 300 words
+Style: Lighthearted and optimistic</code></pre>
+<ol start="3" type="1">
+<li><strong>Chain-of-Thought Prompt</strong></li>
+</ol>
+<pre class="text"><code>Let's write a story about a robot learning to cook.
+1. First, establish the robot's motivation for learning
+2. Then, describe its first attempt at cooking
+3. Show the challenges it faces
+4. End with a lesson learned
+Remember to include sensory details and emotional elements.
+Maximum 300 words.</code></pre>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="output-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="output-analysis">Output Analysis</h3>
+<p>For each prompt type, I generated 5 responses and analyzed them based on:</p>
+<ol type="1">
+<li><strong>Content Relevance</strong>
+<ul>
+<li>Basic Prompt: 65% relevant content</li>
+<li>Structured Prompt: 85% relevant content</li>
+<li>Chain-of-Thought: 90% relevant content</li>
+</ul></li>
+<li><strong>Consistency Metrics</strong>
+<ul>
+<li>Basic Prompt: High variation between outputs</li>
+<li>Structured Prompt: Moderate consistency</li>
+<li>Chain-of-Thought: Highest consistency</li>
+</ul></li>
+<li><strong>Response Length</strong>
+<ul>
+<li>Basic Prompt: 150-400 words</li>
+<li>Structured Prompt: 280-320 words</li>
+<li>Chain-of-Thought: 290-310 words</li>
+</ul></li>
+</ol>
+</section>
+<section id="sample-outputs" class="level3">
+<h3 class="anchored" data-anchor-id="sample-outputs">Sample Outputs</h3>
+<p>Here’s one example output from each prompt type:</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-What You’ll Find Here
+Basic Prompt Output
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li>Detailed technical documentation of AI experiments</li>
-<li>Analysis of different AI models and their capabilities</li>
-<li>Prompt engineering techniques and best practices</li>
-<li>Performance comparisons and insights</li>
-</ul>
+<p>Unit-7 stared at the kitchen with confusion. Its processors whirred as it analyzed the array of utensils before it. Cooking seemed like such an inefficient way to prepare nutrients, yet humans insisted it was important…</p>
 </div>
 </div>
-<section id="experiment-categories" class="level2">
-<h2 class="anchored" data-anchor-id="experiment-categories">Experiment Categories</h2>
-<div class="grid">
-<section id="model-exploration" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="model-exploration">Model Exploration</h3>
-<p>Testing different AI models and understanding their strengths and limitations.</p>
-</section>
-<section id="prompt-engineering" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="prompt-engineering">Prompt Engineering</h3>
-<p>Developing and testing various prompt techniques for better results.</p>
-</section>
-<section id="technical-analysis" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="technical-analysis">Technical Analysis</h3>
-<p>Deep dives into the technical aspects of AI content generation.</p>
-</section>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Structured Prompt Output
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The gleaming chrome of Chef-Bot 2000’s exterior reflected the warm kitchen lights as it carefully measured out ingredients. Its motivation was simple: understand why humans preferred home-cooked meals over efficient nutrient packets…</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Chain-of-Thought Output
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>ROB-3RT’s curiosity subroutine had been triggered by the cooking shows in its entertainment database. The way humans connected over food fascinated its neural networks. Its first attempt at making an omelet resulted in a smoky kitchen…</p>
+</div>
 </div>
 </section>
-<section id="documentation-format" class="level2">
-<h2 class="anchored" data-anchor-id="documentation-format">Documentation Format</h2>
-<p>Each experiment is documented with:</p>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<section id="key-findings" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings">Key Findings</h3>
 <ol type="1">
-<li><strong>Objective</strong>: Clear statement of what I’m trying to achieve</li>
-<li><strong>Methodology</strong>: Detailed description of the approach</li>
-<li><strong>Results</strong>: Raw outputs and analysis</li>
-<li><strong>Insights</strong>: Key learnings and observations</li>
-<li><strong>Technical Details</strong>: Model parameters, settings, and configurations</li>
+<li><strong>Prompt Structure Impact</strong>
+<ul>
+<li>More structured prompts led to more consistent outputs</li>
+<li>Chain-of-thought prompting produced the most coherent narratives</li>
+<li>Basic prompts allowed more creative variation but less control</li>
+</ul></li>
+<li><strong>Content Quality Correlation</strong>
+<ul>
+<li>Detailed requirements improved output relevance</li>
+<li>Step-by-step instructions led to better narrative flow</li>
+<li>Specific constraints helped maintain consistent length</li>
+</ul></li>
+<li><strong>Optimization Opportunities</strong>
+<ul>
+<li>Combining structured format with creative freedom</li>
+<li>Including specific style guidelines</li>
+<li>Adding context-specific constraints</li>
+</ul></li>
 </ol>
 </section>
-<section id="latest-experiments" class="level2">
-<h2 class="anchored" data-anchor-id="latest-experiments">Latest Experiments</h2>
-<p>Below you’ll find my most recent technical experiments. Use the filter and sort options to find specific topics or browse through different categories.</p>
+</section>
+<section id="technical-insights" class="level2">
+<h2 class="anchored" data-anchor-id="technical-insights">Technical Insights</h2>
+<section id="prompt-engineering-best-practices" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-engineering-best-practices">Prompt Engineering Best Practices</h3>
+<ol type="1">
+<li><strong>Clear Structure</strong>
+<ul>
+<li>Use hierarchical formatting</li>
+<li>Include specific requirements</li>
+<li>Set clear boundaries</li>
+</ul></li>
+<li><strong>Content Guidelines</strong>
+<ul>
+<li>Specify desired elements</li>
+<li>Include style preferences</li>
+<li>Define output format</li>
+</ul></li>
+<li><strong>Balance</strong>
+<ul>
+<li>Between structure and creativity</li>
+<li>Between specificity and flexibility</li>
+<li>Between guidance and constraints</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="future-experiments" class="level2">
+<h2 class="anchored" data-anchor-id="future-experiments">Future Experiments</h2>
+<p>Based on these findings, future experiments should explore:</p>
+<ol type="1">
+<li><strong>Hybrid Approaches</strong>
+<ul>
+<li>Combining different prompt structures</li>
+<li>Testing variable constraint levels</li>
+<li>Exploring dynamic prompting</li>
+</ul></li>
+<li><strong>Parameter Optimization</strong>
+<ul>
+<li>Testing different temperature settings</li>
+<li>Adjusting token limits</li>
+<li>Exploring frequency penalties</li>
+</ul></li>
+<li><strong>Application-Specific Testing</strong>
+<ul>
+<li>Different content types</li>
+<li>Various writing styles</li>
+<li>Multiple use cases</li>
+</ul></li>
+</ol>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
+<p>This experiment demonstrates that: 1. Structured prompts generally produce more consistent results 2. Chain-of-thought prompting offers the best balance of control and creativity 3. Clear constraints improve output relevance 4. Prompt structure significantly impacts content quality</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Reproducibility
+Practical Application
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>All experiments include the exact parameters and settings used, allowing you to replicate the results if you wish.</p>
+<p>These findings can be immediately applied to improve AI content generation across different use cases. The structured approach, in particular, shows promise for consistent content creation.</p>
 </div>
 </div>
 </section>
-<section id="technical-notes" class="level2">
-<h2 class="anchored" data-anchor-id="technical-notes">Technical Notes</h2>
+<section id="technical-appendix" class="level2">
+<h2 class="anchored" data-anchor-id="technical-appendix">Technical Appendix</h2>
+<section id="complete-test-parameters" class="level3">
+<h3 class="anchored" data-anchor-id="complete-test-parameters">Complete Test Parameters</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"gpt-4"</span><span class="fu">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"temperature"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">7</span><span class="fu">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"max_tokens"</span><span class="fu">:</span> <span class="dv">500</span><span class="fu">,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"top_p"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"frequency_penalty"</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"presence_penalty"</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"test_iterations"</span><span class="fu">:</span> <span class="dv">5</span><span class="fu">,</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"prompt_types"</span><span class="fu">:</span> <span class="dv">3</span><span class="fu">,</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"total_samples"</span><span class="fu">:</span> <span class="dv">15</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="data-collection-method" class="level3">
+<h3 class="anchored" data-anchor-id="data-collection-method">Data Collection Method</h3>
 <ul>
-<li>All code snippets are provided when relevant</li>
-<li>Parameters and configurations are clearly documented</li>
-<li>Results include both successes and failures</li>
-<li>Each experiment includes suggestions for future exploration</li>
+<li>Automated response collection</li>
+<li>Manual content analysis</li>
+<li>Quantitative metrics tracking</li>
+<li>Qualitative assessment</li>
 </ul>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Remember that AI models are constantly updating, so results may vary over time. Each experiment notes the specific model versions used.</p>
-</div>
-</div>
-
+</section>
+<section id="tools-used" class="level3">
+<h3 class="anchored" data-anchor-id="tools-used">Tools Used</h3>
+<ul>
+<li>OpenAI API</li>
+<li>Custom Python scripts for data collection</li>
+<li>Manual analysis spreadsheet</li>
+<li>Statistical analysis tools</li>
+</ul>
 
 
 </section>
 </section>
+</section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="VGVjaG5pY2FsIEFuYWx5c2lzLFByb21wdCBFbmdpbmVlcmluZyxHUFQtNA==" data-listing-date-sort="1705467600000" data-listing-file-modified-sort="1731208554998" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="745">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../experiments/posts/prompt-engineering-study.html" class="no-external">Prompt Engineering: A Systematic Study</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../experiments/posts/prompt-engineering-study.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('VGVjaG5pY2FsIEFuYWx5c2lz'); return false;">
-Technical Analysis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UHJvbXB0IEVuZ2luZWVyaW5n'); return false;">
-Prompt Engineering
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R1BULTQ='); return false;">
-GPT-4
-</div>
-</div>
-<div class="listing-description">
-<a href="../experiments/posts/prompt-engineering-study.html" class="no-external">A detailed analysis of different prompt engineering techniques and their impact on AI-generated content</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../experiments/posts/prompt-engineering-study.html" class="no-external">
-<div class="listing-date">
-Jan 17, 2024
-</div>
-<div class="listing-reading-time">
-4 min
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

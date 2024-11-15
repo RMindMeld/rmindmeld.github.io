@@ -5,6 +5,8 @@ page-layout: full
 toc: false
 ---
 
+ 
+
 :::{.column-page}
 :::{.hero-banner}
 # Welcome to MindMeld
@@ -12,6 +14,7 @@ toc: false
 Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.
 
 [Explore the Blog](blog/index.qmd){.btn .btn-primary .btn-lg role="button"}
+[Explore the Podcast](podcasts/index.qmd){.btn .btn-primary .btn-lg role="button"}
 [About the Project](about.qmd){.btn .btn-secondary .btn-lg role="button"}
 
 :::
@@ -19,7 +22,7 @@ Where AI-generated content meets human curation, creating a unique perspective o
 
 ## What is MindMeld?
 
-MindMeld is my personal laboratory where I explore and document the fascinating interplay between artificial intelligence and human creativity. As someone deeply interested in AI's creative potential, I curate and share AI-generated content while adding my human perspective and insights.
+MindMeld is my personal laboratory where I explore and document my exploration of artificial intelligence as a tool for learning, and content generation. As someone deeply interested in AI's creative potential, I will share selected AI-generated content while adding my human perspective and insights.
 
 ::::{.grid}
 
@@ -62,6 +65,7 @@ I believe in transparency. Unless otherwise stated, all content on this site is 
 :::{.card}
 
 ### [Exploring AI's Creative Boundaries](/blog/ai-creativity)
+
 What happens when we push AI to its creative limits? A journey through unexpected outputs and surprising discoveries.
 :::
 
@@ -69,11 +73,14 @@ What happens when we push AI to its creative limits? A journey through unexpecte
 
 :::{.g-col-12 .g-col-md-6}
 
-#### From the Gallery
+#### From the Podcast
 
 :::{.card}
+
 ### [AI Art Experiments](/gallery/ai-art-series-1)
+
 A collection of AI-generated artwork with analysis of the prompts and techniques used to create them.
+
 :::
 
 :::
@@ -86,6 +93,9 @@ A collection of AI-generated artwork with analysis of the prompts and techniques
 I'm constantly experimenting with new AI tools and techniques, sharing both successes and failures along the way. This site serves as both a portfolio of AI-human collaboration and a documentation of my learning process.
 
 :::{.callout-note}
+
 ## Want to get in touch?
-Have questions about AI content generation or want to discuss collaboration opportunities? [Reach out to me](/about#contact).
+
+Have questions about AI content generation or want to discuss collaboration opportunities? [Reach out to me](about.qmd#contact).
+
 :::

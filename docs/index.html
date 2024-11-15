@@ -110,14 +110,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./podcasts/index.html"> 
 <span class="menu-text">Podcasts</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./gallery/index.html"> 
-<span class="menu-text">AI Gallery</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./experiments/index.html"> 
-<span class="menu-text">Experiments</span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -133,6 +125,315 @@ ul.task-list li input[type="checkbox"] {
     
 <!-- main -->
 <main class="content page-columns page-full column-body" id="quarto-document-content">
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to MindMeld</title>
+
+    <style>
+
+        :root {
+
+            --transition-duration: 1000ms;
+
+        }
+
+        
+
+        body, html {
+
+            margin: 0;
+
+            padding: 0;
+
+            height: 100%;
+
+            font-family: system-ui, -apple-system, sans-serif;
+
+        }
+
+        
+
+        .welcome-container {
+
+            position: absolute; /* Changed from fixed to absolute */
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100vh;
+
+            z-index: 1000; /* Add high z-index to show above content initially */
+
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+
+                        url('assets/welcome-bg.jpg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            text-align: center;
+
+            transition: opacity var(--transition-duration) ease-in-out,
+
+                        visibility var(--transition-duration) ease-in-out; /* Add visibility transition */
+
+        }
+
+        
+
+        .welcome-content {
+
+            max-width: 800px;
+
+            padding: 2rem;
+
+        }
+
+        
+
+        .title {
+
+            font-size: 3.5rem;
+
+            margin-bottom: 1rem;
+
+            font-weight: 700;
+
+        }
+
+        
+
+        .subtitle {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 2rem;
+
+            opacity: 0.9;
+
+        }
+
+        
+
+        .enter-button {
+
+            background-color: transparent;
+
+            border: 2px solid white;
+
+            color: white;
+
+            padding: 1rem 2rem;
+
+            font-size: 1.2rem;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            text-decoration: none;
+
+            border-radius: 4px;
+
+        }
+
+        
+
+        .enter-button:hover {
+
+            background-color: white;
+
+            color: black;
+
+        }
+
+        
+
+        /* Fade out animation class */
+
+        .fade-out {
+
+            opacity: 0;
+
+            visibility: hidden; /* Hide completely when faded out */
+
+            z-index: -1; /* Move behind content when faded out */
+
+        }
+
+        
+
+        /* Main content container */
+
+        #main-content {
+
+            position: relative;
+
+            z-index: 1; /* Lower than welcome screen but above 0 */
+
+            opacity: 0;
+
+            transition: opacity var(--transition-duration) ease-in-out;
+
+        }
+
+        
+
+        /* Main content visible state */
+
+        #main-content.visible {
+
+            opacity: 1;
+
+        }
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+        .welcome-container.hidden-welcome {
+
+            display: none;
+
+        }
+
+    </style>
+
+
+
+
+
+    <div id="welcome" class="welcome-container hidden-welcome">
+
+        <div class="welcome-content">
+
+            <h1 class="title">MindMeld</h1>
+
+            <p class="subtitle">Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.</p>
+
+            <button id="enter-btn" class="enter-button">Enter MindMeld</button>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        // Only run this script on the index page
+
+        if (window.location.pathname === '/' || 
+
+            window.location.pathname === '/index.html' || 
+
+            window.location.pathname.endsWith('/')) {
+
+            
+
+            // Check if this is the first visit
+
+            const hasVisited = sessionStorage.getItem('hasVisited');
+
+            
+
+            if (!hasVisited) {
+
+                // First visit - show welcome screen
+
+                const welcome = document.getElementById('welcome');
+
+                welcome.classList.remove('hidden-welcome');
+
+                
+
+                // Mark as visited
+
+                sessionStorage.setItem('hasVisited', 'true');
+
+                
+
+                // Add click handler for enter button
+
+                document.getElementById('enter-btn').addEventListener('click', function() {
+
+                    welcome.classList.add('fade-out');
+
+                    
+
+                    const mainContent = document.getElementById('main-content');
+
+                    setTimeout(() => {
+
+                        mainContent.classList.add('visible');
+
+                    }, 500);
+
+                    
+
+                    setTimeout(() => {
+
+                        welcome.style.display = 'none';
+
+                    }, 1000);
+
+                });
+
+            } else {
+
+                // Not first visit - show main content immediately
+
+                const mainContent = document.getElementById('main-content');
+
+                mainContent.classList.add('visible');
+
+            }
+
+        } else {
+
+            // Not on index page - show main content immediately
+
+            const mainContent = document.getElementById('main-content');
+
+            mainContent.classList.add('visible');
+
+        }
+
+    </script>
+
+
+
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -158,12 +459,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="welcome-to-mindmeld" class="level1 hero-banner">
 <h1>Welcome to MindMeld</h1>
 <p>Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.</p>
-<p><a href="./blog/index.html" class="btn btn-primary btn-lg" role="button">Explore the Blog</a> <a href="./about.html" class="btn btn-secondary btn-lg" role="button">About the Project</a></p>
+<p><a href="./blog/index.html" class="btn btn-primary btn-lg" role="button">Explore the Blog</a> <a href="./podcasts/index.html" class="btn btn-primary btn-lg" role="button">Explore the Podcast</a> <a href="./about.html" class="btn btn-secondary btn-lg" role="button">About the Project</a></p>
 </section>
 </div>
 <section id="what-is-mindmeld" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-mindmeld">What is MindMeld?</h2>
-<p>MindMeld is my personal laboratory where I explore and document the fascinating interplay between artificial intelligence and human creativity. As someone deeply interested in AI’s creative potential, I curate and share AI-generated content while adding my human perspective and insights.</p>
+<p>MindMeld is my personal laboratory where I explore and document my exploration of artificial intelligence as a tool for learning, and content generation. As someone deeply interested in AI’s creative potential, I will share selected AI-generated content while adding my human perspective and insights.</p>
 <div class="grid">
 <section id="ai-generation" class="level3 g-col-12 g-col-md-4">
 <h3 class="anchored" data-anchor-id="ai-generation">AI Generation</h3>
@@ -193,8 +494,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </div>
 <div class="g-col-12 g-col-md-6">
-<section id="from-the-gallery" class="level4">
-<h4 class="anchored" data-anchor-id="from-the-gallery">From the Gallery</h4>
+<section id="from-the-podcast" class="level4">
+<h4 class="anchored" data-anchor-id="from-the-podcast">From the Podcast</h4>
 </section>
 <section id="ai-art-experiments" class="level3 card">
 <h3 class="anchored" data-anchor-id="ai-art-experiments"><a href=".\gallery/ai-art-series-1">AI Art Experiments</a></h3>
@@ -217,7 +518,7 @@ Want to get in touch?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Have questions about AI content generation or want to discuss collaboration opportunities? <a href=".\about#contact">Reach out to me</a>.</p>
+<p>Have questions about AI content generation or want to discuss collaboration opportunities? <a href="./about.html#contact">Reach out to me</a>.</p>
 </div>
 </div>
 

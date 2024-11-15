@@ -112,14 +112,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../podcasts/index.html"> 
 <span class="menu-text">Podcasts</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../gallery/index.html"> 
-<span class="menu-text">AI Gallery</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../experiments/index.html"> 
-<span class="menu-text">Experiments</span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -137,12 +129,338 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#episode-1-getting-started-with-ai-content-generation" id="toc-episode-1-getting-started-with-ai-content-generation" class="nav-link active" data-scroll-target="#episode-1-getting-started-with-ai-content-generation">Episode 1: Getting Started with AI Content Generation</a></li>
+  <li><a href="#episode-1-getting-started-with-ai-content-generation" id="toc-episode-1-getting-started-with-ai-content-generation" class="nav-link active" data-scroll-target="#episode-1-getting-started-with-ai-content-generation">Episode 1: Getting Started with AI Content Generation</a>
+  <ul class="collapse">
+  <li><a href="#episode-overview" id="toc-episode-overview" class="nav-link" data-scroll-target="#episode-overview">Episode Overview</a></li>
+  <li><a href="#show-notes" id="toc-show-notes" class="nav-link" data-scroll-target="#show-notes">Show Notes</a>
+  <ul class="collapse">
+  <li><a href="#topics-covered" id="toc-topics-covered" class="nav-link" data-scroll-target="#topics-covered">Topics Covered</a></li>
+  </ul></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a></li>
+  <li><a href="#resources-mentioned" id="toc-resources-mentioned" class="nav-link" data-scroll-target="#resources-mentioned">Resources Mentioned</a>
+  <ul class="collapse">
+  <li><a href="#ai-tools" id="toc-ai-tools" class="nav-link" data-scroll-target="#ai-tools">AI Tools</a></li>
+  <li><a href="#learning-resources" id="toc-learning-resources" class="nav-link" data-scroll-target="#learning-resources">Learning Resources</a></li>
+  </ul></li>
+  <li><a href="#transcript" id="toc-transcript" class="nav-link" data-scroll-target="#transcript">Transcript</a></li>
+  <li><a href="#interactive-elements" id="toc-interactive-elements" class="nav-link" data-scroll-target="#interactive-elements">Interactive Elements</a></li>
+  <li><a href="#next-episode-preview" id="toc-next-episode-preview" class="nav-link" data-scroll-target="#next-episode-preview">Next Episode Preview</a></li>
+  <li><a href="#episode-resources" id="toc-episode-resources" class="nav-link" data-scroll-target="#episode-resources">Episode Resources</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to MindMeld</title>
+
+    <style>
+
+        :root {
+
+            --transition-duration: 1000ms;
+
+        }
+
+        
+
+        body, html {
+
+            margin: 0;
+
+            padding: 0;
+
+            height: 100%;
+
+            font-family: system-ui, -apple-system, sans-serif;
+
+        }
+
+        
+
+        .welcome-container {
+
+            position: absolute; /* Changed from fixed to absolute */
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100vh;
+
+            z-index: 1000; /* Add high z-index to show above content initially */
+
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+
+                        url('assets/welcome-bg.jpg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            text-align: center;
+
+            transition: opacity var(--transition-duration) ease-in-out,
+
+                        visibility var(--transition-duration) ease-in-out; /* Add visibility transition */
+
+        }
+
+        
+
+        .welcome-content {
+
+            max-width: 800px;
+
+            padding: 2rem;
+
+        }
+
+        
+
+        .title {
+
+            font-size: 3.5rem;
+
+            margin-bottom: 1rem;
+
+            font-weight: 700;
+
+        }
+
+        
+
+        .subtitle {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 2rem;
+
+            opacity: 0.9;
+
+        }
+
+        
+
+        .enter-button {
+
+            background-color: transparent;
+
+            border: 2px solid white;
+
+            color: white;
+
+            padding: 1rem 2rem;
+
+            font-size: 1.2rem;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            text-decoration: none;
+
+            border-radius: 4px;
+
+        }
+
+        
+
+        .enter-button:hover {
+
+            background-color: white;
+
+            color: black;
+
+        }
+
+        
+
+        /* Fade out animation class */
+
+        .fade-out {
+
+            opacity: 0;
+
+            visibility: hidden; /* Hide completely when faded out */
+
+            z-index: -1; /* Move behind content when faded out */
+
+        }
+
+        
+
+        /* Main content container */
+
+        #main-content {
+
+            position: relative;
+
+            z-index: 1; /* Lower than welcome screen but above 0 */
+
+            opacity: 0;
+
+            transition: opacity var(--transition-duration) ease-in-out;
+
+        }
+
+        
+
+        /* Main content visible state */
+
+        #main-content.visible {
+
+            opacity: 1;
+
+        }
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+        .welcome-container.hidden-welcome {
+
+            display: none;
+
+        }
+
+    </style>
+
+
+
+
+
+    <div id="welcome" class="welcome-container hidden-welcome">
+
+        <div class="welcome-content">
+
+            <h1 class="title">MindMeld</h1>
+
+            <p class="subtitle">Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.</p>
+
+            <button id="enter-btn" class="enter-button">Enter MindMeld</button>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        // Only run this script on the index page
+
+        if (window.location.pathname === '/' || 
+
+            window.location.pathname === '/index.html' || 
+
+            window.location.pathname.endsWith('/')) {
+
+            
+
+            // Check if this is the first visit
+
+            const hasVisited = sessionStorage.getItem('hasVisited');
+
+            
+
+            if (!hasVisited) {
+
+                // First visit - show welcome screen
+
+                const welcome = document.getElementById('welcome');
+
+                welcome.classList.remove('hidden-welcome');
+
+                
+
+                // Mark as visited
+
+                sessionStorage.setItem('hasVisited', 'true');
+
+                
+
+                // Add click handler for enter button
+
+                document.getElementById('enter-btn').addEventListener('click', function() {
+
+                    welcome.classList.add('fade-out');
+
+                    
+
+                    const mainContent = document.getElementById('main-content');
+
+                    setTimeout(() => {
+
+                        mainContent.classList.add('visible');
+
+                    }, 500);
+
+                    
+
+                    setTimeout(() => {
+
+                        welcome.style.display = 'none';
+
+                    }, 1000);
+
+                });
+
+            } else {
+
+                // Not first visit - show main content immediately
+
+                const mainContent = document.getElementById('main-content');
+
+                mainContent.classList.add('visible');
+
+            }
+
+        } else {
+
+            // Not on index page - show main content immediately
+
+            const mainContent = document.getElementById('main-content');
+
+            mainContent.classList.add('visible');
+
+        }
+
+    </script>
+
+
+
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -182,10 +500,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="episode-1-getting-started-with-ai-content-generation" class="level1">
 <h1>Episode 1: Getting Started with AI Content Generation</h1>
 <div class="audio-player">
-<audio controls="">
-<source src="../../assets/podcasts/episodes/001-ai-content-generation.mp3" type="audio/mpeg">
-<source src="../../assets/podcasts/episodes/001-ai-content-generation.ogg" type="audio/ogg">
-Your browser does not support the audio element. </audio>
+<p><audio controls=""> <source src="../../assets/podcasts/episodes/001-ai-content-generation.mp3" type="audio/mpeg"> <source src="../../assets/podcasts/episodes/001-ai-content-generation.ogg" type="audio/ogg"> Your browser does not support the audio element. </audio></p>
 </div>
 <div class="episode-meta">
 <p><strong>Duration</strong>: 25:30<br>
@@ -332,10 +647,9 @@ Share Your Results
 
 
 </section>
-</section></main></div>
+</section>
 
-
- <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -900,7 +1214,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
- <!-- /content -->
+</div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">

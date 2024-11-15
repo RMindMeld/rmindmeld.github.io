@@ -7,21 +7,11 @@
     ]
   },
   {
-    "listing": "/gallery/index.html",
-    "items": [
-      "/gallery/exhibits/abstract-exploration.html"
-    ]
-  },
-  {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/posts/prompt-engineering-study.html",
+      "/blog/posts/abstract-exploration.html",
       "/blog/posts/ai-content-exploration.html"
-    ]
-  },
-  {
-    "listing": "/experiments/index.html",
-    "items": [
-      "/experiments/posts/prompt-engineering-study.html"
     ]
   }
 ]

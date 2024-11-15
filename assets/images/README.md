@@ -10,7 +10,7 @@ images/
 ├── gallery/           # AI artwork gallery
 ├── podcasts/          # Podcast cover images
 ├── experiments/       # Technical diagrams
-└── site/             # Site-wide assets
+└── site/              # Site-wide assets
 ```
 
 ## Image Generation Process

@@ -18,12 +18,18 @@ page-layout: full
 
 This is where I share my experiments, insights, and discoveries in AI content creation. Each post documents a specific aspect of working with AI, from generating creative content to understanding the limitations and possibilities of current AI technology.
 
+This will include the occassional failure, the unexpected success, gallery of AI-generated artwork and visual experiments. It may also include some of the technical details of the AI models and techniques used in the experiments. 
+
 :::{.callout-note}
 ## What to Expect
+
 - Detailed breakdowns of AI experiments
 - Raw AI outputs with analysis
 - Tips and techniques for AI content creation
 - Honest discussions about successes and failures
+- Curated collections of AI-generated artwork with details on the process
+- Technical documentation of AI experiments with Prompt engineering techniques
+
 :::
 
 ## Latest Posts
