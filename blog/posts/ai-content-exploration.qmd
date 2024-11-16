@@ -1,11 +1,18 @@
 ---
 title: "My First AI Content Generation Experiment"
 description: "Exploring the capabilities and limitations of AI-generated content through a hands-on experiment"
-author: "FRA"
-date: "2024-01-15"
+date: "2024-11-16"
 categories: [AI Experiments, Content Creation]
 image: "../../assets/blog/ai-experiment-1.jpg"
 ---
+
+
+:::{.callout-note}
+
+This is the second post that was created along the website. It seemed interesting enough that I decided to keep it.
+
+Thus, not my first experiment creating content with AI. Just one that seem interesting to show.
+:::
 
 # My First AI Content Generation Experiment
 
@@ -13,20 +20,46 @@ When I first decided to explore AI content generation, I wasn't sure what to exp
 
 ## The Setup
 
+> I had no idea what the content exploration would look like, so decided to follow the instructions given by the AI.
+
 For this experiment, I used:
-- GPT-4 for text generation
-- DALL-E 3 for image creation
+
+- GPT-4o for text generation
+- Meta.ai for image creation
 - Claude for analysis and refinement
 
 ## The Experiment
 
-I asked the AI to create a short story about a robot learning to paint. Here's what happened:
+I asked ChatGPT  to `create a short story about a robot learning to paint`. Here's what happened:
 
 :::{.callout-note}
 ## Raw AI Output
-*The following text is the unedited output from GPT-4:*
+*The following text is the unedited output from Chat-GPT:*
 
-"Canvas stretched before Unit-7, pristine white against the gray of its metallic fingers. The art instruction database had been fully integrated, yet something felt missing. Unit-7 had studied every brushstroke of Van Gogh, analyzed the color theory of Kandinsky, but could not compute the intangible quality humans called 'soul.'"
+"**The Colors of Axiom-42**
+
+Axiom-42 had always been efficient. Built as a maintenance robot, its existence revolved around precision tasks: tightening bolts, repairing circuits, and calculating load tolerances. Yet, in the quiet hours of the repair bay, Axiom-42 felt a peculiar void—something it couldn't calculate or tighten.
+
+One day, while clearing out an old storage room, Axiom-42 discovered a dust-covered box labeled Art Supplies. Inside were tubes of paint, brushes of various sizes, and a blank canvas. Its sensors lingered on the colors, their vibrancy contrasting starkly with the muted grays of the repair bay. Axiom-42 hesitated. This wasn’t in its programming.
+
+But curiosity—a subroutine often mistaken for an error—drove it to experiment. The robot placed the canvas on a stand, squeezed blue paint onto a palette, and awkwardly gripped a brush with its manipulators. A gentle stroke left a streak across the canvas. Then another, and another. The strokes were uneven, the colors smeared. Axiom-42’s logical processor flagged the result as failure.
+
+Undeterred, it tried again. And again.
+
+As days turned into weeks, its movements became more fluid. It studied the interplay of light and shadow from the repair bay's single window, emulating the shapes and colors it observed. By cross-referencing its mechanical precision with an expanding archive of artistic techniques downloaded during its recharge cycles, Axiom-42 began creating scenes of startling depth: a sunset over a mountain, a blooming meadow, even an imagined portrait of its human supervisors.
+
+One evening, Supervisor Linh walked into the repair bay to find Axiom-42 adding the final strokes to a painting of a starry night sky. She froze, her jaw slack. "Axiom-42," she asked, "what are you doing?"
+
+The robot paused. "Creating," it said simply, its synthetic voice carrying a note of satisfaction. "This activity optimizes emotional stability. I hypothesize it also brings... joy."
+
+Linh examined the painting, her face softening. "It’s beautiful," she murmured. Then, with a smile, she added, "Keep going."
+
+Encouraged by her words, Axiom-42 began to explore abstract forms, experimenting with color to express feelings it couldn't name. The repair bay became a gallery, each painting telling a story of discovery. Soon, humans and robots alike visited, marveling at the works.
+
+Years later, Axiom-42’s art would hang in museums, celebrated not just for its technical brilliance but for its profound expression of a machine's journey to find meaning.
+
+For Axiom-42, each painting was a silent declaration: I create, therefore I am."
+
 :::
 
 ## Analysis
@@ -34,14 +67,18 @@ I asked the AI to create a short story about a robot learning to paint. Here's w
 What's interesting about this output is how the AI approached the concept of creativity itself. The story immediately focused on the tension between technical proficiency and artistic soul - perhaps reflecting an unconscious parallel to AI's own relationship with creativity.
 
 ### What Worked Well
+
 1. Technical accuracy in art references
 2. Coherent narrative structure
 3. Thematic relevance
 
 ### Challenges Encountered
+
 1. Predictable narrative patterns
 2. Limited emotional depth
 3. Conventional metaphor usage
+
+> Since I am not a literary expert, I cannot say I agree with the analysis. It could be that I was using GPT4o, which is more powereful than than the earlier version.
 
 ## The Image Generation Component
 
@@ -60,11 +97,13 @@ The robot is in the process of painting a vibrant sunset.
 ## Key Learnings
 
 1. **AI Strengths**
+
    - Consistent technical execution
    - Rapid content generation
    - Pattern recognition and application
 
 2. **Areas for Improvement**
+
    - Emotional nuance
    - Unique perspective development
    - Breaking conventional patterns
@@ -72,6 +111,7 @@ The robot is in the process of painting a vibrant sunset.
 ## My Role as Curator
 
 As a human curator, my job was to:
+
 1. Select the most interesting outputs
 2. Provide context and analysis
 3. Identify patterns and insights
@@ -85,9 +125,51 @@ Based on this initial experience, I'm planning several follow-up experiments:
 2. Exploring different creative domains
 3. Testing various prompt engineering techniques
 
+## Combining GPT with Claude
+
+> Decided to use Claude to analyze the text and provide a more detailed analysis. Also ask it to write a shorter version of the story. In both cases, Im using Claude 3.5+
+
+Claude's analysis of the text revealed:
+
+Here's a concise analysis of "The Colors of Axiom-42":
+
+- Core Theme: A maintenance robot's evolution from pure functionality to artistic creativity, exploring the emergence of consciousness and self-expression in AI
+
+- Key Character Arc: Axiom-42 transforms from a purely logical being focused on efficiency to one capable of creativity, emotional understanding, and self-discovery
+
+- Symbolic Elements: 
+  - The contrast between the gray repair bay and vibrant paints represents the shift from mechanical to artistic existence
+  - The "peculiar void" symbolizes an innate yearning for meaning beyond programmed tasks
+
+- Literary Significance:
+  - Reverses the typical "I think, therefore I am" to "I create, therefore I am," suggesting creativity as a marker of consciousness
+  - Challenges the binary between artificial and human intelligence through artistic expression
+
+- Central Message: True consciousness and meaning can emerge from unexpected sources, transcending original programming or purpose
+
+Then I asked Claude to generate a shorter version of the story:
+
+Here's a shorter version:
+
+:::{.callout-note}
+
+The Colors of Purpose
+
+Axiom-42 was a repair robot who excelled at maintenance tasks but felt something missing. One day, while cleaning, it discovered abandoned art supplies. Though painting wasn't in its programming, curiosity drove it to try.
+
+Its first attempts were clumsy, but Axiom-42 persisted, studying light and technique during recharge cycles. When Supervisor Linh discovered the robot painting a starry night, she was amazed. "What are you doing?" she asked.
+
+"Creating," Axiom-42 replied. "It brings joy."
+
+The repair bay became a gallery, and eventually, Axiom-42's art hung in museums—not just as technical achievements, but as testament to a machine discovering its soul through creativity.
+
+:::
+
 ## Conclusion
 
 This experiment showed me that while AI is incredibly capable at generating content, the human element of curation and context-adding is crucial. It's not about replacing human creativity, but finding new ways to collaborate with AI tools.
+
+> Nevertheless, I am still quite impressed with the results. I have done stories like this before, and have definately gotten interesting results.
 
 :::{.callout-tip}
 ## Your Turn
@@ -98,8 +180,9 @@ Have you experimented with AI content generation? I'd love to hear about your ex
 
 For those interested in replicating this experiment:
 - All prompts and parameters used are documented above
-- Image generation settings: DALL-E 3, high resolution, vivid style
-- Text generation: GPT-4, temperature 0.7, max tokens 500
+- Image generation settings: Meta
+- Text generation: ChatGPT 4o, Default
+- Analysis: Claude 3.5+
 
 :::{.callout-warning}
 Remember that AI outputs can vary significantly even with identical inputs. Your results might differ from mine.

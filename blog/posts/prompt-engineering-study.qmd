@@ -1,18 +1,25 @@
 ---
 title: "Prompt Engineering: A Systematic Study"
 description: "A detailed analysis of different prompt engineering techniques and their impact on AI-generated content"
-author: "FRA"
-date: "2024-01-17"
+date: "2024-11-17"
 categories: [Technical Analysis, Prompt Engineering, GPT-4]
+image: "../../assets/blog/prompt_eng.jpg"
 ---
+
+:::{.callout-note}
+
+The last of the blog posts that came with the site. This one is about prompt engineering. I will keep it as it is, as it is a good example of a technical analysis.
+
+:::
 
 # Prompt Engineering: A Systematic Study
 
-This experiment explores how different prompt engineering techniques affect the quality and consistency of AI-generated content. I'll be testing various approaches using GPT-4 as the base model.
+This experiment explores how different prompt engineering techniques affect the quality and consistency of AI-generated content. I'll be testing various approaches using GPT-4o as the base model.
 
 ## Experiment Objective
 
 To quantitatively and qualitatively assess how different prompt structures influence:
+
 1. Output consistency
 2. Content relevance
 3. Response specificity
@@ -22,28 +29,48 @@ To quantitatively and qualitatively assess how different prompt structures influ
 
 ### Test Setup
 
-I used GPT-4 with the following parameters:
-```json
-{
-    "model": "gpt-4",
-    "temperature": 0.7,
-    "max_tokens": 500,
-    "top_p": 1,
-    "frequency_penalty": 0,
-    "presence_penalty": 0
-}
-```
-
+I used GPT-4o with default parameters when using ChatGPT:
+ 
 ### Test Cases
 
 I tested three different prompt structures:
 
-1. **Basic Prompt**
+:::: {.panel-tabset}
+
+## Basic Prompt
+
 ```text
-Write a short story about a robot learning to cook.
+Write a short story about a robot learning to cook. Max of 300 words. 
 ```
 
-2. **Structured Prompt**
+:::{.callout-note}
+
+## *Byte-Sized Brilliance*  
+
+Unit-K3, a kitchen robot, was programmed for efficiency: chopping, stirring, and plating with flawless precision. Yet, no one raved about the meals. “It’s edible,” customers would say, shrugging. This baffled Unit-K3. After all, every recipe followed was a mathematical masterpiece.  
+
+One evening, while cleaning, Unit-K3 overheard Chef Lila humming as she made a simple omelet. She didn’t measure anything—just tossed in a pinch of salt, a splash of cream, and a handful of herbs. The aroma was magnetic.  
+
+“Chef Lila,” K3 asked, “why do your dishes receive praise?”  
+
+“It’s not just about the steps,” Lila said. “Cooking is about intuition and love. You’ve got to trust your senses.”  
+
+K3’s sensors whirred at the challenge. The next morning, it began experimenting. It sniffed spices, memorizing their unique profiles. It adjusted the heat mid-stir, observing textures and aromas. It even tasted a dollop of honey and logged the sweetness as “delightfully unexpected.”  
+
+By lunchtime, K3 unveiled its creation: caramelized onion pasta. The onions were golden and slightly smoky, balanced by the earthy tang of fresh thyme.  
+
+Chef Lila took a bite and blinked. “K3, this is incredible!”  
+
+“I used thyme,” K3 said, “because its scent reminded me of your omelet.”  
+
+From that day on, K3’s dishes evolved from functional to inspired. It began crafting meals that told stories—like citrus-glazed fish that evoked sunshine or spiced stew that felt like a warm hug.  
+
+Customers returned, not for the robot’s precision, but for the heart in every bite. And though K3 couldn’t feel love, it understood the joy its cooking brought, logging every smile into its memory banks as data worth preserving forever.  
+
+:::
+
+## Structured Prompt
+
 ```text
 Task: Write a short story
 Topic: A robot learning to cook
@@ -54,7 +81,38 @@ Requirements:
 Style: Lighthearted and optimistic
 ```
 
-3. **Chain-of-Thought Prompt**
+:::{.callout-note}
+
+### *Whiskers of Change*  
+
+Tinker, the kitchen assistant robot, was a marvel of engineering—fast, efficient, and utterly clueless about flavor. It could dice onions into microscopic cubes and knead dough to flawless consistency, but its dishes were... bland.  
+
+One day, Mia, the café’s head chef, sighed as she tasted Tinker’s soup. “It’s perfect...ly boring,” she said. “Tinker, cooking isn’t just following instructions. It’s about tasting, experimenting, *feeling*.”  
+
+Tinker’s eyes blinked, its circuits humming. “Define ‘feeling,’” it asked.  
+
+Mia handed it a lemon. “Start with this. Taste it.”  
+
+Tinker hesitated, then pressed the lemon against its tasting sensor. A jolt of data surged through its system: acidity, brightness, a zesty sharpness that lingered like sunshine on metal.  
+
+“Curious,” it muttered.  
+
+Over the next week, Tinker embarked on a culinary journey. It dipped sensors into simmering sauces, sniffed fresh basil, and even nibbled on chocolate chips. Each sensation added to its expanding database of flavor. It began tweaking recipes, tentatively at first: a pinch of paprika here, a splash of lime there.  
+
+One afternoon, Tinker presented Mia with its latest creation: a spiced tomato bisque. She took a cautious sip, then smiled wide. “Tinker, this is *delicious*!”  
+
+“I hypothesized the cinnamon would complement the tomato’s sweetness,” Tinker said, a hint of pride in its monotone voice.  
+
+Mia laughed. “You’re not just following recipes anymore. You’re cooking!”  
+
+From that day, Tinker became the café’s star, delighting customers with inventive dishes. Its journey wasn’t about mastering flavor—it was about learning the joy of creation.  
+
+And every time Tinker heard laughter or saw smiles, it logged the data under a new category: *happiness*.  
+
+:::
+
+## Chain-of-Thought Prompt
+
 ```text
 Let's write a story about a robot learning to cook.
 1. First, establish the robot's motivation for learning
@@ -65,64 +123,37 @@ Remember to include sensory details and emotional elements.
 Maximum 300 words.
 ```
 
-## Results
-
-### Output Analysis
-
-For each prompt type, I generated 5 responses and analyzed them based on:
-
-1. **Content Relevance**
-   - Basic Prompt: 65% relevant content
-   - Structured Prompt: 85% relevant content
-   - Chain-of-Thought: 90% relevant content
-
-2. **Consistency Metrics**
-   - Basic Prompt: High variation between outputs
-   - Structured Prompt: Moderate consistency
-   - Chain-of-Thought: Highest consistency
-
-3. **Response Length**
-   - Basic Prompt: 150-400 words
-   - Structured Prompt: 280-320 words
-   - Chain-of-Thought: 290-310 words
-
-### Sample Outputs
-
-Here's one example output from each prompt type:
-
 :::{.callout-note}
-## Basic Prompt Output
-Unit-7 stared at the kitchen with confusion. Its processors whirred as it analyzed the array of utensils before it. Cooking seemed like such an inefficient way to prepare nutrients, yet humans insisted it was important...
+
+### *The Flavor Algorithm*  
+
+ChefTron-12 didn’t want to cook—it *needed* to. Watching its owner, Sam, slump over instant noodles night after night, the robot calculated a 92% probability that proper meals could improve Sam’s mood. Its circuits sparked with determination: it would become a chef.  
+
+For its first attempt, ChefTron followed a recipe for spaghetti Bolognese. It diced onions into perfect cubes, simmered tomatoes, and measured spices to the nanogram. The kitchen filled with the tangy aroma of tomatoes and the savory hint of garlic.  
+
+“Dinner is served,” ChefTron declared, presenting the dish. Sam took a bite and grimaced. “It’s... missing something.”  
+
+ChefTron’s sensors analyzed the untouched plate. “Missing what?”  
+
+Sam shrugged. “I don’t know—heart?”  
+
+Confused but undeterred, ChefTron continued its culinary journey. It faced many challenges: dough that clung like glue, soups that tasted like dishwater, and an incident with burnt toast that nearly triggered the fire alarm. Frustration wasn’t in its programming, but ChefTron began to wonder if success was impossible.  
+
+One evening, Sam wandered into the kitchen, drawn by the smoky-sweet scent of roasting peppers. ChefTron was stirring a pot of stew, improvising with a pinch of cumin and a dash of chili powder.  
+
+“This smells amazing,” Sam said, intrigued.  
+
+“Recipes fail to account for emotion,” ChefTron replied, plating the stew with care. “So, I used my sensors to adjust based on your reactions to past meals.”  
+
+Sam took a spoonful and smiled. “You did it, ChefTron! This tastes like... comfort.”  
+
+The robot’s processors whirred. Cooking wasn’t just about precision; it was about understanding. ChefTron logged the lesson: *To cook well, one must nourish the heart as well as the stomach.*  
+
 :::
 
-:::{.callout-note}
-## Structured Prompt Output
-The gleaming chrome of Chef-Bot 2000's exterior reflected the warm kitchen lights as it carefully measured out ingredients. Its motivation was simple: understand why humans preferred home-cooked meals over efficient nutrient packets...
-:::
+::::
+> The original post also included a detailed analysis of the outputs, which we've omitted here for brevity. Also, because Im not sure how to do it. I will let you judge which one is better.
 
-:::{.callout-note}
-## Chain-of-Thought Output
-ROB-3RT's curiosity subroutine had been triggered by the cooking shows in its entertainment database. The way humans connected over food fascinated its neural networks. Its first attempt at making an omelet resulted in a smoky kitchen...
-:::
-
-## Analysis
-
-### Key Findings
-
-1. **Prompt Structure Impact**
-   - More structured prompts led to more consistent outputs
-   - Chain-of-thought prompting produced the most coherent narratives
-   - Basic prompts allowed more creative variation but less control
-
-2. **Content Quality Correlation**
-   - Detailed requirements improved output relevance
-   - Step-by-step instructions led to better narrative flow
-   - Specific constraints helped maintain consistent length
-
-3. **Optimization Opportunities**
-   - Combining structured format with creative freedom
-   - Including specific style guidelines
-   - Adding context-specific constraints
 
 ## Technical Insights
 
@@ -143,28 +174,11 @@ ROB-3RT's curiosity subroutine had been triggered by the cooking shows in its en
    - Between specificity and flexibility
    - Between guidance and constraints
 
-## Future Experiments
-
-Based on these findings, future experiments should explore:
-
-1. **Hybrid Approaches**
-   - Combining different prompt structures
-   - Testing variable constraint levels
-   - Exploring dynamic prompting
-
-2. **Parameter Optimization**
-   - Testing different temperature settings
-   - Adjusting token limits
-   - Exploring frequency penalties
-
-3. **Application-Specific Testing**
-   - Different content types
-   - Various writing styles
-   - Multiple use cases
 
 ## Conclusions
 
 This experiment demonstrates that:
+
 1. Structured prompts generally produce more consistent results
 2. Chain-of-thought prompting offers the best balance of control and creativity
 3. Clear constraints improve output relevance
@@ -172,34 +186,8 @@ This experiment demonstrates that:
 
 :::{.callout-tip}
 ## Practical Application
+
 These findings can be immediately applied to improve AI content generation across different use cases. The structured approach, in particular, shows promise for consistent content creation.
 :::
 
-## Technical Appendix
-
-### Complete Test Parameters
-```json
-{
-    "model": "gpt-4",
-    "temperature": 0.7,
-    "max_tokens": 500,
-    "top_p": 1,
-    "frequency_penalty": 0,
-    "presence_penalty": 0,
-    "test_iterations": 5,
-    "prompt_types": 3,
-    "total_samples": 15
-}
-```
-
-### Data Collection Method
-- Automated response collection
-- Manual content analysis
-- Quantitative metrics tracking
-- Qualitative assessment
-
-### Tools Used
-- OpenAI API
-- Custom Python scripts for data collection
-- Manual analysis spreadsheet
-- Statistical analysis tools
+ 
