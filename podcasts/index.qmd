@@ -1,6 +1,6 @@
 ---
-title: "AI Conversations"
-subtitle: "Audio Explorations of AI and Creativity"
+title: "Conversations with AI: MindMeld Podcasts"
+subtitle: "Using AI as a tool for learning, creativity, and content creation"
 listing:
   contents: "episodes"
   type: default
@@ -16,82 +16,59 @@ page-layout: full
 :::{.column-page}
 # Welcome to MindMeld Podcasts
 
-This is where I share audio conversations, experiments, and thoughts about AI content creation. Each episode includes a full transcript, show notes, and relevant links to topics discussed.
+This is where I will share conversations, experiments, and thoughts using AI tools to generate the podcast content. 
+
+For now, given my knowledge and skills on the subject, I'll generate different types of podcasts. 
+
+- **Full AI**: This means that I will use tools like NotebookLM by Google to create their "DeepDives" podcast. While this tool is still under development, as of Nov 16 2024, it provides you witn a small context/prompt window that you can use to guide the tone of the podcast, based on the content you provide. Earlier versions did not have that, which produced a more generic "babbling" type of podcast.
+
+- **AI-Generated audio**: This means that I will use tools like Claude or ChatGpt to generate Scripts, or refine scripts that I start writting myself. Then, I will use OpenAI text-to-speech to capabilities to produce the podcast. Given current technologies, this will sound less natural than a real podcast, but I will have more control over the content.
+
+- **Talks with AI**: Just recently, I started experimenting with ChatGPT phone-app with audio capabilities. This version of an AI assistant is more versatile than your typical Alexa or Siri, and can hold a conversation with you. I may be able to "record" those conversations to make a different kind of podcast.
+
+- **Talks about me and you**: Your standard Podcast. If I get the equipment time and guests, I will record a podcast with real people, and real conversations about AI, technology, and how it is being used in the real world.
+
+Depending on the "type" of episode, it will include:
+   - A full transcript, show notes, and relevant links to topics discussed.
+   - Audio conversations, with Prompts that generated it. May include written or audio discussion on the generated content. 
+   - Technical details on how the content was generated, and what tools were used.
 
 :::{.callout-note}
 ## About the Format
-Each episode combines:
-- AI-generated content discussion
-- Technical insights and experiments
-- Real-world applications and observations
-- Interactive elements where possible
+
+Each episode will be different:
+
+- They may include discussions or reviews on
+   - Books (textbooks, novels, etc.), 
+   - concepts (like Ferma's Last Theorem),
+   - or some "random" deep dive into a topic (from a single word, to a catch phrase, a story, etc).
+   - Real-world applications and observations
+   - Interviews with people in the field, or people who have used AI in their work.
+
 :::
 
 ## Latest Episodes
 
-Below you'll find all podcast episodes, with the most recent first. Each entry includes:
-- Full audio recording
-- Complete transcript
-- Show notes and references
-- Related resources and links
+Below you'll find all podcast episodes, with the most recent first. 
 
 ::::{.grid}
 
 :::{.g-col-12 .g-col-md-6}
 
-### Series Overview
-The podcast focuses on practical explorations of AI tools and techniques, with each episode documenting real experiments and their results. Episodes typically run 15-30 minutes.
-
-**Format**:
-- Solo episodes exploring specific AI topics
-- Experiment documentation and results
-- Technical deep-dives into AI tools
-- Occasional guest conversations
-
-:::
-
-:::{.g-col-12 .g-col-md-6}
-
 ### How to Listen
 You can listen to episodes:
+
 - Directly on this website
-- Through RSS feed in your podcast app
 - Download for offline listening
 
 **Subscribe**:
-- [RSS Feed](/podcasts/feed.xml)
-- [Spotify](https://spotify.com)
-- [Apple Podcasts](https://podcasts.apple.com)
+
+- Not just yet! Perhaps if this gains traction, I will add a subscription service.
 
 :::
 
 ::::
 
-## Episode Structure
-
-Each episode follows a consistent format:
-
-1. **Introduction** (2-3 minutes)
-   - Topic overview
-   - Context and background
-   - Episode goals
-
-2. **Main Content** (10-20 minutes)
-   - Detailed exploration
-   - Examples and demonstrations
-   - Technical insights
-
-3. **Conclusion** (3-5 minutes)
-   - Key takeaways
-   - Next steps
-   - Preview of future episodes
-
-## Technical Details
-
-- **Audio Quality**: 44.1kHz, 320kbps stereo
-- **Format**: MP3 and OGG formats available
-- **Transcripts**: Machine-generated with human editing
-- **Show Notes**: Detailed references and links
 
 :::{.callout-tip}
 ## Contribute

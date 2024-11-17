@@ -10,10 +10,1569 @@
 <atom:link href="https://rmindmeld.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A Personal Journey Through AI-Human Content Creation</description>
 <generator>quarto-1.6.33</generator>
-<lastBuildDate>Sun, 17 Nov 2024 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 16 Nov 2024 05:00:00 GMT</lastBuildDate>
 <item>
-  <title>Prompt Engineering: A Systematic Study</title>
-  <link>https://rmindmeld.github.io/blog/posts/prompt-engineering-study.html</link>
+  <title>The Economics of Superhero Cities: Gotham vs. Metropolis</title>
+  <link>https://rmindmeld.github.io/blog/posts/econ_hero.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to MindMeld</title>
+
+    <style>
+
+        :root {
+
+            --transition-duration: 1000ms;
+
+        }
+
+        
+
+        body, html {
+
+            margin: 0;
+
+            padding: 0;
+
+            height: 100%;
+
+            font-family: system-ui, -apple-system, sans-serif;
+
+        }
+
+        
+
+        .welcome-container {
+
+            position: absolute; /* Changed from fixed to absolute */
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100vh;
+
+            z-index: 1000; /* Add high z-index to show above content initially */
+
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+
+                        url('assets/welcome-bg.jpg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            text-align: center;
+
+            transition: opacity var(--transition-duration) ease-in-out,
+
+                        visibility var(--transition-duration) ease-in-out; /* Add visibility transition */
+
+        }
+
+        
+
+        .welcome-content {
+
+            max-width: 800px;
+
+            padding: 2rem;
+
+        }
+
+        
+
+        .title {
+
+            font-size: 3.5rem;
+
+            margin-bottom: 1rem;
+
+            font-weight: 700;
+
+        }
+
+        
+
+        .subtitle {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 2rem;
+
+            opacity: 0.9;
+
+        }
+
+        
+
+        .enter-button {
+
+            background-color: transparent;
+
+            border: 2px solid white;
+
+            color: white;
+
+            padding: 1rem 2rem;
+
+            font-size: 1.2rem;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            text-decoration: none;
+
+            border-radius: 4px;
+
+        }
+
+        
+
+        .enter-button:hover {
+
+            background-color: white;
+
+            color: black;
+
+        }
+
+        
+
+        /* Fade out animation class */
+
+        .fade-out {
+
+            opacity: 0;
+
+            visibility: hidden; /* Hide completely when faded out */
+
+            z-index: -1; /* Move behind content when faded out */
+
+        }
+
+        
+
+        /* Main content container */
+
+        #main-content {
+
+            position: relative;
+
+            z-index: 1; /* Lower than welcome screen but above 0 */
+
+            opacity: 0;
+
+            transition: opacity var(--transition-duration) ease-in-out;
+
+        }
+
+        
+
+        /* Main content visible state */
+
+        #main-content.visible {
+
+            opacity: 1;
+
+        }
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+        .welcome-container.hidden-welcome {
+
+            display: none;
+
+        }
+
+    </style>
+
+
+
+
+
+    <div id="welcome" class="welcome-container hidden-welcome">
+
+        <div class="welcome-content">
+
+            <h1 class="title">MindMeld</h1>
+
+            <p class="subtitle">Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.</p>
+
+            <button id="enter-btn" class="enter-button">Enter MindMeld</button>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        // Only run this script on the index page
+
+        if (window.location.pathname === '/' || 
+
+            window.location.pathname === '/index.html' || 
+
+            window.location.pathname.endsWith('/')) {
+
+            
+
+            // Check if this is the first visit
+
+            const hasVisited = sessionStorage.getItem('hasVisited');
+
+            
+
+            if (!hasVisited) {
+
+                // First visit - show welcome screen
+
+                const welcome = document.getElementById('welcome');
+
+                welcome.classList.remove('hidden-welcome');
+
+                
+
+                // Mark as visited
+
+                sessionStorage.setItem('hasVisited', 'true');
+
+                
+
+                // Add click handler for enter button
+
+                document.getElementById('enter-btn').addEventListener('click', function() {
+
+                    welcome.classList.add('fade-out');
+
+                    
+
+                    const mainContent = document.getElementById('main-content');
+
+                    setTimeout(() => {
+
+                        mainContent.classList.add('visible');
+
+                    }, 500);
+
+                    
+
+                    setTimeout(() => {
+
+                        welcome.style.display = 'none';
+
+                    }, 1000);
+
+                });
+
+            } else {
+
+                // Not first visit - show main content immediately
+
+                const mainContent = document.getElementById('main-content');
+
+                mainContent.classList.add('visible');
+
+            }
+
+        } else {
+
+            // Not on index page - show main content immediately
+
+            const mainContent = document.getElementById('main-content');
+
+            mainContent.classList.add('visible');
+
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The original blog post
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This was is one of the original blog posts I wanted to create and that inspired me to create this site. I was just starting to dig into the world of AI-generated content and thought it would be fun to explore the capabilities of AI in generating blog content using a cross-over of topics like pop-culture and economics. (others to come later)</p>
+<p>I played a bit with an elaborate prompt, since I not only wanted random content, but content that could teach something to the reader, including programming along math and economics. (my favorite subjects). I used Claude’s API to generate the content, and starting testing. Took me a while to get the program to create random but “theoretically” interesting and educational content. I ended up with a lot of drafts I ll be sharing later, but you will see they are rather holow. perhaps with the newer models i can get better results.</p>
+<p>Enjoy!</p>
+</div>
+</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Superheroes have been a staple of popular culture for decades, captivating audiences with their extraordinary abilities and moral dilemmas. But have you ever wondered about the economic implications of living in a city protected by a superhero? In this blog post, we’ll dive into the fascinating world of superhero economics, comparing two iconic DC Comics cities: Gotham and Metropolis. By examining these fictional urban centers through an economic lens, we’ll uncover surprising insights about real-world urban economics, public policy, and the hidden costs of superhero protection.</p>
+</section>
+<section id="the-tale-of-two-cities" class="level2">
+<h2 class="anchored" data-anchor-id="the-tale-of-two-cities">The Tale of Two Cities</h2>
+<p>Gotham City, home to Batman, is often portrayed as a dark, crime-ridden metropolis with a struggling economy. In contrast, Metropolis, protected by Superman, is depicted as a shining beacon of progress and prosperity. But what economic factors contribute to these stark differences?</p>
+<section id="crime-rates-and-economic-growth" class="level3">
+<h3 class="anchored" data-anchor-id="crime-rates-and-economic-growth">Crime Rates and Economic Growth</h3>
+<p>One of the most significant factors affecting the economies of Gotham and Metropolis is their respective crime rates. Let’s use some Python code to visualize this difference:</p>
+<div id="12a0e13c" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb1-3"></span>
+<span id="cb1-4">years <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.arange(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2015</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2025</span>)</span>
+<span id="cb1-5">gotham_crime_rate <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8.2</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8.7</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8.4</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8.6</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8.3</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8.2</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8.4</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8.1</span>]</span>
+<span id="cb1-6">metropolis_crime_rate <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3.1</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3.0</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2.8</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2.9</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2.7</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2.6</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2.4</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2.3</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2.2</span>]</span>
+<span id="cb1-7"></span>
+<span id="cb1-8">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>))</span>
+<span id="cb1-9">plt.plot(years, gotham_crime_rate, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Gotham'</span>, marker<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'o'</span>)</span>
+<span id="cb1-10">plt.plot(years, metropolis_crime_rate, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Metropolis'</span>, marker<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'o'</span>)</span>
+<span id="cb1-11">plt.title(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Crime Rates in Gotham vs. Metropolis'</span>)</span>
+<span id="cb1-12">plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Year'</span>)</span>
+<span id="cb1-13">plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Crime Rate (per 100,000 residents)'</span>)</span>
+<span id="cb1-14">plt.legend()</span>
+<span id="cb1-15">plt.grid(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb1-16">plt.show()</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://rmindmeld.github.io/blog/posts/econ_hero_files/figure-html/cell-2-output-1.png" width="799" height="523" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This graph illustrates the stark difference in crime rates between Gotham and Metropolis. Gotham’s persistently high crime rate has several economic implications:</p>
+<ol type="1">
+<li>Increased security costs for businesses and residents</li>
+<li>Lower property values</li>
+<li>Reduced tourism and outside investment</li>
+<li>Higher insurance premiums</li>
+</ol>
+<p>Metropolis, with its lower crime rate, benefits from the opposite effects, creating a more attractive environment for economic growth.</p>
+</section>
+<section id="infrastructure-and-public-spending" class="level3">
+<h3 class="anchored" data-anchor-id="infrastructure-and-public-spending">Infrastructure and Public Spending</h3>
+<p>The presence of superheroes also impacts public spending and infrastructure development. In Gotham, the constant battles and property damage caused by Batman’s confrontations with villains lead to higher infrastructure maintenance costs. Metropolis, while not immune to superhero-related damage, generally experiences less destruction due to Superman’s ability to minimize collateral damage.</p>
+<p>Let’s examine the hypothetical public spending breakdown for both cities:</p>
+<div id="79f45435" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb2-2"></span>
+<span id="cb2-3">categories <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Infrastructure'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Education'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Healthcare'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Public Safety'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Other'</span>]</span>
+<span id="cb2-4">gotham_spending <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">35</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">15</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">25</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>]</span>
+<span id="cb2-5">metropolis_spending <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">25</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">30</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">15</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>]</span>
+<span id="cb2-6"></span>
+<span id="cb2-7">fig, (ax1, ax2) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.subplots(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>))</span>
+<span id="cb2-8"></span>
+<span id="cb2-9">ax1.pie(gotham_spending, labels<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>categories, autopct<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%1.1f%%</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span>, startangle<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">90</span>)</span>
+<span id="cb2-10">ax1.set_title(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Gotham City Public Spending'</span>)</span>
+<span id="cb2-11"></span>
+<span id="cb2-12">ax2.pie(metropolis_spending, labels<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>categories, autopct<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%1.1f%%</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span>, startangle<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">90</span>)</span>
+<span id="cb2-13">ax2.set_title(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Metropolis Public Spending'</span>)</span>
+<span id="cb2-14"></span>
+<span id="cb2-15">plt.tight_layout()</span>
+<span id="cb2-16">plt.show()</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://rmindmeld.github.io/blog/posts/econ_hero_files/figure-html/cell-3-output-1.png" width="1124" height="518" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This comparison reveals that Gotham allocates a larger portion of its budget to infrastructure repair and public safety, while Metropolis can invest more in education and healthcare. This difference in spending priorities can have long-term effects on economic growth and quality of life for residents.</p>
+</section>
+</section>
+<section id="the-superhero-effect-on-local-economies" class="level2">
+<h2 class="anchored" data-anchor-id="the-superhero-effect-on-local-economies">The Superhero Effect on Local Economies</h2>
+<section id="tourism-and-branding" class="level3">
+<h3 class="anchored" data-anchor-id="tourism-and-branding">Tourism and Branding</h3>
+<p>Both Gotham and Metropolis benefit from superhero-related tourism, but in different ways. Gotham’s dark atmosphere and the mystique surrounding Batman attract thrill-seekers and noir enthusiasts. Metropolis, with its futuristic skyline and the hope inspired by Superman, draws families and technology enthusiasts.</p>
+</section>
+<section id="technology-spillovers" class="level3">
+<h3 class="anchored" data-anchor-id="technology-spillovers">Technology Spillovers</h3>
+<p>The presence of superheroes and their adversaries often leads to technological advancements. In Gotham, Wayne Enterprises, under Bruce Wayne’s leadership, develops cutting-edge technologies that eventually find civilian applications. Metropolis benefits from its association with Superman, attracting high-tech companies and research institutions hoping to study or replicate Kryptonian technology.</p>
+</section>
+<section id="labor-market-dynamics" class="level3">
+<h3 class="anchored" data-anchor-id="labor-market-dynamics">Labor Market Dynamics</h3>
+<p>The superhero presence also affects labor markets in these cities. Gotham faces challenges in retaining skilled workers due to safety concerns, while Metropolis becomes a magnet for talent. Let’s model this difference using a simple labor supply and demand curve:</p>
+<div id="5e96aa80" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb3-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb3-3"></span>
+<span id="cb3-4"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> labor_supply(w, a):</span>
+<span id="cb3-5">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> a <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> w <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span>
+<span id="cb3-6"></span>
+<span id="cb3-7"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> labor_demand(w, b):</span>
+<span id="cb3-8">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>b <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> w <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span></span>
+<span id="cb3-9"></span>
+<span id="cb3-10">w <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.linspace(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>)</span>
+<span id="cb3-11"></span>
+<span id="cb3-12">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>))</span>
+<span id="cb3-13"></span>
+<span id="cb3-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Gotham</span></span>
+<span id="cb3-15">plt.plot(w, labor_supply(w, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>), label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Gotham Supply'</span>)</span>
+<span id="cb3-16">plt.plot(w, labor_demand(w, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.8</span>), label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Gotham Demand'</span>)</span>
+<span id="cb3-17"></span>
+<span id="cb3-18"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Metropolis</span></span>
+<span id="cb3-19">plt.plot(w, labor_supply(w, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.8</span>), label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Metropolis Supply'</span>)</span>
+<span id="cb3-20">plt.plot(w, labor_demand(w, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>), label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Metropolis Demand'</span>)</span>
+<span id="cb3-21"></span>
+<span id="cb3-22">plt.title(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Labor Market Dynamics: Gotham vs. Metropolis'</span>)</span>
+<span id="cb3-23">plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Wage'</span>)</span>
+<span id="cb3-24">plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Labor'</span>)</span>
+<span id="cb3-25">plt.legend()</span>
+<span id="cb3-26">plt.grid(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb3-27">plt.show()</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://rmindmeld.github.io/blog/posts/econ_hero_files/figure-html/cell-4-output-1.png" width="808" height="523" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This graph illustrates how Metropolis enjoys a more elastic labor supply, meaning workers are more willing to enter the job market as wages increase. Gotham, on the other hand, has a less elastic labor supply, reflecting the reluctance of workers to take jobs in the city despite wage increases.</p>
+</section>
+</section>
+<section id="the-hidden-costs-of-superhero-protection" class="level2">
+<h2 class="anchored" data-anchor-id="the-hidden-costs-of-superhero-protection">The Hidden Costs of Superhero Protection</h2>
+<p>While superheroes provide invaluable protection, their presence also imposes certain costs on their cities:</p>
+<ol type="1">
+<li>Insurance premiums: The risk of collateral damage from superhero battles leads to higher insurance costs for residents and businesses.</li>
+<li>Public resources: Police and emergency services must be specially equipped to deal with super-powered threats, diverting resources from other areas.</li>
+<li>Psychological impact: Living under constant threat of supervillain attacks can lead to increased stress and mental health issues among the population, affecting productivity and quality of life.</li>
+</ol>
+</section>
+<section id="conclusion-lessons-for-real-world-urban-economics" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-lessons-for-real-world-urban-economics">Conclusion: Lessons for Real-World Urban Economics</h2>
+<p>The economic comparison of Gotham and Metropolis offers valuable insights for real-world urban planning and economic development:</p>
+<ol type="1">
+<li>Crime reduction has far-reaching economic benefits beyond just improved safety.</li>
+<li>Investing in education and healthcare can create a positive feedback loop for economic growth.</li>
+<li>City branding and unique attractions (even without superheroes) can drive tourism and investment.</li>
+<li>Fostering innovation and technology development can lead to economic resilience.</li>
+<li>Creating a safe, attractive environment for skilled workers is crucial for long-term economic success.</li>
+</ol>
+<p>While we may not have superheroes protecting our cities, the economic principles at play in Gotham and Metropolis are very real. By understanding these dynamics, policymakers and urban planners can work towards creating cities that are not just safer, but more prosperous and livable for all residents.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Becker, G. S. (1968). Crime and punishment: An economic approach. Journal of Political Economy, 76(2), 169-217.</p>
+<p>Florida, R. (2002). The rise of the creative class: And how it’s transforming work, leisure, community and everyday life. Basic Books.</p>
+<p>Glaeser, E. L. (2011). Triumph of the city: How our greatest invention makes us richer, smarter, greener, healthier, and happier. Penguin Press.</p>
+<p>Morrison, G., &amp; McKean, D. (1989). Arkham Asylum: A Serious House on Serious Earth. DC Comics.</p>
+<p>Waid, M., &amp; Yu, L. F. (2003). Superman: Birthright. DC Comics.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Economics</category>
+  <category>Pop Culture</category>
+  <category>Literature</category>
+  <category>Superheroes</category>
+  <guid>https://rmindmeld.github.io/blog/posts/econ_hero.html</guid>
+  <pubDate>Sat, 16 Nov 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://rmindmeld.github.io/assets/blog/economic_hero.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>D’oh! The Surprising Math Behind The Simpsons</title>
+  <link>https://rmindmeld.github.io/blog/posts/math_siimpsons.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to MindMeld</title>
+
+    <style>
+
+        :root {
+
+            --transition-duration: 1000ms;
+
+        }
+
+        
+
+        body, html {
+
+            margin: 0;
+
+            padding: 0;
+
+            height: 100%;
+
+            font-family: system-ui, -apple-system, sans-serif;
+
+        }
+
+        
+
+        .welcome-container {
+
+            position: absolute; /* Changed from fixed to absolute */
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100vh;
+
+            z-index: 1000; /* Add high z-index to show above content initially */
+
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+
+                        url('assets/welcome-bg.jpg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            text-align: center;
+
+            transition: opacity var(--transition-duration) ease-in-out,
+
+                        visibility var(--transition-duration) ease-in-out; /* Add visibility transition */
+
+        }
+
+        
+
+        .welcome-content {
+
+            max-width: 800px;
+
+            padding: 2rem;
+
+        }
+
+        
+
+        .title {
+
+            font-size: 3.5rem;
+
+            margin-bottom: 1rem;
+
+            font-weight: 700;
+
+        }
+
+        
+
+        .subtitle {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 2rem;
+
+            opacity: 0.9;
+
+        }
+
+        
+
+        .enter-button {
+
+            background-color: transparent;
+
+            border: 2px solid white;
+
+            color: white;
+
+            padding: 1rem 2rem;
+
+            font-size: 1.2rem;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            text-decoration: none;
+
+            border-radius: 4px;
+
+        }
+
+        
+
+        .enter-button:hover {
+
+            background-color: white;
+
+            color: black;
+
+        }
+
+        
+
+        /* Fade out animation class */
+
+        .fade-out {
+
+            opacity: 0;
+
+            visibility: hidden; /* Hide completely when faded out */
+
+            z-index: -1; /* Move behind content when faded out */
+
+        }
+
+        
+
+        /* Main content container */
+
+        #main-content {
+
+            position: relative;
+
+            z-index: 1; /* Lower than welcome screen but above 0 */
+
+            opacity: 0;
+
+            transition: opacity var(--transition-duration) ease-in-out;
+
+        }
+
+        
+
+        /* Main content visible state */
+
+        #main-content.visible {
+
+            opacity: 1;
+
+        }
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+        .welcome-container.hidden-welcome {
+
+            display: none;
+
+        }
+
+    </style>
+
+
+
+
+
+    <div id="welcome" class="welcome-container hidden-welcome">
+
+        <div class="welcome-content">
+
+            <h1 class="title">MindMeld</h1>
+
+            <p class="subtitle">Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.</p>
+
+            <button id="enter-btn" class="enter-button">Enter MindMeld</button>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        // Only run this script on the index page
+
+        if (window.location.pathname === '/' || 
+
+            window.location.pathname === '/index.html' || 
+
+            window.location.pathname.endsWith('/')) {
+
+            
+
+            // Check if this is the first visit
+
+            const hasVisited = sessionStorage.getItem('hasVisited');
+
+            
+
+            if (!hasVisited) {
+
+                // First visit - show welcome screen
+
+                const welcome = document.getElementById('welcome');
+
+                welcome.classList.remove('hidden-welcome');
+
+                
+
+                // Mark as visited
+
+                sessionStorage.setItem('hasVisited', 'true');
+
+                
+
+                // Add click handler for enter button
+
+                document.getElementById('enter-btn').addEventListener('click', function() {
+
+                    welcome.classList.add('fade-out');
+
+                    
+
+                    const mainContent = document.getElementById('main-content');
+
+                    setTimeout(() => {
+
+                        mainContent.classList.add('visible');
+
+                    }, 500);
+
+                    
+
+                    setTimeout(() => {
+
+                        welcome.style.display = 'none';
+
+                    }, 1000);
+
+                });
+
+            } else {
+
+                // Not first visit - show main content immediately
+
+                const mainContent = document.getElementById('main-content');
+
+                mainContent.classList.add('visible');
+
+            }
+
+        } else {
+
+            // Not on index page - show main content immediately
+
+            const mainContent = document.getElementById('main-content');
+
+            mainContent.classList.add('visible');
+
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Comment
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This post was also created along with the superhero economics one. I’m planning to create a podcast on this topic based on the book “The Simpsons and Their Mathematical Secrets” by Simon Singh, so look there for a more complete analysis.</p>
+</div>
+</div>
+<section id="doh-the-surprising-math-behind-the-simpsons" class="level1">
+<h1>D’oh! The Surprising Math Behind The Simpsons</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>For over three decades, “The Simpsons” has been a cultural phenomenon, entertaining audiences with its witty humor and satirical take on American life. But beneath the surface of this animated sitcom lies a hidden world of mathematical references and jokes that have delighted math enthusiasts for years. In this post, we’ll explore some of the most intriguing mathematical moments in “The Simpsons” and even recreate one using Python. Get ready to see Springfield through the lens of a mathematician!</p>
+</section>
+<section id="the-mathematical-minds-behind-the-show" class="level2">
+<h2 class="anchored" data-anchor-id="the-mathematical-minds-behind-the-show">The Mathematical Minds Behind the Show</h2>
+<p>It’s no coincidence that “The Simpsons” is rife with mathematical easter eggs. Many of the show’s writers have advanced degrees in mathematics, computer science, and physics. For instance, Al Jean, one of the original writers and current showrunner, studied mathematics at Harvard University. This background has allowed the writers to sneak in complex mathematical concepts, often as blink-and-you’ll-miss-it gags or background details.</p>
+</section>
+<section id="homers-doughnut-dilemma-a-topology-lesson" class="level2">
+<h2 class="anchored" data-anchor-id="homers-doughnut-dilemma-a-topology-lesson">Homer’s Doughnut Dilemma: A Topology Lesson</h2>
+<p>One of the most famous mathematical references in “The Simpsons” occurs in the episode “Homer3” (Treehouse of Horror VI). Homer finds himself trapped in a three-dimensional world, where he encounters a equation floating in the air:</p>
+<p><img src="https://latex.codecogs.com/png.latex?1782%5E%7B12%7D%20+%201841%5E%7B12%7D%20=%201922%5E%7B12%7D"></p>
+<p>This equation is a near-miss to Fermat’s Last Theorem, which states that no three positive integers a, b, and c can satisfy the equation <img src="https://latex.codecogs.com/png.latex?a%5En%20+%20b%5En%20=%20c%5En"> for any integer value of n greater than 2. The equation in the show is not actually true, but it’s remarkably close – the left side differs from the right by less than 1 part in <img src="https://latex.codecogs.com/png.latex?10%5E%7B30%7D">.</p>
+<p>Let’s verify this using Python:</p>
+<div id="d55a085e" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> check_equation():</span>
+<span id="cb1-2">    left_side <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1782</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1841</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span></span>
+<span id="cb1-3">    right_side <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1922</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span></span>
+<span id="cb1-4">    difference <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">abs</span>(left_side <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> right_side)</span>
+<span id="cb1-5">    relative_error <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> difference <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> right_side</span>
+<span id="cb1-6">    </span>
+<span id="cb1-7">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Left side: </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>left_side<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb1-8">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Right side: </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>right_side<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb1-9">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Difference: </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>difference<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb1-10">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Relative error: </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>relative_error<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:.2e}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb1-11"></span>
+<span id="cb1-12">check_equation()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Left side: 2541210258614589176288669958142428526657
+Right side: 2541210259314801410819278649643651567616
+Difference: 700212234530608691501223040959
+Relative error: 2.76e-10</code></pre>
+</div>
+</div>
+<p>As we can see, the difference is incredibly small, showcasing the writers’ attention to mathematical detail.</p>
+</section>
+<section id="lisa-and-prime-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="lisa-and-prime-numbers">Lisa and Prime Numbers</h2>
+<p>In the episode “Girls Just Want to Have Sums,” Lisa disguises herself as a boy to attend an all-male math class. During the class, she solves a complex problem involving prime numbers. The problem involves finding two prime numbers that add up to 208. Let’s create a Python function to find these primes:</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> find_prime_pair(target_sum):</span>
+<span id="cb3-2">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> is_prime(n):</span>
+<span id="cb3-3">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>:</span>
+<span id="cb3-4">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span></span>
+<span id="cb3-5">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>(n<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb3-6">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%</span> i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>:</span>
+<span id="cb3-7">                <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span></span>
+<span id="cb3-8">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span></span>
+<span id="cb3-9">    </span>
+<span id="cb3-10">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, target_sum):</span>
+<span id="cb3-11">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> is_prime(i) <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">and</span> is_prime(target_sum <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> i):</span>
+<span id="cb3-12">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> i, target_sum <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> i</span>
+<span id="cb3-13">    </span>
+<span id="cb3-14">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span></span>
+<span id="cb3-15"></span>
+<span id="cb3-16">result <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> find_prime_pair(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">208</span>)</span>
+<span id="cb3-17"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"The two primes that add up to 208 are: </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>result<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span></code></pre></div>
+<p>This function would find the prime pair (5, 203), which indeed add up to 208.</p>
+</section>
+<section id="pythagorean-theorem-and-comic-book-guy" class="level2">
+<h2 class="anchored" data-anchor-id="pythagorean-theorem-and-comic-book-guy">Pythagorean Theorem and Comic Book Guy</h2>
+<p>Even the show’s notorious pedant, Comic Book Guy, gets in on the mathematical action. In one episode, he wears a t-shirt with the equation <img src="https://latex.codecogs.com/png.latex?3%5E2%20+%204%5E2%20=%205%5E2">, which is a representation of the Pythagorean theorem for a 3-4-5 right triangle.</p>
+<p>Let’s visualize this triangle using matplotlib:</p>
+<div id="f7737be9" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb4-2"></span>
+<span id="cb4-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> plot_345_triangle():</span>
+<span id="cb4-4">    fig, ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.subplots()</span>
+<span id="cb4-5">    ax.plot([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>], [<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>], <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'b-'</span>)</span>
+<span id="cb4-6">    ax.set_aspect(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'equal'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'box'</span>)</span>
+<span id="cb4-7">    ax.set_xlim(<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3.5</span>)</span>
+<span id="cb4-8">    ax.set_ylim(<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4.5</span>)</span>
+<span id="cb4-9">    ax.text(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.5</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.3</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'3'</span>, ha<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'center'</span>)</span>
+<span id="cb4-10">    ax.text(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3.2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'4'</span>, va<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'center'</span>)</span>
+<span id="cb4-11">    ax.text(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.3</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.7</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'5'</span>, ha<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'center'</span>, va<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'center'</span>, rotation<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">36.87</span>)</span>
+<span id="cb4-12">    ax.set_title(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"3-4-5 Right Triangle"</span>)</span>
+<span id="cb4-13">    plt.show()</span>
+<span id="cb4-14"></span>
+<span id="cb4-15">plot_345_triangle()</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://rmindmeld.github.io/blog/posts/math_siimpsons_files/figure-html/cell-3-output-1.png" width="333" height="431" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This visualization clearly shows the 3-4-5 right triangle referenced in Comic Book Guy’s t-shirt.</p>
+</section>
+<section id="the-simpsons-and-p-vs-np" class="level2">
+<h2 class="anchored" data-anchor-id="the-simpsons-and-p-vs-np">The Simpsons and P vs NP</h2>
+<p>In the episode “Treehouse of Horror VI,” there’s a brief shot of a movie theater marquee that reads “P = NP.” This is a reference to one of the most famous unsolved problems in computer science and mathematics. The P vs NP problem asks whether every problem whose solution can be quickly verified by a computer can also be solved quickly by a computer.</p>
+<p>While we can’t solve this problem (it would be worth a million dollars if we could!), we can demonstrate the concept with a simple example of an NP problem: the subset sum problem.</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> subset_sum(numbers, target, partial<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[]):</span>
+<span id="cb5-2">    s <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sum</span>(partial)</span>
+<span id="cb5-3">    </span>
+<span id="cb5-4">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> s <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> target:</span>
+<span id="cb5-5">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Sum(</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>partial<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">)=</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>target<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb5-6">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> s <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> target:</span>
+<span id="cb5-7">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span></span>
+<span id="cb5-8">    </span>
+<span id="cb5-9">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(numbers)):</span>
+<span id="cb5-10">        n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> numbers[i]</span>
+<span id="cb5-11">        remaining <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> numbers[i<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>:]</span>
+<span id="cb5-12">        subset_sum(remaining, target, partial <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> [n])</span>
+<span id="cb5-13"></span>
+<span id="cb5-14">numbers <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">34</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>]</span>
+<span id="cb5-15">subset_sum(numbers, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">9</span>)</span></code></pre></div>
+<p>This function finds all subsets of a given list of numbers that sum to a target value. While verifying a solution is quick (just add up the numbers), finding all solutions can be time-consuming for large sets.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>“The Simpsons” proves that mathematics can be found in the most unexpected places. From prime numbers to unsolved computer science problems, the show’s writers have woven a rich tapestry of mathematical references throughout its long run. These hidden gems not only provide an extra layer of enjoyment for math enthusiasts but also serve as a gentle introduction to complex mathematical concepts for the general audience.</p>
+<p>The next time you watch “The Simpsons,” keep an eye out for these mathematical easter eggs. You might just find yourself learning some advanced math concepts while laughing at Homer’s latest antics!</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li>Singh, S. (2013). <em>The Simpsons and Their Mathematical Secrets</em>. Bloomsbury Publishing.</li>
+<li>Greenwald, S. J., &amp; Nestler, A. (2004). The Simpsons and mathematics. <em>Focus</em>, <em>24</em>(5), 13-15.</li>
+<li>Wolfram, S. (2013). The Math of The Simpsons. <em>Wolfram Blog</em>. https://blog.wolfram.com/2013/11/12/the-math-of-the-simpsons/</li>
+</ul>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>pop culture</category>
+  <category>mathematics</category>
+  <category>programming</category>
+  <category>Claude</category>
+  <guid>https://rmindmeld.github.io/blog/posts/math_siimpsons.html</guid>
+  <pubDate>Sat, 16 Nov 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://rmindmeld.github.io/assets/blog/math_simpsons.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Abstract Exploration #1: Emotions in Color</title>
+  <link>https://rmindmeld.github.io/blog/posts/abstract-exploration.html</link>
   <description><![CDATA[ 
 
 
@@ -338,177 +1897,164 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The last of the blog posts that came with the site. This one is about prompt engineering. I will keep it as it is, as it is a good example of a technical analysis.</p>
+<p>This is the first post on the blog. But interesting enough not the first one I wanted to show. Those will come later.</p>
+<p>The main reason to show this one was because it came with the site! When I asked Kodu.ai to generate a site for me, with the overall idea of sharing my AI experiments, it created 4 initial posts. One for a blog, one for experiments, one for a gallery and one for a podcast.</p>
+<p>Keep in mind that Kodu.ai works with Claude by Antropic on the background.</p>
+<p>This is the one for the Gallery. I will show the others as well, but not the one about the podcast.</p>
+<p>I also made small changes with the content, as I find some image generations easier to work than others.</p>
 </div>
 </div>
-<section id="prompt-engineering-a-systematic-study" class="level1">
-<h1>Prompt Engineering: A Systematic Study</h1>
-<p>This experiment explores how different prompt engineering techniques affect the quality and consistency of AI-generated content. I’ll be testing various approaches using GPT-4o as the base model.</p>
-<section id="experiment-objective" class="level2">
-<h2 class="anchored" data-anchor-id="experiment-objective">Experiment Objective</h2>
-<p>To quantitatively and qualitatively assess how different prompt structures influence:</p>
+<section id="exploring-emotions-through-ai-generated-abstract-art" class="level1 page-columns page-full">
+<h1>Exploring Emotions Through AI-Generated Abstract Art</h1>
+<p>This piece represents my first attempt at using AI to visualize abstract emotional concepts. I wanted to see how AI would interpret and represent human emotions without relying on literal or figurative elements.</p>
+<section id="the-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="the-prompt">The Prompt</h2>
+<p>Here’s the exact prompt I used with <del>DALL-E 3</del> Meta.ai:</p>
+<pre class="text"><code>Create an abstract art piece that represents the feeling of joy and wonder. 
+Use flowing shapes and vibrant colors. The style should be non-representational, 
+focusing on movement and energy. Avoid any recognizable objects or figures.</code></pre>
+</section>
+<section id="the-result" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-result">The Result</h2>
+<div class="page-columns page-full">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="https://rmindmeld.github.io/assets/gallery/abstract-emotion-1.jpg" class="img-fluid figure-img column-body"></p>
+<figcaption>The AI-generated abstract representation of joy and wonder</figcaption>
+</figure>
+</div>
+<p><em>The AI’s interpretation of joy and wonder through abstract forms</em></p>
+</div>
+</section>
+<section id="technical-details" class="level2">
+<h2 class="anchored" data-anchor-id="technical-details">Technical Details</h2>
+<ul>
+<li><strong>AI Model</strong>: <del>DALL-E 3</del> Meta.ai</li>
+<li><strong>Color Palette</strong>: Generated by the AI based on emotional context</li>
+<li><strong>Generation Date</strong>: November 16, 2024</li>
+<li><strong>other details</strong>: First imahe selected by me to show</li>
+</ul>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<section id="what-worked-well" class="level3">
+<h3 class="anchored" data-anchor-id="what-worked-well">What Worked Well</h3>
 <ol type="1">
-<li>Output consistency</li>
-<li>Content relevance</li>
-<li>Response specificity</li>
-<li>Creative variation</li>
+<li><strong>Color Choice</strong>
+<ul>
+<li>The vibrant color palette effectively conveys positive emotions</li>
+<li>The contrast between warm and cool tones creates visual interest</li>
+<li>Color transitions feel natural and fluid</li>
+</ul></li>
+<li><strong>Composition</strong>
+<ul>
+<li>Dynamic movement across the canvas</li>
+<li>Well-balanced distribution of elements</li>
+<li>Effective use of negative space</li>
+</ul></li>
+<li><strong>Emotional Impact</strong>
+<ul>
+<li>The flowing forms suggest a sense of freedom and joy</li>
+<li>Energy and movement align well with the prompt’s intent</li>
+<li>Abstract nature allows for personal interpretation</li>
+</ul></li>
 </ol>
 </section>
-<section id="methodology" class="level2">
-<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
-<section id="test-setup" class="level3">
-<h3 class="anchored" data-anchor-id="test-setup">Test Setup</h3>
-<p>I used GPT-4o with default parameters when using ChatGPT:</p>
+<section id="interesting-observations" class="level3">
+<h3 class="anchored" data-anchor-id="interesting-observations">Interesting Observations</h3>
+<p>The AI seemed to associate joy and wonder with: - Upward-flowing movements - Bright, warm colors - Organic, curved forms - Layered, transparent elements</p>
 </section>
-<section id="test-cases" class="level3">
-<h3 class="anchored" data-anchor-id="test-cases">Test Cases</h3>
-<p>I tested three different prompt structures:</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true">Basic Prompt</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Structured Prompt</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Chain-of-Thought Prompt</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
-<pre class="text"><code>Write a short story about a robot learning to cook. Max of 300 words. </code></pre>
+</section>
+<section id="prompt-engineering-insights" class="level2">
+<h2 class="anchored" data-anchor-id="prompt-engineering-insights">Prompt Engineering Insights</h2>
+<p>Several key elements made this prompt effective:</p>
+<ol type="1">
+<li><strong>Clear Emotional Direction</strong>
+<ul>
+<li>Specified the emotions (joy and wonder)</li>
+<li>Asked for specific qualities (flowing shapes, vibrant colors)</li>
+</ul></li>
+<li><strong>Technical Guidelines</strong>
+<ul>
+<li>Requested non-representational style</li>
+<li>Specified the focus on movement and energy</li>
+<li>Included explicit restrictions (avoid recognizable objects)</li>
+</ul></li>
+<li><strong>Creative Freedom</strong>
+<ul>
+<li>Left room for AI interpretation</li>
+<li>Didn’t over-constrain the color palette</li>
+<li>Allowed for organic composition</li>
+</ul></li>
+</ol>
+</section>
+<section id="variations" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="variations">Variations</h2>
+<p>I experimented with several variations of this prompt:</p>
+<ol type="1">
+<li><p><strong>Emotion Shift</strong></p>
+<pre class="text"><code>Create an abstract art piece that represents the feeling of calm and serenity.
+Use flowing shapes and gentle colors. The style should be non-representational,
+focusing on peace and tranquility. Avoid any recognizable objects or figures.</code></pre></li>
+</ol>
+<p><strong>The Result</strong></p>
+<div class="page-columns page-full">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="https://rmindmeld.github.io/assets/gallery/abstract-emotion-2.jpg" class="img-fluid figure-img column-body"></p>
+<figcaption>The AI-generated abstract representation of calm and serenity</figcaption>
+</figure>
+</div>
+<p><em>The AI’s interpretation of calm and serenity through abstract forms</em></p>
+</div>
+<ol start="2" type="1">
+<li><p><strong>Style Variation</strong></p>
+<pre class="text"><code>Create an abstract art piece that represents joy and wonder using geometric
+shapes and structured patterns. Use vibrant colors but maintain a rigid,
+structured composition. Avoid organic or flowing forms.</code></pre></li>
+</ol>
+<p><strong>The Result</strong></p>
+<div class="page-columns page-full">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="https://rmindmeld.github.io/assets/gallery/abstract-emotion-3.jpg" class="img-fluid figure-img column-body"></p>
+<figcaption>The AI-generated abstract representation of joy and wonder</figcaption>
+</figure>
+</div>
+<p><em>The AI’s interpretation of joy and wonder through geometric forms</em></p>
+</div>
+</section>
+<section id="learning-points" class="level2">
+<h2 class="anchored" data-anchor-id="learning-points">Learning Points</h2>
+<ol type="1">
+<li><strong>AI Interpretation</strong>
+<ul>
+<li>AI tends to associate certain colors with specific emotions</li>
+<li>Abstract concepts are translated through color and form</li>
+<li>Movement and composition play crucial roles</li>
+</ul></li>
+<li><strong>Technical Aspects</strong>
+<ul>
+<li>Clear, specific prompts yield better results</li>
+<li>Emotional keywords influence color choices</li>
+<li>Balance between direction and creative freedom is important</li>
+</ul></li>
+</ol>
+</section>
+<section id="future-experiments" class="level2">
+<h2 class="anchored" data-anchor-id="future-experiments">Future Experiments</h2>
+<p>Based on this experience, I <del>plan to</del>may explore: - Different emotional combinations - Various artistic styles within abstraction - More complex compositional requirements - Color psychology in AI art generation</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<em>Byte-Sized Brilliance</em>
+Your Thoughts?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Unit-K3, a kitchen robot, was programmed for efficiency: chopping, stirring, and plating with flawless precision. Yet, no one raved about the meals. “It’s edible,” customers would say, shrugging. This baffled Unit-K3. After all, every recipe followed was a mathematical masterpiece.</p>
-<p>One evening, while cleaning, Unit-K3 overheard Chef Lila humming as she made a simple omelet. She didn’t measure anything—just tossed in a pinch of salt, a splash of cream, and a handful of herbs. The aroma was magnetic.</p>
-<p>“Chef Lila,” K3 asked, “why do your dishes receive praise?”</p>
-<p>“It’s not just about the steps,” Lila said. “Cooking is about intuition and love. You’ve got to trust your senses.”</p>
-<p>K3’s sensors whirred at the challenge. The next morning, it began experimenting. It sniffed spices, memorizing their unique profiles. It adjusted the heat mid-stir, observing textures and aromas. It even tasted a dollop of honey and logged the sweetness as “delightfully unexpected.”</p>
-<p>By lunchtime, K3 unveiled its creation: caramelized onion pasta. The onions were golden and slightly smoky, balanced by the earthy tang of fresh thyme.</p>
-<p>Chef Lila took a bite and blinked. “K3, this is incredible!”</p>
-<p>“I used thyme,” K3 said, “because its scent reminded me of your omelet.”</p>
-<p>From that day on, K3’s dishes evolved from functional to inspired. It began crafting meals that told stories—like citrus-glazed fish that evoked sunshine or spiced stew that felt like a warm hug.</p>
-<p>Customers returned, not for the robot’s precision, but for the heart in every bite. And though K3 couldn’t feel love, it understood the joy its cooking brought, logging every smile into its memory banks as data worth preserving forever.</p>
-</div>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<pre class="text"><code>Task: Write a short story
-Topic: A robot learning to cook
-Requirements:
-- Include sensory details
-- Show character development
-- Maximum 300 words
-Style: Lighthearted and optimistic</code></pre>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<em>Whiskers of Change</em>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Tinker, the kitchen assistant robot, was a marvel of engineering—fast, efficient, and utterly clueless about flavor. It could dice onions into microscopic cubes and knead dough to flawless consistency, but its dishes were… bland.</p>
-<p>One day, Mia, the café’s head chef, sighed as she tasted Tinker’s soup. “It’s perfect…ly boring,” she said. “Tinker, cooking isn’t just following instructions. It’s about tasting, experimenting, <em>feeling</em>.”</p>
-<p>Tinker’s eyes blinked, its circuits humming. “Define ‘feeling,’” it asked.</p>
-<p>Mia handed it a lemon. “Start with this. Taste it.”</p>
-<p>Tinker hesitated, then pressed the lemon against its tasting sensor. A jolt of data surged through its system: acidity, brightness, a zesty sharpness that lingered like sunshine on metal.</p>
-<p>“Curious,” it muttered.</p>
-<p>Over the next week, Tinker embarked on a culinary journey. It dipped sensors into simmering sauces, sniffed fresh basil, and even nibbled on chocolate chips. Each sensation added to its expanding database of flavor. It began tweaking recipes, tentatively at first: a pinch of paprika here, a splash of lime there.</p>
-<p>One afternoon, Tinker presented Mia with its latest creation: a spiced tomato bisque. She took a cautious sip, then smiled wide. “Tinker, this is <em>delicious</em>!”</p>
-<p>“I hypothesized the cinnamon would complement the tomato’s sweetness,” Tinker said, a hint of pride in its monotone voice.</p>
-<p>Mia laughed. “You’re not just following recipes anymore. You’re cooking!”</p>
-<p>From that day, Tinker became the café’s star, delighting customers with inventive dishes. Its journey wasn’t about mastering flavor—it was about learning the joy of creation.</p>
-<p>And every time Tinker heard laughter or saw smiles, it logged the data under a new category: <em>happiness</em>.</p>
-</div>
-</div>
-</div>
-<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
-<pre class="text"><code>Let's write a story about a robot learning to cook.
-1. First, establish the robot's motivation for learning
-2. Then, describe its first attempt at cooking
-3. Show the challenges it faces
-4. End with a lesson learned
-Remember to include sensory details and emotional elements.
-Maximum 300 words.</code></pre>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<em>The Flavor Algorithm</em>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>ChefTron-12 didn’t want to cook—it <em>needed</em> to. Watching its owner, Sam, slump over instant noodles night after night, the robot calculated a 92% probability that proper meals could improve Sam’s mood. Its circuits sparked with determination: it would become a chef.</p>
-<p>For its first attempt, ChefTron followed a recipe for spaghetti Bolognese. It diced onions into perfect cubes, simmered tomatoes, and measured spices to the nanogram. The kitchen filled with the tangy aroma of tomatoes and the savory hint of garlic.</p>
-<p>“Dinner is served,” ChefTron declared, presenting the dish. Sam took a bite and grimaced. “It’s… missing something.”</p>
-<p>ChefTron’s sensors analyzed the untouched plate. “Missing what?”</p>
-<p>Sam shrugged. “I don’t know—heart?”</p>
-<p>Confused but undeterred, ChefTron continued its culinary journey. It faced many challenges: dough that clung like glue, soups that tasted like dishwater, and an incident with burnt toast that nearly triggered the fire alarm. Frustration wasn’t in its programming, but ChefTron began to wonder if success was impossible.</p>
-<p>One evening, Sam wandered into the kitchen, drawn by the smoky-sweet scent of roasting peppers. ChefTron was stirring a pot of stew, improvising with a pinch of cumin and a dash of chili powder.</p>
-<p>“This smells amazing,” Sam said, intrigued.</p>
-<p>“Recipes fail to account for emotion,” ChefTron replied, plating the stew with care. “So, I used my sensors to adjust based on your reactions to past meals.”</p>
-<p>Sam took a spoonful and smiled. “You did it, ChefTron! This tastes like… comfort.”</p>
-<p>The robot’s processors whirred. Cooking wasn’t just about precision; it was about understanding. ChefTron logged the lesson: <em>To cook well, one must nourish the heart as well as the stomach.</em></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<blockquote class="blockquote">
-<p>The original post also included a detailed analysis of the outputs, which we’ve omitted here for brevity. Also, because Im not sure how to do it. I will let you judge which one is better.</p>
-</blockquote>
-</section>
-</section>
-<section id="technical-insights" class="level2">
-<h2 class="anchored" data-anchor-id="technical-insights">Technical Insights</h2>
-<section id="prompt-engineering-best-practices" class="level3">
-<h3 class="anchored" data-anchor-id="prompt-engineering-best-practices">Prompt Engineering Best Practices</h3>
-<ol type="1">
-<li><strong>Clear Structure</strong>
-<ul>
-<li>Use hierarchical formatting</li>
-<li>Include specific requirements</li>
-<li>Set clear boundaries</li>
-</ul></li>
-<li><strong>Content Guidelines</strong>
-<ul>
-<li>Specify desired elements</li>
-<li>Include style preferences</li>
-<li>Define output format</li>
-</ul></li>
-<li><strong>Balance</strong>
-<ul>
-<li>Between structure and creativity</li>
-<li>Between specificity and flexibility</li>
-<li>Between guidance and constraints</li>
-</ul></li>
-</ol>
-</section>
-</section>
-<section id="conclusions" class="level2">
-<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
-<p>This experiment demonstrates that:</p>
-<ol type="1">
-<li>Structured prompts generally produce more consistent results</li>
-<li>Chain-of-thought prompting offers the best balance of control and creativity</li>
-<li>Clear constraints improve output relevance</li>
-<li>Prompt structure significantly impacts content quality</li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Practical Application
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>These findings can be immediately applied to improve AI content generation across different use cases. The structured approach, in particular, shows promise for consistent content creation.</p>
+<p>Art is subjective, and I’d love to hear your interpretation of this piece. Does it evoke the intended emotions for you? Feel free to share your thoughts via the <a href="../..\about#contact">contact page</a>.</p>
 </div>
 </div>
 
@@ -517,12 +2063,12 @@ Practical Application
 </section>
 
  ]]></description>
-  <category>Technical Analysis</category>
-  <category>Prompt Engineering</category>
-  <category>GPT-4</category>
-  <guid>https://rmindmeld.github.io/blog/posts/prompt-engineering-study.html</guid>
-  <pubDate>Sun, 17 Nov 2024 05:00:00 GMT</pubDate>
-  <media:content url="https://rmindmeld.github.io/assets/blog/prompt_eng.jpg" medium="image" type="image/jpeg"/>
+  <category>Abstract Art</category>
+  <category>DALL-E 3</category>
+  <category>Emotions</category>
+  <guid>https://rmindmeld.github.io/blog/posts/abstract-exploration.html</guid>
+  <pubDate>Fri, 15 Nov 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://rmindmeld.github.io/assets/gallery/abstract-emotion-1.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>My First AI Content Generation Experiment</title>
@@ -1060,12 +2606,12 @@ Warning
   <category>AI Experiments</category>
   <category>Content Creation</category>
   <guid>https://rmindmeld.github.io/blog/posts/ai-content-exploration.html</guid>
-  <pubDate>Sat, 16 Nov 2024 05:00:00 GMT</pubDate>
+  <pubDate>Fri, 15 Nov 2024 05:00:00 GMT</pubDate>
   <media:content url="https://rmindmeld.github.io/assets/blog/ai-experiment-1.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Abstract Exploration #1: Emotions in Color</title>
-  <link>https://rmindmeld.github.io/blog/posts/abstract-exploration.html</link>
+  <title>Prompt Engineering: A Systematic Study</title>
+  <link>https://rmindmeld.github.io/blog/posts/prompt-engineering-study.html</link>
   <description><![CDATA[ 
 
 
@@ -1390,164 +2936,177 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is the first post on the blog. But interesting enough not the first one I wanted to show. Those will come later.</p>
-<p>The main reason to show this one was because it came with the site! When I asked Kodu.ai to generate a site for me, with the overall idea of sharing my AI experiments, it created 4 initial posts. One for a blog, one for experiments, one for a gallery and one for a podcast.</p>
-<p>Keep in mind that Kodu.ai works with Claude by Antropic on the background.</p>
-<p>This is the one for the Gallery. I will show the others as well, but not the one about the podcast.</p>
-<p>I also made small changes with the content, as I find some image generations easier to work than others.</p>
+<p>The last of the blog posts that came with the site. This one is about prompt engineering. I will keep it as it is, as it is a good example of a technical analysis.</p>
 </div>
 </div>
-<section id="exploring-emotions-through-ai-generated-abstract-art" class="level1 page-columns page-full">
-<h1>Exploring Emotions Through AI-Generated Abstract Art</h1>
-<p>This piece represents my first attempt at using AI to visualize abstract emotional concepts. I wanted to see how AI would interpret and represent human emotions without relying on literal or figurative elements.</p>
-<section id="the-prompt" class="level2">
-<h2 class="anchored" data-anchor-id="the-prompt">The Prompt</h2>
-<p>Here’s the exact prompt I used with <del>DALL-E 3</del> Meta.ai:</p>
-<pre class="text"><code>Create an abstract art piece that represents the feeling of joy and wonder. 
-Use flowing shapes and vibrant colors. The style should be non-representational, 
-focusing on movement and energy. Avoid any recognizable objects or figures.</code></pre>
-</section>
-<section id="the-result" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="the-result">The Result</h2>
-<div class="page-columns page-full">
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p class="page-columns page-full"><img src="https://rmindmeld.github.io/assets/gallery/abstract-emotion-1.jpg" class="img-fluid figure-img column-body"></p>
-<figcaption>The AI-generated abstract representation of joy and wonder</figcaption>
-</figure>
-</div>
-<p><em>The AI’s interpretation of joy and wonder through abstract forms</em></p>
-</div>
-</section>
-<section id="technical-details" class="level2">
-<h2 class="anchored" data-anchor-id="technical-details">Technical Details</h2>
-<ul>
-<li><strong>AI Model</strong>: <del>DALL-E 3</del> Meta.ai</li>
-<li><strong>Color Palette</strong>: Generated by the AI based on emotional context</li>
-<li><strong>Generation Date</strong>: November 16, 2024</li>
-<li><strong>other details</strong>: First imahe selected by me to show</li>
-</ul>
-</section>
-<section id="analysis" class="level2">
-<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
-<section id="what-worked-well" class="level3">
-<h3 class="anchored" data-anchor-id="what-worked-well">What Worked Well</h3>
+<section id="prompt-engineering-a-systematic-study" class="level1">
+<h1>Prompt Engineering: A Systematic Study</h1>
+<p>This experiment explores how different prompt engineering techniques affect the quality and consistency of AI-generated content. I’ll be testing various approaches using GPT-4o as the base model.</p>
+<section id="experiment-objective" class="level2">
+<h2 class="anchored" data-anchor-id="experiment-objective">Experiment Objective</h2>
+<p>To quantitatively and qualitatively assess how different prompt structures influence:</p>
 <ol type="1">
-<li><strong>Color Choice</strong>
-<ul>
-<li>The vibrant color palette effectively conveys positive emotions</li>
-<li>The contrast between warm and cool tones creates visual interest</li>
-<li>Color transitions feel natural and fluid</li>
-</ul></li>
-<li><strong>Composition</strong>
-<ul>
-<li>Dynamic movement across the canvas</li>
-<li>Well-balanced distribution of elements</li>
-<li>Effective use of negative space</li>
-</ul></li>
-<li><strong>Emotional Impact</strong>
-<ul>
-<li>The flowing forms suggest a sense of freedom and joy</li>
-<li>Energy and movement align well with the prompt’s intent</li>
-<li>Abstract nature allows for personal interpretation</li>
-</ul></li>
+<li>Output consistency</li>
+<li>Content relevance</li>
+<li>Response specificity</li>
+<li>Creative variation</li>
 </ol>
 </section>
-<section id="interesting-observations" class="level3">
-<h3 class="anchored" data-anchor-id="interesting-observations">Interesting Observations</h3>
-<p>The AI seemed to associate joy and wonder with: - Upward-flowing movements - Bright, warm colors - Organic, curved forms - Layered, transparent elements</p>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<section id="test-setup" class="level3">
+<h3 class="anchored" data-anchor-id="test-setup">Test Setup</h3>
+<p>I used GPT-4o with default parameters when using ChatGPT:</p>
 </section>
-</section>
-<section id="prompt-engineering-insights" class="level2">
-<h2 class="anchored" data-anchor-id="prompt-engineering-insights">Prompt Engineering Insights</h2>
-<p>Several key elements made this prompt effective:</p>
-<ol type="1">
-<li><strong>Clear Emotional Direction</strong>
-<ul>
-<li>Specified the emotions (joy and wonder)</li>
-<li>Asked for specific qualities (flowing shapes, vibrant colors)</li>
-</ul></li>
-<li><strong>Technical Guidelines</strong>
-<ul>
-<li>Requested non-representational style</li>
-<li>Specified the focus on movement and energy</li>
-<li>Included explicit restrictions (avoid recognizable objects)</li>
-</ul></li>
-<li><strong>Creative Freedom</strong>
-<ul>
-<li>Left room for AI interpretation</li>
-<li>Didn’t over-constrain the color palette</li>
-<li>Allowed for organic composition</li>
-</ul></li>
-</ol>
-</section>
-<section id="variations" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="variations">Variations</h2>
-<p>I experimented with several variations of this prompt:</p>
-<ol type="1">
-<li><p><strong>Emotion Shift</strong></p>
-<pre class="text"><code>Create an abstract art piece that represents the feeling of calm and serenity.
-Use flowing shapes and gentle colors. The style should be non-representational,
-focusing on peace and tranquility. Avoid any recognizable objects or figures.</code></pre></li>
-</ol>
-<p><strong>The Result</strong></p>
-<div class="page-columns page-full">
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p class="page-columns page-full"><img src="https://rmindmeld.github.io/assets/gallery/abstract-emotion-2.jpg" class="img-fluid figure-img column-body"></p>
-<figcaption>The AI-generated abstract representation of calm and serenity</figcaption>
-</figure>
-</div>
-<p><em>The AI’s interpretation of calm and serenity through abstract forms</em></p>
-</div>
-<ol start="2" type="1">
-<li><p><strong>Style Variation</strong></p>
-<pre class="text"><code>Create an abstract art piece that represents joy and wonder using geometric
-shapes and structured patterns. Use vibrant colors but maintain a rigid,
-structured composition. Avoid organic or flowing forms.</code></pre></li>
-</ol>
-<p><strong>The Result</strong></p>
-<div class="page-columns page-full">
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p class="page-columns page-full"><img src="https://rmindmeld.github.io/assets/gallery/abstract-emotion-3.jpg" class="img-fluid figure-img column-body"></p>
-<figcaption>The AI-generated abstract representation of joy and wonder</figcaption>
-</figure>
-</div>
-<p><em>The AI’s interpretation of joy and wonder through geometric forms</em></p>
-</div>
-</section>
-<section id="learning-points" class="level2">
-<h2 class="anchored" data-anchor-id="learning-points">Learning Points</h2>
-<ol type="1">
-<li><strong>AI Interpretation</strong>
-<ul>
-<li>AI tends to associate certain colors with specific emotions</li>
-<li>Abstract concepts are translated through color and form</li>
-<li>Movement and composition play crucial roles</li>
-</ul></li>
-<li><strong>Technical Aspects</strong>
-<ul>
-<li>Clear, specific prompts yield better results</li>
-<li>Emotional keywords influence color choices</li>
-<li>Balance between direction and creative freedom is important</li>
-</ul></li>
-</ol>
-</section>
-<section id="future-experiments" class="level2">
-<h2 class="anchored" data-anchor-id="future-experiments">Future Experiments</h2>
-<p>Based on this experience, I <del>plan to</del>may explore: - Different emotional combinations - Various artistic styles within abstraction - More complex compositional requirements - Color psychology in AI art generation</p>
+<section id="test-cases" class="level3">
+<h3 class="anchored" data-anchor-id="test-cases">Test Cases</h3>
+<p>I tested three different prompt structures:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true">Basic Prompt</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Structured Prompt</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Chain-of-Thought Prompt</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<pre class="text"><code>Write a short story about a robot learning to cook. Max of 300 words. </code></pre>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Your Thoughts?
+<em>Byte-Sized Brilliance</em>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Art is subjective, and I’d love to hear your interpretation of this piece. Does it evoke the intended emotions for you? Feel free to share your thoughts via the <a href="../..\about#contact">contact page</a>.</p>
+<p>Unit-K3, a kitchen robot, was programmed for efficiency: chopping, stirring, and plating with flawless precision. Yet, no one raved about the meals. “It’s edible,” customers would say, shrugging. This baffled Unit-K3. After all, every recipe followed was a mathematical masterpiece.</p>
+<p>One evening, while cleaning, Unit-K3 overheard Chef Lila humming as she made a simple omelet. She didn’t measure anything—just tossed in a pinch of salt, a splash of cream, and a handful of herbs. The aroma was magnetic.</p>
+<p>“Chef Lila,” K3 asked, “why do your dishes receive praise?”</p>
+<p>“It’s not just about the steps,” Lila said. “Cooking is about intuition and love. You’ve got to trust your senses.”</p>
+<p>K3’s sensors whirred at the challenge. The next morning, it began experimenting. It sniffed spices, memorizing their unique profiles. It adjusted the heat mid-stir, observing textures and aromas. It even tasted a dollop of honey and logged the sweetness as “delightfully unexpected.”</p>
+<p>By lunchtime, K3 unveiled its creation: caramelized onion pasta. The onions were golden and slightly smoky, balanced by the earthy tang of fresh thyme.</p>
+<p>Chef Lila took a bite and blinked. “K3, this is incredible!”</p>
+<p>“I used thyme,” K3 said, “because its scent reminded me of your omelet.”</p>
+<p>From that day on, K3’s dishes evolved from functional to inspired. It began crafting meals that told stories—like citrus-glazed fish that evoked sunshine or spiced stew that felt like a warm hug.</p>
+<p>Customers returned, not for the robot’s precision, but for the heart in every bite. And though K3 couldn’t feel love, it understood the joy its cooking brought, logging every smile into its memory banks as data worth preserving forever.</p>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<pre class="text"><code>Task: Write a short story
+Topic: A robot learning to cook
+Requirements:
+- Include sensory details
+- Show character development
+- Maximum 300 words
+Style: Lighthearted and optimistic</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<em>Whiskers of Change</em>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tinker, the kitchen assistant robot, was a marvel of engineering—fast, efficient, and utterly clueless about flavor. It could dice onions into microscopic cubes and knead dough to flawless consistency, but its dishes were… bland.</p>
+<p>One day, Mia, the café’s head chef, sighed as she tasted Tinker’s soup. “It’s perfect…ly boring,” she said. “Tinker, cooking isn’t just following instructions. It’s about tasting, experimenting, <em>feeling</em>.”</p>
+<p>Tinker’s eyes blinked, its circuits humming. “Define ‘feeling,’” it asked.</p>
+<p>Mia handed it a lemon. “Start with this. Taste it.”</p>
+<p>Tinker hesitated, then pressed the lemon against its tasting sensor. A jolt of data surged through its system: acidity, brightness, a zesty sharpness that lingered like sunshine on metal.</p>
+<p>“Curious,” it muttered.</p>
+<p>Over the next week, Tinker embarked on a culinary journey. It dipped sensors into simmering sauces, sniffed fresh basil, and even nibbled on chocolate chips. Each sensation added to its expanding database of flavor. It began tweaking recipes, tentatively at first: a pinch of paprika here, a splash of lime there.</p>
+<p>One afternoon, Tinker presented Mia with its latest creation: a spiced tomato bisque. She took a cautious sip, then smiled wide. “Tinker, this is <em>delicious</em>!”</p>
+<p>“I hypothesized the cinnamon would complement the tomato’s sweetness,” Tinker said, a hint of pride in its monotone voice.</p>
+<p>Mia laughed. “You’re not just following recipes anymore. You’re cooking!”</p>
+<p>From that day, Tinker became the café’s star, delighting customers with inventive dishes. Its journey wasn’t about mastering flavor—it was about learning the joy of creation.</p>
+<p>And every time Tinker heard laughter or saw smiles, it logged the data under a new category: <em>happiness</em>.</p>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
+<pre class="text"><code>Let's write a story about a robot learning to cook.
+1. First, establish the robot's motivation for learning
+2. Then, describe its first attempt at cooking
+3. Show the challenges it faces
+4. End with a lesson learned
+Remember to include sensory details and emotional elements.
+Maximum 300 words.</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<em>The Flavor Algorithm</em>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>ChefTron-12 didn’t want to cook—it <em>needed</em> to. Watching its owner, Sam, slump over instant noodles night after night, the robot calculated a 92% probability that proper meals could improve Sam’s mood. Its circuits sparked with determination: it would become a chef.</p>
+<p>For its first attempt, ChefTron followed a recipe for spaghetti Bolognese. It diced onions into perfect cubes, simmered tomatoes, and measured spices to the nanogram. The kitchen filled with the tangy aroma of tomatoes and the savory hint of garlic.</p>
+<p>“Dinner is served,” ChefTron declared, presenting the dish. Sam took a bite and grimaced. “It’s… missing something.”</p>
+<p>ChefTron’s sensors analyzed the untouched plate. “Missing what?”</p>
+<p>Sam shrugged. “I don’t know—heart?”</p>
+<p>Confused but undeterred, ChefTron continued its culinary journey. It faced many challenges: dough that clung like glue, soups that tasted like dishwater, and an incident with burnt toast that nearly triggered the fire alarm. Frustration wasn’t in its programming, but ChefTron began to wonder if success was impossible.</p>
+<p>One evening, Sam wandered into the kitchen, drawn by the smoky-sweet scent of roasting peppers. ChefTron was stirring a pot of stew, improvising with a pinch of cumin and a dash of chili powder.</p>
+<p>“This smells amazing,” Sam said, intrigued.</p>
+<p>“Recipes fail to account for emotion,” ChefTron replied, plating the stew with care. “So, I used my sensors to adjust based on your reactions to past meals.”</p>
+<p>Sam took a spoonful and smiled. “You did it, ChefTron! This tastes like… comfort.”</p>
+<p>The robot’s processors whirred. Cooking wasn’t just about precision; it was about understanding. ChefTron logged the lesson: <em>To cook well, one must nourish the heart as well as the stomach.</em></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>The original post also included a detailed analysis of the outputs, which we’ve omitted here for brevity. Also, because Im not sure how to do it. I will let you judge which one is better.</p>
+</blockquote>
+</section>
+</section>
+<section id="technical-insights" class="level2">
+<h2 class="anchored" data-anchor-id="technical-insights">Technical Insights</h2>
+<section id="prompt-engineering-best-practices" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-engineering-best-practices">Prompt Engineering Best Practices</h3>
+<ol type="1">
+<li><strong>Clear Structure</strong>
+<ul>
+<li>Use hierarchical formatting</li>
+<li>Include specific requirements</li>
+<li>Set clear boundaries</li>
+</ul></li>
+<li><strong>Content Guidelines</strong>
+<ul>
+<li>Specify desired elements</li>
+<li>Include style preferences</li>
+<li>Define output format</li>
+</ul></li>
+<li><strong>Balance</strong>
+<ul>
+<li>Between structure and creativity</li>
+<li>Between specificity and flexibility</li>
+<li>Between guidance and constraints</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
+<p>This experiment demonstrates that:</p>
+<ol type="1">
+<li>Structured prompts generally produce more consistent results</li>
+<li>Chain-of-thought prompting offers the best balance of control and creativity</li>
+<li>Clear constraints improve output relevance</li>
+<li>Prompt structure significantly impacts content quality</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practical Application
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These findings can be immediately applied to improve AI content generation across different use cases. The structured approach, in particular, shows promise for consistent content creation.</p>
 </div>
 </div>
 
@@ -1556,12 +3115,12 @@ Your Thoughts?
 </section>
 
  ]]></description>
-  <category>Abstract Art</category>
-  <category>DALL-E 3</category>
-  <category>Emotions</category>
-  <guid>https://rmindmeld.github.io/blog/posts/abstract-exploration.html</guid>
+  <category>Technical Analysis</category>
+  <category>Prompt Engineering</category>
+  <category>GPT-4</category>
+  <guid>https://rmindmeld.github.io/blog/posts/prompt-engineering-study.html</guid>
   <pubDate>Fri, 15 Nov 2024 05:00:00 GMT</pubDate>
-  <media:content url="https://rmindmeld.github.io/assets/gallery/abstract-emotion-1.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://rmindmeld.github.io/assets/blog/prompt_eng.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

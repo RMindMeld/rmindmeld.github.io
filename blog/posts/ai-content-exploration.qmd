@@ -1,7 +1,7 @@
 ---
 title: "My First AI Content Generation Experiment"
 description: "Exploring the capabilities and limitations of AI-generated content through a hands-on experiment"
-date: "2024-11-16"
+date: "2024-11-15"
 categories: [AI Experiments, Content Creation]
 image: "../../assets/blog/ai-experiment-1.jpg"
 ---

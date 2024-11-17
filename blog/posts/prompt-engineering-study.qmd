@@ -1,7 +1,7 @@
 ---
 title: "Prompt Engineering: A Systematic Study"
 description: "A detailed analysis of different prompt engineering techniques and their impact on AI-generated content"
-date: "2024-11-17"
+date: "2024-11-15"
 categories: [Technical Analysis, Prompt Engineering, GPT-4]
 image: "../../assets/blog/prompt_eng.jpg"
 ---

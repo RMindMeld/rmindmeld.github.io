@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-01-18">
-<meta name="description" content="An introduction to AI content creation tools and techniques">
+<meta name="dcterms.date" content="2024-11-16">
 
-<title>EP002: Getting Started with AI Content Generation – MindMeld</title>
+<title>D’oh! The Surprising Math Behind The Simpsons – MindMeld</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -75,6 +108,35 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles/custom.css">
 </head>
@@ -129,23 +191,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#episode-1-getting-started-with-ai-content-generation" id="toc-episode-1-getting-started-with-ai-content-generation" class="nav-link active" data-scroll-target="#episode-1-getting-started-with-ai-content-generation">Episode 1: Getting Started with AI Content Generation</a>
+  <li><a href="#doh-the-surprising-math-behind-the-simpsons" id="toc-doh-the-surprising-math-behind-the-simpsons" class="nav-link active" data-scroll-target="#doh-the-surprising-math-behind-the-simpsons">D’oh! The Surprising Math Behind The Simpsons</a>
   <ul class="collapse">
-  <li><a href="#episode-overview" id="toc-episode-overview" class="nav-link" data-scroll-target="#episode-overview">Episode Overview</a></li>
-  <li><a href="#show-notes" id="toc-show-notes" class="nav-link" data-scroll-target="#show-notes">Show Notes</a>
-  <ul class="collapse">
-  <li><a href="#topics-covered" id="toc-topics-covered" class="nav-link" data-scroll-target="#topics-covered">Topics Covered</a></li>
-  </ul></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a></li>
-  <li><a href="#resources-mentioned" id="toc-resources-mentioned" class="nav-link" data-scroll-target="#resources-mentioned">Resources Mentioned</a>
-  <ul class="collapse">
-  <li><a href="#ai-tools" id="toc-ai-tools" class="nav-link" data-scroll-target="#ai-tools">AI Tools</a></li>
-  <li><a href="#learning-resources" id="toc-learning-resources" class="nav-link" data-scroll-target="#learning-resources">Learning Resources</a></li>
-  </ul></li>
-  <li><a href="#transcript" id="toc-transcript" class="nav-link" data-scroll-target="#transcript">Transcript</a></li>
-  <li><a href="#interactive-elements" id="toc-interactive-elements" class="nav-link" data-scroll-target="#interactive-elements">Interactive Elements</a></li>
-  <li><a href="#next-episode-preview" id="toc-next-episode-preview" class="nav-link" data-scroll-target="#next-episode-preview">Next Episode Preview</a></li>
-  <li><a href="#episode-resources" id="toc-episode-resources" class="nav-link" data-scroll-target="#episode-resources">Episode Resources</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#the-mathematical-minds-behind-the-show" id="toc-the-mathematical-minds-behind-the-show" class="nav-link" data-scroll-target="#the-mathematical-minds-behind-the-show">The Mathematical Minds Behind the Show</a></li>
+  <li><a href="#homers-doughnut-dilemma-a-topology-lesson" id="toc-homers-doughnut-dilemma-a-topology-lesson" class="nav-link" data-scroll-target="#homers-doughnut-dilemma-a-topology-lesson">Homer’s Doughnut Dilemma: A Topology Lesson</a></li>
+  <li><a href="#lisa-and-prime-numbers" id="toc-lisa-and-prime-numbers" class="nav-link" data-scroll-target="#lisa-and-prime-numbers">Lisa and Prime Numbers</a></li>
+  <li><a href="#pythagorean-theorem-and-comic-book-guy" id="toc-pythagorean-theorem-and-comic-book-guy" class="nav-link" data-scroll-target="#pythagorean-theorem-and-comic-book-guy">Pythagorean Theorem and Comic Book Guy</a></li>
+  <li><a href="#the-simpsons-and-p-vs-np" id="toc-the-simpsons-and-p-vs-np" class="nav-link" data-scroll-target="#the-simpsons-and-p-vs-np">The Simpsons and P vs NP</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -464,19 +519,15 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">EP002: Getting Started with AI Content Generation</h1>
+<h1 class="title">D’oh! The Surprising Math Behind The Simpsons</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">AI Tools</div>
-    <div class="quarto-category">Getting Started</div>
-    <div class="quarto-category">Content Creation</div>
+    <div class="quarto-category">pop culture</div>
+    <div class="quarto-category">mathematics</div>
+    <div class="quarto-category">programming</div>
+    <div class="quarto-category">Claude</div>
   </div>
   </div>
 
-<div>
-  <div class="description">
-    An introduction to AI content creation tools and techniques
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -485,7 +536,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 18, 2024</p>
+      <p class="date">November 16, 2024</p>
     </div>
   </div>
   
@@ -497,153 +548,142 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="episode-1-getting-started-with-ai-content-generation" class="level1">
-<h1>Episode 1: Getting Started with AI Content Generation</h1>
-<div class="audio-player">
-<p><audio controls=""> <source src="../../assets/podcasts/episodes/001-ai-content-generation.mp3" type="audio/mpeg"> <source src="../../assets/podcasts/episodes/001-ai-content-generation.ogg" type="audio/ogg"> Your browser does not support the audio element. </audio></p>
-</div>
-<div class="episode-meta">
-<p><strong>Duration</strong>: 25:30<br>
-<strong>Release Date</strong>: January 18, 2024<br>
-<strong>Category</strong>: AI Tools, Getting Started</p>
-</div>
-<section id="episode-overview" class="level2">
-<h2 class="anchored" data-anchor-id="episode-overview">Episode Overview</h2>
-<p>In this inaugural episode, I explore the basics of AI content generation and share my personal journey into this fascinating field. We’ll look at the tools, techniques, and considerations when starting with AI-assisted content creation.</p>
-</section>
-<section id="show-notes" class="level2">
-<h2 class="anchored" data-anchor-id="show-notes">Show Notes</h2>
-<section id="topics-covered" class="level3">
-<h3 class="anchored" data-anchor-id="topics-covered">Topics Covered</h3>
-<ol type="1">
-<li>Introduction (0:00 - 2:30)
-<ul>
-<li>Personal background with AI</li>
-<li>Why I started this podcast</li>
-<li>What to expect from the series</li>
-</ul></li>
-<li>Basic Tools Overview (2:30 - 8:45)
-<ul>
-<li>GPT-4 and its capabilities</li>
-<li>DALL-E 3 for image generation</li>
-<li>Claude for analysis and refinement</li>
-</ul></li>
-<li>First Steps (8:45 - 15:30)
-<ul>
-<li>Setting up your environment</li>
-<li>Choosing the right tools</li>
-<li>Basic prompt engineering</li>
-</ul></li>
-<li>Real Examples (15:30 - 22:00)
-<ul>
-<li>Live demonstration of text generation</li>
-<li>Image creation walkthrough</li>
-<li>Common pitfalls to avoid</li>
-</ul></li>
-<li>Wrap-up and Next Steps (22:00 - 25:30)
-<ul>
-<li>Key takeaways</li>
-<li>Preview of next episode</li>
-<li>Resource recommendations</li>
-</ul></li>
-</ol>
-</section>
-</section>
-<section id="key-takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
-<ol type="1">
-<li><strong>Starting Point</strong>
-<ul>
-<li>Begin with simple prompts</li>
-<li>Experiment with different tools</li>
-<li>Document your results</li>
-</ul></li>
-<li><strong>Tool Selection</strong>
-<ul>
-<li>Choose tools based on your needs</li>
-<li>Consider cost vs.&nbsp;capability</li>
-<li>Start with free tiers when possible</li>
-</ul></li>
-<li><strong>Best Practices</strong>
-<ul>
-<li>Keep prompts clear and specific</li>
-<li>Save successful prompts</li>
-<li>Iterate based on results</li>
-</ul></li>
-</ol>
-</section>
-<section id="resources-mentioned" class="level2">
-<h2 class="anchored" data-anchor-id="resources-mentioned">Resources Mentioned</h2>
-<section id="ai-tools" class="level3">
-<h3 class="anchored" data-anchor-id="ai-tools">AI Tools</h3>
-<ul>
-<li><a href="https://openai.com">OpenAI GPT-4</a></li>
-<li><a href="https://openai.com/dall-e-3">DALL-E 3</a></li>
-<li><a href="https://anthropic.com">Anthropic Claude</a></li>
-</ul>
-</section>
-<section id="learning-resources" class="level3">
-<h3 class="anchored" data-anchor-id="learning-resources">Learning Resources</h3>
-<ul>
-<li><a href="https://www.promptingguide.ai">Prompt Engineering Guide</a></li>
-<li><a href="https://example.com/ai-basics">AI Content Creation Basics</a></li>
-<li><a href="https://example.com/docs">Tool Documentation</a></li>
-</ul>
-</section>
-</section>
-<section id="transcript" class="level2">
-<h2 class="anchored" data-anchor-id="transcript">Transcript</h2>
-<div class="transcript">
-<p>[00:00] Introduction</p>
-<p>Hello and welcome to MindMeld, a podcast about AI content creation. I’m FRA, and in this first episode, we’re diving into the basics of getting started with AI-generated content.</p>
-<p>[02:30] Basic Tools</p>
-<p>Let’s start by looking at the essential tools you’ll need. The landscape of AI tools is vast, but we’ll focus on the most practical ones for beginners…</p>
-<p>[08:45] First Steps</p>
-<p>When I first started experimenting with AI content generation, I made several mistakes that you can avoid…</p>
-<p>[15:30] Real Examples</p>
-<p>Now, let me show you a real example. I’ll walk you through creating a simple piece of content…</p>
-<p>[22:00] Wrap-up</p>
-<p>That brings us to the end of our first episode. In the next episode, we’ll explore more advanced techniques…</p>
-</div>
-</section>
-<section id="interactive-elements" class="level2">
-<h2 class="anchored" data-anchor-id="interactive-elements">Interactive Elements</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Try It Yourself
+Comment
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Want to experiment with the prompts mentioned in this episode? Here they are:</p>
-<pre class="text"><code>Basic prompt: "Write a short story about a robot learning to paint"
-Advanced prompt: "Create a detailed scene description of a futuristic art studio"</code></pre>
+<p>This post was also created along with the superhero economics one. I’m planning to create a podcast on this topic based on the book “The Simpsons and Their Mathematical Secrets” by Simon Singh, so look there for a more complete analysis.</p>
 </div>
 </div>
+<section id="doh-the-surprising-math-behind-the-simpsons" class="level1">
+<h1>D’oh! The Surprising Math Behind The Simpsons</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>For over three decades, “The Simpsons” has been a cultural phenomenon, entertaining audiences with its witty humor and satirical take on American life. But beneath the surface of this animated sitcom lies a hidden world of mathematical references and jokes that have delighted math enthusiasts for years. In this post, we’ll explore some of the most intriguing mathematical moments in “The Simpsons” and even recreate one using Python. Get ready to see Springfield through the lens of a mathematician!</p>
 </section>
-<section id="next-episode-preview" class="level2">
-<h2 class="anchored" data-anchor-id="next-episode-preview">Next Episode Preview</h2>
-<p>In Episode 2, we’ll dive deeper into prompt engineering techniques and explore how to create more sophisticated content using AI tools.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Share Your Results
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Have you tried the prompts from this episode? Share your results or questions in the comments below or reach out through the <a href="../..\about#contact">contact page</a>.</p>
-</div>
-</div>
+<section id="the-mathematical-minds-behind-the-show" class="level2">
+<h2 class="anchored" data-anchor-id="the-mathematical-minds-behind-the-show">The Mathematical Minds Behind the Show</h2>
+<p>It’s no coincidence that “The Simpsons” is rife with mathematical easter eggs. Many of the show’s writers have advanced degrees in mathematics, computer science, and physics. For instance, Al Jean, one of the original writers and current showrunner, studied mathematics at Harvard University. This background has allowed the writers to sneak in complex mathematical concepts, often as blink-and-you’ll-miss-it gags or background details.</p>
 </section>
-<section id="episode-resources" class="level2">
-<h2 class="anchored" data-anchor-id="episode-resources">Episode Resources</h2>
-<p>Download additional resources for this episode: - <a href="../..\assets/podcasts/transcripts/ep001-transcript.pdf">Episode Transcript (PDF)</a> - <a href="../..\assets/podcasts/resources/ep001-prompts.txt">Prompt Examples (TXT)</a> - <a href="../..\assets/podcasts/notes/ep001-notes.pdf">Show Notes (PDF)</a></p>
+<section id="homers-doughnut-dilemma-a-topology-lesson" class="level2">
+<h2 class="anchored" data-anchor-id="homers-doughnut-dilemma-a-topology-lesson">Homer’s Doughnut Dilemma: A Topology Lesson</h2>
+<p>One of the most famous mathematical references in “The Simpsons” occurs in the episode “Homer3” (Treehouse of Horror VI). Homer finds himself trapped in a three-dimensional world, where he encounters a equation floating in the air:</p>
+<p><span class="math inline">\(1782^{12} + 1841^{12} = 1922^{12}\)</span></p>
+<p>This equation is a near-miss to Fermat’s Last Theorem, which states that no three positive integers a, b, and c can satisfy the equation <span class="math inline">\(a^n + b^n = c^n\)</span> for any integer value of n greater than 2. The equation in the show is not actually true, but it’s remarkably close – the left side differs from the right by less than 1 part in <span class="math inline">\(10^{30}\)</span>.</p>
+<p>Let’s verify this using Python:</p>
+<div id="d55a085e" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> check_equation():</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    left_side <span class="op">=</span> <span class="dv">1782</span><span class="op">**</span><span class="dv">12</span> <span class="op">+</span> <span class="dv">1841</span><span class="op">**</span><span class="dv">12</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    right_side <span class="op">=</span> <span class="dv">1922</span><span class="op">**</span><span class="dv">12</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    difference <span class="op">=</span> <span class="bu">abs</span>(left_side <span class="op">-</span> right_side)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    relative_error <span class="op">=</span> difference <span class="op">/</span> right_side</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Left side: </span><span class="sc">{</span>left_side<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Right side: </span><span class="sc">{</span>right_side<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Difference: </span><span class="sc">{</span>difference<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Relative error: </span><span class="sc">{</span>relative_error<span class="sc">:.2e}</span><span class="ss">"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>check_equation()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Left side: 2541210258614589176288669958142428526657
+Right side: 2541210259314801410819278649643651567616
+Difference: 700212234530608691501223040959
+Relative error: 2.76e-10</code></pre>
+</div>
+</div>
+<p>As we can see, the difference is incredibly small, showcasing the writers’ attention to mathematical detail.</p>
+</section>
+<section id="lisa-and-prime-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="lisa-and-prime-numbers">Lisa and Prime Numbers</h2>
+<p>In the episode “Girls Just Want to Have Sums,” Lisa disguises herself as a boy to attend an all-male math class. During the class, she solves a complex problem involving prime numbers. The problem involves finding two prime numbers that add up to 208. Let’s create a Python function to find these primes:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_prime_pair(target_sum):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> is_prime(n):</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> n <span class="op">&lt;</span> <span class="dv">2</span>:</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="bu">int</span>(n<span class="op">**</span><span class="fl">0.5</span>) <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> n <span class="op">%</span> i <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, target_sum):</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> is_prime(i) <span class="kw">and</span> is_prime(target_sum <span class="op">-</span> i):</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> i, target_sum <span class="op">-</span> i</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> find_prime_pair(<span class="dv">208</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The two primes that add up to 208 are: </span><span class="sc">{</span>result<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This function would find the prime pair (5, 203), which indeed add up to 208.</p>
+</section>
+<section id="pythagorean-theorem-and-comic-book-guy" class="level2">
+<h2 class="anchored" data-anchor-id="pythagorean-theorem-and-comic-book-guy">Pythagorean Theorem and Comic Book Guy</h2>
+<p>Even the show’s notorious pedant, Comic Book Guy, gets in on the mathematical action. In one episode, he wears a t-shirt with the equation <span class="math inline">\(3^2 + 4^2 = 5^2\)</span>, which is a representation of the Pythagorean theorem for a 3-4-5 right triangle.</p>
+<p>Let’s visualize this triangle using matplotlib:</p>
+<div id="f7737be9" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_345_triangle():</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    ax.plot([<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">4</span>, <span class="dv">0</span>], <span class="st">'b-'</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    ax.set_aspect(<span class="st">'equal'</span>, <span class="st">'box'</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    ax.set_xlim(<span class="op">-</span><span class="fl">0.5</span>, <span class="fl">3.5</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    ax.set_ylim(<span class="op">-</span><span class="fl">0.5</span>, <span class="fl">4.5</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="fl">1.5</span>, <span class="op">-</span><span class="fl">0.3</span>, <span class="st">'3'</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="fl">3.2</span>, <span class="dv">2</span>, <span class="st">'4'</span>, va<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="fl">1.3</span>, <span class="fl">1.7</span>, <span class="st">'5'</span>, ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'center'</span>, rotation<span class="op">=-</span><span class="fl">36.87</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="st">"3-4-5 Right Triangle"</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>plot_345_triangle()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="math_siimpsons_files/figure-html/cell-3-output-1.png" width="333" height="431" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This visualization clearly shows the 3-4-5 right triangle referenced in Comic Book Guy’s t-shirt.</p>
+</section>
+<section id="the-simpsons-and-p-vs-np" class="level2">
+<h2 class="anchored" data-anchor-id="the-simpsons-and-p-vs-np">The Simpsons and P vs NP</h2>
+<p>In the episode “Treehouse of Horror VI,” there’s a brief shot of a movie theater marquee that reads “P = NP.” This is a reference to one of the most famous unsolved problems in computer science and mathematics. The P vs NP problem asks whether every problem whose solution can be quickly verified by a computer can also be solved quickly by a computer.</p>
+<p>While we can’t solve this problem (it would be worth a million dollars if we could!), we can demonstrate the concept with a simple example of an NP problem: the subset sum problem.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> subset_sum(numbers, target, partial<span class="op">=</span>[]):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> <span class="bu">sum</span>(partial)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> s <span class="op">==</span> target:</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Sum(</span><span class="sc">{</span>partial<span class="sc">}</span><span class="ss">)=</span><span class="sc">{</span>target<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> s <span class="op">&gt;=</span> target:</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(numbers)):</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        n <span class="op">=</span> numbers[i]</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        remaining <span class="op">=</span> numbers[i<span class="op">+</span><span class="dv">1</span>:]</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        subset_sum(remaining, target, partial <span class="op">+</span> [n])</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">34</span>, <span class="dv">4</span>, <span class="dv">12</span>, <span class="dv">5</span>, <span class="dv">2</span>]</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>subset_sum(numbers, <span class="dv">9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This function finds all subsets of a given list of numbers that sum to a target value. While verifying a solution is quick (just add up the numbers), finding all solutions can be time-consuming for large sets.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>“The Simpsons” proves that mathematics can be found in the most unexpected places. From prime numbers to unsolved computer science problems, the show’s writers have woven a rich tapestry of mathematical references throughout its long run. These hidden gems not only provide an extra layer of enjoyment for math enthusiasts but also serve as a gentle introduction to complex mathematical concepts for the general audience.</p>
+<p>The next time you watch “The Simpsons,” keep an eye out for these mathematical easter eggs. You might just find yourself learning some advanced math concepts while laughing at Homer’s latest antics!</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li>Singh, S. (2013). <em>The Simpsons and Their Mathematical Secrets</em>. Bloomsbury Publishing.</li>
+<li>Greenwald, S. J., &amp; Nestler, A. (2004). The Simpsons and mathematics. <em>Focus</em>, <em>24</em>(5), 13-15.</li>
+<li>Wolfram, S. (2013). The Math of The Simpsons. <em>Wolfram Blog</em>. https://blog.wolfram.com/2013/11/12/the-math-of-the-simpsons/</li>
+</ul>
 
 
 </section>

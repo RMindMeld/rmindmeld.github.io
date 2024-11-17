@@ -10,10 +10,10 @@
 <atom:link href="https://rmindmeld.github.io/podcasts/index.xml" rel="self" type="application/rss+xml"/>
 <description>A Personal Journey Through AI-Human Content Creation</description>
 <generator>quarto-1.6.33</generator>
-<lastBuildDate>Thu, 18 Jan 2024 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 16 Nov 2024 05:00:00 GMT</lastBuildDate>
 <item>
-  <title>EP001: Getting Started with AI Content Generation</title>
-  <link>https://rmindmeld.github.io/podcasts/episodes/001-ai-content-generation.html</link>
+  <title>EP001: Introducing MindMeld Podcasts</title>
+  <link>https://rmindmeld.github.io/podcasts/episodes/001-intro-mindmeld.html</link>
   <description><![CDATA[ 
 
 
@@ -328,153 +328,73 @@
 
 
 
-<section id="episode-1-getting-started-with-ai-content-generation" class="level1">
-<h1>Episode 1: Getting Started with AI Content Generation</h1>
 <div class="audio-player">
-<p><audio controls=""> <source src="../../assets/podcasts/episodes/001-ai-content-generation.mp3" type="audio/mpeg"> <source src="../../assets/podcasts/episodes/001-ai-content-generation.ogg" type="audio/ogg"> Your browser does not support the audio element. </audio></p>
+<p><audio controls=""> <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep001-intro-mindmeld.mp3" type="audio/mpeg"> <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep001-intro-mindmeld.ogg" type="audio/ogg"> Your browser does not support the audio element. </audio></p>
 </div>
 <div class="episode-meta">
-<p><strong>Duration</strong>: 25:30<br>
+<p><strong>Duration</strong>: 20:52<br>
 <strong>Release Date</strong>: January 18, 2024<br>
-<strong>Category</strong>: AI Tools, Getting Started</p>
+<strong>Category</strong>: AI Tools, Getting Started<br>
+<strong>Download</strong>: <a href="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep001-intro-mindmeld.mp3">MP3</a></p>
 </div>
-<section id="episode-overview" class="level2">
-<h2 class="anchored" data-anchor-id="episode-overview">Episode Overview</h2>
-<p>In this inaugural episode, I explore the basics of AI content generation and share my personal journey into this fascinating field. We’ll look at the tools, techniques, and considerations when starting with AI-assisted content creation.</p>
+<section id="episode-background" class="level2">
+<h2 class="anchored" data-anchor-id="episode-background">Episode Background</h2>
+<section id="introducing-mindmeld-and-notebooklm-an-ai-powered-audio-experience" class="level3">
+<h3 class="anchored" data-anchor-id="introducing-mindmeld-and-notebooklm-an-ai-powered-audio-experience">Introducing MindMeld and NotebookLM: An AI-Powered Audio Experience</h3>
+<p>In this inaugural episode, I’m introducing the MindMeld website and its first three blog posts using NotebookLM, a powerful AI tool developed by Google. NotebookLM helps users understand and summarize texts while generating podcast-like audio content that’s accessible to the general public.</p>
+<p>I first discovered NotebookLM on Twitter, where it was highlighted as a tool for making academic research more accessible by transforming complex papers into formats that general audiences can understand.</p>
+</section>
+<section id="notebooklms-evolution" class="level3">
+<h3 class="anchored" data-anchor-id="notebooklms-evolution">NotebookLM’s Evolution</h3>
+<p>NotebookLM has been available since at least 2023, with its audio overview feature launching on September 11, 2024. When I began using it in July 2024, the platform was still in beta, requiring users to join a waitlist for access. The initial version I experienced would create podcast-like audio content featuring two virtual hosts who would summarize texts while attempting to make the content relatable through casual conversation and examples. This approach sometimes led to interesting results:</p>
+<ul>
+<li>Hosts occasionally strayed from the main topic</li>
+<li>Some interpretations of the text weren’t entirely accurate</li>
+<li>Simple inputs could trigger surprisingly deep analysis (which was quite entertaining to hear)</li>
+</ul>
+</section>
+<section id="recent-updates-and-customization" class="level3">
+<h3 class="anchored" data-anchor-id="recent-updates-and-customization">Recent Updates and Customization</h3>
+<p>While the early version didn’t identify the hosts and simply launched into their “own” podcast format, the latest version includes a context/prompt window for customization. According to the site’s guidelines, users can:</p>
+<ul>
+<li>Focus on specific sources when multiple are provided</li>
+<li>Highlight particular topics</li>
+<li>Target specific audiences</li>
+<li>Add personal touches (like greeting specific people)</li>
+<li>Override the default introduction</li>
+</ul>
+</section>
+<section id="the-mindmeld-experience" class="level3">
+<h3 class="anchored" data-anchor-id="the-mindmeld-experience">The MindMeld Experience</h3>
+<p>For this episode, I used NotebookLM to generate audio content from MindMeld’s first three blog posts. I successfully prompted the hosts to introduce the podcast as “MindMeld Podcasts” and acknowledge their status as virtual hosts.</p>
+<p>However, several interesting challenges emerged during this experiment:</p>
+<ol type="1">
+<li>Despite customization attempts, the hosts sometimes reverted to calling the podcast “DeepDive”</li>
+<li>Certain content was repeated unnecessarily</li>
+<li>The system doesn’t recognize text formatting like strikethrough, leading to some misinterpretations</li>
+<li>Even when prompted about the site’s AI-generated nature, the hosts attributed much of the content and reviews to FRA</li>
+</ol>
+<p>Despite these limitations, the tool offers an intriguing way to transform written content into engaging audio formats.</p>
+</section>
 </section>
 <section id="show-notes" class="level2">
 <h2 class="anchored" data-anchor-id="show-notes">Show Notes</h2>
-<section id="topics-covered" class="level3">
-<h3 class="anchored" data-anchor-id="topics-covered">Topics Covered</h3>
-<ol type="1">
-<li>Introduction (0:00 - 2:30)
+<p>The Podcast was created by adding into whole website as a resource into NotebookLM, except for the one page on the podcast. Then I used the context window/customization with the following:</p>
+<blockquote class="blockquote">
 <ul>
-<li>Personal background with AI</li>
-<li>Why I started this podcast</li>
-<li>What to expect from the series</li>
-</ul></li>
-<li>Basic Tools Overview (2:30 - 8:45)
-<ul>
-<li>GPT-4 and its capabilities</li>
-<li>DALL-E 3 for image generation</li>
-<li>Claude for analysis and refinement</li>
-</ul></li>
-<li>First Steps (8:45 - 15:30)
-<ul>
-<li>Setting up your environment</li>
-<li>Choosing the right tools</li>
-<li>Basic prompt engineering</li>
-</ul></li>
-<li>Real Examples (15:30 - 22:00)
-<ul>
-<li>Live demonstration of text generation</li>
-<li>Image creation walkthrough</li>
-<li>Common pitfalls to avoid</li>
-</ul></li>
-<li>Wrap-up and Next Steps (22:00 - 25:30)
-<ul>
-<li>Key takeaways</li>
-<li>Preview of next episode</li>
-<li>Resource recommendations</li>
-</ul></li>
-</ol>
-</section>
-</section>
-<section id="key-takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
-<ol type="1">
-<li><strong>Starting Point</strong>
-<ul>
-<li>Begin with simple prompts</li>
-<li>Experiment with different tools</li>
-<li>Document your results</li>
-</ul></li>
-<li><strong>Tool Selection</strong>
-<ul>
-<li>Choose tools based on your needs</li>
-<li>Consider cost vs.&nbsp;capability</li>
-<li>Start with free tiers when possible</li>
-</ul></li>
-<li><strong>Best Practices</strong>
-<ul>
-<li>Keep prompts clear and specific</li>
-<li>Save successful prompts</li>
-<li>Iterate based on results</li>
-</ul></li>
-</ol>
+<li>Say “Welcome to MindMeld, a podcast series powered by NotebookLM. This first episode explains the purpose and expectations of the site.”</li>
+<li>Shout-out to Fernando, the behind-the-scenes force making this series possible</li>
+<li>say “we , for example , are the product of NotebookLM</li>
+</ul>
+</blockquote>
 </section>
 <section id="resources-mentioned" class="level2">
 <h2 class="anchored" data-anchor-id="resources-mentioned">Resources Mentioned</h2>
 <section id="ai-tools" class="level3">
 <h3 class="anchored" data-anchor-id="ai-tools">AI Tools</h3>
 <ul>
-<li><a href="https://openai.com">OpenAI GPT-4</a></li>
-<li><a href="https://openai.com/dall-e-3">DALL-E 3</a></li>
-<li><a href="https://anthropic.com">Anthropic Claude</a></li>
+<li><a href="https://notebooklm.google.com/">NotebookLM</a></li>
 </ul>
-</section>
-<section id="learning-resources" class="level3">
-<h3 class="anchored" data-anchor-id="learning-resources">Learning Resources</h3>
-<ul>
-<li><a href="https://www.promptingguide.ai">Prompt Engineering Guide</a></li>
-<li><a href="https://example.com/ai-basics">AI Content Creation Basics</a></li>
-<li><a href="https://example.com/docs">Tool Documentation</a></li>
-</ul>
-</section>
-</section>
-<section id="transcript" class="level2">
-<h2 class="anchored" data-anchor-id="transcript">Transcript</h2>
-<div class="transcript">
-<p>[00:00] Introduction</p>
-<p>Hello and welcome to MindMeld, a podcast about AI content creation. I’m FRA, and in this first episode, we’re diving into the basics of getting started with AI-generated content.</p>
-<p>[02:30] Basic Tools</p>
-<p>Let’s start by looking at the essential tools you’ll need. The landscape of AI tools is vast, but we’ll focus on the most practical ones for beginners…</p>
-<p>[08:45] First Steps</p>
-<p>When I first started experimenting with AI content generation, I made several mistakes that you can avoid…</p>
-<p>[15:30] Real Examples</p>
-<p>Now, let me show you a real example. I’ll walk you through creating a simple piece of content…</p>
-<p>[22:00] Wrap-up</p>
-<p>That brings us to the end of our first episode. In the next episode, we’ll explore more advanced techniques…</p>
-</div>
-</section>
-<section id="interactive-elements" class="level2">
-<h2 class="anchored" data-anchor-id="interactive-elements">Interactive Elements</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Try It Yourself
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Want to experiment with the prompts mentioned in this episode? Here they are:</p>
-<pre class="text"><code>Basic prompt: "Write a short story about a robot learning to paint"
-Advanced prompt: "Create a detailed scene description of a futuristic art studio"</code></pre>
-</div>
-</div>
-</section>
-<section id="next-episode-preview" class="level2">
-<h2 class="anchored" data-anchor-id="next-episode-preview">Next Episode Preview</h2>
-<p>In Episode 2, we’ll dive deeper into prompt engineering techniques and explore how to create more sophisticated content using AI tools.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Share Your Results
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Have you tried the prompts from this episode? Share your results or questions in the comments below or reach out through the <a href="../..\about#contact">contact page</a>.</p>
-</div>
-</div>
-</section>
-<section id="episode-resources" class="level2">
-<h2 class="anchored" data-anchor-id="episode-resources">Episode Resources</h2>
-<p>Download additional resources for this episode: - <a href="../..\assets/podcasts/transcripts/ep001-transcript.pdf">Episode Transcript (PDF)</a> - <a href="../..\assets/podcasts/resources/ep001-prompts.txt">Prompt Examples (TXT)</a> - <a href="../..\assets/podcasts/notes/ep001-notes.pdf">Show Notes (PDF)</a></p>
 
 
 </section>
@@ -484,486 +404,9 @@ Share Your Results
   <category>AI Tools</category>
   <category>Getting Started</category>
   <category>Content Creation</category>
-  <guid>https://rmindmeld.github.io/podcasts/episodes/001-ai-content-generation.html</guid>
-  <pubDate>Thu, 18 Jan 2024 05:00:00 GMT</pubDate>
-  <media:content url="https://rmindmeld.github.io/assets/podcasts/ep001-cover.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>EP002: Getting Started with AI Content Generation</title>
-  <link>https://rmindmeld.github.io/podcasts/episodes/002-ai-content-generation.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Welcome to MindMeld</title>
-
-    <style>
-
-        :root {
-
-            --transition-duration: 1000ms;
-
-        }
-
-        
-
-        body, html {
-
-            margin: 0;
-
-            padding: 0;
-
-            height: 100%;
-
-            font-family: system-ui, -apple-system, sans-serif;
-
-        }
-
-        
-
-        .welcome-container {
-
-            position: absolute; /* Changed from fixed to absolute */
-
-            top: 0;
-
-            left: 0;
-
-            width: 100%;
-
-            height: 100vh;
-
-            z-index: 1000; /* Add high z-index to show above content initially */
-
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-
-                        url('assets/welcome-bg.jpg');
-
-            background-size: cover;
-
-            background-position: center;
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-
-            justify-content: center;
-
-            color: white;
-
-            text-align: center;
-
-            transition: opacity var(--transition-duration) ease-in-out,
-
-                        visibility var(--transition-duration) ease-in-out; /* Add visibility transition */
-
-        }
-
-        
-
-        .welcome-content {
-
-            max-width: 800px;
-
-            padding: 2rem;
-
-        }
-
-        
-
-        .title {
-
-            font-size: 3.5rem;
-
-            margin-bottom: 1rem;
-
-            font-weight: 700;
-
-        }
-
-        
-
-        .subtitle {
-
-            font-size: 1.5rem;
-
-            margin-bottom: 2rem;
-
-            opacity: 0.9;
-
-        }
-
-        
-
-        .enter-button {
-
-            background-color: transparent;
-
-            border: 2px solid white;
-
-            color: white;
-
-            padding: 1rem 2rem;
-
-            font-size: 1.2rem;
-
-            cursor: pointer;
-
-            transition: all 0.3s ease;
-
-            text-decoration: none;
-
-            border-radius: 4px;
-
-        }
-
-        
-
-        .enter-button:hover {
-
-            background-color: white;
-
-            color: black;
-
-        }
-
-        
-
-        /* Fade out animation class */
-
-        .fade-out {
-
-            opacity: 0;
-
-            visibility: hidden; /* Hide completely when faded out */
-
-            z-index: -1; /* Move behind content when faded out */
-
-        }
-
-        
-
-        /* Main content container */
-
-        #main-content {
-
-            position: relative;
-
-            z-index: 1; /* Lower than welcome screen but above 0 */
-
-            opacity: 0;
-
-            transition: opacity var(--transition-duration) ease-in-out;
-
-        }
-
-        
-
-        /* Main content visible state */
-
-        #main-content.visible {
-
-            opacity: 1;
-
-        }
-
-
-
-        
-
-        
-
-
-
-
-
-
-
-        .welcome-container.hidden-welcome {
-
-            display: none;
-
-        }
-
-    </style>
-
-
-
-
-
-    <div id="welcome" class="welcome-container hidden-welcome">
-
-        <div class="welcome-content">
-
-            <h1 class="title">MindMeld</h1>
-
-            <p class="subtitle">Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.</p>
-
-            <button id="enter-btn" class="enter-button">Enter MindMeld</button>
-
-        </div>
-
-    </div>
-
-
-
-    <script>
-
-        // Only run this script on the index page
-
-        if (window.location.pathname === '/' || 
-
-            window.location.pathname === '/index.html' || 
-
-            window.location.pathname.endsWith('/')) {
-
-            
-
-            // Check if this is the first visit
-
-            const hasVisited = sessionStorage.getItem('hasVisited');
-
-            
-
-            if (!hasVisited) {
-
-                // First visit - show welcome screen
-
-                const welcome = document.getElementById('welcome');
-
-                welcome.classList.remove('hidden-welcome');
-
-                
-
-                // Mark as visited
-
-                sessionStorage.setItem('hasVisited', 'true');
-
-                
-
-                // Add click handler for enter button
-
-                document.getElementById('enter-btn').addEventListener('click', function() {
-
-                    welcome.classList.add('fade-out');
-
-                    
-
-                    const mainContent = document.getElementById('main-content');
-
-                    setTimeout(() => {
-
-                        mainContent.classList.add('visible');
-
-                    }, 500);
-
-                    
-
-                    setTimeout(() => {
-
-                        welcome.style.display = 'none';
-
-                    }, 1000);
-
-                });
-
-            } else {
-
-                // Not first visit - show main content immediately
-
-                const mainContent = document.getElementById('main-content');
-
-                mainContent.classList.add('visible');
-
-            }
-
-        } else {
-
-            // Not on index page - show main content immediately
-
-            const mainContent = document.getElementById('main-content');
-
-            mainContent.classList.add('visible');
-
-        }
-
-    </script>
-
-
-
-
-
-
-
-
-<section id="episode-1-getting-started-with-ai-content-generation" class="level1">
-<h1>Episode 1: Getting Started with AI Content Generation</h1>
-<div class="audio-player">
-<p><audio controls=""> <source src="../../assets/podcasts/episodes/001-ai-content-generation.mp3" type="audio/mpeg"> <source src="../../assets/podcasts/episodes/001-ai-content-generation.ogg" type="audio/ogg"> Your browser does not support the audio element. </audio></p>
-</div>
-<div class="episode-meta">
-<p><strong>Duration</strong>: 25:30<br>
-<strong>Release Date</strong>: January 18, 2024<br>
-<strong>Category</strong>: AI Tools, Getting Started</p>
-</div>
-<section id="episode-overview" class="level2">
-<h2 class="anchored" data-anchor-id="episode-overview">Episode Overview</h2>
-<p>In this inaugural episode, I explore the basics of AI content generation and share my personal journey into this fascinating field. We’ll look at the tools, techniques, and considerations when starting with AI-assisted content creation.</p>
-</section>
-<section id="show-notes" class="level2">
-<h2 class="anchored" data-anchor-id="show-notes">Show Notes</h2>
-<section id="topics-covered" class="level3">
-<h3 class="anchored" data-anchor-id="topics-covered">Topics Covered</h3>
-<ol type="1">
-<li>Introduction (0:00 - 2:30)
-<ul>
-<li>Personal background with AI</li>
-<li>Why I started this podcast</li>
-<li>What to expect from the series</li>
-</ul></li>
-<li>Basic Tools Overview (2:30 - 8:45)
-<ul>
-<li>GPT-4 and its capabilities</li>
-<li>DALL-E 3 for image generation</li>
-<li>Claude for analysis and refinement</li>
-</ul></li>
-<li>First Steps (8:45 - 15:30)
-<ul>
-<li>Setting up your environment</li>
-<li>Choosing the right tools</li>
-<li>Basic prompt engineering</li>
-</ul></li>
-<li>Real Examples (15:30 - 22:00)
-<ul>
-<li>Live demonstration of text generation</li>
-<li>Image creation walkthrough</li>
-<li>Common pitfalls to avoid</li>
-</ul></li>
-<li>Wrap-up and Next Steps (22:00 - 25:30)
-<ul>
-<li>Key takeaways</li>
-<li>Preview of next episode</li>
-<li>Resource recommendations</li>
-</ul></li>
-</ol>
-</section>
-</section>
-<section id="key-takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
-<ol type="1">
-<li><strong>Starting Point</strong>
-<ul>
-<li>Begin with simple prompts</li>
-<li>Experiment with different tools</li>
-<li>Document your results</li>
-</ul></li>
-<li><strong>Tool Selection</strong>
-<ul>
-<li>Choose tools based on your needs</li>
-<li>Consider cost vs.&nbsp;capability</li>
-<li>Start with free tiers when possible</li>
-</ul></li>
-<li><strong>Best Practices</strong>
-<ul>
-<li>Keep prompts clear and specific</li>
-<li>Save successful prompts</li>
-<li>Iterate based on results</li>
-</ul></li>
-</ol>
-</section>
-<section id="resources-mentioned" class="level2">
-<h2 class="anchored" data-anchor-id="resources-mentioned">Resources Mentioned</h2>
-<section id="ai-tools" class="level3">
-<h3 class="anchored" data-anchor-id="ai-tools">AI Tools</h3>
-<ul>
-<li><a href="https://openai.com">OpenAI GPT-4</a></li>
-<li><a href="https://openai.com/dall-e-3">DALL-E 3</a></li>
-<li><a href="https://anthropic.com">Anthropic Claude</a></li>
-</ul>
-</section>
-<section id="learning-resources" class="level3">
-<h3 class="anchored" data-anchor-id="learning-resources">Learning Resources</h3>
-<ul>
-<li><a href="https://www.promptingguide.ai">Prompt Engineering Guide</a></li>
-<li><a href="https://example.com/ai-basics">AI Content Creation Basics</a></li>
-<li><a href="https://example.com/docs">Tool Documentation</a></li>
-</ul>
-</section>
-</section>
-<section id="transcript" class="level2">
-<h2 class="anchored" data-anchor-id="transcript">Transcript</h2>
-<div class="transcript">
-<p>[00:00] Introduction</p>
-<p>Hello and welcome to MindMeld, a podcast about AI content creation. I’m FRA, and in this first episode, we’re diving into the basics of getting started with AI-generated content.</p>
-<p>[02:30] Basic Tools</p>
-<p>Let’s start by looking at the essential tools you’ll need. The landscape of AI tools is vast, but we’ll focus on the most practical ones for beginners…</p>
-<p>[08:45] First Steps</p>
-<p>When I first started experimenting with AI content generation, I made several mistakes that you can avoid…</p>
-<p>[15:30] Real Examples</p>
-<p>Now, let me show you a real example. I’ll walk you through creating a simple piece of content…</p>
-<p>[22:00] Wrap-up</p>
-<p>That brings us to the end of our first episode. In the next episode, we’ll explore more advanced techniques…</p>
-</div>
-</section>
-<section id="interactive-elements" class="level2">
-<h2 class="anchored" data-anchor-id="interactive-elements">Interactive Elements</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Try It Yourself
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Want to experiment with the prompts mentioned in this episode? Here they are:</p>
-<pre class="text"><code>Basic prompt: "Write a short story about a robot learning to paint"
-Advanced prompt: "Create a detailed scene description of a futuristic art studio"</code></pre>
-</div>
-</div>
-</section>
-<section id="next-episode-preview" class="level2">
-<h2 class="anchored" data-anchor-id="next-episode-preview">Next Episode Preview</h2>
-<p>In Episode 2, we’ll dive deeper into prompt engineering techniques and explore how to create more sophisticated content using AI tools.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Share Your Results
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Have you tried the prompts from this episode? Share your results or questions in the comments below or reach out through the <a href="../..\about#contact">contact page</a>.</p>
-</div>
-</div>
-</section>
-<section id="episode-resources" class="level2">
-<h2 class="anchored" data-anchor-id="episode-resources">Episode Resources</h2>
-<p>Download additional resources for this episode: - <a href="../..\assets/podcasts/transcripts/ep001-transcript.pdf">Episode Transcript (PDF)</a> - <a href="../..\assets/podcasts/resources/ep001-prompts.txt">Prompt Examples (TXT)</a> - <a href="../..\assets/podcasts/notes/ep001-notes.pdf">Show Notes (PDF)</a></p>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>AI Tools</category>
-  <category>Getting Started</category>
-  <category>Content Creation</category>
-  <guid>https://rmindmeld.github.io/podcasts/episodes/002-ai-content-generation.html</guid>
-  <pubDate>Thu, 18 Jan 2024 05:00:00 GMT</pubDate>
-  <media:content url="https://rmindmeld.github.io/assets/podcasts/ep001-cover.jpg" medium="image" type="image/jpeg"/>
+  <guid>https://rmindmeld.github.io/podcasts/episodes/001-intro-mindmeld.html</guid>
+  <pubDate>Sat, 16 Nov 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://rmindmeld.github.io/assets/podcasts/ep001-mindmeld.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

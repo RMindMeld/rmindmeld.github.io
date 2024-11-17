@@ -1,0 +1,83 @@
+---
+title: "EP001: Introducing MindMeld Podcasts"
+description: "An introduction to the MindMeld Podcast series and the different types of AI-generated content, power by NotebookLM"
+date: "2024-11-16"
+categories: [AI Tools, Getting Started, Content Creation]
+image: "../../assets/podcasts/ep001-mindmeld.jpg"
+audio:
+  src: "/assets/podcasts/001-ai-content-generation.mp3"
+  title: "Episode 1: Introducing MindMeld Podcasts"
+  description: "An introduction to the MindMeld Podcast series and the different types of AI-generated content, power by NotebookLM"
+  duration: "20:52"
+---
+
+
+<div class="audio-player">
+   <audio controls>
+   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep001-intro-mindmeld.mp3" type="audio/mpeg">
+   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep001-intro-mindmeld.ogg" type="audio/ogg">
+   Your browser does not support the audio element.
+   </audio>
+</div>
+
+:::{.episode-meta}
+
+**Duration**: 20:52  
+**Release Date**: January 18, 2024  
+**Category**: AI Tools, Getting Started  
+**Download**: [MP3](https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep001-intro-mindmeld.mp3)
+
+:::
+
+## Episode Background
+
+### Introducing MindMeld and NotebookLM: An AI-Powered Audio Experience
+
+In this inaugural episode, I'm introducing the MindMeld website and its first three blog posts using NotebookLM, a powerful AI tool developed by Google. NotebookLM helps users understand and summarize texts while generating podcast-like audio content that's accessible to the general public.
+
+I first discovered NotebookLM on Twitter, where it was highlighted as a tool for making academic research more accessible by transforming complex papers into formats that general audiences can understand.
+
+### NotebookLM's Evolution
+
+NotebookLM has been available since at least 2023, with its audio overview feature launching on September 11, 2024. When I began using it in July 2024, the platform was still in beta, requiring users to join a waitlist for access. The initial version I experienced would create podcast-like audio content featuring two virtual hosts who would summarize texts while attempting to make the content relatable through casual conversation and examples. This approach sometimes led to interesting results:
+
+- Hosts occasionally strayed from the main topic
+- Some interpretations of the text weren't entirely accurate
+- Simple inputs could trigger surprisingly deep analysis (which was quite entertaining to hear)
+
+### Recent Updates and Customization
+
+While the early version didn't identify the hosts and simply launched into their "own" podcast format, the latest version includes a context/prompt window for customization. According to the site's guidelines, users can:
+
+- Focus on specific sources when multiple are provided
+- Highlight particular topics
+- Target specific audiences
+- Add personal touches (like greeting specific people)
+- Override the default introduction
+
+### The MindMeld Experience
+
+For this episode, I used NotebookLM to generate audio content from MindMeld's first three blog posts. I successfully prompted the hosts to introduce the podcast as "MindMeld Podcasts" and acknowledge their status as virtual hosts.
+
+However, several interesting challenges emerged during this experiment:
+
+1. Despite customization attempts, the hosts sometimes reverted to calling the podcast "DeepDive"
+2. Certain content was repeated unnecessarily
+3. The system doesn't recognize text formatting like strikethrough, leading to some misinterpretations
+4. Even when prompted about the site's AI-generated nature, the hosts attributed much of the content and reviews to FRA
+
+Despite these limitations, the tool offers an intriguing way to transform written content into engaging audio formats.
+
+## Show Notes
+
+The Podcast was created by adding into whole website as a resource into NotebookLM, except for the one page on the podcast. Then I used the context window/customization with the following:
+
+> - Say “Welcome to MindMeld, a podcast series powered by NotebookLM. This first episode explains the purpose and expectations of the site.”
+> - Shout-out to Fernando, the behind-the-scenes force making this series possible
+> - say “we , for example , are the product of NotebookLM
+
+## Resources Mentioned
+
+### AI Tools
+- [NotebookLM](https://notebooklm.google.com/)
+ 

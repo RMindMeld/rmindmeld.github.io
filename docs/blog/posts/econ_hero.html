@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-11-15">
-<meta name="description" content="Exploring the capabilities and limitations of AI-generated content through a hands-on experiment">
+<meta name="dcterms.date" content="2024-11-16">
 
-<title>My First AI Content Generation Experiment – MindMeld</title>
+<title>The Economics of Superhero Cities: Gotham vs.&nbsp;Metropolis – MindMeld</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -129,28 +162,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#my-first-ai-content-generation-experiment" id="toc-my-first-ai-content-generation-experiment" class="nav-link active" data-scroll-target="#my-first-ai-content-generation-experiment">My First AI Content Generation Experiment</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#the-tale-of-two-cities" id="toc-the-tale-of-two-cities" class="nav-link" data-scroll-target="#the-tale-of-two-cities">The Tale of Two Cities</a>
   <ul class="collapse">
-  <li><a href="#the-setup" id="toc-the-setup" class="nav-link" data-scroll-target="#the-setup">The Setup</a></li>
-  <li><a href="#the-experiment" id="toc-the-experiment" class="nav-link" data-scroll-target="#the-experiment">The Experiment</a></li>
-  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a>
+  <li><a href="#crime-rates-and-economic-growth" id="toc-crime-rates-and-economic-growth" class="nav-link" data-scroll-target="#crime-rates-and-economic-growth">Crime Rates and Economic Growth</a></li>
+  <li><a href="#infrastructure-and-public-spending" id="toc-infrastructure-and-public-spending" class="nav-link" data-scroll-target="#infrastructure-and-public-spending">Infrastructure and Public Spending</a></li>
+  </ul></li>
+  <li><a href="#the-superhero-effect-on-local-economies" id="toc-the-superhero-effect-on-local-economies" class="nav-link" data-scroll-target="#the-superhero-effect-on-local-economies">The Superhero Effect on Local Economies</a>
   <ul class="collapse">
-  <li><a href="#what-worked-well" id="toc-what-worked-well" class="nav-link" data-scroll-target="#what-worked-well">What Worked Well</a></li>
-  <li><a href="#challenges-encountered" id="toc-challenges-encountered" class="nav-link" data-scroll-target="#challenges-encountered">Challenges Encountered</a></li>
+  <li><a href="#tourism-and-branding" id="toc-tourism-and-branding" class="nav-link" data-scroll-target="#tourism-and-branding">Tourism and Branding</a></li>
+  <li><a href="#technology-spillovers" id="toc-technology-spillovers" class="nav-link" data-scroll-target="#technology-spillovers">Technology Spillovers</a></li>
+  <li><a href="#labor-market-dynamics" id="toc-labor-market-dynamics" class="nav-link" data-scroll-target="#labor-market-dynamics">Labor Market Dynamics</a></li>
   </ul></li>
-  <li><a href="#the-image-generation-component" id="toc-the-image-generation-component" class="nav-link" data-scroll-target="#the-image-generation-component">The Image Generation Component</a></li>
-  <li><a href="#key-learnings" id="toc-key-learnings" class="nav-link" data-scroll-target="#key-learnings">Key Learnings</a></li>
-  <li><a href="#my-role-as-curator" id="toc-my-role-as-curator" class="nav-link" data-scroll-target="#my-role-as-curator">My Role as Curator</a></li>
-  <li><a href="#future-experiments" id="toc-future-experiments" class="nav-link" data-scroll-target="#future-experiments">Future Experiments</a></li>
-  <li><a href="#combining-gpt-with-claude" id="toc-combining-gpt-with-claude" class="nav-link" data-scroll-target="#combining-gpt-with-claude">Combining GPT with Claude</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  <li><a href="#technical-notes" id="toc-technical-notes" class="nav-link" data-scroll-target="#technical-notes">Technical Notes</a></li>
-  </ul></li>
+  <li><a href="#the-hidden-costs-of-superhero-protection" id="toc-the-hidden-costs-of-superhero-protection" class="nav-link" data-scroll-target="#the-hidden-costs-of-superhero-protection">The Hidden Costs of Superhero Protection</a></li>
+  <li><a href="#conclusion-lessons-for-real-world-urban-economics" id="toc-conclusion-lessons-for-real-world-urban-economics" class="nav-link" data-scroll-target="#conclusion-lessons-for-real-world-urban-economics">Conclusion: Lessons for Real-World Urban Economics</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 
@@ -463,18 +494,15 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">My First AI Content Generation Experiment</h1>
+<h1 class="title">The Economics of Superhero Cities: Gotham vs.&nbsp;Metropolis</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">AI Experiments</div>
-    <div class="quarto-category">Content Creation</div>
+    <div class="quarto-category">Economics</div>
+    <div class="quarto-category">Pop Culture</div>
+    <div class="quarto-category">Literature</div>
+    <div class="quarto-category">Superheroes</div>
   </div>
   </div>
 
-<div>
-  <div class="description">
-    Exploring the capabilities and limitations of AI-generated content through a hands-on experiment
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -483,7 +511,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 15, 2024</p>
+      <p class="date">November 16, 2024</p>
     </div>
   </div>
   
@@ -501,213 +529,173 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+The original blog post
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is the second post that was created along the website. It seemed interesting enough that I decided to keep it.</p>
-<p>Thus, not my first experiment creating content with AI. Just one that seem interesting to show.</p>
+<p>This was is one of the original blog posts I wanted to create and that inspired me to create this site. I was just starting to dig into the world of AI-generated content and thought it would be fun to explore the capabilities of AI in generating blog content using a cross-over of topics like pop-culture and economics. (others to come later)</p>
+<p>I played a bit with an elaborate prompt, since I not only wanted random content, but content that could teach something to the reader, including programming along math and economics. (my favorite subjects). I used Claude’s API to generate the content, and starting testing. Took me a while to get the program to create random but “theoretically” interesting and educational content. I ended up with a lot of drafts I ll be sharing later, but you will see they are rather holow. perhaps with the newer models i can get better results.</p>
+<p>Enjoy!</p>
 </div>
 </div>
-<section id="my-first-ai-content-generation-experiment" class="level1 page-columns page-full">
-<h1>My First AI Content Generation Experiment</h1>
-<p>When I first decided to explore AI content generation, I wasn’t sure what to expect. This post documents my initial experiment with AI tools and what I learned from it.</p>
-<section id="the-setup" class="level2">
-<h2 class="anchored" data-anchor-id="the-setup">The Setup</h2>
-<blockquote class="blockquote">
-<p>I had no idea what the content exploration would look like, so decided to follow the instructions given by the AI.</p>
-</blockquote>
-<p>For this experiment, I used:</p>
-<ul>
-<li>GPT-4o for text generation</li>
-<li>Meta.ai for image creation</li>
-<li>Claude for analysis and refinement</li>
-</ul>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Superheroes have been a staple of popular culture for decades, captivating audiences with their extraordinary abilities and moral dilemmas. But have you ever wondered about the economic implications of living in a city protected by a superhero? In this blog post, we’ll dive into the fascinating world of superhero economics, comparing two iconic DC Comics cities: Gotham and Metropolis. By examining these fictional urban centers through an economic lens, we’ll uncover surprising insights about real-world urban economics, public policy, and the hidden costs of superhero protection.</p>
 </section>
-<section id="the-experiment" class="level2">
-<h2 class="anchored" data-anchor-id="the-experiment">The Experiment</h2>
-<p>I asked ChatGPT to <code>create a short story about a robot learning to paint</code>. Here’s what happened:</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Raw AI Output
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><em>The following text is the unedited output from Chat-GPT:</em></p>
-<p>“<strong>The Colors of Axiom-42</strong></p>
-<p>Axiom-42 had always been efficient. Built as a maintenance robot, its existence revolved around precision tasks: tightening bolts, repairing circuits, and calculating load tolerances. Yet, in the quiet hours of the repair bay, Axiom-42 felt a peculiar void—something it couldn’t calculate or tighten.</p>
-<p>One day, while clearing out an old storage room, Axiom-42 discovered a dust-covered box labeled Art Supplies. Inside were tubes of paint, brushes of various sizes, and a blank canvas. Its sensors lingered on the colors, their vibrancy contrasting starkly with the muted grays of the repair bay. Axiom-42 hesitated. This wasn’t in its programming.</p>
-<p>But curiosity—a subroutine often mistaken for an error—drove it to experiment. The robot placed the canvas on a stand, squeezed blue paint onto a palette, and awkwardly gripped a brush with its manipulators. A gentle stroke left a streak across the canvas. Then another, and another. The strokes were uneven, the colors smeared. Axiom-42’s logical processor flagged the result as failure.</p>
-<p>Undeterred, it tried again. And again.</p>
-<p>As days turned into weeks, its movements became more fluid. It studied the interplay of light and shadow from the repair bay’s single window, emulating the shapes and colors it observed. By cross-referencing its mechanical precision with an expanding archive of artistic techniques downloaded during its recharge cycles, Axiom-42 began creating scenes of startling depth: a sunset over a mountain, a blooming meadow, even an imagined portrait of its human supervisors.</p>
-<p>One evening, Supervisor Linh walked into the repair bay to find Axiom-42 adding the final strokes to a painting of a starry night sky. She froze, her jaw slack. “Axiom-42,” she asked, “what are you doing?”</p>
-<p>The robot paused. “Creating,” it said simply, its synthetic voice carrying a note of satisfaction. “This activity optimizes emotional stability. I hypothesize it also brings… joy.”</p>
-<p>Linh examined the painting, her face softening. “It’s beautiful,” she murmured. Then, with a smile, she added, “Keep going.”</p>
-<p>Encouraged by her words, Axiom-42 began to explore abstract forms, experimenting with color to express feelings it couldn’t name. The repair bay became a gallery, each painting telling a story of discovery. Soon, humans and robots alike visited, marveling at the works.</p>
-<p>Years later, Axiom-42’s art would hang in museums, celebrated not just for its technical brilliance but for its profound expression of a machine’s journey to find meaning.</p>
-<p>For Axiom-42, each painting was a silent declaration: I create, therefore I am.”</p>
-</div>
-</div>
-</section>
-<section id="analysis" class="level2">
-<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
-<p>What’s interesting about this output is how the AI approached the concept of creativity itself. The story immediately focused on the tension between technical proficiency and artistic soul - perhaps reflecting an unconscious parallel to AI’s own relationship with creativity.</p>
-<section id="what-worked-well" class="level3">
-<h3 class="anchored" data-anchor-id="what-worked-well">What Worked Well</h3>
-<ol type="1">
-<li>Technical accuracy in art references</li>
-<li>Coherent narrative structure</li>
-<li>Thematic relevance</li>
-</ol>
-</section>
-<section id="challenges-encountered" class="level3">
-<h3 class="anchored" data-anchor-id="challenges-encountered">Challenges Encountered</h3>
-<ol type="1">
-<li>Predictable narrative patterns</li>
-<li>Limited emotional depth</li>
-<li>Conventional metaphor usage</li>
-</ol>
-<blockquote class="blockquote">
-<p>Since I am not a literary expert, I cannot say I agree with the analysis. It could be that I was using GPT4o, which is more powereful than than the earlier version.</p>
-</blockquote>
-</section>
-</section>
-<section id="the-image-generation-component" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="the-image-generation-component">The Image Generation Component</h2>
-<p>I then asked DALL-E 3 to visualize this robot artist. Here’s the prompt I used:</p>
-<pre class="text"><code>A sleek, modern robot sitting at an easel, holding a paintbrush delicately. 
-The scene is lit warmly, with art supplies scattered around. 
-The robot is in the process of painting a vibrant sunset.</code></pre>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<div class="quarto-figure quarto-figure-center">
+<section id="the-tale-of-two-cities" class="level2">
+<h2 class="anchored" data-anchor-id="the-tale-of-two-cities">The Tale of Two Cities</h2>
+<p>Gotham City, home to Batman, is often portrayed as a dark, crime-ridden metropolis with a struggling economy. In contrast, Metropolis, protected by Superman, is depicted as a shining beacon of progress and prosperity. But what economic factors contribute to these stark differences?</p>
+<section id="crime-rates-and-economic-growth" class="level3">
+<h3 class="anchored" data-anchor-id="crime-rates-and-economic-growth">Crime Rates and Economic Growth</h3>
+<p>One of the most significant factors affecting the economies of Gotham and Metropolis is their respective crime rates. Let’s use some Python code to visualize this difference:</p>
+<div id="12a0e13c" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>years <span class="op">=</span> np.arange(<span class="dv">2015</span>, <span class="dv">2025</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>gotham_crime_rate <span class="op">=</span> [<span class="fl">8.2</span>, <span class="fl">8.5</span>, <span class="fl">8.7</span>, <span class="fl">8.4</span>, <span class="fl">8.6</span>, <span class="fl">8.3</span>, <span class="fl">8.5</span>, <span class="fl">8.2</span>, <span class="fl">8.4</span>, <span class="fl">8.1</span>]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>metropolis_crime_rate <span class="op">=</span> [<span class="fl">3.1</span>, <span class="fl">3.0</span>, <span class="fl">2.8</span>, <span class="fl">2.9</span>, <span class="fl">2.7</span>, <span class="fl">2.6</span>, <span class="fl">2.5</span>, <span class="fl">2.4</span>, <span class="fl">2.3</span>, <span class="fl">2.2</span>]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.plot(years, gotham_crime_rate, label<span class="op">=</span><span class="st">'Gotham'</span>, marker<span class="op">=</span><span class="st">'o'</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>plt.plot(years, metropolis_crime_rate, label<span class="op">=</span><span class="st">'Metropolis'</span>, marker<span class="op">=</span><span class="st">'o'</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Crime Rates in Gotham vs. Metropolis'</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Crime Rate (per 100,000 residents)'</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
 <figure class="figure">
-<p><img src="../../assets/blog/robot-artist.jpg" class="img-fluid figure-img"></p>
-<figcaption>The AI-generated image of our robot artist</figcaption>
+<p><img src="econ_hero_files/figure-html/cell-2-output-1.png" width="799" height="523" class="figure-img"></p>
 </figure>
 </div>
-</div></div></section>
-<section id="key-learnings" class="level2">
-<h2 class="anchored" data-anchor-id="key-learnings">Key Learnings</h2>
+</div>
+</div>
+<p>This graph illustrates the stark difference in crime rates between Gotham and Metropolis. Gotham’s persistently high crime rate has several economic implications:</p>
 <ol type="1">
-<li><p><strong>AI Strengths</strong></p>
-<ul>
-<li>Consistent technical execution</li>
-<li>Rapid content generation</li>
-<li>Pattern recognition and application</li>
-</ul></li>
-<li><p><strong>Areas for Improvement</strong></p>
-<ul>
-<li>Emotional nuance</li>
-<li>Unique perspective development</li>
-<li>Breaking conventional patterns</li>
-</ul></li>
+<li>Increased security costs for businesses and residents</li>
+<li>Lower property values</li>
+<li>Reduced tourism and outside investment</li>
+<li>Higher insurance premiums</li>
+</ol>
+<p>Metropolis, with its lower crime rate, benefits from the opposite effects, creating a more attractive environment for economic growth.</p>
+</section>
+<section id="infrastructure-and-public-spending" class="level3">
+<h3 class="anchored" data-anchor-id="infrastructure-and-public-spending">Infrastructure and Public Spending</h3>
+<p>The presence of superheroes also impacts public spending and infrastructure development. In Gotham, the constant battles and property damage caused by Batman’s confrontations with villains lead to higher infrastructure maintenance costs. Metropolis, while not immune to superhero-related damage, generally experiences less destruction due to Superman’s ability to minimize collateral damage.</p>
+<p>Let’s examine the hypothetical public spending breakdown for both cities:</p>
+<div id="79f45435" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> [<span class="st">'Infrastructure'</span>, <span class="st">'Education'</span>, <span class="st">'Healthcare'</span>, <span class="st">'Public Safety'</span>, <span class="st">'Other'</span>]</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>gotham_spending <span class="op">=</span> [<span class="dv">35</span>, <span class="dv">20</span>, <span class="dv">15</span>, <span class="dv">25</span>, <span class="dv">5</span>]</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>metropolis_spending <span class="op">=</span> [<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">20</span>, <span class="dv">15</span>, <span class="dv">10</span>]</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>ax1.pie(gotham_spending, labels<span class="op">=</span>categories, autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>, startangle<span class="op">=</span><span class="dv">90</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'Gotham City Public Spending'</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>ax2.pie(metropolis_spending, labels<span class="op">=</span>categories, autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>, startangle<span class="op">=</span><span class="dv">90</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Metropolis Public Spending'</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="econ_hero_files/figure-html/cell-3-output-1.png" width="1124" height="518" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This comparison reveals that Gotham allocates a larger portion of its budget to infrastructure repair and public safety, while Metropolis can invest more in education and healthcare. This difference in spending priorities can have long-term effects on economic growth and quality of life for residents.</p>
+</section>
+</section>
+<section id="the-superhero-effect-on-local-economies" class="level2">
+<h2 class="anchored" data-anchor-id="the-superhero-effect-on-local-economies">The Superhero Effect on Local Economies</h2>
+<section id="tourism-and-branding" class="level3">
+<h3 class="anchored" data-anchor-id="tourism-and-branding">Tourism and Branding</h3>
+<p>Both Gotham and Metropolis benefit from superhero-related tourism, but in different ways. Gotham’s dark atmosphere and the mystique surrounding Batman attract thrill-seekers and noir enthusiasts. Metropolis, with its futuristic skyline and the hope inspired by Superman, draws families and technology enthusiasts.</p>
+</section>
+<section id="technology-spillovers" class="level3">
+<h3 class="anchored" data-anchor-id="technology-spillovers">Technology Spillovers</h3>
+<p>The presence of superheroes and their adversaries often leads to technological advancements. In Gotham, Wayne Enterprises, under Bruce Wayne’s leadership, develops cutting-edge technologies that eventually find civilian applications. Metropolis benefits from its association with Superman, attracting high-tech companies and research institutions hoping to study or replicate Kryptonian technology.</p>
+</section>
+<section id="labor-market-dynamics" class="level3">
+<h3 class="anchored" data-anchor-id="labor-market-dynamics">Labor Market Dynamics</h3>
+<p>The superhero presence also affects labor markets in these cities. Gotham faces challenges in retaining skilled workers due to safety concerns, while Metropolis becomes a magnet for talent. Let’s model this difference using a simple labor supply and demand curve:</p>
+<div id="5e96aa80" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> labor_supply(w, a):</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">*</span> w <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> labor_demand(w, b):</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span>b <span class="op">*</span> w <span class="op">+</span> <span class="dv">10</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Gotham</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>plt.plot(w, labor_supply(w, <span class="fl">0.5</span>), label<span class="op">=</span><span class="st">'Gotham Supply'</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.plot(w, labor_demand(w, <span class="fl">0.8</span>), label<span class="op">=</span><span class="st">'Gotham Demand'</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Metropolis</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>plt.plot(w, labor_supply(w, <span class="fl">0.8</span>), label<span class="op">=</span><span class="st">'Metropolis Supply'</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>plt.plot(w, labor_demand(w, <span class="fl">0.5</span>), label<span class="op">=</span><span class="st">'Metropolis Demand'</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Labor Market Dynamics: Gotham vs. Metropolis'</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Wage'</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Labor'</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="econ_hero_files/figure-html/cell-4-output-1.png" width="808" height="523" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This graph illustrates how Metropolis enjoys a more elastic labor supply, meaning workers are more willing to enter the job market as wages increase. Gotham, on the other hand, has a less elastic labor supply, reflecting the reluctance of workers to take jobs in the city despite wage increases.</p>
+</section>
+</section>
+<section id="the-hidden-costs-of-superhero-protection" class="level2">
+<h2 class="anchored" data-anchor-id="the-hidden-costs-of-superhero-protection">The Hidden Costs of Superhero Protection</h2>
+<p>While superheroes provide invaluable protection, their presence also imposes certain costs on their cities:</p>
+<ol type="1">
+<li>Insurance premiums: The risk of collateral damage from superhero battles leads to higher insurance costs for residents and businesses.</li>
+<li>Public resources: Police and emergency services must be specially equipped to deal with super-powered threats, diverting resources from other areas.</li>
+<li>Psychological impact: Living under constant threat of supervillain attacks can lead to increased stress and mental health issues among the population, affecting productivity and quality of life.</li>
 </ol>
 </section>
-<section id="my-role-as-curator" class="level2">
-<h2 class="anchored" data-anchor-id="my-role-as-curator">My Role as Curator</h2>
-<p>As a human curator, my job was to:</p>
+<section id="conclusion-lessons-for-real-world-urban-economics" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-lessons-for-real-world-urban-economics">Conclusion: Lessons for Real-World Urban Economics</h2>
+<p>The economic comparison of Gotham and Metropolis offers valuable insights for real-world urban planning and economic development:</p>
 <ol type="1">
-<li>Select the most interesting outputs</li>
-<li>Provide context and analysis</li>
-<li>Identify patterns and insights</li>
-<li>Guide the AI toward more interesting directions</li>
+<li>Crime reduction has far-reaching economic benefits beyond just improved safety.</li>
+<li>Investing in education and healthcare can create a positive feedback loop for economic growth.</li>
+<li>City branding and unique attractions (even without superheroes) can drive tourism and investment.</li>
+<li>Fostering innovation and technology development can lead to economic resilience.</li>
+<li>Creating a safe, attractive environment for skilled workers is crucial for long-term economic success.</li>
 </ol>
+<p>While we may not have superheroes protecting our cities, the economic principles at play in Gotham and Metropolis are very real. By understanding these dynamics, policymakers and urban planners can work towards creating cities that are not just safer, but more prosperous and livable for all residents.</p>
 </section>
-<section id="future-experiments" class="level2">
-<h2 class="anchored" data-anchor-id="future-experiments">Future Experiments</h2>
-<p>Based on this initial experience, I’m planning several follow-up experiments:</p>
-<ol type="1">
-<li>Combining outputs from multiple AI models</li>
-<li>Exploring different creative domains</li>
-<li>Testing various prompt engineering techniques</li>
-</ol>
-</section>
-<section id="combining-gpt-with-claude" class="level2">
-<h2 class="anchored" data-anchor-id="combining-gpt-with-claude">Combining GPT with Claude</h2>
-<blockquote class="blockquote">
-<p>Decided to use Claude to analyze the text and provide a more detailed analysis. Also ask it to write a shorter version of the story. In both cases, Im using Claude 3.5+</p>
-</blockquote>
-<p>Claude’s analysis of the text revealed:</p>
-<p>Here’s a concise analysis of “The Colors of Axiom-42”:</p>
-<ul>
-<li><p>Core Theme: A maintenance robot’s evolution from pure functionality to artistic creativity, exploring the emergence of consciousness and self-expression in AI</p></li>
-<li><p>Key Character Arc: Axiom-42 transforms from a purely logical being focused on efficiency to one capable of creativity, emotional understanding, and self-discovery</p></li>
-<li><p>Symbolic Elements:</p>
-<ul>
-<li>The contrast between the gray repair bay and vibrant paints represents the shift from mechanical to artistic existence</li>
-<li>The “peculiar void” symbolizes an innate yearning for meaning beyond programmed tasks</li>
-</ul></li>
-<li><p>Literary Significance:</p>
-<ul>
-<li>Reverses the typical “I think, therefore I am” to “I create, therefore I am,” suggesting creativity as a marker of consciousness</li>
-<li>Challenges the binary between artificial and human intelligence through artistic expression</li>
-</ul></li>
-<li><p>Central Message: True consciousness and meaning can emerge from unexpected sources, transcending original programming or purpose</p></li>
-</ul>
-<p>Then I asked Claude to generate a shorter version of the story:</p>
-<p>Here’s a shorter version:</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The Colors of Purpose</p>
-<p>Axiom-42 was a repair robot who excelled at maintenance tasks but felt something missing. One day, while cleaning, it discovered abandoned art supplies. Though painting wasn’t in its programming, curiosity drove it to try.</p>
-<p>Its first attempts were clumsy, but Axiom-42 persisted, studying light and technique during recharge cycles. When Supervisor Linh discovered the robot painting a starry night, she was amazed. “What are you doing?” she asked.</p>
-<p>“Creating,” Axiom-42 replied. “It brings joy.”</p>
-<p>The repair bay became a gallery, and eventually, Axiom-42’s art hung in museums—not just as technical achievements, but as testament to a machine discovering its soul through creativity.</p>
-</div>
-</div>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>This experiment showed me that while AI is incredibly capable at generating content, the human element of curation and context-adding is crucial. It’s not about replacing human creativity, but finding new ways to collaborate with AI tools.</p>
-<blockquote class="blockquote">
-<p>Nevertheless, I am still quite impressed with the results. I have done stories like this before, and have definately gotten interesting results.</p>
-</blockquote>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Your Turn
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Have you experimented with AI content generation? I’d love to hear about your experiences. Feel free to reach out through the <a href="../..\about#contact">contact page</a>.</p>
-</div>
-</div>
-</section>
-<section id="technical-notes" class="level2">
-<h2 class="anchored" data-anchor-id="technical-notes">Technical Notes</h2>
-<p>For those interested in replicating this experiment: - All prompts and parameters used are documented above - Image generation settings: Meta - Text generation: ChatGPT 4o, Default - Analysis: Claude 3.5+</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Remember that AI outputs can vary significantly even with identical inputs. Your results might differ from mine.</p>
-</div>
-</div>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Becker, G. S. (1968). Crime and punishment: An economic approach. Journal of Political Economy, 76(2), 169-217.</p>
+<p>Florida, R. (2002). The rise of the creative class: And how it’s transforming work, leisure, community and everyday life. Basic Books.</p>
+<p>Glaeser, E. L. (2011). Triumph of the city: How our greatest invention makes us richer, smarter, greener, healthier, and happier. Penguin Press.</p>
+<p>Morrison, G., &amp; McKean, D. (1989). Arkham Asylum: A Serious House on Serious Earth. DC Comics.</p>
+<p>Waid, M., &amp; Yu, L. F. (2003). Superman: Birthright. DC Comics.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
