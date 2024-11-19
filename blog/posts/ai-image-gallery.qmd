@@ -1,16 +1,15 @@
 ---
 title: "AI Image Generation Gallery"
 subtitle: "A Collection of Generative AI Artwork"
-date: "2024-07-25"
+date: "2024-11-19"
 categories: [AI, Art, Generative AI]
-image: "../assets/blog/ai-experiment-1.jpg"
 ---
 
 ## Exploring Creative AI Imagery
 
 This gallery showcases a diverse collection of AI-generated images, each created from unique and imaginative prompts. These images represent the intersection of creativity, technology, and artificial intelligence.
 
-> Originally this images were created as part of a series of blogs like the 4th and 5th in the blog. The blog themselves were bland, thus i decided to create a gallery to showcase the images.
+> Originally this images were created as part of a series of blogs like the 4th and 5th in this blog . The blog themselves were bland, thus i decided to create a gallery to showcase the images.
 
 
 ::: {.grid}

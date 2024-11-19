@@ -1,7 +1,7 @@
 ---
 title: "AI Image Generation Gallery"
 subtitle: "A Collection of Generative AI Artwork"
-date: "2024-07-25"
+date: "2024-11-19"
 categories: [AI, Art, Generative AI]
 image: "../assets/blog/ai-experiment-1.jpg"
 ---

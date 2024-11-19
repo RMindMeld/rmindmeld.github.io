@@ -9,14 +9,14 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/posts/ai-image-gallery.html",
       "/blog/posts/don-quijote.html",
       "/blog/posts/multiverse.html",
       "/blog/posts/econ_hero.html",
       "/blog/posts/math_siimpsons.html",
       "/blog/posts/abstract-exploration.html",
       "/blog/posts/ai-content-exploration.html",
-      "/blog/posts/prompt-engineering-study.html",
-      "/blog/posts/ai-image-gallery.html"
+      "/blog/posts/prompt-engineering-study.html"
     ]
   }
 ]

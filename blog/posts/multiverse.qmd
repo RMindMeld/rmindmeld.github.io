@@ -5,7 +5,7 @@ categories:
   - Science Fiction
   - Pop Culture
   - Physics
-image: "../../assets/blog/multiverse_scifi.jpg"
+image: "../../assets/blog/multiverse_cityscape.jpg"
 execute: 
   freeze: auto
 ---
