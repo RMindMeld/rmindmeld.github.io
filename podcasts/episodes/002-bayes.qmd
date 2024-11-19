@@ -1,0 +1,47 @@
+---
+title: "EP002: Review of the book Bayesian Statistics"
+description: "A different approach to understading Bayesian Statistics"
+date: "2024-11-18"
+categories: [AI Tools, book review, learning]
+image: "../../assets/podcasts/ep002_bayes.jpg"
+audio:
+  src: "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep002-bayes.mp3"
+  title: "Episode 2: Review of the book Bayesian Statistics"
+  description: "A different approach to understading Bayesian Statistics"
+  duration: "20:52"
+---
+
+
+<div class="audio-player">
+   <audio controls>
+   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep002-bayes.mp3" type="audio/mpeg">
+   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep002-bayes.ogg" type="audio/ogg">
+   Your browser does not support the audio element.
+   </audio>
+</div>
+
+:::{.episode-meta}
+
+**Duration**: 20:52  
+**Release Date**: January 18, 2024  
+**Category**: AI Tools, Getting Started  
+**Download**: [MP3](https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep001-intro-mindmeld.mp3)
+
+:::
+
+## Episode Background
+
+This is an example ofu using notebookLM to generate a podcast episode on a book review of Bayesian Statistics. The episode is a review of the book Bayesian Statistics, which is a different approach to understanding Bayesian Statistics. The episode is 17 minutes and 18 seconds long and was released on January 18, 2024.
+
+## Show Notes
+
+The Podcast was created using the book as only source. Then I used the context window/customization with the following:
+
+> - Say “Welcome to MindMeld, a podcast series powered by NotebookLM.”
+> - Shout-out to Fernando, the behind-the-scenes force making this series possible
+ 
+## Resources Mentioned
+
+### AI Tools
+- [NotebookLM](https://notebooklm.google.com/)
+- [bayesian statistics](https://nostarch.com/learnbayes)

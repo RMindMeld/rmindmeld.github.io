@@ -2,6 +2,7 @@
   {
     "listing": "/podcasts/index.html",
     "items": [
+      "/podcasts/episodes/002-bayes.html",
       "/podcasts/episodes/001-intro-mindmeld.html"
     ]
   },
@@ -14,7 +15,8 @@
       "/blog/posts/math_siimpsons.html",
       "/blog/posts/abstract-exploration.html",
       "/blog/posts/ai-content-exploration.html",
-      "/blog/posts/prompt-engineering-study.html"
+      "/blog/posts/prompt-engineering-study.html",
+      "/blog/posts/ai-image-gallery.html"
     ]
   }
 ]

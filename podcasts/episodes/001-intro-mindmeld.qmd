@@ -3,7 +3,7 @@ title: "EP001: Introducing MindMeld Podcasts"
 description: "An introduction to the MindMeld Podcast series and the different types of AI-generated content, power by NotebookLM"
 date: "2024-11-16"
 categories: [AI Tools, Getting Started, Content Creation]
-image: "../../assets/podcasts/ep001-mindmeld.jpg"
+image: "../../assets/podcasts/ep001_mindmeld.jpg"
 audio:
   src: "/assets/podcasts/001-ai-content-generation.mp3"
   title: "Episode 1: Introducing MindMeld Podcasts"

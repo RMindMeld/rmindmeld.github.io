@@ -1,0 +1,112 @@
+---
+title: "AI Image Generation Gallery"
+subtitle: "A Collection of Generative AI Artwork"
+date: "2024-07-25"
+categories: [AI, Art, Generative AI]
+image: "../assets/blog/ai-experiment-1.jpg"
+---
+
+## Exploring Creative AI Imagery
+
+This gallery showcases a diverse collection of AI-generated images, each created from unique and imaginative prompts. These images represent the intersection of creativity, technology, and artificial intelligence.
+
+> Originally these images were created as part of a series of blogs like the 4th and 5th in the blog. The blog themselves were bland, thus i decided to create a gallery to showcase the images.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### Fantasy Literature and Gaming Fusion
+![Fantasy Literature Gaming Transformation](/assets/blog/fantasy_gaming.jpg)
+
+
+**Prompt:** Create an image that represents the fusion of fantasy literature and gaming, with a book transforming into a video game controller, surrounded by magical elements like spell effects and mythical creatures.
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### AI Sudoku Solver
+![Digital Sudoku Solving](/assets/blog/ai_sudoku_solver.jpg)
+
+
+**Prompt:** Create an image of a Sudoku grid being solved by computer code, with binary numbers flowing into the empty cells of the Sudoku puzzle. The image should have a futuristic and technological feel, combining the classic Sudoku grid with digital elements.
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### Exoplanet Exploration
+![Space Telescope Observing Exoplanet](/assets/blog/exoplanet_exploration.jpg)
+
+
+**Prompt:** Create an image of a futuristic space telescope observing a distant exoplanet with a vibrant, alien-looking atmosphere. The image should blend elements of scientific accuracy with artistic imagination, showcasing the intersection of science and science fiction in exoplanet exploration.
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### Open Source Economics
+![Open Source Economics and Game Theory](/assets/blog/open_source_economics_game_theory.jpg)
+
+
+**Prompt:** Create an image that represents the intersection of open source software, economics, and game theory. The image should feature symbolic representations of code, economic concepts, and game theory elements, intertwined to show their interconnectedness.
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### Mathematical Rubik's Cube
+![Math Equations on Rubik's Cube](/assets/blog/mathematical_rubiks_cube.jpg)
+
+
+**Prompt:** Create an image of a Rubik's Cube with mathematical equations and formulas floating around it, symbolizing the mathematical concepts behind the puzzle. The cube should be partially solved, with some faces scrambled and others completed.
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### Golden Fibonacci Spiral
+![Fibonacci Spiral Visualization](/assets/blog/golden_fibonacci_spiral.jpg)
+
+
+**Prompt:** Create an image of a golden spiral formed by connecting quarter-circles drawn in squares with Fibonacci number side lengths. The spiral should be blue, overlaid on red squares, with a clean, mathematical aesthetic.
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### Monopoly Economics
+![Monopoly Game Economic Concepts](/assets/blog/monopoly_economics_illustration.jpg)
+
+
+**Prompt:** Create an image for a blog post about Monopoly and economics. The image should feature iconic Monopoly game pieces arranged on a Monopoly board, interspersed with economic symbols like dollar signs, stock charts, and coins.
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### AI in Sports Officiating
+![AI and Human Referees](/assets/blog/ai_sports_officiating.jpg)
+
+
+**Prompt:** Create an image of a futuristic sports arena with holographic displays showing real-time AI analysis of player movements and referee decisions. Include a mix of human referees and robotic assistants on the field.
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### RPG Evolution Timeline
+![Role-Playing Games Evolution](/assets/blog/rpg_evolution_timeline.jpg)
+
+
+**Prompt:** Create an image depicting the evolution of role-playing games from traditional tabletop Dungeons & Dragons to modern digital RPGs and LitRPG books. Show a timeline or progression with iconic representations of each stage.
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### Simpsons Predictions
+![Simpsons Predictions in Reality](/assets/blog/simpsons_predictions_reality.jpg)
+
+
+**Prompt:** Create an image showcasing various predictions made by The Simpsons TV show that came true in real life. Feature Simpsons characters surrounded by thought bubbles containing miniature scenes of predicted events.
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### Mathematics in The Simpsons
+![Math and Simpsons Characters](/assets/blog/simpsons_mathematics.jpg)
+
+**Original Filename:** `image_20240724_215944.jpg`
+
+**Prompt:** Create an image for a blog post about mathematics in The Simpsons. Feature Simpsons characters surrounded by mathematical equations, symbols, and graphs, including a chalkboard with complex formulas.
+:::
+
+:::
+
+## About This Gallery
+
+These images were generated using advanced AI image generation technologies, demonstrating the creative potential of artificial intelligence in visual art. Each image represents a unique prompt, exploring themes from science and technology to pop culture and mathematics.
+
+**Note:** All images are AI-generated and represent creative interpretations of the provided prompts.

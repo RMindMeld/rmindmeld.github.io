@@ -10,7 +10,368 @@
 <atom:link href="https://rmindmeld.github.io/podcasts/index.xml" rel="self" type="application/rss+xml"/>
 <description>A Personal Journey Through AI-Human Content Creation</description>
 <generator>quarto-1.6.33</generator>
-<lastBuildDate>Sat, 16 Nov 2024 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 18 Nov 2024 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>EP002: Review of the book Bayesian Statistics</title>
+  <link>https://rmindmeld.github.io/podcasts/episodes/002-bayes.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to MindMeld</title>
+
+    <style>
+
+        :root {
+
+            --transition-duration: 1000ms;
+
+        }
+
+        
+
+        body, html {
+
+            margin: 0;
+
+            padding: 0;
+
+            height: 100%;
+
+            font-family: system-ui, -apple-system, sans-serif;
+
+        }
+
+        
+
+        .welcome-container {
+
+            position: absolute; /* Changed from fixed to absolute */
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100vh;
+
+            z-index: 1000; /* Add high z-index to show above content initially */
+
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+
+                        url('assets/welcome-bg.jpg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            text-align: center;
+
+            transition: opacity var(--transition-duration) ease-in-out,
+
+                        visibility var(--transition-duration) ease-in-out; /* Add visibility transition */
+
+        }
+
+        
+
+        .welcome-content {
+
+            max-width: 800px;
+
+            padding: 2rem;
+
+        }
+
+        
+
+        .title {
+
+            font-size: 3.5rem;
+
+            margin-bottom: 1rem;
+
+            font-weight: 700;
+
+        }
+
+        
+
+        .subtitle {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 2rem;
+
+            opacity: 0.9;
+
+        }
+
+        
+
+        .enter-button {
+
+            background-color: transparent;
+
+            border: 2px solid white;
+
+            color: white;
+
+            padding: 1rem 2rem;
+
+            font-size: 1.2rem;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            text-decoration: none;
+
+            border-radius: 4px;
+
+        }
+
+        
+
+        .enter-button:hover {
+
+            background-color: white;
+
+            color: black;
+
+        }
+
+        
+
+        /* Fade out animation class */
+
+        .fade-out {
+
+            opacity: 0;
+
+            visibility: hidden; /* Hide completely when faded out */
+
+            z-index: -1; /* Move behind content when faded out */
+
+        }
+
+        
+
+        /* Main content container */
+
+        #main-content {
+
+            position: relative;
+
+            z-index: 1; /* Lower than welcome screen but above 0 */
+
+            opacity: 0;
+
+            transition: opacity var(--transition-duration) ease-in-out;
+
+        }
+
+        
+
+        /* Main content visible state */
+
+        #main-content.visible {
+
+            opacity: 1;
+
+        }
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+        .welcome-container.hidden-welcome {
+
+            display: none;
+
+        }
+
+    </style>
+
+
+
+
+
+    <div id="welcome" class="welcome-container hidden-welcome">
+
+        <div class="welcome-content">
+
+            <h1 class="title">MindMeld</h1>
+
+            <p class="subtitle">Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.</p>
+
+            <button id="enter-btn" class="enter-button">Enter MindMeld</button>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        // Only run this script on the index page
+
+        if (window.location.pathname === '/' || 
+
+            window.location.pathname === '/index.html' || 
+
+            window.location.pathname.endsWith('/')) {
+
+            
+
+            // Check if this is the first visit
+
+            const hasVisited = sessionStorage.getItem('hasVisited');
+
+            
+
+            if (!hasVisited) {
+
+                // First visit - show welcome screen
+
+                const welcome = document.getElementById('welcome');
+
+                welcome.classList.remove('hidden-welcome');
+
+                
+
+                // Mark as visited
+
+                sessionStorage.setItem('hasVisited', 'true');
+
+                
+
+                // Add click handler for enter button
+
+                document.getElementById('enter-btn').addEventListener('click', function() {
+
+                    welcome.classList.add('fade-out');
+
+                    
+
+                    const mainContent = document.getElementById('main-content');
+
+                    setTimeout(() => {
+
+                        mainContent.classList.add('visible');
+
+                    }, 500);
+
+                    
+
+                    setTimeout(() => {
+
+                        welcome.style.display = 'none';
+
+                    }, 1000);
+
+                });
+
+            } else {
+
+                // Not first visit - show main content immediately
+
+                const mainContent = document.getElementById('main-content');
+
+                mainContent.classList.add('visible');
+
+            }
+
+        } else {
+
+            // Not on index page - show main content immediately
+
+            const mainContent = document.getElementById('main-content');
+
+            mainContent.classList.add('visible');
+
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+<div class="audio-player">
+<p><audio controls=""> <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep002-bayes.mp3" type="audio/mpeg"> <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep002-bayes.ogg" type="audio/ogg"> Your browser does not support the audio element. </audio></p>
+</div>
+<div class="episode-meta">
+<p><strong>Duration</strong>: 20:52<br>
+<strong>Release Date</strong>: January 18, 2024<br>
+<strong>Category</strong>: AI Tools, Getting Started<br>
+<strong>Download</strong>: <a href="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep001-intro-mindmeld.mp3">MP3</a></p>
+</div>
+<section id="episode-background" class="level2">
+<h2 class="anchored" data-anchor-id="episode-background">Episode Background</h2>
+<p>This is an example ofu using notebookLM to generate a podcast episode on a book review of Bayesian Statistics. The episode is a review of the book Bayesian Statistics, which is a different approach to understanding Bayesian Statistics. The episode is 17 minutes and 18 seconds long and was released on January 18, 2024.</p>
+</section>
+<section id="show-notes" class="level2">
+<h2 class="anchored" data-anchor-id="show-notes">Show Notes</h2>
+<p>The Podcast was created using the book as only source. Then I used the context window/customization with the following:</p>
+<blockquote class="blockquote">
+<ul>
+<li>Say “Welcome to MindMeld, a podcast series powered by NotebookLM.”</li>
+<li>Shout-out to Fernando, the behind-the-scenes force making this series possible</li>
+</ul>
+</blockquote>
+</section>
+<section id="resources-mentioned" class="level2">
+<h2 class="anchored" data-anchor-id="resources-mentioned">Resources Mentioned</h2>
+<section id="ai-tools" class="level3">
+<h3 class="anchored" data-anchor-id="ai-tools">AI Tools</h3>
+<ul>
+<li><a href="https://notebooklm.google.com/">NotebookLM</a></li>
+<li><a href="https://nostarch.com/learnbayes">bayesian statistics</a></li>
+</ul>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>AI Tools</category>
+  <category>book review</category>
+  <category>learning</category>
+  <guid>https://rmindmeld.github.io/podcasts/episodes/002-bayes.html</guid>
+  <pubDate>Mon, 18 Nov 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://rmindmeld.github.io/assets/podcasts/ep002_bayes.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>EP001: Introducing MindMeld Podcasts</title>
   <link>https://rmindmeld.github.io/podcasts/episodes/001-intro-mindmeld.html</link>
@@ -406,7 +767,7 @@
   <category>Content Creation</category>
   <guid>https://rmindmeld.github.io/podcasts/episodes/001-intro-mindmeld.html</guid>
   <pubDate>Sat, 16 Nov 2024 05:00:00 GMT</pubDate>
-  <media:content url="https://rmindmeld.github.io/assets/podcasts/ep001-mindmeld.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://rmindmeld.github.io/assets/podcasts/ep001_mindmeld.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
