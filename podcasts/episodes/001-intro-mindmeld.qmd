@@ -23,7 +23,7 @@ audio:
 :::{.episode-meta}
 
 **Duration**: 20:52  
-**Release Date**: January 18, 2024  
+**Release Date**: November 16, 2024  
 **Category**: AI Tools, Getting Started  
 **Download**: [MP3](https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep001-intro-mindmeld.mp3)
 

@@ -2,6 +2,7 @@
   {
     "listing": "/podcasts/index.html",
     "items": [
+      "/podcasts/episodes/003-cre-stata.html",
       "/podcasts/episodes/002-bayes.html",
       "/podcasts/episodes/001-intro-mindmeld.html"
     ]
