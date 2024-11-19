@@ -76,8 +76,6 @@ host_2:
 
 Random Effects models, on the other hand, do allow for time-invariant variables but assume that unobserved individual effects are uncorrelated with the explanatory variables—a strong assumption that’s often violated in practice."  
 
-
-
 host_1:  
 "So where do Correlated Random Effects, or CRE, come into play?"  
 

@@ -522,7 +522,7 @@
     "href": "podcasts/episodes/003-cre-stata.html#show-notes",
     "title": "MindMeld",
     "section": "Show Notes",
-    "text": "Show Notes\nThe Podcast was created using the paper as only source. I asked OpenAI the following:\n\nRead paper carefully and then write a script explaining this in a podcast with two hosts for about 10-20 min. One host is the one asking the questions, the other one answering them.\n\nThe total duration of the episode was 7 minutes and 22 seconds. Half of what I asked for.\nFor the Podcast itself, I used a small script (that I will share at a later point) to generate the episode, by going back and forth between different voices.\nIn this case, we have the full script of the episode here"
+    "text": "Show Notes\nThe Podcast was created using the paper as only source. I asked OpenAI the following:\n\nRead paper carefully and then write a script explaining this in a podcast with two hosts for about 10-20 min. One host is the one asking the questions, the other one answering them.\n\nThe total duration of the episode was 7 minutes and 22 seconds. Half of what I asked for.\nFor the Podcast itself, I used a small script (that I will share at a later point) to generate the episode, by going back and forth between different voices."
   },
   {
     "objectID": "podcasts/episodes/003-cre-stata.html#resources-mentioned",
