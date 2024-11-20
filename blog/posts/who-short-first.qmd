@@ -2,10 +2,10 @@
 title: "Who Shot First?: Your Podcast Maker"
 description: "A small example of a dialogue about the infamous Han Solo debate AI-generated, and AI rendered."
 date: "2024-11-19"
-categories: Claude, OpenAI, tts, Star Wars
+categories: [Claude, OpenAI, tts, Star Wars]
 image: "../../assets/blog/prompt_eng.jpg"
 ---
-
+ 
 ## Podcast your way
 
 As you already have noticed, I have been using NotebookLM and their audio overviews to create Podcast like audio episodes. That could be further improved and custom to be "my" podcast thanks to the window for customization.

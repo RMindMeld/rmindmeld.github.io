@@ -937,7 +937,10 @@
 </section>
 
  ]]></description>
-  <category>Claude, OpenAI, tts, Star Wars</category>
+  <category>Claude</category>
+  <category>OpenAI</category>
+  <category>tts</category>
+  <category>Star Wars</category>
   <guid>https://rmindmeld.github.io/blog/posts/who-short-first.html</guid>
   <pubDate>Tue, 19 Nov 2024 05:00:00 GMT</pubDate>
   <media:content url="https://rmindmeld.github.io/assets/blog/prompt_eng.jpg" medium="image" type="image/jpeg"/>
@@ -4292,7 +4295,7 @@ Comment
 <p><img src="https://latex.codecogs.com/png.latex?1782%5E%7B12%7D%20+%201841%5E%7B12%7D%20=%201922%5E%7B12%7D"></p>
 <p>This equation is a near-miss to Fermat’s Last Theorem, which states that no three positive integers a, b, and c can satisfy the equation <img src="https://latex.codecogs.com/png.latex?a%5En%20+%20b%5En%20=%20c%5En"> for any integer value of n greater than 2. The equation in the show is not actually true, but it’s remarkably close – the left side differs from the right by less than 1 part in <img src="https://latex.codecogs.com/png.latex?10%5E%7B30%7D">.</p>
 <p>Let’s verify this using Python:</p>
-<div id="cf2ae48b" class="cell" data-execution_count="1">
+<div id="0c78e209" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
@@ -4516,7 +4519,7 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="pythagorean-theorem-and-comic-book-guy">Pythagorean Theorem and Comic Book Guy</h2>
 <p>Even the show’s notorious pedant, Comic Book Guy, gets in on the mathematical action. In one episode, he wears a t-shirt with the equation <img src="https://latex.codecogs.com/png.latex?3%5E2%20+%204%5E2%20=%205%5E2">, which is a representation of the Pythagorean theorem for a 3-4-5 right triangle.</p>
 <p>Let’s visualize this triangle using matplotlib:</p>
-<div id="b2f82024" class="cell" data-execution_count="2">
+<div id="502173a7" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
