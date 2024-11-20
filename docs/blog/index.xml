@@ -594,7 +594,7 @@
 </item>
 <item>
   <title>Who Shot First?: Your Podcast Maker</title>
-  <link>https://rmindmeld.github.io/blog/posts/who-short-first.html</link>
+  <link>https://rmindmeld.github.io/blog/posts/who-shot-first.html</link>
   <description><![CDATA[ 
 
 
@@ -921,7 +921,7 @@
 <section id="who-shot-first" class="level2">
 <h2 class="anchored" data-anchor-id="who-shot-first">Who Shot first</h2>
 <div class="audio-player">
-<p><audio controls=""> <source src="https://github.com/RMindMeld/podcast_asset/blob/main/who-shot-first.mp3" type="audio/mpeg"> Your browser does not support the audio element. </audio></p>
+<p><audio controls=""> <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/who-shot-first.mp3" type="audio/mpeg"> Your browser does not support the audio element. </audio></p>
 </div>
 <p>Sarah: Look, let’s settle this Han Solo debate once and for all. In the original 1977 Star Wars, Han straight-up shot Greedo under that table. No question, no dodging, just pure survival instinct.</p>
 <p>Marcus: Wait, that can’t be right. I just watched it on Disney+ last week - Greedo definitely shot first and missed somehow.</p>
@@ -939,11 +939,10 @@
  ]]></description>
   <category>Claude</category>
   <category>OpenAI</category>
-  <category>tts</category>
-  <category>Star Wars</category>
-  <guid>https://rmindmeld.github.io/blog/posts/who-short-first.html</guid>
+  <category>Pop Cultureure</category>
+  <guid>https://rmindmeld.github.io/blog/posts/who-shot-first.html</guid>
   <pubDate>Tue, 19 Nov 2024 05:00:00 GMT</pubDate>
-  <media:content url="https://rmindmeld.github.io/assets/blog/prompt_eng.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://rmindmeld.github.io/assets/blog/who-shot-first.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>The Ingenious Gentleman in the Digital Age: AI Retells Don Quixote</title>
