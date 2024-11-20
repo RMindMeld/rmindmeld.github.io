@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rmindmeld.github.io/podcasts/index.html</loc>
-    <lastmod>2024-11-19T14:18:50.890Z</lastmod>
+    <lastmod>2024-11-16T21:08:39.098Z</lastmod>
   </url>
   <url>
     <loc>https://rmindmeld.github.io/podcasts/episodes/002-bayes.html</loc>
-    <lastmod>2024-11-19T15:05:53.853Z</lastmod>
+    <lastmod>2024-11-20T01:58:52.166Z</lastmod>
   </url>
   <url>
     <loc>https://rmindmeld.github.io/index.html</loc>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://rmindmeld.github.io/blog/posts/multiverse.html</loc>
-    <lastmod>2024-11-19T14:23:44.434Z</lastmod>
+    <lastmod>2024-11-20T01:58:51.934Z</lastmod>
   </url>
   <url>
     <loc>https://rmindmeld.github.io/blog/posts/econ_hero.html</loc>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://rmindmeld.github.io/blog/index.html</loc>
-    <lastmod>2024-11-19T14:18:50.789Z</lastmod>
+    <lastmod>2024-11-15T03:33:40.621Z</lastmod>
   </url>
   <url>
     <loc>https://rmindmeld.github.io/blog/posts/ai-content-exploration.html</loc>
@@ -58,10 +58,14 @@
   </url>
   <url>
     <loc>https://rmindmeld.github.io/podcasts/episodes/001-intro-mindmeld.html</loc>
-    <lastmod>2024-11-19T15:04:55.174Z</lastmod>
+    <lastmod>2024-11-20T01:58:52.150Z</lastmod>
   </url>
   <url>
     <loc>https://rmindmeld.github.io/podcasts/episodes/003-cre-stata.html</loc>
-    <lastmod>2024-11-19T15:31:57.890Z</lastmod>
+    <lastmod>2024-11-20T01:58:52.166Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rmindmeld.github.io/blog/posts/who-short-first.html</loc>
+    <lastmod>2024-11-20T04:15:25.693Z</lastmod>
   </url>
 </urlset>

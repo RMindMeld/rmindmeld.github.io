@@ -593,6 +593,356 @@
   <pubDate>Tue, 19 Nov 2024 05:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>Who Shot First?: Your Podcast Maker</title>
+  <link>https://rmindmeld.github.io/blog/posts/who-short-first.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to MindMeld</title>
+
+    <style>
+
+        :root {
+
+            --transition-duration: 1000ms;
+
+        }
+
+        
+
+        body, html {
+
+            margin: 0;
+
+            padding: 0;
+
+            height: 100%;
+
+            font-family: system-ui, -apple-system, sans-serif;
+
+        }
+
+        
+
+        .welcome-container {
+
+            position: absolute; /* Changed from fixed to absolute */
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100vh;
+
+            z-index: 1000; /* Add high z-index to show above content initially */
+
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+
+                        url('assets/welcome-bg.jpg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            text-align: center;
+
+            transition: opacity var(--transition-duration) ease-in-out,
+
+                        visibility var(--transition-duration) ease-in-out; /* Add visibility transition */
+
+        }
+
+        
+
+        .welcome-content {
+
+            max-width: 800px;
+
+            padding: 2rem;
+
+        }
+
+        
+
+        .title {
+
+            font-size: 3.5rem;
+
+            margin-bottom: 1rem;
+
+            font-weight: 700;
+
+        }
+
+        
+
+        .subtitle {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 2rem;
+
+            opacity: 0.9;
+
+        }
+
+        
+
+        .enter-button {
+
+            background-color: transparent;
+
+            border: 2px solid white;
+
+            color: white;
+
+            padding: 1rem 2rem;
+
+            font-size: 1.2rem;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            text-decoration: none;
+
+            border-radius: 4px;
+
+        }
+
+        
+
+        .enter-button:hover {
+
+            background-color: white;
+
+            color: black;
+
+        }
+
+        
+
+        /* Fade out animation class */
+
+        .fade-out {
+
+            opacity: 0;
+
+            visibility: hidden; /* Hide completely when faded out */
+
+            z-index: -1; /* Move behind content when faded out */
+
+        }
+
+        
+
+        /* Main content container */
+
+        #main-content {
+
+            position: relative;
+
+            z-index: 1; /* Lower than welcome screen but above 0 */
+
+            opacity: 0;
+
+            transition: opacity var(--transition-duration) ease-in-out;
+
+        }
+
+        
+
+        /* Main content visible state */
+
+        #main-content.visible {
+
+            opacity: 1;
+
+        }
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+        .welcome-container.hidden-welcome {
+
+            display: none;
+
+        }
+
+    </style>
+
+
+
+
+
+    <div id="welcome" class="welcome-container hidden-welcome">
+
+        <div class="welcome-content">
+
+            <h1 class="title">MindMeld</h1>
+
+            <p class="subtitle">Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.</p>
+
+            <button id="enter-btn" class="enter-button">Enter MindMeld</button>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        // Only run this script on the index page
+
+        if (window.location.pathname === '/' || 
+
+            window.location.pathname === '/index.html' || 
+
+            window.location.pathname.endsWith('/')) {
+
+            
+
+            // Check if this is the first visit
+
+            const hasVisited = sessionStorage.getItem('hasVisited');
+
+            
+
+            if (!hasVisited) {
+
+                // First visit - show welcome screen
+
+                const welcome = document.getElementById('welcome');
+
+                welcome.classList.remove('hidden-welcome');
+
+                
+
+                // Mark as visited
+
+                sessionStorage.setItem('hasVisited', 'true');
+
+                
+
+                // Add click handler for enter button
+
+                document.getElementById('enter-btn').addEventListener('click', function() {
+
+                    welcome.classList.add('fade-out');
+
+                    
+
+                    const mainContent = document.getElementById('main-content');
+
+                    setTimeout(() => {
+
+                        mainContent.classList.add('visible');
+
+                    }, 500);
+
+                    
+
+                    setTimeout(() => {
+
+                        welcome.style.display = 'none';
+
+                    }, 1000);
+
+                });
+
+            } else {
+
+                // Not first visit - show main content immediately
+
+                const mainContent = document.getElementById('main-content');
+
+                mainContent.classList.add('visible');
+
+            }
+
+        } else {
+
+            // Not on index page - show main content immediately
+
+            const mainContent = document.getElementById('main-content');
+
+            mainContent.classList.add('visible');
+
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+<section id="podcast-your-way" class="level2">
+<h2 class="anchored" data-anchor-id="podcast-your-way">Podcast your way</h2>
+<p>As you already have noticed, I have been using NotebookLM and their audio overviews to create Podcast like audio episodes. That could be further improved and custom to be “my” podcast thanks to the window for customization.</p>
+<p>While that was a great experience, I wanted to see if I could create something like that myself, using some of the features of OpenAI and Text-to-Speech capabilities. If you have access to the API for OpenAI you will notice that you can create audio files from text, but with limits. You need to select the voice that you want, and there are limits to the length of the audio file. (4k characters)</p>
+<p>Looking online, apparently there are other options outhere already that can do this. But most of them are rather expensive, despite having a free tier.</p>
+<p>Im already paying for credits with OpenAI, so decided to give it a try and make a program that could create a podcast episode from a text file, for any length of text, and with the voice that I want. My Python skills are not the best, but I was able to make a functional program using Claude.ai Sonnet (free tier).</p>
+<p>There are limits, of course. I have only 6 voices to choose from. And have not yet tested the limits of the audio file length. Still, I got a good working prototype that does the job. I can share the code if you are interested.</p>
+<p>Anyways, I already made an example on EP3 of the podcast. But now I wanted to make an example of one of the greatest questions of all times: Who shot first? Han or Greedo?</p>
+</section>
+<section id="who-shot-first" class="level2">
+<h2 class="anchored" data-anchor-id="who-shot-first">Who Shot first</h2>
+<div class="audio-player">
+<p><audio controls=""> <source src="https://github.com/RMindMeld/podcast_asset/blob/main/who-shot-first.mp3" type="audio/mpeg"> Your browser does not support the audio element. </audio></p>
+</div>
+<p>Sarah: Look, let’s settle this Han Solo debate once and for all. In the original 1977 Star Wars, Han straight-up shot Greedo under that table. No question, no dodging, just pure survival instinct.</p>
+<p>Marcus: Wait, that can’t be right. I just watched it on Disney+ last week - Greedo definitely shot first and missed somehow.</p>
+<p>Elena: rolls eyes Oh, you sweet summer child. What you saw was the modified version. George Lucas went back and changed it in ’97 because he thought it made Han look too ruthless.</p>
+<p>David: And that’s exactly why the change ruins the whole character arc! Han was supposed to be this morally ambiguous smuggler who’d shoot first to save his own skin. That’s what made his transformation into a hero so powerful.</p>
+<p>Sarah: Exactly! The whole point is that he starts as this self-serving survivor and grows into someone who’d risk everything for the rebellion.</p>
+<p>Marcus: So you’re telling me they digitally altered it to make Han dodge and shoot second? That’s… kind of ridiculous.</p>
+<p>Elena: Right? And Greedo missing from literally two feet away makes zero sense. He’s supposed to be a professional bounty hunter!</p>
+<p>Sarah: Oh god, don’t even get me started on that addition…</p>
+<p>Elena: Trust me, Marcus, you don’t want to know. Let’s just say they kept “improving” the scene over the years.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Claude, OpenAI, tts, Star Wars</category>
+  <guid>https://rmindmeld.github.io/blog/posts/who-short-first.html</guid>
+  <pubDate>Tue, 19 Nov 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://rmindmeld.github.io/assets/blog/prompt_eng.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
   <title>The Ingenious Gentleman in the Digital Age: AI Retells Don Quixote</title>
   <link>https://rmindmeld.github.io/blog/posts/don-quijote.html</link>
   <description><![CDATA[ 
