@@ -20,7 +20,17 @@ Looking online, apparently there are other options outhere already that can do t
 
 Im already paying for credits with OpenAI, so decided to give it a try and make a program that could create a podcast episode from a text file, for any length of text, and with the voice that I want. My Python skills are not the best, but I was able to make a functional program using Claude.ai Sonnet (free tier).
 
-There are limits, of course. I have only 6 voices to choose from. And have not yet tested the limits of the audio file length. Still, I got a good working prototype that does the job. I can share the code if you are interested.
+There are limits, of course. I have only 6 voices to choose from. And have not yet tested the limits of the audio file length. Still, I got a good working prototype that does the job. You can get the code here: [Podcast Maker](../../assets/blog/podcast_maker.py). 
+
+You will also need to install the following libraries:
+- OpenAI, plus having a Key API (paid credits)
+- NLTK
+- Pydub
+- Tkinter
+- Keyring
+- num2words
+
+and have ffmpg installed in your system to get the codecs.
 
 Anyways, I already made an example on EP3 of the podcast. But now I wanted to make an example of one of the greatest questions of all times: Who shot first? Han or Greedo?
 
