@@ -1,0 +1,173 @@
+---
+title: "Programming in Stata with AI: An Experiment of Success"
+date: "2024-11-21"
+categories: 
+  - Programming
+  - AI Experiments
+  - Stata
+image: "../../assets/blog/stata_ai_experiment.jpg"
+execute: 
+  freeze: auto
+---
+
+
+## The Story Behind This Experiment
+
+As many other economists, I some time spend quite a lot of time working with my Stata code and programs, debugging, trying, testing, to make sure everything is working as it should. Usually that is not much of a problem with programs for isolated projects. But, trying to do that with ado's that are ment to be used by others, it can be quite a challenge.
+
+That is not unexpected. Working with specific tasks usually requires lots of data cleaning, data wrangling, labeling, and so on. It is an easy task, but its time consuming and tedious. But we all have done it. 
+
+The task that can take even more time consuming and daunting is when you are working with a highly complex analysis, or even more, when you are developing a new program that will be used by others.
+Perhaps one of those programs that was the stone in my shoe was the estimation of unconditional quantile regression models using RIF regressions. It took quite some time for me to get it right, and expand it to a sufficiently general program that could be used by others: `rifhdreg`
+
+When I heard about Stata, one of the first questions I asked was for it to give me code to estimate unconditional quantile regression models. and guess what...it did!...hallucinate!. Asking about implementing the program from scratch was out of the question. This is not too surprising. We know that Stata is a somewhat niche programming Language, and being proprietary, it is not as popular as Python or R. So the "training" of AI is very limited.
+
+## How Proficient is AI in Stata?
+
+From all competing AI models, the one I have been using for programming is Claude.ai. It is suppoused to excell in programming. However, if you ask it about its proficiency using the following prompt: 
+
+> Scale 0-100 , provide your own assessment on profficiency on Stata R Python Julia SQL Basic C++ Rubi, Scratch, Pascal, and any other programs you have heard off
+
+You get:
+
+| Language | Proficiency |
+|----------|-------------|
+| Python   | 95/100      |
+| R        | 90/100      |
+| SQL      | 90/100      |
+| Julia    | 85/100      |
+| Stata    | 80/100      |
+| C++      | 75/100      |
+| Ruby     | 70/100      |
+| Pascal   | 65/100      |
+| Scratch  | 60/100      |
+| MATLAB   | 75/100      |
+| SAS      | 70/100      |
+| Fortran  | 65/100      |
+| Perl     | 60/100      |
+| SPSS     | 60/100      |
+Language Proficiency  
+
+Keep in mind that the first time I asked this, it gave itself a 60/100 on Stata. It has now increased to 80/100. It is still below R or Python, but it is quite good. So with the newest models, I thought...perhaps it can also help with Stata programming.
+
+## The Experiment: Zero-prompt Stata Programming
+
+I decided to give it a try. I would use Claude.ai and give it a zero-prompt, and see if it could help me with Stata programming. The prompt was direct:
+
+> Write a Stata program that implements the estimation of unconditional quantile regression models using RIF regressions from scratch.
+
+The result was quite surprising. It game me a full program, including an example of how to use it!
+
+```{stata}
+
+capture program drop rifqreg
+program define rifqreg, eclass
+    version 14.0
+    
+    syntax varlist(min=2) [if] [in] [aweight fweight pweight], ///
+        Quantile(real) ///
+        [vce(string) Robust CLuster(varname) reps(integer 50)]
+    
+    marksample touse
+    gettoken depvar indepvars : varlist
+    
+    // Check quantile is between 0 and 1
+    if `quantile' <= 0 | `quantile' >= 1 {
+        di as error "quantile() must be between 0 and 1"
+        exit 198
+    }
+    
+    // Handle weights
+    local weight ""
+    if "`weight'" != "" {
+        local weight "[`weight'`exp']"
+    }
+    
+    // Get sample size
+    qui count if `touse'
+    local N = r(N)
+    
+    // Compute the sample quantile
+    tempvar y_sorted
+    qui sort `depvar'
+    qui gen `y_sorted' = `depvar' if `touse'
+    _pctile `y_sorted' `weight' if `touse', p(`=`quantile'*100')
+    local q_tau = r(r1)
+    
+    // Compute the density at the quantile using kernel density estimation
+    tempvar kde_est
+    qui kdensity `depvar' if `touse', nograph generate(`kde_est') at(`q_tau')
+    local f_tau = `r(density)'
+    
+    // Generate RIF
+    tempvar rif
+    qui gen `rif' = `q_tau' + ///
+        (`depvar' <= `q_tau' - `quantile')/`f_tau' if `touse'
+    
+    // Estimate RIF regression
+    if "`vce'" == "bootstrap" {
+        qui bootstrap _b, reps(`reps'): regress `rif' `indepvars' if `touse' `weight'
+    }
+    else {
+        local vcetype ""
+        if "`robust'" != "" | "`cluster'" != "" {
+            local vcetype "robust"
+            if "`cluster'" != "" {
+                local vcetype "`vcetype' cluster(`cluster')"
+            }
+        }
+        qui regress `rif' `indepvars' if `touse' `weight', `vcetype'
+    }
+    
+    // Store results
+    ereturn local cmd "rifqreg"
+    ereturn local title "RIF-based Unconditional Quantile Regression"
+    ereturn scalar q_tau = `q_tau'
+    ereturn scalar f_tau = `f_tau'
+    ereturn scalar tau = `quantile'
+    
+    // Display results
+    di _n as txt "RIF-based Unconditional Quantile Regression"
+    di as txt "Quantile: " as res `quantile'
+    di as txt "Sample quantile value: " as res `q_tau'
+    di as txt "Density estimate at quantile: " as res `f_tau'
+    di _n
+    ereturn display
+end
+
+// Helper program for generating RIF values
+capture program drop gen_rif
+program define gen_rif
+    syntax varname, Quantile(real) GENerate(name)
+    
+    tempvar y_sorted kde_est
+    qui sort `varlist'
+    qui gen `y_sorted' = `varlist'
+    
+    _pctile `y_sorted', p(`=`quantile'*100')
+    local q_tau = r(r1)
+    
+    qui kdensity `varlist', nograph generate(`kde_est') at(`q_tau')
+    local f_tau = `r(density)'
+    
+    qui gen `generate' = `q_tau' + ///
+        (`varlist' <= `q_tau' - `quantile')/`f_tau'
+end
+
+// Example usage:
+/*
+* Load data
+sysuse auto, clear
+
+* Run unconditional quantile regression at median
+rifqreg price weight length foreign, q(0.5) robust
+
+* Run unconditional quantile regression at 75th percentile with bootstrapped SE
+rifqreg price weight length foreign, q(0.75) vce(bootstrap) reps(100)
+
+* Generate RIF values for manual analysis
+gen_rif price, q(0.5) gen(rif_price50)
+*/
+
+```
+
