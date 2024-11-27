@@ -1,11 +1,11 @@
 ---
 title: "Programming in Stata with AI: An Experiment of Success"
-date: "2024-11-21"
+date: "2024-11-26"
 categories: 
   - Programming
   - AI Experiments
   - Stata
-image: "../../assets/blog/stata_ai_experiment.jpg"
+image: "../../assets/blog/ai-prog-stata.jpg"
 execute: 
   freeze: auto
 ---
@@ -56,10 +56,13 @@ I decided to give it a try. I would use Claude.ai and give it a zero-prompt, and
 
 > Write a Stata program that implements the estimation of unconditional quantile regression models using RIF regressions from scratch.
 
-The result was quite surprising. It game me a full program, including an example of how to use it!
+The result was quite surprising. It game me a full program, including an example of how to use it! It also cited Firpo, Fortin, and Lemieux (2009) as the reference for the method. 
+
+Looking at the code, it was quite good. It had all the necessary components, including the kernel density estimation for the RIF, the computation of the sample quantile, and the estimation of the RIF regression. It even had an option for bootstrapped standard errors, and with good documentation.
 
 ```{stata}
-
+*| code-fold: true
+*| execute: false
 capture program drop rifqreg
 program define rifqreg, eclass
     version 14.0
@@ -171,3 +174,265 @@ gen_rif price, q(0.5) gen(rif_price50)
 
 ```
 
+
+But does it work?? 
+
+Nope...
+
+There are few errors in the program that can be easily to fix. Nevertheless, the results were impresive. And while I could (and have) implemented this from scratch. If I were to program this today, this could have certainly saved me a lot of time. But...there is still a long way to go. As I mentioned, there were few errors that need fixing, in addition to some programming choices that are definately not something I would have done. 
+
+1. I would produce UQR using the median as default. The current program asks you to provide a value for quantiles.
+2. I like to use a range 0-100 for quantiles instead of 0-1.
+
+And what needs fixing?
+
+1. The way the density is computed is not correct. Calls on `kdensity` using `at()` option, but using a value rather than a variable. (easy fix)
+2. The RIF function is slighly off as well
+
+the program uses:
+
+```stata
+gen `rif' = `q_tau' + (`depvar' <= `q_tau' - `quantile')/`f_tau' if `touse'
+```
+
+But it should be:
+
+```stata
+gen `rif' = `q_tau' + ((`depvar' >= `q_tau')- `quantile')/`f_tau' if `touse'
+```                  
+
+Here is the program with the changes:
+
+```{stata}
+*| code-fold: true
+*| execute: false
+capture program drop rifqreg
+program define rifqreg, eclass
+    version 14.0
+    
+    syntax varlist(min=2) [if] [in] [aweight fweight pweight], ///
+        Quantile(real) ///
+        [vce(string) Robust CLuster(varname) reps(integer 50)]
+    
+    marksample touse
+    gettoken depvar indepvars : varlist
+    
+    // Check quantile is between 0 and 1
+    if `quantile' <= 0 | `quantile' >= 1 {
+        di as error "quantile() must be between 0 and 1"
+        exit 198
+    }
+    
+    // Handle weights
+    local weight ""
+    if "`weight'" != "" {
+        local weight "[`weight'`exp']"
+    }
+    
+    // Get sample size
+    qui count if `touse'
+    local N = r(N)
+    
+    // Compute the sample quantile
+    tempvar y_sorted
+    qui sort `depvar'
+    qui gen `y_sorted' = `depvar' if `touse'
+    _pctile `y_sorted' `weight' if `touse', p(`=`quantile'*100')
+    local q_tau = r(r1)
+    
+    // Compute the density at the quantile using kernel density estimation
+    tempvar kde_est
+	tempvar q_tau_v
+	qui: gen double `q_tau_v' = `q_tau' in 1
+    qui kdensity `depvar' if `touse', nograph generate(`kde_est') at(`q_tau_v')
+    local f_tau = `kde_est'[1]
+    
+    // Generate RIF
+    tempvar rif
+    qui gen `rif' = `q_tau' + ///
+        ((`depvar' >= `q_tau' )- `quantile')/`f_tau' if `touse'
+    
+    // Estimate RIF regression
+    if "`vce'" == "bootstrap" {
+        qui bootstrap _b, reps(`reps'): regress `rif' `indepvars' if `touse' `weight'
+    }
+    else {
+        local vcetype ""
+        if "`robust'" != "" | "`cluster'" != "" {
+            local vcetype "robust"
+            if "`cluster'" != "" {
+                local vcetype "`vcetype' cluster(`cluster')"
+            }
+        }
+        qui regress `rif' `indepvars' if `touse' `weight', `vcetype'
+    }
+    
+    // Store results
+    ereturn local cmd "rifqreg"
+    ereturn local title "RIF-based Unconditional Quantile Regression"
+    ereturn scalar q_tau = `q_tau'
+    ereturn scalar f_tau = `f_tau'
+    ereturn scalar tau = `quantile'
+    
+    // Display results
+    di _n as txt "RIF-based Unconditional Quantile Regression"
+    di as txt "Quantile: " as res `quantile'
+    di as txt "Sample quantile value: " as res `q_tau'
+    di as txt "Density estimate at quantile: " as res `f_tau'
+    di _n
+    ereturn display
+end
+
+// Helper program for generating RIF values
+capture program drop gen_rif
+program define gen_rif
+    syntax varname, Quantile(real) GENerate(name)
+    
+    tempvar y_sorted kde_est
+    qui sort `varlist'
+    qui gen `y_sorted' = `varlist'
+    
+    _pctile `y_sorted', p(`=`quantile'*100')
+    local q_tau = r(r1)
+    
+    qui kdensity `varlist', nograph generate(`kde_est') at(`q_tau')
+    local f_tau = `r(density)'
+    
+    qui gen `generate' = `q_tau' + ///
+        (`varlist' <= `q_tau' - `quantile')/`f_tau'
+end
+
+// Example usage:
+/*
+* Load data
+sysuse auto, clear
+
+* Run unconditional quantile regression at median
+rifqreg price weight length foreign, q(0.5) robust
+
+* Run unconditional quantile regression at 75th percentile with bootstrapped SE
+rifqreg price weight length foreign, q(0.75) vce(bootstrap) reps(100)
+
+* Generate RIF values for manual analysis
+gen_rif price, q(0.5) gen(rif_price50)
+*/
+```
+
+And now produces results comparable to my own `rifhdreg` program. I have not tested its other features.
+
+## What else?
+
+Something else I some times "dread" to do is documentation. One thing is to write how my code works for me, and another is to write a helpfile for others. And to be honest, SMCL (Stata Markup language) is not very intuitive. But no problem!. With the program above, and sketch of a helpfile, Claude.ai could write it as well.
+
+Unfortunately, I cannot use `sonnet` right now, so what you see below is based on `haiku` model.
+
+Here the prompt:
+
+> using the attached program, write a helpfile following standard syntax for Stata 
+
+And again, the result was impresive. It produced a helpfile that was quite good. It had all the necessary components, including the syntax, the description, the options, the examples, and the references. All using SMCL.
+
+It even had place holders for my own information. (Author? I wonder if it should be Claude!)
+
+Here it is. If you want to see the result, you can copy/paste into a new file and save it as `rifqreg.sthlp`. Then click on "show file in viewer" to see the result.
+
+```{stata}
+*| code-fold: true
+*| execute: false
+/*
+{smcl}
+{* *! version 1.0.0  26Nov2024}
+{title:Title}
+
+{phang}
+{cmd:rifqreg} {hline 2} RIF-based Unconditional Quantile Regression
+
+{title:Syntax}
+
+{p 8 17 2}
+{cmd:rifqreg} {depvar} {indepvars} {ifin} 
+{cmd:,} {opt q:uantile(#)} 
+[{opt vce(vcetype)} {opt rob:ust} {opt clus:ter(varname)} {opt reps(#)}]
+
+{p 8 17 2}
+{cmd:gen_rif} {varname} {cmd:,} {opt q:uantile(#)} {opt gen:erate(newvar)}
+
+{title:Description}
+
+{pstd}
+{cmd:rifqreg} performs RIF-based (Recentered Influence Function) unconditional quantile regression. 
+This method allows estimation of the impact of covariates on a specific quantile of the outcome distribution.
+
+{pstd}
+{cmd:gen_rif} is a helper command that generates Recentered Influence Function values for a specified quantile.
+
+{title:Options}
+
+{dlgtab:Main}
+
+{phang}
+{opt q:uantile(#)} Specifies the quantile to estimate. Must be a value between 0 and 1.
+
+{dlgtab:Variance Estimation}
+
+{phang}
+{opt vce(vcetype)} Specifies the variance estimation method:
+{p_margin}
+{opt vce(bootstrap)} Uses bootstrap standard errors{p_end}
+
+{phang}
+{opt rob:ust} Uses robust standard errors.
+
+{phang}
+{opt clus:ter(varname)} Clusters standard errors by the specified variable.
+
+{phang}
+{opt reps(#)} Number of bootstrap replications (default is 50). Only used with {opt vce(bootstrap)}.
+
+{title:Returned Results}
+
+{pstd}
+{cmd:rifqreg} returns the following in {cmd:e()}:
+
+{synoptset 20 tabbed}{...}
+{synopt:{cmd:e(cmd)}}command name, {cmd:rifqreg}{p_end}
+{synopt:{cmd:e(title)}}Title of command{p_end}
+{synopt:{cmd:e(q_tau)}}Sample quantile value{p_end}
+{synopt:{cmd:e(f_tau)}}Density estimate at the quantile{p_end}
+{synopt:{cmd:e(tau)}}Quantile requested{p_end}
+
+{title:Examples}
+
+{phang}Using the auto dataset:{p_end}
+
+{phang2}{cmd:. sysuse auto, clear}{p_end}
+{phang2}{cmd:. rifqreg price weight length foreign, q(0.5) robust}{p_end}
+{phang2}{cmd:. rifqreg price weight length foreign, q(0.75) vce(bootstrap) reps(100)}{p_end}
+{phang2}{cmd:. gen_rif price, q(0.5) gen(rif_price50)}{p_end}
+
+{title:Author}
+
+{pstd}
+[Your Name or Organization]{p_end}
+
+{title:References}
+
+{pstd}
+Firpo, S., Fortin, N., and Lemieux, T. (2009). Unconditional Quantile Regressions. 
+Econometrica, 77(3), 953-973.
+
+{title:See Also}
+
+{pstd}
+{help qreg}, {help regress}
+*/
+```
+
+
+## Conclusion
+
+The results were quite impresive, and are getting better. In Software like Python, Claude can produce highly complex programs that are almost ready to use. In Stata, it did a good job with minor bugs that I could easily fix. 
+
+However, I still think I have my job secured. I can easily check and debug the code, or write a better version myself. However, for a quick and dirty solution, it is quite good. And for documentation, it is a life saver.
+
+I have started using this for other cases as well. Write programs for data cleaning, data wrangling, and transformations. It is quite good. I may try to add some of that in this blog in the future.

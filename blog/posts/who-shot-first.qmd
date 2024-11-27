@@ -1,11 +1,11 @@
 ---
 title: "Who Shot First?: Your Podcast Maker"
 description: "A test of the podcast makers capabilities"
-date: "2024-11-19"
+date: "2024-11-20"
 categories:
    - Claude
    - OpenAI
-   - Pop Cultureure
+   - Pop Culture
 image: "../../assets/blog/who-shot-first.jpg"
 ---
  

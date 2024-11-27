@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-11-19">
+<meta name="dcterms.date" content="2024-11-20">
 <meta name="description" content="A test of the podcast makers capabilities">
 
 <title>Who Shot First?: Your Podcast Maker – MindMeld</title>
@@ -452,7 +452,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-categories">
     <div class="quarto-category">Claude</div>
     <div class="quarto-category">OpenAI</div>
-    <div class="quarto-category">Pop Cultureure</div>
+    <div class="quarto-category">Pop Culture</div>
   </div>
   </div>
 
@@ -469,7 +469,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 19, 2024</p>
+      <p class="date">November 20, 2024</p>
     </div>
   </div>
   
@@ -487,7 +487,9 @@ ul.task-list li input[type="checkbox"] {
 <p>While that was a great experience, I wanted to see if I could create something like that myself, using some of the features of OpenAI and Text-to-Speech capabilities. If you have access to the API for OpenAI you will notice that you can create audio files from text, but with limits. You need to select the voice that you want, and there are limits to the length of the audio file. (4k characters)</p>
 <p>Looking online, apparently there are other options outhere already that can do this. But most of them are rather expensive, despite having a free tier.</p>
 <p>Im already paying for credits with OpenAI, so decided to give it a try and make a program that could create a podcast episode from a text file, for any length of text, and with the voice that I want. My Python skills are not the best, but I was able to make a functional program using Claude.ai Sonnet (free tier).</p>
-<p>There are limits, of course. I have only 6 voices to choose from. And have not yet tested the limits of the audio file length. Still, I got a good working prototype that does the job. I can share the code if you are interested.</p>
+<p>There are limits, of course. I have only 6 voices to choose from. And have not yet tested the limits of the audio file length. Still, I got a good working prototype that does the job. You can get the code here: <a href="../../assets/blog/podcast_maker.py">Podcast Maker</a>.</p>
+<p>You will also need to install the following libraries: - OpenAI, plus having a Key API (paid credits) - NLTK - Pydub - Tkinter - Keyring - num2words</p>
+<p>and have ffmpg installed in your system to get the codecs.</p>
 <p>Anyways, I already made an example on EP3 of the podcast. But now I wanted to make an example of one of the greatest questions of all times: Who shot first? Han or Greedo?</p>
 </section>
 <section id="who-shot-first" class="level2">
