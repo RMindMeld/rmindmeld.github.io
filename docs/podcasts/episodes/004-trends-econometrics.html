@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-12-06">
+<meta name="description" content="An introduction to the mini-series on Trends in Econometrics">
 
-<title>Conversations with AI: MindMeld Podcasts – MindMeld</title>
+<title>EP004: Trends in Econometrics – MindMeld</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +25,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../assets/favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8b864f0777c60eecff11d75b6b2e1175.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c317f4e2cda59582947d469ba41a9865.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-3a6d30365a1138f69a61d96706983317.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8b864f0777c60eecff11d75b6b2e1175.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c317f4e2cda59582947d469ba41a9865.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-3a6d30365a1138f69a61d96706983317.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,71 +71,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description','listing-categories','listing-image','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles/custom.css">
-<link rel="alternate" type="application/rss+xml" title="MindMeld" href="index.xml" data-external="1"></head>
+<link rel="stylesheet" href="../../styles/custom.css">
+</head>
 
 <body class="nav-fixed">
 
@@ -144,7 +86,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">MindMeld</span>
     </a>
   </div>
@@ -155,19 +97,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html"> 
+    <a class="nav-link" href="../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../podcasts/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../podcasts/index.html"> 
 <span class="menu-text">Podcasts</span></a>
   </li>  
 </ul>
@@ -179,7 +121,7 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -187,19 +129,17 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome-to-mindmeld-podcasts" id="toc-welcome-to-mindmeld-podcasts" class="nav-link active" data-scroll-target="#welcome-to-mindmeld-podcasts">Welcome to MindMeld Podcasts</a>
+  <li><a href="#episode-background" id="toc-episode-background" class="nav-link active" data-scroll-target="#episode-background">Episode Background</a></li>
+  <li><a href="#show-notes" id="toc-show-notes" class="nav-link" data-scroll-target="#show-notes">Show Notes</a></li>
+  <li><a href="#resources-mentioned" id="toc-resources-mentioned" class="nav-link" data-scroll-target="#resources-mentioned">Resources Mentioned</a>
   <ul class="collapse">
-  <li><a href="#latest-episodes" id="toc-latest-episodes" class="nav-link" data-scroll-target="#latest-episodes">Latest Episodes</a>
-  <ul class="collapse">
-  <li><a href="#how-to-listen" id="toc-how-to-listen" class="nav-link" data-scroll-target="#how-to-listen">How to Listen</a></li>
-  </ul></li>
-  <li><a href="#episode-categories" id="toc-episode-categories" class="nav-link" data-scroll-target="#episode-categories">Episode Categories</a></li>
+  <li><a href="#ai-tools" id="toc-ai-tools" class="nav-link" data-scroll-target="#ai-tools">AI Tools</a></li>
   </ul></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QUkgVG9vbHM=">AI Tools <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Q29udGVudCBDcmVhdGlvbg==">Content Creation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RWNvbm9tZXRyaWNz">Econometrics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2V0dGluZyBTdGFydGVk">Getting Started <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ym9vayByZXZpZXc=">book review <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bGVhcm5pbmc=">learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bWluaS1zZXJpZXM=">mini-series <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content page-columns page-full column-body" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 
@@ -512,15 +452,30 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Conversations with AI: MindMeld Podcasts</h1>
-<p class="subtitle lead">Using AI as a tool for learning, creativity, and content creation</p>
+<h1 class="title">EP004: Trends in Econometrics</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">AI Tools</div>
+    <div class="quarto-category">Econometrics</div>
+    <div class="quarto-category">mini-series</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    An introduction to the mini-series on Trends in Econometrics
+  </div>
 </div>
 
 
-
-<div class="quarto-title-meta column-body">
+<div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 6, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -530,272 +485,46 @@ window.Quarto = {
 </header>
 
 
-<section id="welcome-to-mindmeld-podcasts" class="level1 column-page">
-<h1>Welcome to MindMeld Podcasts</h1>
-<p>This is where I will share conversations, experiments, and thoughts using AI tools to generate the podcast content.</p>
-<p>For now, given my knowledge and skills on the subject, I’ll generate different types of podcasts.</p>
-<ul>
-<li><p><strong>Full AI</strong>: This means that I will use tools like NotebookLM by Google to create their “DeepDives” podcast. While this tool is still under development, as of Nov 16 2024, it provides you witn a small context/prompt window that you can use to guide the tone of the podcast, based on the content you provide. Earlier versions did not have that, which produced a more generic “babbling” type of podcast.</p></li>
-<li><p><strong>AI-Generated audio</strong>: This means that I will use tools like Claude or ChatGpt to generate Scripts, or refine scripts that I start writting myself. Then, I will use OpenAI text-to-speech to capabilities to produce the podcast. Given current technologies, this will sound less natural than a real podcast, but I will have more control over the content.</p></li>
-<li><p><strong>Talks with AI</strong>: Just recently, I started experimenting with ChatGPT phone-app with audio capabilities. This version of an AI assistant is more versatile than your typical Alexa or Siri, and can hold a conversation with you. I may be able to “record” those conversations to make a different kind of podcast.</p></li>
-<li><p><strong>Talks about me and you</strong>: Your standard Podcast. If I get the equipment time and guests, I will record a podcast with real people, and real conversations about AI, technology, and how it is being used in the real world.</p></li>
-</ul>
-<p>Depending on the “type” of episode, it will include: - A full transcript, show notes, and relevant links to topics discussed. - Audio conversations, with Prompts that generated it. May include written or audio discussion on the generated content. - Technical details on how the content was generated, and what tools were used.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div class="audio-player">
+<p><audio controls=""> <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep004-Econometrics.mp3" type="audio/mpeg"> Your browser does not support the audio element. </audio></p>
 </div>
-<div class="callout-title-container flex-fill">
-About the Format
+<div class="episode-meta">
+<p><strong>Duration</strong>: 25:34<br>
+<strong>Release Date</strong>: December 6, 2024<br>
+<strong>Category</strong>: AI Tools, Econometrics, mini-series <strong>Download</strong>: <a href="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep004-Econometrics.mp3">MP3</a></p>
 </div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Each episode will be different:</p>
-<ul>
-<li>They may include discussions or reviews on
-<ul>
-<li>Books (textbooks, novels, etc.),</li>
-<li>concepts (like Ferma’s Last Theorem),</li>
-<li>or some “random” deep dive into a topic (from a single word, to a catch phrase, a story, etc).</li>
-<li>Real-world applications and observations</li>
-<li>Interviews with people in the field, or people who have used AI in their work.</li>
-</ul></li>
-</ul>
-</div>
-</div>
-<section id="latest-episodes" class="level2">
-<h2 class="anchored" data-anchor-id="latest-episodes">Latest Episodes</h2>
-<p>Below you’ll find all podcast episodes, with the most recent first.</p>
-<div class="grid">
-<section id="how-to-listen" class="level3 g-col-12 g-col-md-6">
-<h3 class="anchored" data-anchor-id="how-to-listen">How to Listen</h3>
-<p>You can listen to episodes:</p>
-<ul>
-<li>Directly on this website</li>
-<li>Download for offline listening</li>
-</ul>
-<p><strong>Subscribe</strong>:</p>
-<ul>
-<li>Not just yet! Perhaps if this gains traction, I will add a subscription service.</li>
-</ul>
+<section id="episode-background" class="level2">
+<h2 class="anchored" data-anchor-id="episode-background">Episode Background</h2>
+<p>Some time ago, I came by a series of papers/monographs on various topics in econometrics and applied economics. The paper that I was looking at at the time was “Non-parametric Econometrics: A Primer” by J. S. Racine. I was looking at this particular topic as I was developing an implementation of a semi-parametric model known as Smooth-varying coefficient model. Just recently, about a year or so, I look at the whole series of monographs created by the same publisher: Foundations and Trends in Econometrics.</p>
+<p>They have a selected number of monographs on various topics in econometrics and applied economicsm with a handful being published every year. Having access to them via the library at work, I got few of them to read, and put few others on the to-read list. Unfortunately, they fell on the long list of readings that I have, and I never got to them.</p>
+<p>Now, thanks to NotebookLM, I decided to create a mini-series on few of their monographs. This one is the first episode of the mini-series, where I requested NotebookLM to generate a podcast episode to introduce the series, and hopefully, generate some interest in the topics that will be covered. I already have the “whole” series obtained, but I will only be posting them as I listen/read them, to make sure they provide good content.</p>
 </section>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Contribute
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Have a topic you’d like me to cover? Questions about AI content creation? Reach out through the <a href="..\about#contact">contact page</a>.</p>
-</div>
-</div>
-</section>
-<section id="episode-categories" class="level2">
-<h2 class="anchored" data-anchor-id="episode-categories">Episode Categories</h2>
+<section id="show-notes" class="level2">
+<h2 class="anchored" data-anchor-id="show-notes">Show Notes</h2>
+<p>The Podcast was created using all the monographs that will be part of the series. Then I used the context window/customization with the following:</p>
+<blockquote class="blockquote">
 <ul>
-<li>AI Experiments</li>
-<li>Technical Deep-Dives</li>
-<li>Creative Applications</li>
-<li>Tool Reviews</li>
-<li>Process Documentation</li>
+<li>“Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources”</li>
+<li>This should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.</li>
+<li>Shout-out to Fernando, the behind-the-scenes force making these series possible.</li>
 </ul>
-<p>Use the filters above to find episodes in specific categories or search for particular topics.</p>
+</blockquote>
+<p>There were so many “podcasts” generated that I hit the limit of audio overviews that I can generate in a single day.</p>
+</section>
+<section id="resources-mentioned" class="level2">
+<h2 class="anchored" data-anchor-id="resources-mentioned">Resources Mentioned</h2>
+<section id="ai-tools" class="level3">
+<h3 class="anchored" data-anchor-id="ai-tools">AI Tools</h3>
+<ul>
+<li><a href="https://notebooklm.google.com/">NotebookLM</a></li>
+<li><a href="https://www.nowpublishers.com/eco">Foundations and Trends® in Econometrics</a></li>
+</ul>
+
+
 </section>
 </section>
 
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="QUkgVG9vbHMsRWNvbm9tZXRyaWNzLG1pbmktc2VyaWVz" data-listing-date-sort="1733461200000" data-listing-file-modified-sort="1733541114146" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="375">
-<div class="thumbnail">
-<p><a href="../podcasts/episodes/004-trends-econometrics.html" class="no-external"></a></p><a href="../podcasts/episodes/004-trends-econometrics.html" class="no-external">
-<p><img loading="lazy" src="../assets/podcasts/ep003_cre.jpg" class="thumbnail-image"></p>
-</a><p><a href="../podcasts/episodes/004-trends-econometrics.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../podcasts/episodes/004-trends-econometrics.html" class="no-external">EP004: Trends in Econometrics</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../podcasts/episodes/004-trends-econometrics.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('QUkgVG9vbHM='); return false;">
-AI Tools
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RWNvbm9tZXRyaWNz'); return false;">
-Econometrics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bWluaS1zZXJpZXM='); return false;">
-mini-series
-</div>
-</div>
-<div class="listing-description">
-<a href="../podcasts/episodes/004-trends-econometrics.html" class="no-external">An introduction to the mini-series on Trends in Econometrics</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../podcasts/episodes/004-trends-econometrics.html" class="no-external">
-<div class="listing-date">
-Dec 6, 2024
-</div>
-<div class="listing-reading-time">
-2 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="QUkgVG9vbHMsYm9vayByZXZpZXcsbGVhcm5pbmc=" data-listing-date-sort="1731992400000" data-listing-file-modified-sort="1733540656398" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1356">
-<div class="thumbnail">
-<p><a href="../podcasts/episodes/003-cre-stata.html" class="no-external"></a></p><a href="../podcasts/episodes/003-cre-stata.html" class="no-external">
-<p><img loading="lazy" src="../assets/podcasts/ep003_cre.jpg" class="thumbnail-image"></p>
-</a><p><a href="../podcasts/episodes/003-cre-stata.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../podcasts/episodes/003-cre-stata.html" class="no-external">EP003: Simplifying the use of Correlated Random Effects Model</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../podcasts/episodes/003-cre-stata.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('QUkgVG9vbHM='); return false;">
-AI Tools
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Ym9vayByZXZpZXc='); return false;">
-book review
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bGVhcm5pbmc='); return false;">
-learning
-</div>
-</div>
-<div class="listing-description">
-<a href="../podcasts/episodes/003-cre-stata.html" class="no-external">Discussion on CRE. A new Stata command for Correlated Random Effects Model in Stata</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../podcasts/episodes/003-cre-stata.html" class="no-external">
-<div class="listing-date">
-Nov 19, 2024
-</div>
-<div class="listing-reading-time">
-7 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="QUkgVG9vbHMsYm9vayByZXZpZXcsbGVhcm5pbmc=" data-listing-date-sort="1731906000000" data-listing-file-modified-sort="1733540780243" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="148">
-<div class="thumbnail">
-<p><a href="../podcasts/episodes/002-bayes.html" class="no-external"></a></p><a href="../podcasts/episodes/002-bayes.html" class="no-external">
-<p><img loading="lazy" src="../assets/podcasts/ep002_bayes.jpg" class="thumbnail-image"></p>
-</a><p><a href="../podcasts/episodes/002-bayes.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../podcasts/episodes/002-bayes.html" class="no-external">EP002: Review of the book Bayesian Statistics</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../podcasts/episodes/002-bayes.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('QUkgVG9vbHM='); return false;">
-AI Tools
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Ym9vayByZXZpZXc='); return false;">
-book review
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bGVhcm5pbmc='); return false;">
-learning
-</div>
-</div>
-<div class="listing-description">
-<a href="../podcasts/episodes/002-bayes.html" class="no-external">A different approach to understading Bayesian Statistics</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../podcasts/episodes/002-bayes.html" class="no-external">
-<div class="listing-date">
-Nov 18, 2024
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="QUkgVG9vbHMsR2V0dGluZyBTdGFydGVkLENvbnRlbnQgQ3JlYXRpb24=" data-listing-date-sort="1731733200000" data-listing-file-modified-sort="1732067932150" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="480">
-<div class="thumbnail">
-<p><a href="../podcasts/episodes/001-intro-mindmeld.html" class="no-external"></a></p><a href="../podcasts/episodes/001-intro-mindmeld.html" class="no-external">
-<p><img loading="lazy" src="../assets/podcasts/ep001_mindmeld.jpg" class="thumbnail-image"></p>
-</a><p><a href="../podcasts/episodes/001-intro-mindmeld.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../podcasts/episodes/001-intro-mindmeld.html" class="no-external">EP001: Introducing MindMeld Podcasts</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../podcasts/episodes/001-intro-mindmeld.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('QUkgVG9vbHM='); return false;">
-AI Tools
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R2V0dGluZyBTdGFydGVk'); return false;">
-Getting Started
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Q29udGVudCBDcmVhdGlvbg=='); return false;">
-Content Creation
-</div>
-</div>
-<div class="listing-description">
-<a href="../podcasts/episodes/001-intro-mindmeld.html" class="no-external">An introduction to the MindMeld Podcast series and the different types of AI-generated content, power by NotebookLM</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../podcasts/episodes/001-intro-mindmeld.html" class="no-external">
-<div class="listing-date">
-Nov 16, 2024
-</div>
-<div class="listing-reading-time">
-3 min
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

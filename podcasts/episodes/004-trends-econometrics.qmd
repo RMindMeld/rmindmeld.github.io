@@ -1,0 +1,52 @@
+---
+title: "EP004: Trends in Econometrics"
+description: "An introduction to the mini-series on Trends in Econometrics"
+date: "2024-12-6"
+categories: [AI Tools, Econometrics, mini-series]
+image: "../../assets/podcasts/ep003_cre.jpg"
+audio:
+  src: "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep003-cre.mp3"
+  title: "Episode 4: Trends in Econometrics"
+  description: "Discussion on CRE. A new Stata command for Correlated Random Effects."
+  duration: "20:52"
+---
+
+<div class="audio-player">
+   <audio controls>
+   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep004-Econometrics.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+   </audio>
+</div>
+
+:::{.episode-meta}
+
+**Duration**: 25:34  
+**Release Date**: December 6, 2024  
+**Category**: AI Tools, Econometrics, mini-series 
+**Download**: [MP3](https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep004-Econometrics.mp3)
+
+:::
+
+## Episode Background
+
+Some time ago, I came by a series of papers/monographs on various topics in econometrics and applied economics. The paper that I was looking at at the time was "Non-parametric Econometrics: A Primer" by J. S. Racine. I was looking at this particular topic as I was developing an implementation of a semi-parametric model known as Smooth-varying coefficient model. Just recently, about a year or so, I look at the whole series of monographs created by the same publisher: Foundations and Trends in Econometrics. 
+
+They have a selected number of monographs on various topics in econometrics and applied economicsm with a handful being published every year. Having access to them via the library at work, I got few of them to read, and put few others on the to-read list. Unfortunately, they fell on the long list of readings that I have, and I never got to them. 
+
+Now, thanks to NotebookLM, I decided to create a mini-series on few of their monographs. This one is the first episode of the mini-series, where I requested NotebookLM to generate a podcast episode to introduce the series, and hopefully, generate some interest in the topics that will be covered. I already have the "whole" series obtained, but I will only be posting them as I listen/read them, to make sure they provide good content.
+
+## Show Notes
+
+The Podcast was created using all the monographs that will be part of the series. Then I used the context window/customization with the following:
+
+>- "Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources"
+>- This should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.
+>- Shout-out to Fernando, the behind-the-scenes force making these series possible.
+
+There were so many "podcasts" generated that I hit the limit of audio overviews that I can generate in a single day.
+
+## Resources Mentioned
+
+### AI Tools
+- [NotebookLM](https://notebooklm.google.com/)
+- [Foundations and Trends® in Econometrics](https://www.nowpublishers.com/eco)

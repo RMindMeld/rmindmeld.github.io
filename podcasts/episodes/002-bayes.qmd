@@ -31,7 +31,7 @@ audio:
 
 ## Episode Background
 
-This is an example ofu using notebookLM to generate a podcast episode on a book review of Bayesian Statistics. The episode is a review of the book Bayesian Statistics, which is a different approach to understanding Bayesian Statistics. The episode is 17 minutes and 18 seconds long and was released on January 18, 2024.
+This is an example of using notebookLM to generate a podcast episode on a book review of Bayesian Statistics. The episode is a review of the book Bayesian Statistics, which is a different approach to understanding Bayesian Statistics. The episode is 17 minutes and 18 seconds long and was released on January 18, 2024.
 
 ## Show Notes
 
