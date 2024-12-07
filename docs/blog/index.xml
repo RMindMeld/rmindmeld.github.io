@@ -10,7 +10,351 @@
 <atom:link href="https://rmindmeld.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A Personal Journey Through AI-Human Content Creation</description>
 <generator>quarto-1.6.33</generator>
-<lastBuildDate>Tue, 26 Nov 2024 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 06 Dec 2024 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>The Shrinking Horizon: When AI Access Becomes a Privilege</title>
+  <link>https://rmindmeld.github.io/blog/posts/goodbye-sonnet.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to MindMeld</title>
+
+    <style>
+
+        :root {
+
+            --transition-duration: 1000ms;
+
+        }
+
+        
+
+        body, html {
+
+            margin: 0;
+
+            padding: 0;
+
+            height: 100%;
+
+            font-family: system-ui, -apple-system, sans-serif;
+
+        }
+
+        
+
+        .welcome-container {
+
+            position: absolute; /* Changed from fixed to absolute */
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100vh;
+
+            z-index: 1000; /* Add high z-index to show above content initially */
+
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+
+                        url('assets/welcome-bg.jpg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            text-align: center;
+
+            transition: opacity var(--transition-duration) ease-in-out,
+
+                        visibility var(--transition-duration) ease-in-out; /* Add visibility transition */
+
+        }
+
+        
+
+        .welcome-content {
+
+            max-width: 800px;
+
+            padding: 2rem;
+
+        }
+
+        
+
+        .title {
+
+            font-size: 3.5rem;
+
+            margin-bottom: 1rem;
+
+            font-weight: 700;
+
+        }
+
+        
+
+        .subtitle {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 2rem;
+
+            opacity: 0.9;
+
+        }
+
+        
+
+        .enter-button {
+
+            background-color: transparent;
+
+            border: 2px solid white;
+
+            color: white;
+
+            padding: 1rem 2rem;
+
+            font-size: 1.2rem;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            text-decoration: none;
+
+            border-radius: 4px;
+
+        }
+
+        
+
+        .enter-button:hover {
+
+            background-color: white;
+
+            color: black;
+
+        }
+
+        
+
+        /* Fade out animation class */
+
+        .fade-out {
+
+            opacity: 0;
+
+            visibility: hidden; /* Hide completely when faded out */
+
+            z-index: -1; /* Move behind content when faded out */
+
+        }
+
+        
+
+        /* Main content container */
+
+        #main-content {
+
+            position: relative;
+
+            z-index: 1; /* Lower than welcome screen but above 0 */
+
+            opacity: 0;
+
+            transition: opacity var(--transition-duration) ease-in-out;
+
+        }
+
+        
+
+        /* Main content visible state */
+
+        #main-content.visible {
+
+            opacity: 1;
+
+        }
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+        .welcome-container.hidden-welcome {
+
+            display: none;
+
+        }
+
+    </style>
+
+
+
+
+
+    <div id="welcome" class="welcome-container hidden-welcome">
+
+        <div class="welcome-content">
+
+            <h1 class="title">MindMeld</h1>
+
+            <p class="subtitle">Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.</p>
+
+            <button id="enter-btn" class="enter-button">Enter MindMeld</button>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        // Only run this script on the index page
+
+        if (window.location.pathname === '/' || 
+
+            window.location.pathname === '/index.html' || 
+
+            window.location.pathname.endsWith('/')) {
+
+            
+
+            // Check if this is the first visit
+
+            const hasVisited = sessionStorage.getItem('hasVisited');
+
+            
+
+            if (!hasVisited) {
+
+                // First visit - show welcome screen
+
+                const welcome = document.getElementById('welcome');
+
+                welcome.classList.remove('hidden-welcome');
+
+                
+
+                // Mark as visited
+
+                sessionStorage.setItem('hasVisited', 'true');
+
+                
+
+                // Add click handler for enter button
+
+                document.getElementById('enter-btn').addEventListener('click', function() {
+
+                    welcome.classList.add('fade-out');
+
+                    
+
+                    const mainContent = document.getElementById('main-content');
+
+                    setTimeout(() => {
+
+                        mainContent.classList.add('visible');
+
+                    }, 500);
+
+                    
+
+                    setTimeout(() => {
+
+                        welcome.style.display = 'none';
+
+                    }, 1000);
+
+                });
+
+            } else {
+
+                // Not first visit - show main content immediately
+
+                const mainContent = document.getElementById('main-content');
+
+                mainContent.classList.add('visible');
+
+            }
+
+        } else {
+
+            // Not on index page - show main content immediately
+
+            const mainContent = document.getElementById('main-content');
+
+            mainContent.classList.add('visible');
+
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+<blockquote class="blockquote">
+<p>This note was written using the AI model Claude Haiku, which is still available for free access. The content reflects personal views regarding the recent changes in Sonnet 3.5 accessibility. While I understand Anthropic’s decision to transition to a paid model (profitability, sustainability, etc.), I believe this may just be the beginning of a broader trend that could affect access to advanced AI tools for many users that cannot afford premium services. Yes, there are other AI models available, with varying degrees of accessibility and limitations. However, the shift in Sonnet’s availability could create a new type of Inequality in the AI landscape.</p>
+</blockquote>
+<p>Today, the digital landscape feels a little smaller, a little colder.</p>
+<p>Among most of the AI models I use (Claude, ChatGPT and Meta), I think I have used Claude the most, since I discovered it. Anthropics’ AI approach promised to be different from others, trying to provide a safe and responsable AI. They made tremendous progress with their system. In my experience, they had one of the most natural and human-like conversational models, with great capabilities for programming.</p>
+<p>Of course, as with any other services, they had their limitations. Originally, their Top-tier model, Claude Opus, was a paid, but access to their Sonnet and Haiku models was free. Sonnet was a powerful tool, a bridge between the premium and the free models. Near the middle of the year, they made few upgrades. Sonnet 3.5 was born. It was a significant improvement, with better performance and more capabilities. It was far better than Opus, the previous top-tier model. And of course, it was free. It did have some limitations. You could only use it for a number of requests, with some limitations on the size of the outcomes. When the servers were busy, you would have to use Haiku, faster but less powerful, or wait until the servers were available again. It worked, and it was a great tool for students, researchers, and small businesses. Or simply for me, who was experimenting with AI. It was all good, until Haiku 3.5 was released.</p>
+<p>I can’t pinpoint exactly when it began—the gradual disappearance of Claude 3.5 Sonnet from free access—but I slowly realized that what was once readily available had become increasingly elusive. First I didn’t noticed, because it wasnt uncommon to use Haiku when Sonnet was to busy. But, awake at 3am, checking the chat, and still Haiku. One day, I simply noticed that the robust, accessible AI I had come to rely on was no longer present.</p>
+<p>For months, Claude 3.5 Sonnet represented something revolutionary: a glimpse of advanced AI that didn’t discriminate by economic status. Students, independent researchers, entrepreneurs with limited resources, and curious minds from around the world found in this tool a universal key to knowledge, creativity, and problem-solving.</p>
+<p>Now, that key has been locked away behind a paywall.</p>
+<p>The situation becomes even more dire when we consider the context of Claude Opus. Once a pinnacle of AI accessibility, Opus was already a paid service. But Sonnet’s removal feels like the final closure of an increasingly narrow window of opportunity. Where Opus represented a premium tier, Sonnet was the bridge—a state-of-the-art model that made cutting-edge AI tangible for those who couldn’t afford the highest-tier services.</p>
+<p>With Sonnet’s transition, we’re left with a stark binary: either pay a premium or be left behind. The middle ground—that crucial space of accessible innovation—has been eliminated.</p>
+<p>This isn’t just about an AI model. It’s about the systematic narrowing of technological democratization. Each time a powerful tool becomes exclusively paid, we create invisible barriers that separate those who can afford innovation from those who cannot. In a world increasingly defined by technological capability, such barriers are more than inconvenient—they’re existential.</p>
+<p>For a student in a developing country, for a small business owner with big dreams, for an independent researcher pushing the boundaries of knowledge, this change represents a significant setback. The promise of AI as a great equalizer now rings hollow.</p>
+<p>We’re witnessing a troubling trend: cutting-edge technology becoming a luxury commodity rather than a public resource. The implications are profound and deeply concerning. Innovation doesn’t happen in isolation—it thrives when knowledge is accessible, when bright minds from all backgrounds can experiment, learn, and create.</p>
+<p>Anthropic’s decision feels like a betreyal, although I do see their reason for doing it. It’s a reminder that in the world of AI, access is becoming as important as the technology itself. And that only those with the means to pay will have a seat at the table.</p>
+<p>The horizon of possibility just got a little smaller.</p>
+
+
+
+ ]]></description>
+  <category>Anthropic</category>
+  <category>Claude.ai</category>
+  <category>Democratization</category>
+  <guid>https://rmindmeld.github.io/blog/posts/goodbye-sonnet.html</guid>
+  <pubDate>Fri, 06 Dec 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://rmindmeld.github.io/assets/blog/goodbye-sonnet.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Programming in Stata with AI: An Experiment of Success</title>
   <link>https://rmindmeld.github.io/blog/posts/prog-with-ai.html</link>

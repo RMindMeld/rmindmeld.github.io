@@ -1,0 +1,43 @@
+---
+title: "The Shrinking Horizon: When AI Access Becomes a Privilege"
+description: "Reflecting on the implications of Claude 3.5 Sonnet's transition to a paid service"
+date: "2024-12-6"
+categories: 
+  - Anthropic
+  - Claude.ai
+  - Democratization
+image: "../../assets/blog/goodbye-sonnet.jpg"
+execute: 
+  freeze: auto
+---
+
+> This note was written using the AI model Claude Haiku, which is still available for free access. The content reflects personal views regarding the recent changes in Sonnet 3.5 accessibility.
+> While I understand Anthropic's decision to transition to a paid model (profitability, sustainability, etc.), I believe this may just be the beginning of a broader trend that could affect access to advanced AI tools for many users that cannot afford premium services.
+> Yes, there are other AI models available, with varying degrees of accessibility and limitations. However, the shift in Sonnet's availability could create a new type of Inequality in the AI landscape.
+
+Today, the digital landscape feels a little smaller, a little colder. 
+
+Among most of the AI models I use (Claude, ChatGPT and Meta), I think I have used Claude the most, since I discovered it. Anthropics' AI approach promised to be different from others, trying to provide a safe and responsable AI. They made tremendous progress with their system. In my experience, they had one of the most natural and human-like conversational models, with great capabilities for programming. 
+
+Of course, as with any other services, they had their limitations. Originally, their Top-tier model, Claude Opus, was a paid, but access to their Sonnet and Haiku models was free. Sonnet was a powerful tool, a bridge between the premium and the free models. Near the middle of the year, they made few upgrades. Sonnet 3.5 was born. It was a significant improvement, with better performance and more capabilities. It was far better than Opus, the previous top-tier model. And of course, it was free. It did have some limitations. You could only use it for a number of requests, with some limitations on the size of the outcomes. When the servers were busy, you would have to use Haiku, faster but less powerful, or wait until the servers were available again. It worked, and it was a great tool for students, researchers, and small businesses. Or simply for me, who was experimenting with AI. It was all good, until Haiku 3.5 was released.
+
+I can't pinpoint exactly when it began—the gradual disappearance of Claude 3.5 Sonnet from free access—but I slowly realized that what was once readily available had become increasingly elusive. First I didn't noticed, because it wasnt uncommon to use Haiku when Sonnet was to busy. But, awake at 3am, checking the chat, and still Haiku. One day, I simply noticed that the robust, accessible AI I had come to rely on was no longer present.
+
+For months, Claude 3.5 Sonnet represented something revolutionary: a glimpse of advanced AI that didn't discriminate by economic status. Students, independent researchers, entrepreneurs with limited resources, and curious minds from around the world found in this tool a universal key to knowledge, creativity, and problem-solving.
+
+Now, that key has been locked away behind a paywall.
+
+The situation becomes even more dire when we consider the context of Claude Opus. Once a pinnacle of AI accessibility, Opus was already a paid service. But Sonnet's removal feels like the final closure of an increasingly narrow window of opportunity. Where Opus represented a premium tier, Sonnet was the bridge—a state-of-the-art model that made cutting-edge AI tangible for those who couldn't afford the highest-tier services.
+
+With Sonnet's transition, we're left with a stark binary: either pay a premium or be left behind. The middle ground—that crucial space of accessible innovation—has been eliminated.
+
+This isn't just about an AI model. It's about the systematic narrowing of technological democratization. Each time a powerful tool becomes exclusively paid, we create invisible barriers that separate those who can afford innovation from those who cannot. In a world increasingly defined by technological capability, such barriers are more than inconvenient—they're existential.
+
+For a student in a developing country, for a small business owner with big dreams, for an independent researcher pushing the boundaries of knowledge, this change represents a significant setback. The promise of AI as a great equalizer now rings hollow.
+
+We're witnessing a troubling trend: cutting-edge technology becoming a luxury commodity rather than a public resource. The implications are profound and deeply concerning. Innovation doesn't happen in isolation—it thrives when knowledge is accessible, when bright minds from all backgrounds can experiment, learn, and create.
+
+Anthropic's decision feels like a betreyal, although I do see their reason for doing it. It's a reminder that in the world of AI, access is becoming as important as the technology itself. And that only those with the means to pay will have a seat at the table.
+
+The horizon of possibility just got a little smaller.
+

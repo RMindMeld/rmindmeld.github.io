@@ -10,6 +10,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/posts/goodbye-sonnet.html",
       "/blog/posts/prog-with-ai.html",
       "/blog/posts/who-shot-first.html",
       "/blog/posts/ai-image-gallery.html",
