@@ -5,6 +5,7 @@ project:
 website:
   title: "MindMeld"
   site-url: "https://rmindmeld.github.io"
+  google-analytics: G-53TXMVK3GH
   description: "A Personal Journey Through AI-Human Content Creation"
   favicon: "assets/favicon.png"
   
