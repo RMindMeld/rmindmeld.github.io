@@ -586,7 +586,7 @@ Comment
 <p><span class="math inline">\(1782^{12} + 1841^{12} = 1922^{12}\)</span></p>
 <p>This equation is a near-miss to Fermat’s Last Theorem, which states that no three positive integers a, b, and c can satisfy the equation <span class="math inline">\(a^n + b^n = c^n\)</span> for any integer value of n greater than 2. The equation in the show is not actually true, but it’s remarkably close – the left side differs from the right by less than 1 part in <span class="math inline">\(10^{30}\)</span>.</p>
 <p>Let’s verify this using Python:</p>
-<div id="52cbf652" class="cell" data-execution_count="1">
+<div id="173f1d35" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> check_equation():</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    left_side <span class="op">=</span> <span class="dv">1782</span><span class="op">**</span><span class="dv">12</span> <span class="op">+</span> <span class="dv">1841</span><span class="op">**</span><span class="dv">12</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    right_side <span class="op">=</span> <span class="dv">1922</span><span class="op">**</span><span class="dv">12</span></span>
@@ -634,7 +634,7 @@ Relative error: 2.76e-10</code></pre>
 <h2 class="anchored" data-anchor-id="pythagorean-theorem-and-comic-book-guy">Pythagorean Theorem and Comic Book Guy</h2>
 <p>Even the show’s notorious pedant, Comic Book Guy, gets in on the mathematical action. In one episode, he wears a t-shirt with the equation <span class="math inline">\(3^2 + 4^2 = 5^2\)</span>, which is a representation of the Pythagorean theorem for a 3-4-5 right triangle.</p>
 <p>Let’s visualize this triangle using matplotlib:</p>
-<div id="2dc3246b" class="cell" data-execution_count="2">
+<div id="4e6cf0db" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_345_triangle():</span>
