@@ -41,7 +41,7 @@ I will only show one example. However, at the time or writing this blog, Bing an
 
 ::: {.grid}
 
-::: {.g-col-2 .g-col-md-6 .g-col-lg-4}
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
 
 ### Bing Image Creator
 ![](/assets/blog/color-pages/dino-bing1.jpg)
@@ -49,7 +49,7 @@ I will only show one example. However, at the time or writing this blog, Bing an
 :::
 
 
-::: {.g-col-2 .g-col-md-6 .g-col-lg-4}
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
 
 ### Meta Image Creator
 ![](/assets/blog/color-pages/dino-meta1.jpg)
