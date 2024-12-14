@@ -11,6 +11,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/posts/color-pages.html",
       "/blog/posts/goodbye-sonnet.html",
       "/blog/posts/prog-with-ai.html",
       "/blog/posts/who-shot-first.html",

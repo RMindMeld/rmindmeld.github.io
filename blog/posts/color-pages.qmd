@@ -1,0 +1,150 @@
+---
+title: "AI for Coloring Pages"
+subtitle: "A Convenient Solution for Parents with Toddlers and Babies (or yourself!)"
+date: "2024-12-14"
+categories: ["AI", "Coloring Pages", "Art"]
+---
+
+> I've been wanting to write about this for a while now. Any now and then, I explore few things with AI, the purpose of this blog, and one of the things I have been using often has been the creation of coloring pages. I like doing coloring pages, but haven not have the time for a while. However, guess who likes coloring pages? My little one! (perhaps the younger sister too). So I started playing with few options to make nice coloring pages for her.
+> Granted, it is possibly cheaper to buy a coloring book, but getting the specific ones you want can be hard. So, knowing that some AI apps can generate images, it seem logical to try to generate coloring pages. I have tried few things, and today I asked ChatGPT to provide few prompts to generate coloring pages. I settle with one but also show the ones he suggested.
+> Also, I did ask "Jarvis" (my ChatGPT) to draft this blog for me, and I am just editing it. I think he did a good job. I am happy with the results. I hope you like it too.
+ 
+If you're a parent with a toddler or baby, you know the struggle of keeping things fresh when it comes to coloring time. Kids love having new pictures to color, for 5 minutes!, but creating or finding the right ones can be time-consuming. My litte one went through a Sesame Street phase, a Baby Shark phase, and a Princess phase. So we got her many coloring books. Many remain untouched, but perhaps will be used in due time. This doesnt include the ones that have no specific theme, but she still likes them. 
+
+Anyways, sometimes she just likes something new, specially now that she has more control with the pencil/crayon.So started to give AI-generated images a try.
+
+With just a few clicks, you can use AI tools to generate custom coloring pages on any topic your little one is interested in—whether it's dinosaurs, animals, princesses, or something more unique. It’s a "quick" and easy way to get exactly what you need, without spending hours searching for the perfect picture online. It can cost a bit of money (if you use a paid service), there are many free options available that can provide you with a wide variety of images to choose from.
+
+One of the biggest benefits is that AI can make it personal. You can ask for a specific style or theme, and the AI will produce images that match. Have a toddler who’s obsessed with space? AI can generate planets, stars, and rockets, just for them. Or, maybe your baby is getting into animals—generate a zoo's worth of critters to color! It’s a way to create endless possibilities and keep things exciting, even on those days when your child’s interests change on a whim.
+
+## Where to Get Started
+
+There are now a days, many models that offer text-to-image generation, with the most realistic and high-quality images you can wish for. Some of them are so real, you may have a hard time to tell they were AI-generated. But do we need that level of quality for coloring pages? Not really. So let me suggest a few options that I find useful:
+
+1. **DALL·E (by OpenAI)** - DALL·E is known for creating high-quality images from text prompts. You can access to it through ChatGPT for limited use (free option), but you can also access to it using [Bing image creator](https://www.bing.com/images/create). This last one I used the most, and its free!
+
+2. **meta.ai** - Meta.ai is another great option for generating images from text prompts. It comes for free using whatsup, or through their website meta.ai, or through Facebook. I have use it as an alternative to Bing image creator, and it works well.
+
+3. [**Craiyon**](https://www.craiyon.com/) - Craiyon is a free version of the DALL·E model that can generate a wide variety of images. This was suggested by Jarvis, but after trying it, I found their images to be too simple for my taste. It is "ad-based" so you may get some ads while using it.
+
+4. [**DeepAI**](https://deepai.org/machine-learning-model/text2img) - Another free option that offers a text-to-image generator, including line drawings. Just like Craiyon, seems too simple, and couldnt make it work for me. But it can be useful for some.
+
+## How to Generate Coloring Pages
+
+When I tried this the first time, I wasnt very successful. So I had to go back and forth with some help from claude.ai and ChatGPT to get a good and concise prompt. Here I will show you how my prompt worked, as well as how the one suggested by Jarvis looked like (ChatGPT). I will be using Meta.ai and Bing image creator, but showing only 1 image per prompt.
+
+I will only show one example. However, at the time or writing this blog, Bing and Meta produce 4 images a time.
+
+### First Jarvis suggestions
+
+**Prompt:** “A black-and-white line drawing of a dinosaur in a jungle, simple and clear for a toddler to color.”
+
+::: {.grid}
+
+::: {.g-col-2 .g-col-md-6 .g-col-lg-4}
+
+### Bing Image Creator
+![](/assets/blog/color-pages/dino-bing1.jpg)
+
+:::
+
+
+::: {.g-col-2 .g-col-md-6 .g-col-lg-4}
+
+### Meta Image Creator
+![](/assets/blog/color-pages/dino-meta1.jpg)
+
+:::
+
+
+:::
+
+Interestingly, Meta was a bit more adult oriented, while Bing was more toddler oriented.
+
+ 
+**Prompt:** “A cute and simple drawing of a baby elephant with flowers around it, perfect for a toddler to color.”
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+
+### Bing Image Creator
+![](/assets/blog/color-pages/elphant-bing.jpg)
+
+:::
+
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+
+### Meta Image Creator
+![](/assets/blog/color-pages/elphant-meta.jpg)
+
+:::
+
+:::
+
+Meta failed me this time. The image was cute, but it was a colored image, not a coloring page. 
+
+**Prompt:** “A space-themed black-and-white line drawing with rockets, planets, and stars for coloring.”
+
+::: {.grid}
+
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+
+### Bing Image Creator
+![](/assets/blog/color-pages/space-bing.jpg)
+
+:::
+
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+
+### Meta Image Creator
+![](/assets/blog/color-pages/space-meta.jpg)
+
+:::
+
+
+:::
+
+I think I will give it to Bing this time. Both were good, but Meta created too much black space.
+
+### Now my best prompt
+
+Now the prompt I have been using the most:
+
+**Prompt:** “Create a black and white line art illustration suitable for coloring. Theme: Chibi litrpg adventurer”
+
+Ok, ok, I know, I am a geek. But I like litrpg, so this is more for me than for my little one. But she still likes it.
+
+::: {.grid}
+
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+
+### Bing Image Creator
+![](/assets/blog/color-pages/litrpg-bing.jpg)
+
+:::
+
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+
+### Meta Image Creator
+![](/assets/blog/color-pages/litrpg-meta.jpg)
+
+:::
+
+
+:::
+
+And now I like both! This prompt has been very concistent.
+
+
+## Final words
+
+Of course, there are a few things to keep in mind. Not every AI tool is perfect, so sometimes you might have to try a couple of different prompts to get exactly what you want. But with a bit of patience, you can create a whole library of coloring pages that will keep your little ones entertained for hours.
+
+So, next time you’re looking to add something new to your child’s coloring collection, try AI-generated images. It’s a fast, creative solution that gives you exactly what you need, whenever you need it!
+ 

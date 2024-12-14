@@ -614,5 +614,33 @@
     "title": "MindMeld",
     "section": "Resources Mentioned",
     "text": "Resources Mentioned\n\nAI Tools\n\nNotebookLM\nFoundations and Trends® in Econometrics"
+  },
+  {
+    "objectID": "blog/posts/color-pages.html",
+    "href": "blog/posts/color-pages.html",
+    "title": "MindMeld",
+    "section": "",
+    "text": "If you’re a parent with a toddler or baby, you know the struggle of keeping things fresh when it comes to coloring time. Kids love having new pictures to color, for 5 minutes!, but creating or finding the right ones can be time-consuming. My litte one went through a Sesame Street phase, a Baby Shark phase, and a Princess phase. So we got her many coloring books. Many remain untouched, but perhaps will be used in due time. This doesnt include the ones that have no specific theme, but she still likes them.\nAnyways, sometimes she just likes something new, specially now that she has more control with the pencil/crayon.So started to give AI-generated images a try.\nWith just a few clicks, you can use AI tools to generate custom coloring pages on any topic your little one is interested in—whether it’s dinosaurs, animals, princesses, or something more unique. It’s a “quick” and easy way to get exactly what you need, without spending hours searching for the perfect picture online. It can cost a bit of money (if you use a paid service), there are many free options available that can provide you with a wide variety of images to choose from.\nOne of the biggest benefits is that AI can make it personal. You can ask for a specific style or theme, and the AI will produce images that match. Have a toddler who’s obsessed with space? AI can generate planets, stars, and rockets, just for them. Or, maybe your baby is getting into animals—generate a zoo’s worth of critters to color! It’s a way to create endless possibilities and keep things exciting, even on those days when your child’s interests change on a whim."
+  },
+  {
+    "objectID": "blog/posts/color-pages.html#where-to-get-started",
+    "href": "blog/posts/color-pages.html#where-to-get-started",
+    "title": "MindMeld",
+    "section": "Where to Get Started",
+    "text": "Where to Get Started\nThere are now a days, many models that offer text-to-image generation, with the most realistic and high-quality images you can wish for. Some of them are so real, you may have a hard time to tell they were AI-generated. But do we need that level of quality for coloring pages? Not really. So let me suggest a few options that I find useful:\n\nDALL·E (by OpenAI) - DALL·E is known for creating high-quality images from text prompts. You can access to it through ChatGPT for limited use (free option), but you can also access to it using Bing image creator. This last one I used the most, and its free!\nmeta.ai - Meta.ai is another great option for generating images from text prompts. It comes for free using whatsup, or through their website meta.ai, or through Facebook. I have use it as an alternative to Bing image creator, and it works well.\nCraiyon - Craiyon is a free version of the DALL·E model that can generate a wide variety of images. This was suggested by Jarvis, but after trying it, I found their images to be too simple for my taste. It is “ad-based” so you may get some ads while using it.\nDeepAI - Another free option that offers a text-to-image generator, including line drawings. Just like Craiyon, seems too simple, and couldnt make it work for me. But it can be useful for some."
+  },
+  {
+    "objectID": "blog/posts/color-pages.html#how-to-generate-coloring-pages",
+    "href": "blog/posts/color-pages.html#how-to-generate-coloring-pages",
+    "title": "MindMeld",
+    "section": "How to Generate Coloring Pages",
+    "text": "How to Generate Coloring Pages\nWhen I tried this the first time, I wasnt very successful. So I had to go back and forth with some help from claude.ai and ChatGPT to get a good and concise prompt. Here I will show you how my prompt worked, as well as how the one suggested by Jarvis looked like (ChatGPT). I will be using Meta.ai and Bing image creator, but showing only 1 image per prompt.\nI will only show one example. However, at the time or writing this blog, Bing and Meta produce 4 images a time.\n\nFirst Jarvis suggestions\nPrompt: “A black-and-white line drawing of a dinosaur in a jungle, simple and clear for a toddler to color.”\n\n\n\nBing Image Creator\n\n\n\nMeta Image Creator\n\n\nInterestingly, Meta was a bit more adult oriented, while Bing was more toddler oriented.\n\nPrompt: “A cute and simple drawing of a baby elephant with flowers around it, perfect for a toddler to color.”\n\n\nBing Image Creator\n\n\n\nMeta Image Creator\n\n\nMeta failed me this time. The image was cute, but it was a colored image, not a coloring page.\n\nPrompt: “A space-themed black-and-white line drawing with rockets, planets, and stars for coloring.”\n\n\nBing Image Creator\n\n\n\nMeta Image Creator\n\n\nI think I will give it to Bing this time. Both were good, but Meta created too much black space.\n\nNow the prompt I have been using the most:\nPrompt: “Create a black and white line art illustration suitable for coloring. Theme: Chibi litrpg adventurer”\nOk, ok, I know, I am a geek. But I like litrpg, so this is more for me than for my little one. But she still likes it.\n\n\nBing Image Creator\n\n\n\nMeta Image Creator\n\n\nAnd now I like both! This prompt has been very concistent."
+  },
+  {
+    "objectID": "blog/posts/color-pages.html#final-words",
+    "href": "blog/posts/color-pages.html#final-words",
+    "title": "MindMeld",
+    "section": "Final words",
+    "text": "Final words\nOf course, there are a few things to keep in mind. Not every AI tool is perfect, so sometimes you might have to try a couple of different prompts to get exactly what you want. But with a bit of patience, you can create a whole library of coloring pages that will keep your little ones entertained for hours.\nSo, next time you’re looking to add something new to your child’s coloring collection, try AI-generated images. It’s a fast, creative solution that gives you exactly what you need, whenever you need it!"
   }
 ]
