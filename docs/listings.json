@@ -2,6 +2,7 @@
   {
     "listing": "/podcasts/index.html",
     "items": [
+      "/podcasts/episodes/005-montecarlo-simulation.html",
       "/podcasts/episodes/004-trends-econometrics.html",
       "/podcasts/episodes/003-cre-stata.html",
       "/podcasts/episodes/002-bayes.html",

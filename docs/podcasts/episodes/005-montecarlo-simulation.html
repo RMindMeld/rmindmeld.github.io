@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-12-15">
+<meta name="description" content="How to harness simulation to understand the performance of your estimators">
 
-<title>MindMeld</title>
+<title>EP005: Monte Carlo Simulation – MindMeld</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +25,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./assets/favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-fa922219ad37d9f48b0167f686af0326.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-f73952fa0772e7c8a36d775958ad5de9.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-fa922219ad37d9f48b0167f686af0326.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-f73952fa0772e7c8a36d775958ad5de9.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,7 +85,7 @@ gtag('config', 'G-53TXMVK3GH', { 'anonymize_ip': true});
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 
 
-<link rel="stylesheet" href="styles/custom.css">
+<link rel="stylesheet" href="../../styles/custom.css">
 </head>
 
 <body class="nav-fixed">
@@ -93,7 +95,7 @@ gtag('config', 'G-53TXMVK3GH', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">MindMeld</span>
     </a>
   </div>
@@ -104,19 +106,19 @@ gtag('config', 'G-53TXMVK3GH', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog/index.html"> 
+    <a class="nav-link" href="../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./podcasts/index.html"> 
+    <a class="nav-link" href="../../podcasts/index.html"> 
 <span class="menu-text">Podcasts</span></a>
   </li>  
 </ul>
@@ -128,12 +130,22 @@ gtag('config', 'G-53TXMVK3GH', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#episode-background" id="toc-episode-background" class="nav-link active" data-scroll-target="#episode-background">Episode Background</a></li>
+  <li><a href="#show-notes" id="toc-show-notes" class="nav-link" data-scroll-target="#show-notes">Show Notes</a></li>
+  <li><a href="#resources-mentioned" id="toc-resources-mentioned" class="nav-link" data-scroll-target="#resources-mentioned">Resources Mentioned</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content page-columns page-full column-body" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 
@@ -446,15 +458,30 @@ gtag('config', 'G-53TXMVK3GH', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">MindMeld</h1>
-<p class="subtitle lead">Exploring the Intersection of AI and Human Creativity</p>
+<h1 class="title">EP005: Monte Carlo Simulation</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">AI Tools</div>
+    <div class="quarto-category">Econometrics</div>
+    <div class="quarto-category">mini-series</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    How to harness simulation to understand the performance of your estimators
+  </div>
 </div>
 
 
-
-<div class="quarto-title-meta column-body">
+<div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 15, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -464,47 +491,39 @@ gtag('config', 'G-53TXMVK3GH', { 'anonymize_ip': true});
 </header>
 
 
-<div class="column-page">
-<section id="welcome-to-mindmeld" class="level1 hero-banner">
-<h1>Welcome to MindMeld</h1>
-<p>Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.</p>
-<p><a href="./blog/index.html" class="btn btn-primary btn-lg" role="button">Explore the Blog</a> <a href="./podcasts/index.html" class="btn btn-primary btn-lg" role="button">Explore the Podcast</a> <a href="./about.html" class="btn btn-secondary btn-lg" role="button">About the Project</a></p>
+<div class="audio-player">
+<p><audio controls=""> <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep005_monte_carlo_simulation.mp3" type="audio/mpeg"> Your browser does not support the audio element. </audio></p>
+</div>
+<div class="episode-meta">
+<p><strong>Duration</strong>: 18:22<br>
+<strong>Release Date</strong>: December 15, 2024<br>
+<strong>Category</strong>: AI Tools, Econometrics, mini-series <strong>Download</strong>: <a href="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep005_monte_carlo_simulation.mp3">MP3</a></p>
+</div>
+<section id="episode-background" class="level2">
+<h2 class="anchored" data-anchor-id="episode-background">Episode Background</h2>
+<p>Monte Carlo Simulation is one of those tools everybody seems to know about (in economics and econometrics), but few are thought how to use it. But why should you?</p>
+<p>One of the main uses of Monte Carlo Simulation is to understand the performance of your estimators. That typically means that you are someone proposing a new estimator, or someone trying to understand how well an existing estimator performs under different conditions, but the typical applied researcher who simply ones to use it.</p>
+<p>Interestingly, Monte Carlo Simulation is not difficult. Its main idea is to simulate data from a known distribution (your assumptions), and apply your estimator to the data. After repeating the process quite few times, you can have good ideas of how the method, or estimator you are proposing or studying will perform. I find it a very good tool for teaching econometrics, and show how violations of assumptions can affect estimation of models.</p>
+<p>This episode covers a monograph on this topic. And while some of the descriptions seem off to me. For example, the discussion suggests Monte Carlo Simulation can be used to simulate policy changes, which is not something I have seen. Nevertheless, the podcast does a good overview of the topic, emphasizing the general rules to produce good simulations.</p>
 </section>
-</div>
-<section id="what-is-mindmeld" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-mindmeld">What is MindMeld?</h2>
-<p>MindMeld is my personal laboratory where I explore and document my exploration of artificial intelligence as a tool for learning, and content generation. As someone deeply interested in AI’s creative potential, I will share selected AI-generated content while adding my human perspective and insights.</p>
-<div class="grid">
-<section id="ai-generation" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="ai-generation">AI Generation</h3>
-<p>I work with various AI models to generate content: text, images, music, Podcasts, exploring their capabilities and limitations.</p>
+<section id="show-notes" class="level2">
+<h2 class="anchored" data-anchor-id="show-notes">Show Notes</h2>
+<p>The Podcast was created using only the Monograph on Monte Carlo Simulations. Then I used the context window/customization with the following:</p>
+<blockquote class="blockquote">
+<ul>
+<li>“Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources”</li>
+<li>This should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.</li>
+<li>Shout-out to Fernando, the behind-the-scenes force making these series possible.</li>
+</ul>
+</blockquote>
 </section>
-<section id="human-curation" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="human-curation">Human Curation</h3>
-<p>Every piece of AI-generated content is carefully selected and contextualized with my personal insights, observations and interests.</p>
-</section>
-<section id="open-process" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="open-process">Open Process</h3>
-<p>I believe in transparency. Unless otherwise stated, all content on this site is generated by AI, and curated by me.</p>
-</section>
-</div>
-</section>
-<section id="join-the-journey" class="level2">
-<h2 class="anchored" data-anchor-id="join-the-journey">Join the Journey</h2>
-<p>I’m constantly experimenting with new AI tools and techniques, sharing both successes and failures along the way. This site serves as both a portfolio of AI-human collaboration and a documentation of my learning process.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Want to get in touch?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Have questions about AI content generation or want to discuss collaboration opportunities? <a href="./about.html#contact">Reach out to me</a>.</p>
-</div>
-</div>
+<section id="resources-mentioned" class="level2">
+<h2 class="anchored" data-anchor-id="resources-mentioned">Resources Mentioned</h2>
+<ul>
+<li><a href="https://notebooklm.google.com/">NotebookLM</a></li>
+<li><a href="https://www.nowpublishers.com/eco">Foundations and Trends® in Econometrics</a></li>
+<li><a href="https://www.nowpublishers.com/article/Details/ECO-011">Monte Carlo Simulation for Econometricians</a></li>
+</ul>
 
 
 </section>

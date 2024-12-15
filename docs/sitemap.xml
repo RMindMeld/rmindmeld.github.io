@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://rmindmeld.github.io/index.html</loc>
-    <lastmod>2024-11-15T02:52:54.787Z</lastmod>
+    <lastmod>2024-12-15T17:53:43.022Z</lastmod>
   </url>
   <url>
     <loc>https://rmindmeld.github.io/podcasts/episodes/002-bayes.html</loc>
@@ -83,5 +83,9 @@
   <url>
     <loc>https://rmindmeld.github.io/podcasts/episodes/004-trends-econometrics.html</loc>
     <lastmod>2024-12-07T03:49:52.664Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rmindmeld.github.io/podcasts/episodes/005-montecarlo-simulation.html</loc>
+    <lastmod>2024-12-15T17:54:07.590Z</lastmod>
   </url>
 </urlset>

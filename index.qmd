@@ -52,41 +52,7 @@ I believe in transparency. Unless otherwise stated, all content on this site is 
 
 ::::
 
-## Latest Content
-
-:::{.column-page}
-
-:::{.grid}
-
-:::{.g-col-12 .g-col-md-6}
-
-#### From the Blog
-
-:::{.card}
-
-### [Exploring AI's Creative Boundaries](/blog/ai-creativity)
-
-What happens when we push AI to its creative limits? A journey through unexpected outputs and surprising discoveries.
-:::
-
-:::
-
-:::{.g-col-12 .g-col-md-6}
-
-#### From the Podcast
-
-:::{.card}
-
-### [AI Art Experiments](/gallery/ai-art-series-1)
-
-A collection of AI-generated artwork with analysis of the prompts and techniques used to create them.
-
-:::
-
-:::
-
-:::
-:::
+ 
 
 ## Join the Journey
 

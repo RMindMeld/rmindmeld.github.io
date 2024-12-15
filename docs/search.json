@@ -642,5 +642,26 @@
     "title": "MindMeld",
     "section": "Resources Mentioned",
     "text": "Resources Mentioned\n\nAI Tools\n\nNotebookLM\nFoundations and Trends® in Econometrics"
+  },
+  {
+    "objectID": "podcasts/episodes/005-montecarlo-simulation.html#episode-background",
+    "href": "podcasts/episodes/005-montecarlo-simulation.html#episode-background",
+    "title": "MindMeld",
+    "section": "Episode Background",
+    "text": "Episode Background\nMonte Carlo Simulation is one of those tools everybody seems to know about (in economics and econometrics), but few are thought how to use it. But why should you?\nOne of the main uses of Monte Carlo Simulation is to understand the performance of your estimators. That typically means that you are someone proposing a new estimator, or someone trying to understand how well an existing estimator performs under different conditions, but the typical applied researcher who simply ones to use it.\nInterestingly, Monte Carlo Simulation is not difficult. Its main idea is to simulate data from a known distribution (your assumptions), and apply your estimator to the data. After repeating the process quite few times, you can have good ideas of how the method, or estimator you are proposing or studying will perform. I find it a very good tool for teaching econometrics, and show how violations of assumptions can affect estimation of models.\nThis episode covers a monograph on this topic. And while some of the descriptions seem off to me. For example, the discussion suggests Monte Carlo Simulation can be used to simulate policy changes, which is not something I have seen. Nevertheless, the podcast does a good overview of the topic, emphasizing the general rules to produce good simulations."
+  },
+  {
+    "objectID": "podcasts/episodes/005-montecarlo-simulation.html#show-notes",
+    "href": "podcasts/episodes/005-montecarlo-simulation.html#show-notes",
+    "title": "MindMeld",
+    "section": "Show Notes",
+    "text": "Show Notes\nThe Podcast was created using only the Monograph on Monte Carlo Simulations. Then I used the context window/customization with the following:\n\n\n“Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources”\nThis should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.\nShout-out to Fernando, the behind-the-scenes force making these series possible."
+  },
+  {
+    "objectID": "podcasts/episodes/005-montecarlo-simulation.html#resources-mentioned",
+    "href": "podcasts/episodes/005-montecarlo-simulation.html#resources-mentioned",
+    "title": "MindMeld",
+    "section": "Resources Mentioned",
+    "text": "Resources Mentioned\n\nNotebookLM\nFoundations and Trends® in Econometrics\nMonte Carlo Simulation for Econometricians"
   }
 ]
