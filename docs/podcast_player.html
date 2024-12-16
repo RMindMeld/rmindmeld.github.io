@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Player</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom scrollbar for episode list */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="container mx-auto max-w-md bg-white shadow-lg rounded-xl overflow-hidden">
+        <!-- Player Container -->
+        <div class="relative">
+            <!-- Artwork -->
+            <img id="artwork" class="w-full h-64 object-cover" src="assets/favicon.png" alt="Podcast Artwork">
+            
+            <!-- Episode List Overlay -->
+            <div id="episode-list-overlay" class="hidden absolute inset-0 bg-black bg-opacity-80 z-10 p-4 overflow-y-auto custom-scrollbar">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-white text-xl font-bold">Episodes</h2>
+                    <button id="close-episodes-btn" class="text-white text-2xl">&times;</button>
+                </div>
+                <div id="episode-list" class="space-y-2"></div>
+            </div>
+        </div>
+
+        <!-- Track Info -->
+        <div class="p-4">
+            <h2 id="track-title" class="text-xl font-bold text-gray-800 truncate">MindMeld Podcast</h2>
+            <p id="track-artist" class="text-gray-600 truncate">Hosted by Github</p>
+
+            <!-- Progress -->
+            <div class="mt-4 mb-2">
+                <div class="flex justify-between text-sm text-gray-600 mb-1">
+                    <span id="current-time">0:00</span>
+                    <span id="total-time">0:00</span>
+                </div>
+                <div class="bg-gray-300 rounded-full h-1.5">
+                    <div id="progress-bar" class="bg-blue-600 rounded-full h-1.5 w-0"></div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="flex items-center justify-between mt-4">
+                <button id="back-15-btn" class="bg-gray-200 p-2 rounded-full hover:bg-gray-300 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.334 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z" />
+                    </svg>
+                </button>
+
+                <button id="prev-btn" class="bg-gray-200 p-2 rounded-full hover:bg-gray-300 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                    </svg>
+                </button>
+
+                <button id="play-pause-btn" class="bg-blue-600 text-white p-4 rounded-full hover:bg-blue-700 transition shadow-lg">
+                    ▶
+                </button>
+
+                <button id="next-btn" class="bg-gray-200 p-2 rounded-full hover:bg-gray-300 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <button id="forward-15-btn" class="bg-gray-200 p-2 rounded-full hover:bg-gray-300 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Additional Controls -->
+            <div class="flex justify-between items-center mt-4">
+                <button id="speed-btn" class="bg-gray-200 px-3 py-1 rounded-full text-sm hover:bg-gray-300 transition">
+                    1x
+                </button>
+                <button id="show-episodes-btn" class="bg-gray-200 px-3 py-1 rounded-full text-sm hover:bg-gray-300 transition">
+                    Episodes
+                </button>
+            </div>
+        </div>
+
+        <!-- Hidden Audio Element -->
+        <audio id="audio" class="hidden"></audio>
+    </div>
+
+    <script>
+        class PodcastPlayer {
+            constructor() {
+                // DOM Elements
+                this.audio = document.getElementById('audio');
+                this.artworkEl = document.getElementById('artwork');
+                this.titleEl = document.getElementById('track-title');
+                this.artistEl = document.getElementById('track-artist');
+                this.progressBar = document.getElementById('progress-bar');
+                this.currentTimeEl = document.getElementById('current-time');
+                this.totalTimeEl = document.getElementById('total-time');
+                this.playPauseBtn = document.getElementById('play-pause-btn');
+                this.prevBtn = document.getElementById('prev-btn');
+                this.nextBtn = document.getElementById('next-btn');
+                this.back15Btn = document.getElementById('back-15-btn');
+                this.forward15Btn = document.getElementById('forward-15-btn');
+                this.speedBtn = document.getElementById('speed-btn');
+                this.showEpisodesBtn = document.getElementById('show-episodes-btn');
+                this.episodeListOverlay = document.getElementById('episode-list-overlay');
+                this.episodeList = document.getElementById('episode-list');
+                this.closeEpisodesBtn = document.getElementById('close-episodes-btn');
+
+                // State
+                this.tracks = [];
+                this.currentTrackIndex = 0;
+                this.isPlaying = false;
+                this.speedRates = [1, 1.5, 2, 0.75];
+                this.currentSpeedIndex = 0;
+
+                // Bind methods
+                this.initializePlayer = this.initializePlayer.bind(this);
+                this.loadTrack = this.loadTrack.bind(this);
+                this.togglePlayPause = this.togglePlayPause.bind(this);
+                this.updateProgress = this.updateProgress.bind(this);
+                this.nextTrack = this.nextTrack.bind(this);
+                this.prevTrack = this.prevTrack.bind(this);
+                this.back15Seconds = this.back15Seconds.bind(this);
+                this.forward15Seconds = this.forward15Seconds.bind(this);
+                this.togglePlaybackSpeed = this.togglePlaybackSpeed.bind(this);
+                this.showEpisodeList = this.showEpisodeList.bind(this);
+                this.closeEpisodeList = this.closeEpisodeList.bind(this);
+                this.selectEpisode = this.selectEpisode.bind(this);
+
+                // Event Listeners
+                this.playPauseBtn.addEventListener('click', this.togglePlayPause);
+                this.nextBtn.addEventListener('click', this.nextTrack);
+                this.prevBtn.addEventListener('click', this.prevTrack);
+                this.back15Btn.addEventListener('click', this.back15Seconds);
+                this.forward15Btn.addEventListener('click', this.forward15Seconds);
+                this.speedBtn.addEventListener('click', this.togglePlaybackSpeed);
+                this.showEpisodesBtn.addEventListener('click', this.showEpisodeList);
+                this.closeEpisodesBtn.addEventListener('click', this.closeEpisodeList);
+                this.audio.addEventListener('timeupdate', this.updateProgress);
+                this.audio.addEventListener('loadedmetadata', this.updateProgress);
+                this.audio.addEventListener('ended', this.nextTrack);
+
+                // Initialize
+                this.initializePlayer();
+            }
+
+            formatTime(seconds) {
+                const hours = Math.floor(seconds / 3600);
+                const minutes = Math.floor((seconds % 3600) / 60);
+                const secs = Math.floor(seconds % 60);
+                
+                if (hours > 0) {
+                    return `${hours}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+                }
+                return `${minutes}:${secs.toString().padStart(2, '0')}`;
+            }
+
+            async initializePlayer() {
+                try {
+                    // Fetch tracks from JSON
+                    const response = await fetch('tracks.json');
+                    const data = await response.json();
+                    this.tracks = data.tracks;
+
+                    // Populate episode list
+                    this.episodeList.innerHTML = this.tracks.map((track, index) => `
+                        <button data-index="${index}" class="episode-item w-full text-left py-2 px-3 hover:bg-gray-700 text-white rounded transition">
+                            <span class="font-bold block truncate">${track.title}</span>
+                            <span class="text-sm text-gray-400 truncate">${track.description || 'No description'}</span>
+                        </button>
+                    `).join('');
+
+                    // Add click event to episode items
+                    this.episodeList.querySelectorAll('.episode-item').forEach(item => {
+                        item.addEventListener('click', this.selectEpisode);
+                    });
+
+                    // Load first track
+                    if (this.tracks.length > 0) {
+                        this.loadTrack(0);
+                    }
+                } catch (error) {
+                    console.error('Error loading tracks:', error);
+                    alert('Failed to load tracks. Please check your tracks.json file.');
+                }
+            }
+
+            selectEpisode(event) {
+                const index = parseInt(event.currentTarget.dataset.index, 10);
+                this.loadTrack(index);
+                this.closeEpisodeList();
+            }
+
+            showEpisodeList() {
+                this.episodeListOverlay.classList.remove('hidden');
+            }
+
+            closeEpisodeList() {
+                this.episodeListOverlay.classList.add('hidden');
+            }
+
+            loadTrack(index) {
+                // Ensure index wraps around the track list
+                if (index < 0) index = this.tracks.length - 1;
+                if (index >= this.tracks.length) index = 0;
+
+                this.currentTrackIndex = index;
+                const track = this.tracks[index];
+
+                // Update UI
+                this.titleEl.textContent = track.title;
+                this.artistEl.textContent = track.description || track.artist || 'Unknown Podcast';
+                this.artworkEl.src = track.artwork || 'default-artwork.jpg';
+                
+                // Set audio source
+                this.audio.src = track.url;
+
+                // Reset play state
+                this.isPlaying = false;
+                this.playPauseBtn.textContent = '▶';
+
+                // Reset playback speed
+                this.currentSpeedIndex = 0;
+                this.speedBtn.textContent = '1x';
+                this.audio.playbackRate = 1;
+            }
+
+            togglePlayPause() {
+                if (this.audio.paused) {
+                    this.audio.play();
+                    this.isPlaying = true;
+                    this.playPauseBtn.textContent = '❚❚';
+                } else {
+                    this.audio.pause();
+                    this.isPlaying = false;
+                    this.playPauseBtn.textContent = '▶';
+                }
+            }
+
+            updateProgress() {
+                if (this.audio.duration) {
+                    // Progress bar
+                    const progressPercent = 
+                        (this.audio.currentTime / this.audio.duration) * 100;
+                    this.progressBar.style.width = `${progressPercent}%`;
+
+                    // Time display
+                    this.currentTimeEl.textContent = this.formatTime(this.audio.currentTime);
+                    this.totalTimeEl.textContent = this.formatTime(this.audio.duration);
+                }
+            }
+
+            nextTrack() {
+                this.loadTrack(this.currentTrackIndex + 1);
+            }
+
+            prevTrack() {
+                this.loadTrack(this.currentTrackIndex - 1);
+            }
+
+            back15Seconds() {
+                this.audio.currentTime = Math.max(0, this.audio.currentTime - 15);
+            }
+
+            forward15Seconds() {
+                this.audio.currentTime = Math.min(
+                    this.audio.duration, 
+                    this.audio.currentTime + 15
+                );
+            }
+
+            togglePlaybackSpeed() {
+                this.currentSpeedIndex = (this.currentSpeedIndex + 1) % this.speedRates.length;
+                const newSpeed = this.speedRates[this.currentSpeedIndex];
+                this.audio.playbackRate = newSpeed;
+                this.speedBtn.textContent = `${newSpeed}x`;
+            }
+        }
+
+        // Initialize Player on DOM load
+        document.addEventListener('DOMContentLoaded', () => {
+            new PodcastPlayer();
+        });
+    </script>
+</body>
+</html>

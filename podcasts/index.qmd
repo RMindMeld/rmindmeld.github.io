@@ -51,6 +51,8 @@ Each episode will be different:
 
 Below you'll find all podcast episodes, with the most recent first. 
 
+If you are interested only on the podcast, see [here](../podcast_player.html)
+
 ::::{.grid}
 
 :::{.g-col-12 .g-col-md-6}
