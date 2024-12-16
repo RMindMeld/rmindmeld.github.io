@@ -1,0 +1,123 @@
+{
+    "tracks": [
+      {
+        "title": "EP001: Introducing MindMeld Podcasts",
+        "description": "An introduction to the MindMeld Podcast series and the different types of AI-generated content, power by NotebookLM",
+        "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep001-intro-mindmeld.mp3",
+        "artwork": "assets/podcasts/ep001_mindmeld.jpg"
+      },      {
+        "title": "EP002: Review of the book Bayesian Statistics",
+        "description": "A different approach to understading Bayesian Statistics",
+        "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep002-bayes.mp3",
+        "artwork": "assets/podcasts/ep002_bayes.jpg"
+      },
+      {
+          "title": "Ep003: Simplifying the use of Correlated Random Effects Model",
+          "description": "Discussion on CRE. A new Stata command for Correlated Random Effects Model in Stata",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep003_cre.mp3",
+          "artwork": "assets/podcasts/ep003_cre.jpg"
+      },
+      {
+          "title": "EP004: Trends in Econometrics",
+          "description": "An introduction to the mini-series on Trends in Econometrics",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep004-Econometrics.mp3",
+          "artwork": "assets/podcasts/ep004-Econometrics.jpg"
+      },
+      {
+          "title": "EP005: Monte Carlo Simulation",
+          "description": "How to harness simulations to understand the performance of your estimators",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep005_monte_carlo_simulation.mp3",
+          "artwork": "assets/podcasts/ep005_montecarlo.jpg"
+      },
+      {
+          "title": "Ep006: Dimension_Reduction_Techniques",
+          "description": "A podcast episode titled Ep006_Dimension_Reduction_Techniques",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep006_dimension_reduction_techniques.mp3",
+          "artwork": "assets/podcasts/ep006_dimension_reduction_techniques.jpg"
+      },
+      {
+          "title": "Ep007: Inference_Weak_Instrumental",
+          "description": "A podcast episode titled Ep007_Inference_Weak_Instrumental",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep007_inference_weak_instrumental.mp3",
+          "artwork": "assets/podcasts/ep007_inference_weak_instrumental.jpg"
+      },
+      {
+          "title": "Ep008_Economics_Crime_Punishment",
+          "description": "A podcast episode titled Ep008_Economics_Crime_Punishment",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep008_economics_crime_punishment.mp3",
+          "artwork": "assets/podcasts/ep008_economics_crime_punishment.jpg"
+      },
+      {
+          "title": "Ep009_Semiparametric_Efficiency_Bounds",
+          "description": "A podcast episode titled Ep009_Semiparametric_Efficiency_Bounds",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep009_semiparametric_efficiency_bounds.mp3",
+          "artwork": "assets/podcasts/ep009_semiparametric_efficiency_bounds.jpg"
+      },
+      {
+          "title": "Ep010_Differenceindifferences_Estimation",
+          "description": "A podcast episode titled Ep010_Differenceindifferences_Estimation",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep010_differenceindifferences_estimation.mp3",
+          "artwork": "assets/podcasts/ep010_differenceindifferences_estimation.jpg"
+      },
+      {
+          "title": "Ep011_Social_Interactions_Labor",
+          "description": "A podcast episode titled Ep011_Social_Interactions_Labor",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep011_social_interactions_labor.mp3",
+          "artwork": "assets/podcasts/ep011_social_interactions_labor.jpg"
+      },
+      {
+          "title": "Ep012_Nonparametric_Econometrics",
+          "description": "A podcast episode titled Ep012_Nonparametric_Econometrics",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep012_nonparametric_econometrics.mp3",
+          "artwork": "assets/podcasts/ep012_nonparametric_econometrics.jpg"
+      },
+      {
+          "title": "Ep013_Sex_Discrimination_Labor",
+          "description": "A podcast episode titled Ep013_Sex_Discrimination_Labor",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep013_sex_discrimination_labor.mp3",
+          "artwork": "assets/podcasts/ep013_sex_discrimination_labor.jpg"
+      },
+      {
+          "title": "Ep014_Happiness_Economics",
+          "description": "A podcast episode titled Ep014_Happiness_Economics",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep014_happiness_economics.mp3",
+          "artwork": "assets/podcasts/ep014_happiness_economics.jpg"
+      },
+      {
+          "title": "Ep015_Data_Visualization_Health",
+          "description": "A podcast episode titled Ep015_Data_Visualization_Health",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep015_data_visualization_health.mp3",
+          "artwork": "assets/podcasts/ep015_data_visualization_health.jpg"
+      },
+      {
+          "title": "Ep016_Copula_Modeling",
+          "description": "A podcast episode titled Ep016_Copula_Modeling",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep016_copula_modeling.mp3",
+          "artwork": "assets/podcasts/ep016_copula_modeling.jpg"
+      },
+      {
+          "title": "Ep017_Spatial_Econometrics_Regional",
+          "description": "A podcast episode titled Ep017_Spatial_Econometrics_Regional",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep017_spatial_econometrics_regional.mp3",
+          "artwork": "assets/podcasts/ep017_spatial_econometrics_regional.jpg"
+      },
+      {
+          "title": "Ep018_Minimum_Wages_Employment_",
+          "description": "A podcast episode titled Ep018_Minimum_Wages_Employment_",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep018_minimum_wages_employment_.mp3",
+          "artwork": "assets/podcasts/ep018_minimum_wages_employment_.jpg"
+      },
+      {
+          "title": "Ep019_Collective_Household_Consumption",
+          "description": "A podcast episode titled Ep019_Collective_Household_Consumption",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep019_collective_household_consumption.mp3",
+          "artwork": "assets/podcasts/ep019_collective_household_consumption.jpg"
+      },
+      {
+          "title": "Ep020_Climate_Econometrics",
+          "description": "A podcast episode titled Ep020_Climate_Econometrics",
+          "url": "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep020_climate_econometrics.mp3",
+          "artwork": "assets/podcasts/ep020_climate_econometrics.jpg"
+      }
+    ]
+  }
