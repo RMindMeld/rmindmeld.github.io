@@ -5,7 +5,7 @@ date: "2024-11-16"
 categories: [AI Tools, Getting Started, Content Creation]
 image: "../../assets/podcasts/ep001_mindmeld.jpg"
 audio:
-  src: "/assets/podcasts/001-ai-content-generation.mp3"
+  src: "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep001-intro-mindmeld.mp3"
   title: "Episode 1: Introducing MindMeld Podcasts"
   description: "An introduction to the MindMeld Podcast series and the different types of AI-generated content, power by NotebookLM"
   duration: "20:52"
