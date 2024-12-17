@@ -129,6 +129,7 @@
                 this.isPlaying = false;
                 this.speedRates = [1, 1.5, 2, 0.75];
                 this.currentSpeedIndex = 0;
+                this.isContinuousPlay = true; // Added continuous play flag
 
                 // Bind methods
                 this.initializePlayer = this.initializePlayer.bind(this);
@@ -143,6 +144,7 @@
                 this.showEpisodeList = this.showEpisodeList.bind(this);
                 this.closeEpisodeList = this.closeEpisodeList.bind(this);
                 this.selectEpisode = this.selectEpisode.bind(this);
+                this.handleTrackEnd = this.handleTrackEnd.bind(this);
 
                 // Event Listeners
                 this.playPauseBtn.addEventListener('click', this.togglePlayPause);
@@ -155,7 +157,7 @@
                 this.closeEpisodesBtn.addEventListener('click', this.closeEpisodeList);
                 this.audio.addEventListener('timeupdate', this.updateProgress);
                 this.audio.addEventListener('loadedmetadata', this.updateProgress);
-                this.audio.addEventListener('ended', this.nextTrack);
+                this.audio.addEventListener('ended', this.handleTrackEnd);
 
                 // Initialize
                 this.initializePlayer();
@@ -232,9 +234,10 @@
                 // Set audio source
                 this.audio.src = track.url;
 
-                // Reset play state
-                this.isPlaying = false;
-                this.playPauseBtn.textContent = '▶';
+                // Maintain play state if it was playing
+                if (this.isPlaying) {
+                    this.audio.play();
+                }
 
                 // Reset playback speed
                 this.currentSpeedIndex = 0;
@@ -267,12 +270,29 @@
                 }
             }
 
+            handleTrackEnd() {
+                // If continuous play is enabled, play the next track
+                if (this.isContinuousPlay) {
+                    this.nextTrack();
+                } else {
+                    // Reset play button if not continuous
+                    this.isPlaying = false;
+                    this.playPauseBtn.textContent = '▶';
+                }
+            }
+
             nextTrack() {
                 this.loadTrack(this.currentTrackIndex + 1);
             }
 
             prevTrack() {
-                this.loadTrack(this.currentTrackIndex - 1);
+                // If less than 5 seconds have passed, go to previous track
+                // Otherwise, restart current track
+                if (this.audio.currentTime < 5) {
+                    this.loadTrack(this.currentTrackIndex - 1);
+                } else {
+                    this.audio.currentTime = 0;
+                }
             }
 
             back15Seconds() {
