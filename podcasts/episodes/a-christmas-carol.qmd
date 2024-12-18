@@ -2,7 +2,7 @@
 title: "Special Episode: A Christmas Carol"
 description: "A special episode to celebrate the holiday season, and the power of NotebookLM"
 date: "2024-12-17"
-categories: [AI Tools, Econometrics, mini-series]
+categories: [AI Tools, Book Summary, Christmas]
 image: "../../assets/podcasts/a-christmas-carol.jpg"
 audio:
   title: "Special Episode: A Christmas Carol"
