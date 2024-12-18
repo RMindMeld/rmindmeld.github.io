@@ -2,6 +2,7 @@
   {
     "listing": "/podcasts/index.html",
     "items": [
+      "/podcasts/episodes/a-christmas-carol.html",
       "/podcasts/episodes/005-montecarlo-simulation.html",
       "/podcasts/episodes/004-trends-econometrics.html",
       "/podcasts/episodes/003-cre-stata.html",

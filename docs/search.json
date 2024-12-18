@@ -656,5 +656,26 @@
     "title": "MindMeld",
     "section": "Resources Mentioned",
     "text": "Resources Mentioned\n\nNotebookLM\nFoundations and Trends® in Econometrics\nMonte Carlo Simulation for Econometricians"
+  },
+  {
+    "objectID": "podcasts/episodes/a-christmas-carol.html#episode-background",
+    "href": "podcasts/episodes/a-christmas-carol.html#episode-background",
+    "title": "MindMeld",
+    "section": "Episode Background",
+    "text": "Episode Background\nCharles Dickens’ “A Christmas Carol” is the story that transformed Christmas to what we know. More than a story—it’s a powerful message of hope, redemption, and the transformative power of compassion. To celebrate this season of Joy, Christmas, and celebration, I decided to embark on a unique experiment that celebrates Christmas, summarizing this master piece using NotebookLM.\nBut what is different about this episode?\nNotebookLM is a powerful took that can be used for educational purposes, summarizing, providing study guides, and most interesting, creating audio/podcast overviews of your own material.\nOfficially, NotebookLM creates a podcast overview with 2 voices, the host and the guest (expert), and its officially only in English. However, because there is a small window for customization, I decided to “suggest” that the audio overview to be in other languages: Spanish, German, and French.\nOther languages were tried, including Italian, Portuguese, and Aymara, which I hope to release in the future. This pushes the boundaries of what NotebookLM can do. I hope you enjoy this special episode."
+  },
+  {
+    "objectID": "podcasts/episodes/a-christmas-carol.html#show-notes",
+    "href": "podcasts/episodes/a-christmas-carol.html#show-notes",
+    "title": "MindMeld",
+    "section": "Show Notes",
+    "text": "Show Notes\nThe Podcast was created using only “A Christmas Carol” as sole Source. Then I used the context window/customization with the following:\n\n\nsay “Welcome to MindMeld”\nMention which book was being reviewed\nprovide a summary of the book\nThe podcast should be done in [language] only, for [language] speaking audience. No other language."
+  },
+  {
+    "objectID": "podcasts/episodes/a-christmas-carol.html#resources-mentioned",
+    "href": "podcasts/episodes/a-christmas-carol.html#resources-mentioned",
+    "title": "MindMeld",
+    "section": "Resources Mentioned",
+    "text": "Resources Mentioned\n\nNotebookLM"
   }
 ]

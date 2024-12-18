@@ -1,0 +1,95 @@
+---
+title: "Special Episode: A Christmas Carol"
+description: "A special episode to celebrate the holiday season, and the power of NotebookLM"
+date: "2024-12-17"
+categories: [AI Tools, Econometrics, mini-series]
+image: "../../assets/podcasts/a-christmas-carol.jpg"
+audio:
+  title: "Special Episode: A Christmas Carol"
+  description: "A special episode to celebrate the holiday season, and the power of NotebookLM"
+---
+
+:::{.panel-tabset}
+
+## English
+
+<div class="audio-player">
+   <audio controls>
+   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/esp_cc_en.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+   </audio>
+</div>
+
+## Spanish
+
+<div class="audio-player">
+   <audio controls>
+   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/esp_cc_sp.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+   </audio>
+</div>
+
+## German
+
+<div class="audio-player">
+   <audio controls>
+   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/esp_cc_gr.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+   </audio>
+</div>
+
+## French
+
+<div class="audio-player">
+   <audio controls>
+   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/esp_cc_fr.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+   </audio>
+</div>
+
+## Italian
+
+<div class="audio-player">
+   <audio controls>
+   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/esp_cc_it.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+   </audio>
+</div>
+
+## Portuguese
+
+<div class="audio-player">
+   <audio controls>
+   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/esp_cc_pg.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+   </audio>
+</div>
+
+:::
+
+
+## Episode Background
+
+Charles Dickens' "A Christmas Carol" is the story that transformed Christmas to what we know. More than a story—it's a powerful message of hope, redemption, and the transformative power of compassion. To celebrate this season of Joy, Christmas, and celebration, I decided to embark on a unique experiment that celebrates Christmas, summarizing this master piece using NotebookLM.
+
+But what is different about this episode? 
+
+NotebookLM is a powerful took that can be used for educational purposes, summarizing, providing study guides, and most interesting, creating audio/podcast overviews of your own material. 
+
+Officially, NotebookLM creates a podcast overview with 2 voices, the host and the guest (expert), and its officially only in English. However, because there is a small window for customization, I decided to "suggest" that the audio overview to be in other languages: Spanish, German, and French.
+
+Other languages were tried, including Italian, Portuguese, and Aymara, which I hope to release in the future. This pushes the boundaries of what NotebookLM can do. I hope you enjoy this special episode.
+
+## Show Notes
+
+The Podcast was created using only "A Christmas Carol" as sole Source. Then I used the context window/customization with the following:
+
+>- say "Welcome to MindMeld"
+>- Mention which book was being reviewed
+>- provide a summary of the book
+>- The podcast should be done in [language] only, for [language] speaking audience. No other language.
+
+
+## Resources Mentioned
+
+- [NotebookLM](https://notebooklm.google.com/)
