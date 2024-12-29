@@ -1,7 +1,7 @@
 ---
 title: "EP006: Dimension Reduction: A Guided Tour"
 description: "Going Beyond Principal Component Analysis: A review of Methods"
-date: "2024-12-15"
+date: "2024-12-28"
 categories: [AI Tools, Econometrics, mini-series]
 image: "../../assets/podcasts/ep006_dimension.jpg"
 audio:
