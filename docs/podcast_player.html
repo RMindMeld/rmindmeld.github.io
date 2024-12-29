@@ -177,7 +177,7 @@
             async initializePlayer() {
                 try {
                     // Fetch tracks from JSON
-                    const response = await fetch('tracks.json');
+                    const response = await fetch('https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/tracks.json');
                     const data = await response.json();
                     this.tracks = data.tracks;
 

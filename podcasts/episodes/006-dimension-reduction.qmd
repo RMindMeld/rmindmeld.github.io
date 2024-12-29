@@ -1,0 +1,53 @@
+---
+title: "EP006: Dimension Reduction: A Guided Tour"
+description: "Going Beyond Principal Component Analysis: A review of Methods"
+date: "2024-12-15"
+categories: [AI Tools, Econometrics, mini-series]
+image: "../../assets/podcasts/ep006_dimension.jpg"
+audio:
+  src: "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep006_dimension_reduction_techniques.mp3"
+  title: "Episode 6: Dimension Reduction: A Guided Tour"
+  description: "Going Beyond Principal Component Analysis: A review of Methods"
+  duration: "25:53"
+---
+
+<div class="audio-player">
+   <audio controls>
+   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep006_dimension_reduction_techniques.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+   </audio>
+</div>
+
+:::{.episode-meta}
+
+**Duration**: 25:53  
+**Release Date**: December 28, 2024  
+**Category**: AI Tools, Econometrics, mini-series 
+**Download**: [MP3](https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep006_dimension_reduction_techniques.mp3)
+
+:::
+
+## Episode Background
+
+One of the methodologies I have learned late in my during my undergraduate studies was Principal Component Analysis (PCA). As you may know, this is a technique that can be used to reduce the dimensionality of data, by using linear combinations of the original variables, such that few "principal components" can explain most of the variance in the data. Each "component" is independent of the others, and "latter" components explain less and less of the variance. 
+
+This technique is very useful. I have used it to demonstrate a simple approach for image compression, and to show that one does not need "all" the variables to "see" the "big" picture. However, the scenario where I have used this most is in the context of economics, and the creation of wealth indexes.
+
+The idea is simple: you have a lot of variables say on asset ownership, education, home ownership, etc. You need an approximation for "wealth", thus you can use PCA to create a "wealth index" that can be used in your analysis.  
+
+While this is probably the simplest and most common use of dimension reduction, there are many other methods that can be used. This episode covers a review of methods that go beyond PCA, and that can be used in different scenarios. The book itself its quite technical, but the podcast does a good job of summarizing the main ideas.
+
+## Show Notes
+
+The Podcast was created using only the Monograph on Dimension Reduction techniques. Then I used the context window/customization with the following:
+
+>- "Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources"
+>- This should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.
+>- Shout-out to Fernando, the behind-the-scenes force making these series possible.
+
+
+## Resources Mentioned
+
+- [NotebookLM](https://notebooklm.google.com/)
+- [Foundations and Trends® in Machine Learning](https://www.nowpublishers.com/mal)
+- [Dimension Reduction: A guided Tour](https://www.nowpublishers.com/article/Details/MAL-002)
