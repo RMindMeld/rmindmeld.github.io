@@ -15,7 +15,7 @@ audio:
 
 <div class="audio-player">
    <audio controls>
-   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/esp_cc_en.mp3" type="audio/mpeg">
+   <source src="https://rmindmeld.github.io/podcast_asset/esp_cc_en.mp3" type="audio/mpeg">
    Your browser does not support the audio element.
    </audio>
 </div>
@@ -24,7 +24,7 @@ audio:
 
 <div class="audio-player">
    <audio controls>
-   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/esp_cc_sp.mp3" type="audio/mpeg">
+   <source src="https://rmindmeld.github.io/podcast_asset/esp_cc_sp.mp3" type="audio/mpeg">
    Your browser does not support the audio element.
    </audio>
 </div>
@@ -33,7 +33,7 @@ audio:
 
 <div class="audio-player">
    <audio controls>
-   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/esp_cc_gr.mp3" type="audio/mpeg">
+   <source src="https://rmindmeld.github.io/podcast_asset/esp_cc_gr.mp3" type="audio/mpeg">
    Your browser does not support the audio element.
    </audio>
 </div>
@@ -42,7 +42,7 @@ audio:
 
 <div class="audio-player">
    <audio controls>
-   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/esp_cc_fr.mp3" type="audio/mpeg">
+   <source src="https://rmindmeld.github.io/podcast_asset/esp_cc_fr.mp3" type="audio/mpeg">
    Your browser does not support the audio element.
    </audio>
 </div>
@@ -51,7 +51,7 @@ audio:
 
 <div class="audio-player">
    <audio controls>
-   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/esp_cc_it.mp3" type="audio/mpeg">
+   <source src="https://rmindmeld.github.io/podcast_asset/esp_cc_it.mp3" type="audio/mpeg">
    Your browser does not support the audio element.
    </audio>
 </div>
@@ -60,7 +60,7 @@ audio:
 
 <div class="audio-player">
    <audio controls>
-   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/esp_cc_pg.mp3" type="audio/mpeg">
+   <source src="https://rmindmeld.github.io/podcast_asset/esp_cc_pg.mp3" type="audio/mpeg">
    Your browser does not support the audio element.
    </audio>
 </div>

@@ -5,7 +5,7 @@ date: "2024-11-19"
 categories: [AI Tools, book review, learning]
 image: "../../assets/podcasts/ep003_cre.jpg"
 audio:
-  src: "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep003-cre.mp3"
+  src: "https://rmindmeld.github.io/podcast_asset/ep003-cre.mp3"
   title: "Episode 3: Simplifying the use of Correlated Random Effects Model"
   description: "Discussion on CRE. A new Stata command for Correlated Random Effects Model in Stata"
   duration: "7:22"
@@ -13,7 +13,7 @@ audio:
 
 <div class="audio-player">
    <audio controls>
-   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep003_cre.mp3" type="audio/mpeg">
+   <source src="https://rmindmeld.github.io/podcast_asset/ep003_cre.mp3" type="audio/mpeg">
    Your browser does not support the audio element.
    </audio>
 </div>
@@ -23,7 +23,7 @@ audio:
 **Duration**: 7:22  
 **Release Date**: November 19, 2024  
 **Category**: AI Tools, Getting Started, Research
-**Download**: [MP3](https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep003-cre.mp3)
+**Download**: [MP3](https://rmindmeld.github.io/podcast_asset/ep003-cre.mp3)
 
 :::
 

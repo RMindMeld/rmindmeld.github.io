@@ -5,7 +5,7 @@ date: "2024-11-18"
 categories: [AI Tools, book review, learning]
 image: "../../assets/podcasts/ep002_bayes.jpg"
 audio:
-  src: "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep002-bayes.mp3"
+  src: "https://rmindmeld.github.io/podcast_asset/ep002-bayes.mp3"
   title: "Episode 2: Review of the book Bayesian Statistics"
   description: "A different approach to understading Bayesian Statistics"
   duration: "20:52"
@@ -14,8 +14,8 @@ audio:
 
 <div class="audio-player">
    <audio controls>
-   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep002-bayes.mp3" type="audio/mpeg">
-   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep002-bayes.ogg" type="audio/ogg">
+   <source src="https://rmindmeld.github.io/podcast_asset/ep002-bayes.mp3" type="audio/mpeg">
+   <source src="https://rmindmeld.github.io/podcast_asset/ep002-bayes.ogg" type="audio/ogg">
    Your browser does not support the audio element.
    </audio>
 </div>
@@ -25,7 +25,7 @@ audio:
 **Duration**: 20:52  
 **Release Date**: November 18, 2024  
 **Category**: AI Tools, Getting Started  
-**Download**: [MP3](https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep002-bayes.mp3)
+**Download**: [MP3](https://rmindmeld.github.io/podcast_asset/ep002-bayes.mp3)
 
 :::
 

@@ -5,7 +5,7 @@ date: "2024-12-6"
 categories: [AI Tools, Econometrics, mini-series]
 image: "../../assets/podcasts/ep004_econometrics.jpg"
 audio:
-  src: "https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep004-Econometrics.mp3"
+  src: "https://rmindmeld.github.io/podcast_asset/ep004-Econometrics.mp3"
   title: "Episode 4: Trends in Econometrics"
   description: "Discussion on CRE. A new Stata command for Correlated Random Effects."
   duration: "20:52"
@@ -13,7 +13,7 @@ audio:
 
 <div class="audio-player">
    <audio controls>
-   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep004-Econometrics.mp3" type="audio/mpeg">
+   <source src="https://rmindmeld.github.io/podcast_asset/ep004-Econometrics.mp3" type="audio/mpeg">
    Your browser does not support the audio element.
    </audio>
 </div>
@@ -23,7 +23,7 @@ audio:
 **Duration**: 25:34  
 **Release Date**: December 6, 2024  
 **Category**: AI Tools, Econometrics, mini-series 
-**Download**: [MP3](https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/ep004-Econometrics.mp3)
+**Download**: [MP3](https://rmindmeld.github.io/podcast_asset/ep004-Econometrics.mp3)
 
 :::
 
