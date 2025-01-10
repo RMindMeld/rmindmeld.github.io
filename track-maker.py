@@ -2,7 +2,7 @@ import os
 import json
 
 # Define the directory containing the podcast files
-directory = r"C:\Users\Fernando\Documents\GitHub\podcast_asset"
+directory = r"C:\Users\Fernando\Desktop\New folder"
 
 # Initialize an empty list to hold track information
 tracks = []
@@ -13,7 +13,7 @@ for filename in os.listdir(directory):
         # Extract metadata from the filename (assuming a naming convention)
         title = filename.replace("-", " ").replace(".mp3", "").title()
         description = f"A podcast episode titled {title}"
-        url = f"https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/{filename}"
+        url = f"https://rmindmeld.github.io/podcast_asset/{filename}"
         artwork = f"assets/podcasts/{filename.replace('.mp3', '.jpg')}"
         
         # Create a track dictionary
@@ -33,7 +33,7 @@ tracks_json = {
 }
 
 # Define the output JSON file path
-output_file = os.path.join(directory, "tracks.json")
+output_file = os.path.join(directory, "tracks2.json")
 
 # Write the JSON data to the file
 with open(output_file, "w") as f:
