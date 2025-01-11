@@ -698,5 +698,26 @@
     "title": "MindMeld",
     "section": "Resources Mentioned",
     "text": "Resources Mentioned\n\nNotebookLM"
+  },
+  {
+    "objectID": "podcasts/episodes/007-Inference-week-IV.html#episode-background",
+    "href": "podcasts/episodes/007-Inference-week-IV.html#episode-background",
+    "title": "MindMeld",
+    "section": "Episode Background",
+    "text": "Episode Background\nIn econometrics, whenever one is trying to look and identify for the elusive “causal effect”, one often encounters the problem of endogeneity. Factors beyond our control that may affect both the outcome and the variable of interest.\nOne of the first methodologies I learned back in undergrad to address this problem, was the use of instrumental variables. Instrumental variable are exogenous variables that explain the endogenous variable of interest but not the outcome. Thus it can be used to isolate the causal effect we are interested in.\nWhile this sounds like a great solution, it is not without its own set of problems. It is usually difficult to find a good instrumental variable. And often, what we end up with are only weakly related to the variable of interest. This is what we call weak instruments.\nBack in my day, and still used today as a basic rule to determine the strength of an instrument, is to look into the F-statistic of the first stage regression. If the F-statistic is less than 10, then the instrument is considered weak. More recently, some papers suggested that one would actually require an F-statistic that should be much larger.\nWhat I didn’t know back then was that with weak instruments, most bets are off. And we may end up with results that are worse than if no instruments were used at all.\nThis episode provides a brief overview of the problem and talks about some of the solutions that have been proposed in the literature (in 2013).\nIt has nice examples, and I hope you enjoy it."
+  },
+  {
+    "objectID": "podcasts/episodes/007-Inference-week-IV.html#show-notes",
+    "href": "podcasts/episodes/007-Inference-week-IV.html#show-notes",
+    "title": "MindMeld",
+    "section": "Show Notes",
+    "text": "Show Notes\nThe Podcast was created using only the Monograph on Inference with weak instruments. Then I used the context window/customization with the following:\n\n\n“Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources”\nThis should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.\nShout-out to Fernando, the behind-the-scenes force making these series possible."
+  },
+  {
+    "objectID": "podcasts/episodes/007-Inference-week-IV.html#resources-mentioned",
+    "href": "podcasts/episodes/007-Inference-week-IV.html#resources-mentioned",
+    "title": "MindMeld",
+    "section": "Resources Mentioned",
+    "text": "Resources Mentioned\n\nNotebookLM\nFoundations and Trends® in Econometrics\nInference in the Presence of Weak Instruments: A Selected Survey"
   }
 ]

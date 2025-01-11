@@ -2,6 +2,7 @@
   {
     "listing": "/podcasts/index.html",
     "items": [
+      "/podcasts/episodes/007-Inference-week-IV.html",
       "/podcasts/episodes/006-dimension-reduction.html",
       "/podcasts/episodes/a-christmas-carol.html",
       "/podcasts/episodes/005-montecarlo-simulation.html",

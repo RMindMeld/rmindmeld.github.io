@@ -1,0 +1,59 @@
+---
+title: "EP007: Inference with Weak Instruments"
+description: "An overview of the problems and solutions regarding weak instruments"
+date: "2025-1-10"
+categories: [AI Tools, Econometrics, mini-series]
+image: "../../assets/podcasts/ep007_week_iv.jpg"
+audio:
+  src: "https://rmindmeld.github.io/podcast_asset/ep007_inference_weak_instrumental.mp3"
+  title: "Episode 7: Inference with Weak Instruments"
+  description: "An overview of the problems and solutions regarding weak instruments"
+  duration: "12:03"
+---
+
+<div class="audio-player">
+   <audio controls>
+   <source src="https://rmindmeld.github.io/podcast_asset/ep007_inference_weak_instrumental.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+   </audio>
+</div>
+
+:::{.episode-meta}
+
+**Duration**: 12:03  
+**Release Date**: January 10, 2025  
+**Category**: AI Tools, Econometrics, mini-series 
+**Download**: [MP3](https://rmindmeld.github.io/podcast_asset/ep007_inference_weak_instrumental.mp3)
+
+:::
+
+## Episode Background
+
+In econometrics, whenever one is trying to look and identify for the elusive "causal effect", one often encounters the problem of endogeneity. Factors beyond our control that may affect both the outcome and the variable of interest. 
+
+One of the first methodologies I learned back in undergrad to address this problem, was the use of instrumental variables. Instrumental variable are exogenous variables that explain the endogenous variable of interest but not the outcome. Thus it can be used to isolate the causal effect we are interested in.
+
+While this sounds like a great solution, it is not without its own set of problems. It is usually difficult to find a good instrumental variable. And often, what we end up with are only weakly related to the variable of interest. This is what we call weak instruments.
+
+Back in my day, and still used today as a basic rule to determine the strength of an instrument, is to look into the F-statistic of the first stage regression. If the F-statistic is less than 10, then the instrument is considered weak. More recently, some papers suggested that one would actually require an F-statistic that should be much larger.
+
+What I didn't know back then was that with weak instruments, most bets are off. And we may end up with results that are worse than if no instruments were used at all. 
+
+This episode provides a brief overview of the problem and talks about some of the solutions that have been proposed in the literature (in 2013). 
+
+It has nice examples, and I hope you enjoy it.
+
+## Show Notes
+
+The Podcast was created using only the Monograph on Inference with weak instruments. Then I used the context window/customization with the following:
+
+>- "Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources"
+>- This should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.
+>- Shout-out to Fernando, the behind-the-scenes force making these series possible.
+
+
+## Resources Mentioned
+
+- [NotebookLM](https://notebooklm.google.com/)
+- [Foundations and Trends® in Econometrics](https://www.nowpublishers.com/ECO)
+- [Inference in the Presence of Weak Instruments: A Selected Survey](https://www.nowpublishers.com/article/Details/ECO-017)

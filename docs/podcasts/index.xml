@@ -10,7 +10,372 @@
 <atom:link href="https://rmindmeld.github.io/podcasts/index.xml" rel="self" type="application/rss+xml"/>
 <description>A Personal Journey Through AI-Human Content Creation</description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Sat, 28 Dec 2024 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 10 Jan 2025 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>EP007: Inference with Weak Instruments</title>
+  <link>https://rmindmeld.github.io/podcasts/episodes/007-Inference-week-IV.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to MindMeld</title>
+
+    <style>
+
+        :root {
+
+            --transition-duration: 1000ms;
+
+        }
+
+        
+
+        body, html {
+
+            margin: 0;
+
+            padding: 0;
+
+            height: 100%;
+
+            font-family: system-ui, -apple-system, sans-serif;
+
+        }
+
+        
+
+        .welcome-container {
+
+            position: absolute; /* Changed from fixed to absolute */
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100vh;
+
+            z-index: 1000; /* Add high z-index to show above content initially */
+
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+
+                        url('assets/welcome-bg.jpg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            text-align: center;
+
+            transition: opacity var(--transition-duration) ease-in-out,
+
+                        visibility var(--transition-duration) ease-in-out; /* Add visibility transition */
+
+        }
+
+        
+
+        .welcome-content {
+
+            max-width: 800px;
+
+            padding: 2rem;
+
+        }
+
+        
+
+        .title {
+
+            font-size: 3.5rem;
+
+            margin-bottom: 1rem;
+
+            font-weight: 700;
+
+        }
+
+        
+
+        .subtitle {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 2rem;
+
+            opacity: 0.9;
+
+        }
+
+        
+
+        .enter-button {
+
+            background-color: transparent;
+
+            border: 2px solid white;
+
+            color: white;
+
+            padding: 1rem 2rem;
+
+            font-size: 1.2rem;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            text-decoration: none;
+
+            border-radius: 4px;
+
+        }
+
+        
+
+        .enter-button:hover {
+
+            background-color: white;
+
+            color: black;
+
+        }
+
+        
+
+        /* Fade out animation class */
+
+        .fade-out {
+
+            opacity: 0;
+
+            visibility: hidden; /* Hide completely when faded out */
+
+            z-index: -1; /* Move behind content when faded out */
+
+        }
+
+        
+
+        /* Main content container */
+
+        #main-content {
+
+            position: relative;
+
+            z-index: 1; /* Lower than welcome screen but above 0 */
+
+            opacity: 0;
+
+            transition: opacity var(--transition-duration) ease-in-out;
+
+        }
+
+        
+
+        /* Main content visible state */
+
+        #main-content.visible {
+
+            opacity: 1;
+
+        }
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+        .welcome-container.hidden-welcome {
+
+            display: none;
+
+        }
+
+    </style>
+
+
+
+
+
+    <div id="welcome" class="welcome-container hidden-welcome">
+
+        <div class="welcome-content">
+
+            <h1 class="title">MindMeld</h1>
+
+            <p class="subtitle">Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.</p>
+
+            <button id="enter-btn" class="enter-button">Enter MindMeld</button>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        // Only run this script on the index page
+
+        if (window.location.pathname === '/' || 
+
+            window.location.pathname === '/index.html' || 
+
+            window.location.pathname.endsWith('/')) {
+
+            
+
+            // Check if this is the first visit
+
+            const hasVisited = sessionStorage.getItem('hasVisited');
+
+            
+
+            if (!hasVisited) {
+
+                // First visit - show welcome screen
+
+                const welcome = document.getElementById('welcome');
+
+                welcome.classList.remove('hidden-welcome');
+
+                
+
+                // Mark as visited
+
+                sessionStorage.setItem('hasVisited', 'true');
+
+                
+
+                // Add click handler for enter button
+
+                document.getElementById('enter-btn').addEventListener('click', function() {
+
+                    welcome.classList.add('fade-out');
+
+                    
+
+                    const mainContent = document.getElementById('main-content');
+
+                    setTimeout(() => {
+
+                        mainContent.classList.add('visible');
+
+                    }, 500);
+
+                    
+
+                    setTimeout(() => {
+
+                        welcome.style.display = 'none';
+
+                    }, 1000);
+
+                });
+
+            } else {
+
+                // Not first visit - show main content immediately
+
+                const mainContent = document.getElementById('main-content');
+
+                mainContent.classList.add('visible');
+
+            }
+
+        } else {
+
+            // Not on index page - show main content immediately
+
+            const mainContent = document.getElementById('main-content');
+
+            mainContent.classList.add('visible');
+
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+<div class="audio-player">
+<p><audio controls=""> <source src="https://rmindmeld.github.io/podcast_asset/ep007_inference_weak_instrumental.mp3" type="audio/mpeg"> Your browser does not support the audio element. </audio></p>
+</div>
+<div class="episode-meta">
+<p><strong>Duration</strong>: 12:03<br>
+<strong>Release Date</strong>: January 10, 2025<br>
+<strong>Category</strong>: AI Tools, Econometrics, mini-series <strong>Download</strong>: <a href="https://rmindmeld.github.io/podcast_asset/ep007_inference_weak_instrumental.mp3">MP3</a></p>
+</div>
+<section id="episode-background" class="level2">
+<h2 class="anchored" data-anchor-id="episode-background">Episode Background</h2>
+<p>In econometrics, whenever one is trying to look and identify for the elusive “causal effect”, one often encounters the problem of endogeneity. Factors beyond our control that may affect both the outcome and the variable of interest.</p>
+<p>One of the first methodologies I learned back in undergrad to address this problem, was the use of instrumental variables. Instrumental variable are exogenous variables that explain the endogenous variable of interest but not the outcome. Thus it can be used to isolate the causal effect we are interested in.</p>
+<p>While this sounds like a great solution, it is not without its own set of problems. It is usually difficult to find a good instrumental variable. And often, what we end up with are only weakly related to the variable of interest. This is what we call weak instruments.</p>
+<p>Back in my day, and still used today as a basic rule to determine the strength of an instrument, is to look into the F-statistic of the first stage regression. If the F-statistic is less than 10, then the instrument is considered weak. More recently, some papers suggested that one would actually require an F-statistic that should be much larger.</p>
+<p>What I didn’t know back then was that with weak instruments, most bets are off. And we may end up with results that are worse than if no instruments were used at all.</p>
+<p>This episode provides a brief overview of the problem and talks about some of the solutions that have been proposed in the literature (in 2013).</p>
+<p>It has nice examples, and I hope you enjoy it.</p>
+</section>
+<section id="show-notes" class="level2">
+<h2 class="anchored" data-anchor-id="show-notes">Show Notes</h2>
+<p>The Podcast was created using only the Monograph on Inference with weak instruments. Then I used the context window/customization with the following:</p>
+<blockquote class="blockquote">
+<ul>
+<li>“Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources”</li>
+<li>This should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.</li>
+<li>Shout-out to Fernando, the behind-the-scenes force making these series possible.</li>
+</ul>
+</blockquote>
+</section>
+<section id="resources-mentioned" class="level2">
+<h2 class="anchored" data-anchor-id="resources-mentioned">Resources Mentioned</h2>
+<ul>
+<li><a href="https://notebooklm.google.com/">NotebookLM</a></li>
+<li><a href="https://www.nowpublishers.com/ECO">Foundations and Trends® in Econometrics</a></li>
+<li><a href="https://www.nowpublishers.com/article/Details/ECO-017">Inference in the Presence of Weak Instruments: A Selected Survey</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>AI Tools</category>
+  <category>Econometrics</category>
+  <category>mini-series</category>
+  <guid>https://rmindmeld.github.io/podcasts/episodes/007-Inference-week-IV.html</guid>
+  <pubDate>Fri, 10 Jan 2025 05:00:00 GMT</pubDate>
+  <media:content url="https://rmindmeld.github.io/assets/podcasts/ep007_week_iv.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>EP006: Dimension Reduction: A Guided Tour</title>
   <link>https://rmindmeld.github.io/podcasts/episodes/006-dimension-reduction.html</link>
