@@ -14,81 +14,109 @@
     "text": "Episode Categories\n\nAI Experiments\nTechnical Deep-Dives\nCreative Applications\nTool Reviews\nProcess Documentation\n\nUse the filters above to find episodes in specific categories or search for particular topics."
   },
   {
-    "objectID": "podcasts/episodes/006-dimension-reduction.html#episode-background",
-    "href": "podcasts/episodes/006-dimension-reduction.html#episode-background",
+    "objectID": "podcasts/episodes/007-Inference-week-IV.html#episode-background",
+    "href": "podcasts/episodes/007-Inference-week-IV.html#episode-background",
     "title": "MindMeld",
     "section": "Episode Background",
-    "text": "Episode Background\nOne of the methodologies I have learned late in my during my undergraduate studies was Principal Component Analysis (PCA). As you may know, this is a technique that can be used to reduce the dimensionality of data, by using linear combinations of the original variables, such that few “principal components” can explain most of the variance in the data. Each “component” is independent of the others, and “latter” components explain less and less of the variance.\nThis technique is very useful. I have used it to demonstrate a simple approach for image compression, and to show that one does not need “all” the variables to “see” the “big” picture. However, the scenario where I have used this most is in the context of economics, and the creation of wealth indexes.\nThe idea is simple: you have a lot of variables say on asset ownership, education, home ownership, etc. You need an approximation for “wealth”, thus you can use PCA to create a “wealth index” that can be used in your analysis.\nWhile this is probably the simplest and most common use of dimension reduction, there are many other methods that can be used. This episode covers a review of methods that go beyond PCA, and that can be used in different scenarios. The book itself its quite technical, but the podcast does a good job of summarizing the main ideas."
+    "text": "Episode Background\nIn econometrics, whenever one is trying to look and identify for the elusive “causal effect”, one often encounters the problem of endogeneity. Factors beyond our control that may affect both the outcome and the variable of interest.\nOne of the first methodologies I learned back in undergrad to address this problem, was the use of instrumental variables. Instrumental variable are exogenous variables that explain the endogenous variable of interest but not the outcome. Thus it can be used to isolate the causal effect we are interested in.\nWhile this sounds like a great solution, it is not without its own set of problems. It is usually difficult to find a good instrumental variable. And often, what we end up with are only weakly related to the variable of interest. This is what we call weak instruments.\nBack in my day, and still used today as a basic rule to determine the strength of an instrument, is to look into the F-statistic of the first stage regression. If the F-statistic is less than 10, then the instrument is considered weak. More recently, some papers suggested that one would actually require an F-statistic that should be much larger.\nWhat I didn’t know back then was that with weak instruments, most bets are off. And we may end up with results that are worse than if no instruments were used at all.\nThis episode provides a brief overview of the problem and talks about some of the solutions that have been proposed in the literature (in 2013).\nIt has nice examples, and I hope you enjoy it."
   },
   {
-    "objectID": "podcasts/episodes/006-dimension-reduction.html#show-notes",
-    "href": "podcasts/episodes/006-dimension-reduction.html#show-notes",
+    "objectID": "podcasts/episodes/007-Inference-week-IV.html#show-notes",
+    "href": "podcasts/episodes/007-Inference-week-IV.html#show-notes",
     "title": "MindMeld",
     "section": "Show Notes",
-    "text": "Show Notes\nThe Podcast was created using only the Monograph on Dimension Reduction techniques. Then I used the context window/customization with the following:\n\n\n“Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources”\nThis should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.\nShout-out to Fernando, the behind-the-scenes force making these series possible."
+    "text": "Show Notes\nThe Podcast was created using only the Monograph on Inference with weak instruments. Then I used the context window/customization with the following:\n\n\n“Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources”\nThis should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.\nShout-out to Fernando, the behind-the-scenes force making these series possible."
   },
   {
-    "objectID": "podcasts/episodes/006-dimension-reduction.html#resources-mentioned",
-    "href": "podcasts/episodes/006-dimension-reduction.html#resources-mentioned",
+    "objectID": "podcasts/episodes/007-Inference-week-IV.html#resources-mentioned",
+    "href": "podcasts/episodes/007-Inference-week-IV.html#resources-mentioned",
     "title": "MindMeld",
     "section": "Resources Mentioned",
-    "text": "Resources Mentioned\n\nNotebookLM\nFoundations and Trends® in Machine Learning\nDimension Reduction: A guided Tour"
+    "text": "Resources Mentioned\n\nNotebookLM\nFoundations and Trends® in Econometrics\nInference in the Presence of Weak Instruments: A Selected Survey"
   },
   {
-    "objectID": "podcasts/episodes/004-trends-econometrics.html#episode-background",
-    "href": "podcasts/episodes/004-trends-econometrics.html#episode-background",
+    "objectID": "podcasts/episodes/005-montecarlo-simulation.html#episode-background",
+    "href": "podcasts/episodes/005-montecarlo-simulation.html#episode-background",
     "title": "MindMeld",
     "section": "Episode Background",
-    "text": "Episode Background\nSome time ago, I came by a series of papers/monographs on various topics in econometrics and applied economics. The paper that I was looking at at the time was “Non-parametric Econometrics: A Primer” by J. S. Racine. I was looking at this particular topic as I was developing an implementation of a semi-parametric model known as Smooth-varying coefficient model. Just recently, about a year or so, I look at the whole series of monographs created by the same publisher: Foundations and Trends in Econometrics.\nThey have a selected number of monographs on various topics in econometrics and applied economicsm with a handful being published every year. Having access to them via the library at work, I got few of them to read, and put few others on the to-read list. Unfortunately, they fell on the long list of readings that I have, and I never got to them.\nNow, thanks to NotebookLM, I decided to create a mini-series on few of their monographs. This one is the first episode of the mini-series, where I requested NotebookLM to generate a podcast episode to introduce the series, and hopefully, generate some interest in the topics that will be covered. I already have the “whole” series obtained, but I will only be posting them as I listen/read them, to make sure they provide good content."
+    "text": "Episode Background\nMonte Carlo Simulation is one of those tools everybody seems to know about (in economics and econometrics), but few are thought how to use it. But why should you?\nOne of the main uses of Monte Carlo Simulation is to understand the performance of your estimators. That typically means that you are someone proposing a new estimator, or someone trying to understand how well an existing estimator performs under different conditions, but the typical applied researcher who simply ones to use it.\nInterestingly, Monte Carlo Simulation is not difficult. Its main idea is to simulate data from a known distribution (your assumptions), and apply your estimator to the data. After repeating the process quite few times, you can have good ideas of how the method, or estimator you are proposing or studying will perform. I find it a very good tool for teaching econometrics, and show how violations of assumptions can affect estimation of models.\nThis episode covers a monograph on this topic. And while some of the descriptions seem off to me. For example, the discussion suggests Monte Carlo Simulation can be used to simulate policy changes, which is not something I have seen. Nevertheless, the podcast does a good overview of the topic, emphasizing the general rules to produce good simulations."
   },
   {
-    "objectID": "podcasts/episodes/004-trends-econometrics.html#show-notes",
-    "href": "podcasts/episodes/004-trends-econometrics.html#show-notes",
+    "objectID": "podcasts/episodes/005-montecarlo-simulation.html#show-notes",
+    "href": "podcasts/episodes/005-montecarlo-simulation.html#show-notes",
     "title": "MindMeld",
     "section": "Show Notes",
-    "text": "Show Notes\nThe Podcast was created using all the monographs that will be part of the series. Then I used the context window/customization with the following:\n\n\n“Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources”\nThis should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.\nShout-out to Fernando, the behind-the-scenes force making these series possible.\n\n\nThere were so many “podcasts” generated that I hit the limit of audio overviews that I can generate in a single day."
+    "text": "Show Notes\nThe Podcast was created using only the Monograph on Monte Carlo Simulations. Then I used the context window/customization with the following:\n\n\n“Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources”\nThis should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.\nShout-out to Fernando, the behind-the-scenes force making these series possible."
   },
   {
-    "objectID": "podcasts/episodes/004-trends-econometrics.html#resources-mentioned",
-    "href": "podcasts/episodes/004-trends-econometrics.html#resources-mentioned",
+    "objectID": "podcasts/episodes/005-montecarlo-simulation.html#resources-mentioned",
+    "href": "podcasts/episodes/005-montecarlo-simulation.html#resources-mentioned",
     "title": "MindMeld",
     "section": "Resources Mentioned",
-    "text": "Resources Mentioned\n\nAI Tools\n\nNotebookLM\nFoundations and Trends® in Econometrics"
+    "text": "Resources Mentioned\n\nNotebookLM\nFoundations and Trends® in Econometrics\nMonte Carlo Simulation for Econometricians"
   },
   {
-    "objectID": "podcasts/episodes/002-bayes.html#episode-background",
-    "href": "podcasts/episodes/002-bayes.html#episode-background",
+    "objectID": "podcasts/episodes/003-cre-stata.html#episode-background",
+    "href": "podcasts/episodes/003-cre-stata.html#episode-background",
     "title": "MindMeld",
     "section": "Episode Background",
-    "text": "Episode Background\nThis is an example of using notebookLM to generate a podcast episode on a book review of Bayesian Statistics. The episode is a review of the book Bayesian Statistics, which is a different approach to understanding Bayesian Statistics. The episode is 17 minutes and 18 seconds long and was released on January 18, 2024."
+    "text": "Episode Background\nThis is an example of using OpenAI Text to Speach capabilities to generate a podcast episode. In this opportunity, I’m using a paper of mine as the subject, where the two “hosts” explain the paper and the method there in. Since I wrote the paper, it was easy to decide if the content was accurate before rendering the episode. The episode is 7 minutes and 22 seconds long and was released on November 19, 2024."
   },
   {
-    "objectID": "podcasts/episodes/002-bayes.html#show-notes",
-    "href": "podcasts/episodes/002-bayes.html#show-notes",
+    "objectID": "podcasts/episodes/003-cre-stata.html#show-notes",
+    "href": "podcasts/episodes/003-cre-stata.html#show-notes",
     "title": "MindMeld",
     "section": "Show Notes",
-    "text": "Show Notes\nThe Podcast was created using the book as only source. Then I used the context window/customization with the following:\n\n\nSay “Welcome to MindMeld, a podcast series powered by NotebookLM.”\nShout-out to Fernando, the behind-the-scenes force making this series possible"
+    "text": "Show Notes\nThe Podcast was created using the paper as only source. I asked OpenAI the following:\n\nRead paper carefully and then write a script explaining this in a podcast with two hosts for about 10-20 min. One host is the one asking the questions, the other one answering them.\n\nThe total duration of the episode was 7 minutes and 22 seconds. Half of what I asked for.\nFor the Podcast itself, I used a small script (that I will share at a later point) to generate the episode, by going back and forth between different voices."
   },
   {
-    "objectID": "podcasts/episodes/002-bayes.html#resources-mentioned",
-    "href": "podcasts/episodes/002-bayes.html#resources-mentioned",
+    "objectID": "podcasts/episodes/003-cre-stata.html#resources-mentioned",
+    "href": "podcasts/episodes/003-cre-stata.html#resources-mentioned",
     "title": "MindMeld",
     "section": "Resources Mentioned",
-    "text": "Resources Mentioned\n\nAI Tools\n\nNotebookLM\nbayesian statistics"
+    "text": "Resources Mentioned\n\nAI Tools\n\nOpen\nThe paper is available on request\nThe python script will be released soon"
   },
   {
-    "objectID": "index.html#what-is-mindmeld",
-    "href": "index.html#what-is-mindmeld",
+    "objectID": "podcasts/episodes/003-cre-stata.html#script",
+    "href": "podcasts/episodes/003-cre-stata.html#script",
     "title": "MindMeld",
-    "section": "What is MindMeld?",
-    "text": "What is MindMeld?\nMindMeld is my personal laboratory where I explore and document my exploration of artificial intelligence as a tool for learning, and content generation. As someone deeply interested in AI’s creative potential, I will share selected AI-generated content while adding my human perspective and insights.\n\n\nAI Generation\nI work with various AI models to generate content: text, images, music, Podcasts, exploring their capabilities and limitations.\n\n\nHuman Curation\nEvery piece of AI-generated content is carefully selected and contextualized with my personal insights, observations and interests.\n\n\nOpen Process\nI believe in transparency. Unless otherwise stated, all content on this site is generated by AI, and curated by me."
+    "section": "Script",
+    "text": "Script\nhost_1: “This podcast is powered by OpenAI Text-to-Speech. All voices are AI Generated”\nhost_1:\n“Welcome to Mindmeld, the podcast where we use AI to break down papers, create content, and use it for teaching purposes. Today, we’re discussing an exciting paper titled Simplifying the Estimation of Correlated Random Effects Models. With me to unpack this is my co-host and econometrics enthusiast, Jamie. Welcome, Jamie!”\nhost_2: “Thanks! It’s great to be here. This paper tackles a method that sits at the intersection of two well-known approaches in panel data analysis, offering researchers a way to address some long-standing challenges.”\nhost_1:\n“Let’s set the stage, Jamie. What exactly is panel data, and why is it so important in econometrics?”\nhost_2:\n“Panel data is a type of dataset where we track the same units—like individuals, firms, or countries—over multiple time periods. This structure allows researchers to control for unobserved characteristics that don’t change over time, which is incredibly valuable in isolating causal relationships.\nFor example, if we’re studying the effect of education on income, panel data lets us account for unmeasured factors like inherent ability or family background by observing the same person over several years.”\nhost_1:\n“Got it. So how do econometricians typically analyze panel data?”\nhost_2:\n“The two most common approaches are Fixed Effects (FE) and Random Effects (RE) models. Fixed Effects models control for unobserved time-invariant factors by essentially ‘subtracting out’ the averages within each unit. While this is great for consistent estimates of time-varying variables, it doesn’t let us estimate the effects of time-invariant variables, like gender or geographic location.\nRandom Effects models, on the other hand, do allow for time-invariant variables but assume that unobserved individual effects are uncorrelated with the explanatory variables—a strong assumption that’s often violated in practice.”\nhost_1:\n“So where do Correlated Random Effects, or CRE, come into play?”\nhost_2:\n“CRE models, first introduced by Mundlak in 1978 and expanded by Chamberlain in 1982, offer a middle ground. They explicitly account for correlation between unobserved individual effects and explanatory variables by including group-specific averages of the time-varying variables in the model.\nIn a sense, it’s like taking the benefits of both FE and RE models: you get consistent estimates for time-varying variables while also allowing time-invariant variables to remain in the analysis.”\nhost_1:\n“That sounds promising! But if CRE has been around for decades, why hasn’t it gained widespread adoption?”\nhost_2:\n“Great question. One reason is that implementing CRE models has historically been cumbersome. It requires manual steps, like calculating group averages for time-varying variables and restructuring the data, which can get complicated. That’s where Rios-Avila’s paper comes in—it introduces a Stata command called cre that automates these steps, making the approach far more accessible to researchers.”\nhost_1:\n“Let’s talk about the paper itself. What does Rios-Avila’s cre command bring to the table?”\nhost_2:\n“The cre command is a prefix command in Stata, meaning you can use it with existing estimation tools to implement CRE models easily. It works for both linear and nonlinear models and supports balanced and unbalanced panel data. This is important because real-world data often isn’t perfectly balanced, where each unit has observations for the same time periods.\nThe command calculates group-specific averages—known as Mundlak terms—for time-varying variables and includes them in the model automatically. It even extends CRE models to handle multiple fixed effects, like controlling for both individual and time-specific factors, which is a common requirement in panel data analysis.”\nhost_1:\n“That sounds versatile! Does the paper show how well this command performs?”\nhost_2:\n“It does. The paper includes a Monte Carlo simulation where the cre command is tested on both linear and nonlinear models, such as probit and poisson regressions. These simulations compare CRE to pooled estimators and fixed-effects models.\nThe results show that CRE provides unbiased and consistent estimates for both time-varying and time-invariant variables, even when unobserved effects are correlated with the predictors. The only trade-off is a slight increase in variance compared to idealized benchmarks, but the bias—arguably a bigger issue—is negligible.”\nhost_1:\n“What about nonlinear models? Aren’t those notoriously tricky for fixed effects?”\nhost_2:\n“Exactly. Nonlinear models like probit or tobit often face the ‘incidental parameter problem,’ which makes fixed-effects estimates unreliable or even impossible. CRE offers a workaround by including those Mundlak terms, which effectively control for unobserved heterogeneity. This makes the cre command especially valuable for researchers working with nonlinear outcomes, like binary or count data.”\nhost_1:\n“This sounds incredibly useful. What kinds of research questions could benefit the most from CRE models?”\nhost_2:\n“CRE models are particularly useful in fields like labor economics, health policy, and education. For instance, if you’re studying how health interventions affect long-term outcomes, CRE allows you to account for fixed individual traits while still including factors like geographic location or baseline characteristics.\nIt’s also great for cases where you want to study treatment effects in staggered adoption scenarios, like the rollout of a new policy across states.”\nhost_1:\n“Are there any challenges researchers should watch out for when using the cre command?”\nhost_2:\n“One challenge is correctly estimating standard errors. Since CRE involves a two-step process—calculating group means and then estimating the model—there’s added uncertainty. The paper suggests using robust or clustered standard errors and even bootstrapping in some cases to address this.\nAnother consideration is understanding the underlying theory. The cre command makes implementation easier, but researchers still need to interpret their results within the CRE framework. For instance, the inclusion of group means changes how we think about causal relationships.”\nhost_1:\n“So, Jamie, what’s your overall takeaway from this paper?”\nhost_2:\n“It’s a significant contribution. By simplifying the implementation of CRE models, Rios-Avila is empowering researchers to tackle complex panel data problems without sacrificing rigor. I think this command will see widespread use, especially in applied research.”\nhost_1:\n“And what’s next for CRE research?”\nhost_2:\n“I see opportunities to integrate CRE models with machine learning tools, especially for handling high-dimensional data or exploring interactions. Also, further work on refining standard error estimation for CRE models could make them even more robust.”\nhost_1:\n“That’s it for today’s episode of Deep Data Dive! We’ve explored Correlated Random Effects and how the cre command is making this powerful tool accessible to researchers. If you’re interested, check out the paper by Fernando Rios-Avila or try the cre command in your next project. Thanks for tuning in, and we’ll see you next time!”\nhost_2:\n“Thanks, everyone! Stay curious!”"
   },
   {
-    "objectID": "index.html#join-the-journey",
-    "href": "index.html#join-the-journey",
+    "objectID": "podcasts/episodes/001-intro-mindmeld.html#episode-background",
+    "href": "podcasts/episodes/001-intro-mindmeld.html#episode-background",
     "title": "MindMeld",
-    "section": "Join the Journey",
-    "text": "Join the Journey\nI’m constantly experimenting with new AI tools and techniques, sharing both successes and failures along the way. This site serves as both a portfolio of AI-human collaboration and a documentation of my learning process.\n\n\n\n\n\n\nWant to get in touch?\n\n\n\nHave questions about AI content generation or want to discuss collaboration opportunities? Reach out to me."
+    "section": "Episode Background",
+    "text": "Episode Background\n\nIntroducing MindMeld and NotebookLM: An AI-Powered Audio Experience\nIn this inaugural episode, I’m introducing the MindMeld website and its first three blog posts using NotebookLM, a powerful AI tool developed by Google. NotebookLM helps users understand and summarize texts while generating podcast-like audio content that’s accessible to the general public.\nI first discovered NotebookLM on Twitter, where it was highlighted as a tool for making academic research more accessible by transforming complex papers into formats that general audiences can understand.\n\n\nNotebookLM’s Evolution\nNotebookLM has been available since at least 2023, with its audio overview feature launching on September 11, 2024. When I began using it in July 2024, the platform was still in beta, requiring users to join a waitlist for access. The initial version I experienced would create podcast-like audio content featuring two virtual hosts who would summarize texts while attempting to make the content relatable through casual conversation and examples. This approach sometimes led to interesting results:\n\nHosts occasionally strayed from the main topic\nSome interpretations of the text weren’t entirely accurate\nSimple inputs could trigger surprisingly deep analysis (which was quite entertaining to hear)\n\n\n\nRecent Updates and Customization\nWhile the early version didn’t identify the hosts and simply launched into their “own” podcast format, the latest version includes a context/prompt window for customization. According to the site’s guidelines, users can:\n\nFocus on specific sources when multiple are provided\nHighlight particular topics\nTarget specific audiences\nAdd personal touches (like greeting specific people)\nOverride the default introduction\n\n\n\nThe MindMeld Experience\nFor this episode, I used NotebookLM to generate audio content from MindMeld’s first three blog posts. I successfully prompted the hosts to introduce the podcast as “MindMeld Podcasts” and acknowledge their status as virtual hosts.\nHowever, several interesting challenges emerged during this experiment:\n\nDespite customization attempts, the hosts sometimes reverted to calling the podcast “DeepDive”\nCertain content was repeated unnecessarily\nThe system doesn’t recognize text formatting like strikethrough, leading to some misinterpretations\nEven when prompted about the site’s AI-generated nature, the hosts attributed much of the content and reviews to FRA\n\nDespite these limitations, the tool offers an intriguing way to transform written content into engaging audio formats."
+  },
+  {
+    "objectID": "podcasts/episodes/001-intro-mindmeld.html#show-notes",
+    "href": "podcasts/episodes/001-intro-mindmeld.html#show-notes",
+    "title": "MindMeld",
+    "section": "Show Notes",
+    "text": "Show Notes\nThe Podcast was created by adding into whole website as a resource into NotebookLM, except for the one page on the podcast. Then I used the context window/customization with the following:\n\n\nSay “Welcome to MindMeld, a podcast series powered by NotebookLM. This first episode explains the purpose and expectations of the site.”\nShout-out to Fernando, the behind-the-scenes force making this series possible\nsay “we , for example , are the product of NotebookLM"
+  },
+  {
+    "objectID": "podcasts/episodes/001-intro-mindmeld.html#resources-mentioned",
+    "href": "podcasts/episodes/001-intro-mindmeld.html#resources-mentioned",
+    "title": "MindMeld",
+    "section": "Resources Mentioned",
+    "text": "Resources Mentioned\n\nAI Tools\n\nNotebookLM"
+  },
+  {
+    "objectID": "blog/posts/who-shot-first.html#podcast-your-way",
+    "href": "blog/posts/who-shot-first.html#podcast-your-way",
+    "title": "MindMeld",
+    "section": "Podcast your way",
+    "text": "Podcast your way\nAs you already have noticed, I have been using NotebookLM and their audio overviews to create Podcast like audio episodes. That could be further improved and custom to be “my” podcast thanks to the window for customization.\nWhile that was a great experience, I wanted to see if I could create something like that myself, using some of the features of OpenAI and Text-to-Speech capabilities. If you have access to the API for OpenAI you will notice that you can create audio files from text, but with limits. You need to select the voice that you want, and there are limits to the length of the audio file. (4k characters)\nLooking online, apparently there are other options outhere already that can do this. But most of them are rather expensive, despite having a free tier.\nIm already paying for credits with OpenAI, so decided to give it a try and make a program that could create a podcast episode from a text file, for any length of text, and with the voice that I want. My Python skills are not the best, but I was able to make a functional program using Claude.ai Sonnet (free tier).\nThere are limits, of course. I have only 6 voices to choose from. And have not yet tested the limits of the audio file length. Still, I got a good working prototype that does the job. You can get the code here: Podcast Maker.\nYou will also need to install the following libraries: - OpenAI, plus having a Key API (paid credits) - NLTK - Pydub - Tkinter - Keyring - num2words\nand have ffmpg installed in your system to get the codecs.\nAnyways, I already made an example on EP3 of the podcast. But now I wanted to make an example of one of the greatest questions of all times: Who shot first? Han or Greedo?"
+  },
+  {
+    "objectID": "blog/posts/who-shot-first.html#who-shot-first",
+    "href": "blog/posts/who-shot-first.html#who-shot-first",
+    "title": "MindMeld",
+    "section": "Who Shot first",
+    "text": "Who Shot first\n\n  Your browser does not support the audio element. \n\nSarah: Look, let’s settle this Han Solo debate once and for all. In the original 1977 Star Wars, Han straight-up shot Greedo under that table. No question, no dodging, just pure survival instinct.\nMarcus: Wait, that can’t be right. I just watched it on Disney+ last week - Greedo definitely shot first and missed somehow.\nElena: rolls eyes Oh, you sweet summer child. What you saw was the modified version. George Lucas went back and changed it in ’97 because he thought it made Han look too ruthless.\nDavid: And that’s exactly why the change ruins the whole character arc! Han was supposed to be this morally ambiguous smuggler who’d shoot first to save his own skin. That’s what made his transformation into a hero so powerful.\nSarah: Exactly! The whole point is that he starts as this self-serving survivor and grows into someone who’d risk everything for the rebellion.\nMarcus: So you’re telling me they digitally altered it to make Han dodge and shoot second? That’s… kind of ridiculous.\nElena: Right? And Greedo missing from literally two feet away makes zero sense. He’s supposed to be a professional bounty hunter!\nSarah: Oh god, don’t even get me started on that addition…\nElena: Trust me, Marcus, you don’t want to know. Let’s just say they kept “improving” the scene over the years."
   },
   {
     "objectID": "blog/posts/prompt-engineering-study.html#experiment-objective",
@@ -196,174 +224,6 @@
     "text": "About This Comprehensive Gallery\nThis expanded gallery demonstrates the incredible versatility of AI-generated imagery, exploring themes from science and technology to pop culture, mathematics, and beyond. Each image represents a unique creative prompt, showcasing the potential of generative AI to visualize complex and imaginative concepts.\nNote: All images are AI-generated and represent creative interpretations of the provided prompts."
   },
   {
-    "objectID": "blog/posts/abstract-exploration.html#the-prompt",
-    "href": "blog/posts/abstract-exploration.html#the-prompt",
-    "title": "MindMeld",
-    "section": "The Prompt",
-    "text": "The Prompt\nHere’s the exact prompt I used with DALL-E 3 Meta.ai:\nCreate an abstract art piece that represents the feeling of joy and wonder. \nUse flowing shapes and vibrant colors. The style should be non-representational, \nfocusing on movement and energy. Avoid any recognizable objects or figures."
-  },
-  {
-    "objectID": "blog/posts/abstract-exploration.html#the-result",
-    "href": "blog/posts/abstract-exploration.html#the-result",
-    "title": "MindMeld",
-    "section": "The Result",
-    "text": "The Result\n\n\n\n\nThe AI-generated abstract representation of joy and wonder\n\n\nThe AI’s interpretation of joy and wonder through abstract forms"
-  },
-  {
-    "objectID": "blog/posts/abstract-exploration.html#technical-details",
-    "href": "blog/posts/abstract-exploration.html#technical-details",
-    "title": "MindMeld",
-    "section": "Technical Details",
-    "text": "Technical Details\n\nAI Model: DALL-E 3 Meta.ai\nColor Palette: Generated by the AI based on emotional context\nGeneration Date: November 16, 2024\nother details: First imahe selected by me to show"
-  },
-  {
-    "objectID": "blog/posts/abstract-exploration.html#analysis",
-    "href": "blog/posts/abstract-exploration.html#analysis",
-    "title": "MindMeld",
-    "section": "Analysis",
-    "text": "Analysis\n\nWhat Worked Well\n\nColor Choice\n\nThe vibrant color palette effectively conveys positive emotions\nThe contrast between warm and cool tones creates visual interest\nColor transitions feel natural and fluid\n\nComposition\n\nDynamic movement across the canvas\nWell-balanced distribution of elements\nEffective use of negative space\n\nEmotional Impact\n\nThe flowing forms suggest a sense of freedom and joy\nEnergy and movement align well with the prompt’s intent\nAbstract nature allows for personal interpretation\n\n\n\n\nInteresting Observations\nThe AI seemed to associate joy and wonder with: - Upward-flowing movements - Bright, warm colors - Organic, curved forms - Layered, transparent elements"
-  },
-  {
-    "objectID": "blog/posts/abstract-exploration.html#prompt-engineering-insights",
-    "href": "blog/posts/abstract-exploration.html#prompt-engineering-insights",
-    "title": "MindMeld",
-    "section": "Prompt Engineering Insights",
-    "text": "Prompt Engineering Insights\nSeveral key elements made this prompt effective:\n\nClear Emotional Direction\n\nSpecified the emotions (joy and wonder)\nAsked for specific qualities (flowing shapes, vibrant colors)\n\nTechnical Guidelines\n\nRequested non-representational style\nSpecified the focus on movement and energy\nIncluded explicit restrictions (avoid recognizable objects)\n\nCreative Freedom\n\nLeft room for AI interpretation\nDidn’t over-constrain the color palette\nAllowed for organic composition"
-  },
-  {
-    "objectID": "blog/posts/abstract-exploration.html#variations",
-    "href": "blog/posts/abstract-exploration.html#variations",
-    "title": "MindMeld",
-    "section": "Variations",
-    "text": "Variations\nI experimented with several variations of this prompt:\n\nEmotion Shift\nCreate an abstract art piece that represents the feeling of calm and serenity.\nUse flowing shapes and gentle colors. The style should be non-representational,\nfocusing on peace and tranquility. Avoid any recognizable objects or figures.\n\nThe Result\n\n\n\n\nThe AI-generated abstract representation of calm and serenity\n\n\nThe AI’s interpretation of calm and serenity through abstract forms\n\n\nStyle Variation\nCreate an abstract art piece that represents joy and wonder using geometric\nshapes and structured patterns. Use vibrant colors but maintain a rigid,\nstructured composition. Avoid organic or flowing forms.\n\nThe Result\n\n\n\n\nThe AI-generated abstract representation of joy and wonder\n\n\nThe AI’s interpretation of joy and wonder through geometric forms"
-  },
-  {
-    "objectID": "blog/posts/abstract-exploration.html#learning-points",
-    "href": "blog/posts/abstract-exploration.html#learning-points",
-    "title": "MindMeld",
-    "section": "Learning Points",
-    "text": "Learning Points\n\nAI Interpretation\n\nAI tends to associate certain colors with specific emotions\nAbstract concepts are translated through color and form\nMovement and composition play crucial roles\n\nTechnical Aspects\n\nClear, specific prompts yield better results\nEmotional keywords influence color choices\nBalance between direction and creative freedom is important"
-  },
-  {
-    "objectID": "blog/posts/abstract-exploration.html#future-experiments",
-    "href": "blog/posts/abstract-exploration.html#future-experiments",
-    "title": "MindMeld",
-    "section": "Future Experiments",
-    "text": "Future Experiments\nBased on this experience, I plan tomay explore: - Different emotional combinations - Various artistic styles within abstraction - More complex compositional requirements - Color psychology in AI art generation\n\n\n\n\n\n\nYour Thoughts?\n\n\n\nArt is subjective, and I’d love to hear your interpretation of this piece. Does it evoke the intended emotions for you? Feel free to share your thoughts via the contact page."
-  },
-  {
-    "objectID": "assets/prompts.html#site-wide-assets",
-    "href": "assets/prompts.html#site-wide-assets",
-    "title": "MindMeld",
-    "section": "Site-Wide Assets",
-    "text": "Site-Wide Assets\n\nFavicon\nFile: assets/favicon.png\nCreate a minimalist icon showing a stylized brain merged with a circuit board, using only two colors: deep blue (#2D46B9) and white. The design should be simple enough to work as a favicon.\n\n\nHero Image\nFile: assets/hero-image.png\nCreate a wide banner image showing a seamless blend of human creativity and AI, with flowing abstract patterns transitioning between organic brushstrokes and digital pixels. Use a color palette of deep blues, purples, and white. The style should be modern and sophisticated, suitable for a website header."
-  },
-  {
-    "objectID": "assets/prompts.html#blog-posts",
-    "href": "assets/prompts.html#blog-posts",
-    "title": "MindMeld",
-    "section": "Blog Posts",
-    "text": "Blog Posts\n\nAI Content Exploration Post\nFile: assets/blog/ai-experiment-1.jpg\nCreate a split-screen image showing a robot artist and its canvas. On the left, a sleek, modern robot with delicate appendages holding a paintbrush. On the right, an abstract painting in progress with vibrant colors. The lighting should be warm and studio-like, with subtle highlights on the robot's metallic surface.\n\n\nRobot Artist Image\nFile: assets/blog/robot-artist.jpg\nCreate an image of a sophisticated robot sitting at an easel, painting a sunset. The robot should have precise, delicate hands and be designed for artistic work. The scene should be set in a modern art studio with natural light streaming in. Include scattered art supplies and tools around the workspace."
-  },
-  {
-    "objectID": "assets/prompts.html#gallery",
-    "href": "assets/prompts.html#gallery",
-    "title": "MindMeld",
-    "section": "Gallery",
-    "text": "Gallery\n\nAbstract Emotion Series\nFile: assets/gallery/abstract-emotion-1.jpg\nCreate an abstract art piece representing joy and wonder. Use flowing, organic shapes and vibrant colors (yellows, bright blues, and warm pinks). The composition should show movement and energy through sweeping curves and dynamic forms. Avoid any recognizable objects or figures, focusing purely on emotional expression through color and form.\n\n\nLandscape Series\nFile: assets/gallery/landscape-1.jpg\nGenerate a surreal landscape where natural and artificial elements merge seamlessly. Show floating islands with both lush vegetation and geometric structures, connected by streams of light or data. Use a color palette of deep greens, blues, and purple, with highlights of golden light. The style should be both photorealistic and fantastical."
-  },
-  {
-    "objectID": "assets/prompts.html#podcast",
-    "href": "assets/prompts.html#podcast",
-    "title": "MindMeld",
-    "section": "Podcast",
-    "text": "Podcast\n\nEpisode 1 Cover\nFile: assets/podcasts/ep001-cover.jpg\nCreate a podcast cover image showing a modern microphone transforming into streams of digital data. The design should be clean and professional, with a dark background and glowing blue accents. Include subtle circuit board patterns in the background. The composition should work well as a square thumbnail.\n\n\nSeries Cover\nFile: assets/podcasts/series-cover.jpg\nDesign a main podcast cover image featuring a human profile silhouette merged with AI patterns. Use a deep blue to purple gradient background with flowing, technological patterns. Include subtle audio waveforms that transform into neural network connections. The design should be sophisticated and minimal."
-  },
-  {
-    "objectID": "assets/prompts.html#experiments",
-    "href": "assets/prompts.html#experiments",
-    "title": "MindMeld",
-    "section": "Experiments",
-    "text": "Experiments\n\nPrompt Engineering Study\nFile: assets/experiments/prompt-comparison-chart.png\nCreate a clean, modern infographic showing three different approaches to AI prompting. Use a minimalist design with icons and flow charts. The color scheme should use blue (#2D46B9) as the primary color with gray accents. Include simple visualizations of input/output relationships."
-  },
-  {
-    "objectID": "assets/prompts.html#profile-images",
-    "href": "assets/prompts.html#profile-images",
-    "title": "MindMeld",
-    "section": "Profile Images",
-    "text": "Profile Images\n\nAbout Page Profile\nFile: assets/profile.jpg\nGenerate a stylized avatar that represents a tech enthusiast/creator. The image should be semi-abstract, showing a blend of human and digital elements. Use a warm, approachable style with technological motifs. The composition should work well as a circular profile picture."
-  },
-  {
-    "objectID": "assets/prompts.html#notes-for-generation",
-    "href": "assets/prompts.html#notes-for-generation",
-    "title": "MindMeld",
-    "section": "Notes for Generation",
-    "text": "Notes for Generation\n\nAll images should be generated at 1024x1024 resolution unless specified otherwise\nUse DALL-E 3 for best quality\nMaintain consistent color scheme across site assets\nEnsure all images work well in both light and dark mode\nConsider accessibility in contrast and clarity\nSave final images in appropriate formats:\n\nJPG for photographs and complex images\nPNG for graphics with transparency\nSVG for icons and simple graphics"
-  },
-  {
-    "objectID": "assets/prompts.html#style-guidelines",
-    "href": "assets/prompts.html#style-guidelines",
-    "title": "MindMeld",
-    "section": "Style Guidelines",
-    "text": "Style Guidelines\n\nPrimary Colors:\n\nDeep Blue: #2D46B9\nPurple: #7B8FFF\nWhite: #FFFFFF\n\nSecondary Colors:\n\nGray: #6C757D\nLight Blue: #E5E7EB\n\nStyle:\n\nModern and clean\nProfessional but approachable\nConsistent lighting and depth\nClear focal points\nSuitable negative space"
-  },
-  {
-    "objectID": "about.html#whos-behind-mindmeld",
-    "href": "about.html#whos-behind-mindmeld",
-    "title": "MindMeld",
-    "section": "Who’s Behind MindMeld?",
-    "text": "Who’s Behind MindMeld?\nHi! I’m FRA, and MindMeld is my personal exploration into the fascinating world of AI-generated content. As someone interested in the potential of artificial intelligence, I created this space to document my experiments, discoveries, and insights in AI content creation.\nI’m relatively new to AI. I’m not a developer, but I do have a background on Econometrics and Data Analysis. When ChatGPT was popularized, I started to experiment with it, at least as a hobby, to understand the novelty of AI. As an Instructor, I have seen AI being recived with skepticism, and I wanted to understand it better.\nI don’t claim to be an expert, but I like to believe I’m sufficiently experienced in other areas of research and learning, that I can bring some perspective to using AI. Besides, this is just a journey of discovery, my more serious work is done on other projects.\nSo, I decided to document what I discover along the way. Hopefully, this will be useful to others who are curious about AI, content creation, or the future of digital creativity.\nInteresting enough. This site was generated using Quarto, but generated using AI, Specifically using Coder by &lt;Kodu.ai&gt;, which is a programming agent that works with Claude by Anthropic. Highly recommend it!\n\n\n That’s me, probably generated by AI too!"
-  },
-  {
-    "objectID": "about.html#what-makes-mindmeld-different",
-    "href": "about.html#what-makes-mindmeld-different",
-    "title": "MindMeld",
-    "section": "What Makes MindMeld Different?",
-    "text": "What Makes MindMeld Different?\nUnlike many AI content platforms (frankly do not know any), MindMeld is deliberately personal and experimental, but open for suggestions. Here, you’ll find:\n\nRaw AI outputs alongside my human perspective\nHonest discussions about both successes and failures\nA transparent look at how AI content is generated and curated\nPersonal insights into what works and what doesn’t"
-  },
-  {
-    "objectID": "about.html#my-approach",
-    "href": "about.html#my-approach",
-    "title": "MindMeld",
-    "section": "My Approach",
-    "text": "My Approach\nI believe in a straightforward approach to AI content:\n\nGeneration: I use various AI tools to create different types of content\nCuration: I personally review and select interesting outputs\nContext: I add my thoughts and observations\nSharing: I publish everything here, including the occasional mishaps"
-  },
-  {
-    "objectID": "about.html#tools-i-use",
-    "href": "about.html#tools-i-use",
-    "title": "MindMeld",
-    "section": "Tools I Use",
-    "text": "Tools I Use\nSome of the AI tools I frequently experiment with:\n\nGPT models for text generation. ChatGPT, Claude, etc.\nStable Diffusion for image creation. DALL-E, thanks to OpenAI, and Meta and Copilot by Microsoft.\nVarious specialized AI tools for specific content types, Like Suno for music, or NotebookLM for Podcasts.\n\n\n\n\n\n\n\nNote\n\n\n\nI try to clearly indicate which tools were used for each piece of content. Occasionally, I will provide my own work, with help of AI."
-  },
-  {
-    "objectID": "about.html#the-philosophy",
-    "href": "about.html#the-philosophy",
-    "title": "MindMeld",
-    "section": "The Philosophy",
-    "text": "The Philosophy\nMindMeld isn’t about presenting AI as perfect or infallible. Instead, it’s about:\n\nExploring AI’s creative capabilities honestly\nUnderstanding the intersection of human and machine creativity\nDocumenting the learning process\nSharing insights with others interested in AI content creation"
-  },
-  {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "MindMeld",
-    "section": "Contact & Connect",
-    "text": "Contact & Connect\nI’m always interested in discussing AI, content creation, and the future of digital creativity. You can reach me through:\n\nEmail: friosa@gmail.com\nTwitter: @friosavila\n\n\n\n\n\n\n\nInterested in Collaboration?\n\n\n\nWhether you’re an AI enthusiast, creator, or just curious about the technology, I’m always open to interesting conversations and collaborations."
-  },
-  {
-    "objectID": "about.html#site-updates",
-    "href": "about.html#site-updates",
-    "title": "MindMeld",
-    "section": "Site Updates",
-    "text": "Site Updates\nI will try to update MindMeld regularly with new experiments, insights, and discoveries. It will most likely happen in clusters. Periods with lots of contents, and periods of hiatus. Its hard to keep up with real work, family and hobbies. The best way to keep up with new content is to:\n\nFollow me on social media (perhaps)\nCheck the blog regularly\nCheck the podcasts regularly"
-  },
-  {
-    "objectID": "blog/index.html#latest-posts",
-    "href": "blog/index.html#latest-posts",
-    "title": "MindMeld",
-    "section": "Latest Posts",
-    "text": "Latest Posts\nThe posts below are sorted by date, with the most recent appearing first. Use the filter and sort options to find specific topics or browse through different categories."
-  },
-  {
     "objectID": "blog/posts/ai-content-exploration.html#the-setup",
     "href": "blog/posts/ai-content-exploration.html#the-setup",
     "title": "MindMeld",
@@ -432,6 +292,209 @@
     "title": "MindMeld",
     "section": "Technical Notes",
     "text": "Technical Notes\nFor those interested in replicating this experiment: - All prompts and parameters used are documented above - Image generation settings: Meta - Text generation: ChatGPT 4o, Default - Analysis: Claude 3.5+\n\n\n\n\n\n\nWarning\n\n\n\nRemember that AI outputs can vary significantly even with identical inputs. Your results might differ from mine."
+  },
+  {
+    "objectID": "blog/index.html#latest-posts",
+    "href": "blog/index.html#latest-posts",
+    "title": "MindMeld",
+    "section": "Latest Posts",
+    "text": "Latest Posts\nThe posts below are sorted by date, with the most recent appearing first. Use the filter and sort options to find specific topics or browse through different categories."
+  },
+  {
+    "objectID": "about.html#whos-behind-mindmeld",
+    "href": "about.html#whos-behind-mindmeld",
+    "title": "MindMeld",
+    "section": "Who’s Behind MindMeld?",
+    "text": "Who’s Behind MindMeld?\nHi! I’m FRA, and MindMeld is my personal exploration into the fascinating world of AI-generated content. As someone interested in the potential of artificial intelligence, I created this space to document my experiments, discoveries, and insights in AI content creation.\nI’m relatively new to AI. I’m not a developer, but I do have a background on Econometrics and Data Analysis. When ChatGPT was popularized, I started to experiment with it, at least as a hobby, to understand the novelty of AI. As an Instructor, I have seen AI being recived with skepticism, and I wanted to understand it better.\nI don’t claim to be an expert, but I like to believe I’m sufficiently experienced in other areas of research and learning, that I can bring some perspective to using AI. Besides, this is just a journey of discovery, my more serious work is done on other projects.\nSo, I decided to document what I discover along the way. Hopefully, this will be useful to others who are curious about AI, content creation, or the future of digital creativity.\nInteresting enough. This site was generated using Quarto, but generated using AI, Specifically using Coder by &lt;Kodu.ai&gt;, which is a programming agent that works with Claude by Anthropic. Highly recommend it!\n\n\n That’s me, probably generated by AI too!"
+  },
+  {
+    "objectID": "about.html#what-makes-mindmeld-different",
+    "href": "about.html#what-makes-mindmeld-different",
+    "title": "MindMeld",
+    "section": "What Makes MindMeld Different?",
+    "text": "What Makes MindMeld Different?\nUnlike many AI content platforms (frankly do not know any), MindMeld is deliberately personal and experimental, but open for suggestions. Here, you’ll find:\n\nRaw AI outputs alongside my human perspective\nHonest discussions about both successes and failures\nA transparent look at how AI content is generated and curated\nPersonal insights into what works and what doesn’t"
+  },
+  {
+    "objectID": "about.html#my-approach",
+    "href": "about.html#my-approach",
+    "title": "MindMeld",
+    "section": "My Approach",
+    "text": "My Approach\nI believe in a straightforward approach to AI content:\n\nGeneration: I use various AI tools to create different types of content\nCuration: I personally review and select interesting outputs\nContext: I add my thoughts and observations\nSharing: I publish everything here, including the occasional mishaps"
+  },
+  {
+    "objectID": "about.html#tools-i-use",
+    "href": "about.html#tools-i-use",
+    "title": "MindMeld",
+    "section": "Tools I Use",
+    "text": "Tools I Use\nSome of the AI tools I frequently experiment with:\n\nGPT models for text generation. ChatGPT, Claude, etc.\nStable Diffusion for image creation. DALL-E, thanks to OpenAI, and Meta and Copilot by Microsoft.\nVarious specialized AI tools for specific content types, Like Suno for music, or NotebookLM for Podcasts.\n\n\n\n\n\n\n\nNote\n\n\n\nI try to clearly indicate which tools were used for each piece of content. Occasionally, I will provide my own work, with help of AI."
+  },
+  {
+    "objectID": "about.html#the-philosophy",
+    "href": "about.html#the-philosophy",
+    "title": "MindMeld",
+    "section": "The Philosophy",
+    "text": "The Philosophy\nMindMeld isn’t about presenting AI as perfect or infallible. Instead, it’s about:\n\nExploring AI’s creative capabilities honestly\nUnderstanding the intersection of human and machine creativity\nDocumenting the learning process\nSharing insights with others interested in AI content creation"
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "MindMeld",
+    "section": "Contact & Connect",
+    "text": "Contact & Connect\nI’m always interested in discussing AI, content creation, and the future of digital creativity. You can reach me through:\n\nEmail: friosa@gmail.com\nTwitter: @friosavila\n\n\n\n\n\n\n\nInterested in Collaboration?\n\n\n\nWhether you’re an AI enthusiast, creator, or just curious about the technology, I’m always open to interesting conversations and collaborations."
+  },
+  {
+    "objectID": "about.html#site-updates",
+    "href": "about.html#site-updates",
+    "title": "MindMeld",
+    "section": "Site Updates",
+    "text": "Site Updates\nI will try to update MindMeld regularly with new experiments, insights, and discoveries. It will most likely happen in clusters. Periods with lots of contents, and periods of hiatus. Its hard to keep up with real work, family and hobbies. The best way to keep up with new content is to:\n\nFollow me on social media (perhaps)\nCheck the blog regularly\nCheck the podcasts regularly"
+  },
+  {
+    "objectID": "assets/prompts.html#site-wide-assets",
+    "href": "assets/prompts.html#site-wide-assets",
+    "title": "MindMeld",
+    "section": "Site-Wide Assets",
+    "text": "Site-Wide Assets\n\nFavicon\nFile: assets/favicon.png\nCreate a minimalist icon showing a stylized brain merged with a circuit board, using only two colors: deep blue (#2D46B9) and white. The design should be simple enough to work as a favicon.\n\n\nHero Image\nFile: assets/hero-image.png\nCreate a wide banner image showing a seamless blend of human creativity and AI, with flowing abstract patterns transitioning between organic brushstrokes and digital pixels. Use a color palette of deep blues, purples, and white. The style should be modern and sophisticated, suitable for a website header."
+  },
+  {
+    "objectID": "assets/prompts.html#blog-posts",
+    "href": "assets/prompts.html#blog-posts",
+    "title": "MindMeld",
+    "section": "Blog Posts",
+    "text": "Blog Posts\n\nAI Content Exploration Post\nFile: assets/blog/ai-experiment-1.jpg\nCreate a split-screen image showing a robot artist and its canvas. On the left, a sleek, modern robot with delicate appendages holding a paintbrush. On the right, an abstract painting in progress with vibrant colors. The lighting should be warm and studio-like, with subtle highlights on the robot's metallic surface.\n\n\nRobot Artist Image\nFile: assets/blog/robot-artist.jpg\nCreate an image of a sophisticated robot sitting at an easel, painting a sunset. The robot should have precise, delicate hands and be designed for artistic work. The scene should be set in a modern art studio with natural light streaming in. Include scattered art supplies and tools around the workspace."
+  },
+  {
+    "objectID": "assets/prompts.html#gallery",
+    "href": "assets/prompts.html#gallery",
+    "title": "MindMeld",
+    "section": "Gallery",
+    "text": "Gallery\n\nAbstract Emotion Series\nFile: assets/gallery/abstract-emotion-1.jpg\nCreate an abstract art piece representing joy and wonder. Use flowing, organic shapes and vibrant colors (yellows, bright blues, and warm pinks). The composition should show movement and energy through sweeping curves and dynamic forms. Avoid any recognizable objects or figures, focusing purely on emotional expression through color and form.\n\n\nLandscape Series\nFile: assets/gallery/landscape-1.jpg\nGenerate a surreal landscape where natural and artificial elements merge seamlessly. Show floating islands with both lush vegetation and geometric structures, connected by streams of light or data. Use a color palette of deep greens, blues, and purple, with highlights of golden light. The style should be both photorealistic and fantastical."
+  },
+  {
+    "objectID": "assets/prompts.html#podcast",
+    "href": "assets/prompts.html#podcast",
+    "title": "MindMeld",
+    "section": "Podcast",
+    "text": "Podcast\n\nEpisode 1 Cover\nFile: assets/podcasts/ep001-cover.jpg\nCreate a podcast cover image showing a modern microphone transforming into streams of digital data. The design should be clean and professional, with a dark background and glowing blue accents. Include subtle circuit board patterns in the background. The composition should work well as a square thumbnail.\n\n\nSeries Cover\nFile: assets/podcasts/series-cover.jpg\nDesign a main podcast cover image featuring a human profile silhouette merged with AI patterns. Use a deep blue to purple gradient background with flowing, technological patterns. Include subtle audio waveforms that transform into neural network connections. The design should be sophisticated and minimal."
+  },
+  {
+    "objectID": "assets/prompts.html#experiments",
+    "href": "assets/prompts.html#experiments",
+    "title": "MindMeld",
+    "section": "Experiments",
+    "text": "Experiments\n\nPrompt Engineering Study\nFile: assets/experiments/prompt-comparison-chart.png\nCreate a clean, modern infographic showing three different approaches to AI prompting. Use a minimalist design with icons and flow charts. The color scheme should use blue (#2D46B9) as the primary color with gray accents. Include simple visualizations of input/output relationships."
+  },
+  {
+    "objectID": "assets/prompts.html#profile-images",
+    "href": "assets/prompts.html#profile-images",
+    "title": "MindMeld",
+    "section": "Profile Images",
+    "text": "Profile Images\n\nAbout Page Profile\nFile: assets/profile.jpg\nGenerate a stylized avatar that represents a tech enthusiast/creator. The image should be semi-abstract, showing a blend of human and digital elements. Use a warm, approachable style with technological motifs. The composition should work well as a circular profile picture."
+  },
+  {
+    "objectID": "assets/prompts.html#notes-for-generation",
+    "href": "assets/prompts.html#notes-for-generation",
+    "title": "MindMeld",
+    "section": "Notes for Generation",
+    "text": "Notes for Generation\n\nAll images should be generated at 1024x1024 resolution unless specified otherwise\nUse DALL-E 3 for best quality\nMaintain consistent color scheme across site assets\nEnsure all images work well in both light and dark mode\nConsider accessibility in contrast and clarity\nSave final images in appropriate formats:\n\nJPG for photographs and complex images\nPNG for graphics with transparency\nSVG for icons and simple graphics"
+  },
+  {
+    "objectID": "assets/prompts.html#style-guidelines",
+    "href": "assets/prompts.html#style-guidelines",
+    "title": "MindMeld",
+    "section": "Style Guidelines",
+    "text": "Style Guidelines\n\nPrimary Colors:\n\nDeep Blue: #2D46B9\nPurple: #7B8FFF\nWhite: #FFFFFF\n\nSecondary Colors:\n\nGray: #6C757D\nLight Blue: #E5E7EB\n\nStyle:\n\nModern and clean\nProfessional but approachable\nConsistent lighting and depth\nClear focal points\nSuitable negative space"
+  },
+  {
+    "objectID": "blog/posts/abstract-exploration.html#the-prompt",
+    "href": "blog/posts/abstract-exploration.html#the-prompt",
+    "title": "MindMeld",
+    "section": "The Prompt",
+    "text": "The Prompt\nHere’s the exact prompt I used with DALL-E 3 Meta.ai:\nCreate an abstract art piece that represents the feeling of joy and wonder. \nUse flowing shapes and vibrant colors. The style should be non-representational, \nfocusing on movement and energy. Avoid any recognizable objects or figures."
+  },
+  {
+    "objectID": "blog/posts/abstract-exploration.html#the-result",
+    "href": "blog/posts/abstract-exploration.html#the-result",
+    "title": "MindMeld",
+    "section": "The Result",
+    "text": "The Result\n\n\n\n\nThe AI-generated abstract representation of joy and wonder\n\n\nThe AI’s interpretation of joy and wonder through abstract forms"
+  },
+  {
+    "objectID": "blog/posts/abstract-exploration.html#technical-details",
+    "href": "blog/posts/abstract-exploration.html#technical-details",
+    "title": "MindMeld",
+    "section": "Technical Details",
+    "text": "Technical Details\n\nAI Model: DALL-E 3 Meta.ai\nColor Palette: Generated by the AI based on emotional context\nGeneration Date: November 16, 2024\nother details: First imahe selected by me to show"
+  },
+  {
+    "objectID": "blog/posts/abstract-exploration.html#analysis",
+    "href": "blog/posts/abstract-exploration.html#analysis",
+    "title": "MindMeld",
+    "section": "Analysis",
+    "text": "Analysis\n\nWhat Worked Well\n\nColor Choice\n\nThe vibrant color palette effectively conveys positive emotions\nThe contrast between warm and cool tones creates visual interest\nColor transitions feel natural and fluid\n\nComposition\n\nDynamic movement across the canvas\nWell-balanced distribution of elements\nEffective use of negative space\n\nEmotional Impact\n\nThe flowing forms suggest a sense of freedom and joy\nEnergy and movement align well with the prompt’s intent\nAbstract nature allows for personal interpretation\n\n\n\n\nInteresting Observations\nThe AI seemed to associate joy and wonder with: - Upward-flowing movements - Bright, warm colors - Organic, curved forms - Layered, transparent elements"
+  },
+  {
+    "objectID": "blog/posts/abstract-exploration.html#prompt-engineering-insights",
+    "href": "blog/posts/abstract-exploration.html#prompt-engineering-insights",
+    "title": "MindMeld",
+    "section": "Prompt Engineering Insights",
+    "text": "Prompt Engineering Insights\nSeveral key elements made this prompt effective:\n\nClear Emotional Direction\n\nSpecified the emotions (joy and wonder)\nAsked for specific qualities (flowing shapes, vibrant colors)\n\nTechnical Guidelines\n\nRequested non-representational style\nSpecified the focus on movement and energy\nIncluded explicit restrictions (avoid recognizable objects)\n\nCreative Freedom\n\nLeft room for AI interpretation\nDidn’t over-constrain the color palette\nAllowed for organic composition"
+  },
+  {
+    "objectID": "blog/posts/abstract-exploration.html#variations",
+    "href": "blog/posts/abstract-exploration.html#variations",
+    "title": "MindMeld",
+    "section": "Variations",
+    "text": "Variations\nI experimented with several variations of this prompt:\n\nEmotion Shift\nCreate an abstract art piece that represents the feeling of calm and serenity.\nUse flowing shapes and gentle colors. The style should be non-representational,\nfocusing on peace and tranquility. Avoid any recognizable objects or figures.\n\nThe Result\n\n\n\n\nThe AI-generated abstract representation of calm and serenity\n\n\nThe AI’s interpretation of calm and serenity through abstract forms\n\n\nStyle Variation\nCreate an abstract art piece that represents joy and wonder using geometric\nshapes and structured patterns. Use vibrant colors but maintain a rigid,\nstructured composition. Avoid organic or flowing forms.\n\nThe Result\n\n\n\n\nThe AI-generated abstract representation of joy and wonder\n\n\nThe AI’s interpretation of joy and wonder through geometric forms"
+  },
+  {
+    "objectID": "blog/posts/abstract-exploration.html#learning-points",
+    "href": "blog/posts/abstract-exploration.html#learning-points",
+    "title": "MindMeld",
+    "section": "Learning Points",
+    "text": "Learning Points\n\nAI Interpretation\n\nAI tends to associate certain colors with specific emotions\nAbstract concepts are translated through color and form\nMovement and composition play crucial roles\n\nTechnical Aspects\n\nClear, specific prompts yield better results\nEmotional keywords influence color choices\nBalance between direction and creative freedom is important"
+  },
+  {
+    "objectID": "blog/posts/abstract-exploration.html#future-experiments",
+    "href": "blog/posts/abstract-exploration.html#future-experiments",
+    "title": "MindMeld",
+    "section": "Future Experiments",
+    "text": "Future Experiments\nBased on this experience, I plan tomay explore: - Different emotional combinations - Various artistic styles within abstraction - More complex compositional requirements - Color psychology in AI art generation\n\n\n\n\n\n\nYour Thoughts?\n\n\n\nArt is subjective, and I’d love to hear your interpretation of this piece. Does it evoke the intended emotions for you? Feel free to share your thoughts via the contact page."
+  },
+  {
+    "objectID": "blog/posts/ai-human-thinking.html#background",
+    "href": "blog/posts/ai-human-thinking.html#background",
+    "title": "MindMeld",
+    "section": "Background",
+    "text": "Background\nSo again, this is the second post after a while. And as I mention on the other post of today (yesterday), my new job has kept me busy. But I have been thinking about AI and how it works. I have also been using it to help me with my new job.\nOn doing this, and some reflection, I came with a couple of ideas of how AI thinks, and why it is similar to how we think. Here a curated version of my thoughts, with the help of OpenAI “Jarvis”."
+  },
+  {
+    "objectID": "blog/posts/ai-human-thinking.html#do-ai-and-humans-think-the-same-way",
+    "href": "blog/posts/ai-human-thinking.html#do-ai-and-humans-think-the-same-way",
+    "title": "MindMeld",
+    "section": "Do AI and Humans Think the Same Way?",
+    "text": "Do AI and Humans Think the Same Way?\nWe like to think of artificial intelligence as something fundamentally different from human thought — robotic, rigid, cold. But when you look under the hood, you might be surprised at how similar our thinking patterns really are.\nThe difference? It’s not in how we think — but in how we learn.\nLet me explain."
+  },
+  {
+    "objectID": "blog/posts/ai-human-thinking.html#ai-and-humans-neural-networks",
+    "href": "blog/posts/ai-human-thinking.html#ai-and-humans-neural-networks",
+    "title": "MindMeld",
+    "section": "AI and Humans: Neural Networks",
+    "text": "AI and Humans: Neural Networks\nBoth humans and AI don’t retrieve answers from a fixed list. We reconstruct knowledge. When you ask a person, “What’s the capital of France?”, they don’t dig through a hard drive, or rather, they do not look into their highschool class notes. They reassemble the answer from memory, context, past experiences, associations. All those synaptic connections in our brains that help us recreate the answer: Paris.\nInterestingly enough, that is how AI works too.\nFor example, when you ask your AI of preference a question, It generates a response based on the patterns it has acquared during its training. That is why larger models are expected to have better general knowledge, because there are more connections in their neural network, that would allow them to provide us with better answers.\nIn toerh words, AI doesn’t remember facts, it simple infers them from billions of examples, encoded into the layers of neural networks.\nAgain, this is very similar to how our brains work. For example, there are studies that suggest we rarely remember things as exact copies of what happened. Instead, we piece together memories from fragments — which makes us surprisingly prone to false memories or “hallucinations.”\nThis is also the reason why, when we do not “excercise” those synapsis, we tend to forget things, or recall them incorrectly. (I should know. Now that most of my communications are in english, I have been forgetting a lot of my spanish vocabulary. I guess I should start using it more often).\nSound familiar?\nThat’s the same term people use when AI generates plausible but incorrect responses.\nOf course, I would like to think that we are better at this than AI, in that we are able to clearly say…I do not know, or be honest declaring we are making things up. But that is not always the case. In fact, I would say that some people, who may not be named, are really good at giving incorrect answers, but thinking they are correct."
+  },
+  {
+    "objectID": "blog/posts/ai-human-thinking.html#so-wheres-the-difference-between-ai-and-human-memories",
+    "href": "blog/posts/ai-human-thinking.html#so-wheres-the-difference-between-ai-and-human-memories",
+    "title": "MindMeld",
+    "section": "So Where’s the Difference between AI and Human memories?",
+    "text": "So Where’s the Difference between AI and Human memories?\nHere’s the fundamental divide:\n\nHumans are always learning. AI isn’t — until someone trains it again.\n\nIn AI systems, all their knowledge is embedded in my weights — millions (or billions) of tiny adjustable numbers shaped during training. But once that training ends, those weights are frozen. Yes, they can be changed or fine-tuned, but that is a costly and lenghly process.\nFor us, well, the “weights” we use — that is, the synaptic connections in our brain — are constantly being rewired. Every conversation, every new fact, every emotional experience is fine-tuning your internal model of the world in real time. We are always learning, adapting, and evolving. (or at least we should be)\nThat means:\n\nHumans are always learning.\nAI is a snapshot, frozen in time."
+  },
+  {
+    "objectID": "blog/posts/ai-human-thinking.html#final-thought-were-both-storytellers",
+    "href": "blog/posts/ai-human-thinking.html#final-thought-were-both-storytellers",
+    "title": "MindMeld",
+    "section": "Final Thought: We’re Both Storytellers",
+    "text": "Final Thought: We’re Both Storytellers\nIn the end, both AI and humans build stories from patterns. We guess what comes next based on what we’ve seen before. We make mistakes. We hallucinate. But while AI stay the same unless retrained, we wake up every day just a little wiser.\nAnd that — more than anything — is the true miracle of human intelligence."
   },
   {
     "objectID": "blog/posts/color-pages.html",
@@ -595,88 +658,130 @@
     "text": "Conclusion\nThe results were quite impresive, and are getting better. In Software like Python, Claude can produce highly complex programs that are almost ready to use. In Stata, it did a good job with minor bugs that I could easily fix.\nHowever, I still think I have my job secured. I can easily check and debug the code, or write a better version myself. However, for a quick and dirty solution, it is quite good. And for documentation, it is a life saver.\nI have started using this for other cases as well. Write programs for data cleaning, data wrangling, and transformations. It is quite good. I may try to add some of that in this blog in the future."
   },
   {
-    "objectID": "blog/posts/who-shot-first.html#podcast-your-way",
-    "href": "blog/posts/who-shot-first.html#podcast-your-way",
+    "objectID": "blog/posts/when-ai-thinks-too-much.html#behind-todays-blog",
+    "href": "blog/posts/when-ai-thinks-too-much.html#behind-todays-blog",
     "title": "MindMeld",
-    "section": "Podcast your way",
-    "text": "Podcast your way\nAs you already have noticed, I have been using NotebookLM and their audio overviews to create Podcast like audio episodes. That could be further improved and custom to be “my” podcast thanks to the window for customization.\nWhile that was a great experience, I wanted to see if I could create something like that myself, using some of the features of OpenAI and Text-to-Speech capabilities. If you have access to the API for OpenAI you will notice that you can create audio files from text, but with limits. You need to select the voice that you want, and there are limits to the length of the audio file. (4k characters)\nLooking online, apparently there are other options outhere already that can do this. But most of them are rather expensive, despite having a free tier.\nIm already paying for credits with OpenAI, so decided to give it a try and make a program that could create a podcast episode from a text file, for any length of text, and with the voice that I want. My Python skills are not the best, but I was able to make a functional program using Claude.ai Sonnet (free tier).\nThere are limits, of course. I have only 6 voices to choose from. And have not yet tested the limits of the audio file length. Still, I got a good working prototype that does the job. You can get the code here: Podcast Maker.\nYou will also need to install the following libraries: - OpenAI, plus having a Key API (paid credits) - NLTK - Pydub - Tkinter - Keyring - num2words\nand have ffmpg installed in your system to get the codecs.\nAnyways, I already made an example on EP3 of the podcast. But now I wanted to make an example of one of the greatest questions of all times: Who shot first? Han or Greedo?"
+    "section": "Behind todays blog",
+    "text": "Behind todays blog\nFirst, if you are actually reading this blog, my appologies. I just started a new job, and have had very little time to add more information to this blog.\nInterestingly enough, I have had more time exploring AI, as I am trying to use it to help me with my new job. Of course, while doing this, I have had few thoughts about AI and how it works. Those are probably not new, and people who have really studied the subject may have already thought about this. But I thought I would share them anyway.\nSo today snote is about AI and reasoning. This is a relatively new feature that many providers are adding to their models. Even small lanauge models (under 10B parameters) are being trained to reason. This may seem like a good thing, but it has some drawbacks.\nSo, I decided to share my thoughts on this, combined with the help of OpenAI “Jarvis” (that is what I call it) to help me write this blog. Hope you enjoy it!\nThat’s a fantastic premise for a post — one that blends the philosophy of AI, the limits of pure logic, and the emotional intelligence gap. Here’s a blog post draft that explores this idea with depth and storytelling flair:"
   },
   {
-    "objectID": "blog/posts/who-shot-first.html#who-shot-first",
-    "href": "blog/posts/who-shot-first.html#who-shot-first",
+    "objectID": "blog/posts/when-ai-thinks-too-much.html#when-ai-thinks-too-much",
+    "href": "blog/posts/when-ai-thinks-too-much.html#when-ai-thinks-too-much",
     "title": "MindMeld",
-    "section": "Who Shot first",
-    "text": "Who Shot first\n\n  Your browser does not support the audio element. \n\nSarah: Look, let’s settle this Han Solo debate once and for all. In the original 1977 Star Wars, Han straight-up shot Greedo under that table. No question, no dodging, just pure survival instinct.\nMarcus: Wait, that can’t be right. I just watched it on Disney+ last week - Greedo definitely shot first and missed somehow.\nElena: rolls eyes Oh, you sweet summer child. What you saw was the modified version. George Lucas went back and changed it in ’97 because he thought it made Han look too ruthless.\nDavid: And that’s exactly why the change ruins the whole character arc! Han was supposed to be this morally ambiguous smuggler who’d shoot first to save his own skin. That’s what made his transformation into a hero so powerful.\nSarah: Exactly! The whole point is that he starts as this self-serving survivor and grows into someone who’d risk everything for the rebellion.\nMarcus: So you’re telling me they digitally altered it to make Han dodge and shoot second? That’s… kind of ridiculous.\nElena: Right? And Greedo missing from literally two feet away makes zero sense. He’s supposed to be a professional bounty hunter!\nSarah: Oh god, don’t even get me started on that addition…\nElena: Trust me, Marcus, you don’t want to know. Let’s just say they kept “improving” the scene over the years."
+    "section": "When AI Thinks Too Much",
+    "text": "When AI Thinks Too Much\nIn the race to build more powerful AI models — especially those capable of reasoning — we’re beginning to bump into a strange and very human problem:\n\nWhat happens when an AI thinks too much… and feels nothing?\n\nToday’s most advanced AI systems don’t just complete sentences — they reason. They can solve logic puzzles, debug code, write essays, and even reflect on their own answers.\nTools like AI coding companions (e.g., Kodu or Cline) are backed by large models that simulate reasoning with impressive precision.\nBut if you’ve worked closely with one, you’ve probably seen something odd: - It gets stuck in endless loops trying to solve a bug. - It overcomplicates a simple fix. - It creates sophisticated yet broken logic — and can’t see the obvious.\nAnd sometimes… it doubts itself so much it keeps rewriting the same code five different ways."
   },
   {
-    "objectID": "podcasts/episodes/001-intro-mindmeld.html#episode-background",
-    "href": "podcasts/episodes/001-intro-mindmeld.html#episode-background",
+    "objectID": "blog/posts/when-ai-thinks-too-much.html#the-logic-trap",
+    "href": "blog/posts/when-ai-thinks-too-much.html#the-logic-trap",
+    "title": "MindMeld",
+    "section": "The Logic Trap",
+    "text": "The Logic Trap\nHere’s the irony: as AI models improve at reasoning, I think they also become more prone to the trap of overthinking. That’s because reasoning, in AI, is a recursive process. It loops over possibilities, weighs probabilities, and searches for coherence.\nBut when there’s no clear “best” answer — when the problem requires a value judgment, not a logical deduction — the AI stalls or spirals.\nThis isn’t a bug. It’s potentially a fundamental limit of logic without emotion."
+  },
+  {
+    "objectID": "blog/posts/when-ai-thinks-too-much.html#the-human-parallel-a-brain-without-emotion",
+    "href": "blog/posts/when-ai-thinks-too-much.html#the-human-parallel-a-brain-without-emotion",
+    "title": "MindMeld",
+    "section": "The Human Parallel: A Brain Without Emotion",
+    "text": "The Human Parallel: A Brain Without Emotion\nThere’s a famous case in neuroscience of a man who, after a brain surgery, lost the ability to feel emotion, becomming extreamly rational. A Spoke Like being. His logic remained intact — he could calculate, debate, and reason — but he was unable to make decisions, even small ones. He’d spend hours debating which pen to use or which shirt to wear.\n\nI heard first of this story from RadioLab, in the episode Overcome by Emotion. you can listen to it here\n\nWhy?\nBecause many decisions in life don’t have a logical best. They need a gut feeling. A value judgment. An emotional weight. That little bit of “extra” that can tip the scales when the logic is even.\nWithout emotion, he became paralyzed by options.\nSound familiar?\nThis is exactly the problem facing advanced reasoning AIs."
+  },
+  {
+    "objectID": "blog/posts/when-ai-thinks-too-much.html#the-voyager-paradox",
+    "href": "blog/posts/when-ai-thinks-too-much.html#the-voyager-paradox",
+    "title": "MindMeld",
+    "section": "The Voyager Paradox",
+    "text": "The Voyager Paradox\n\nSomething you may not know, but I am a bit of a Trekkie. Just a bit. I have seen DS9 and Voyager countless times. And read a few of the books!\n\nThere’s an episode of Star Trek: Voyager, the Latent Image where the ship’s holographic doctor faces a moral dilemma: Two crew members are dying. He can save only one. He chooses his friend, ensign Kim.\nHe saves a life — but suffers a crisis. Why? Because his logic circuits can’t justify prioritizing one life over another without bias. He made a human choice. But he’s not human.\nThe result? A loop of guilt, self-doubt, and recursive ethical analysis — a logic crash caused by an emotional conflict he isn’t equipped to handle.\nAnd that’s the terrifying beauty of it:\n&gt; Reason without emotion breaks down when the path forward isn’t logical — but personal."
+  },
+  {
+    "objectID": "blog/posts/when-ai-thinks-too-much.html#what-ai-still-lacks",
+    "href": "blog/posts/when-ai-thinks-too-much.html#what-ai-still-lacks",
+    "title": "MindMeld",
+    "section": "What AI Still Lacks",
+    "text": "What AI Still Lacks\nToday’s reasoning AIs simulate logic beautifully. They can: - Solve math problems - Plan multi-step code rewrites - Generate complex arguments\nBut they still lack: - Emotional context - A sense of priority rooted in experience - The ability to choose when no option is “correct”\nIn other words:\n&gt; They don’t know when to stop thinking and just decide."
+  },
+  {
+    "objectID": "blog/posts/when-ai-thinks-too-much.html#so-what-can-be-done",
+    "href": "blog/posts/when-ai-thinks-too-much.html#so-what-can-be-done",
+    "title": "MindMeld",
+    "section": "So What Can be done?",
+    "text": "So What Can be done?\n\nAt this point, I think this is just speculation. AI is advancing so fast, that it is hard to predict what will happen next. But I think it is worth thinking about.\n\nDesigning better AI reasoning isn’t just about better algorithms — it’s about embedding constraints, values, and context that mimic the role of emotion in human thought. Possible paths forward:\n\nHeuristics over recursion: Sometimes “good enough” beats “perfect.”\n\nAfter playing with a hard problem. I restart the question, or change provider. It often helps. Also, I switch to a “dumber” model. It is often better at simple tasks.\n\nHuman-in-the-loop decision gates: Let the AI propose, but let us decide.\n\nThis is something we should be doing anyway. We can use AI to help us synthesize information, but we should be the ones making the final decision. When we stop doing that, we would be losing our purpose.\n\nMeta-reasoning: So it can say “I’m overthinking this.”. And I think it already does.\n\nUntil then, we’ll keep seeing flashes of brilliance followed by strange loops of doubt.\nJust like the holographic doctor. Just like us, when we forget what really matters."
+  },
+  {
+    "objectID": "index.html#what-is-mindmeld",
+    "href": "index.html#what-is-mindmeld",
+    "title": "MindMeld",
+    "section": "What is MindMeld?",
+    "text": "What is MindMeld?\nMindMeld is my personal laboratory where I explore and document my exploration of artificial intelligence as a tool for learning, and content generation. As someone deeply interested in AI’s creative potential, I will share selected AI-generated content while adding my human perspective and insights.\n\n\nAI Generation\nI work with various AI models to generate content: text, images, music, Podcasts, exploring their capabilities and limitations.\n\n\nHuman Curation\nEvery piece of AI-generated content is carefully selected and contextualized with my personal insights, observations and interests.\n\n\nOpen Process\nI believe in transparency. Unless otherwise stated, all content on this site is generated by AI, and curated by me."
+  },
+  {
+    "objectID": "index.html#join-the-journey",
+    "href": "index.html#join-the-journey",
+    "title": "MindMeld",
+    "section": "Join the Journey",
+    "text": "Join the Journey\nI’m constantly experimenting with new AI tools and techniques, sharing both successes and failures along the way. This site serves as both a portfolio of AI-human collaboration and a documentation of my learning process.\n\n\n\n\n\n\nWant to get in touch?\n\n\n\nHave questions about AI content generation or want to discuss collaboration opportunities? Reach out to me."
+  },
+  {
+    "objectID": "podcasts/episodes/002-bayes.html#episode-background",
+    "href": "podcasts/episodes/002-bayes.html#episode-background",
     "title": "MindMeld",
     "section": "Episode Background",
-    "text": "Episode Background\n\nIntroducing MindMeld and NotebookLM: An AI-Powered Audio Experience\nIn this inaugural episode, I’m introducing the MindMeld website and its first three blog posts using NotebookLM, a powerful AI tool developed by Google. NotebookLM helps users understand and summarize texts while generating podcast-like audio content that’s accessible to the general public.\nI first discovered NotebookLM on Twitter, where it was highlighted as a tool for making academic research more accessible by transforming complex papers into formats that general audiences can understand.\n\n\nNotebookLM’s Evolution\nNotebookLM has been available since at least 2023, with its audio overview feature launching on September 11, 2024. When I began using it in July 2024, the platform was still in beta, requiring users to join a waitlist for access. The initial version I experienced would create podcast-like audio content featuring two virtual hosts who would summarize texts while attempting to make the content relatable through casual conversation and examples. This approach sometimes led to interesting results:\n\nHosts occasionally strayed from the main topic\nSome interpretations of the text weren’t entirely accurate\nSimple inputs could trigger surprisingly deep analysis (which was quite entertaining to hear)\n\n\n\nRecent Updates and Customization\nWhile the early version didn’t identify the hosts and simply launched into their “own” podcast format, the latest version includes a context/prompt window for customization. According to the site’s guidelines, users can:\n\nFocus on specific sources when multiple are provided\nHighlight particular topics\nTarget specific audiences\nAdd personal touches (like greeting specific people)\nOverride the default introduction\n\n\n\nThe MindMeld Experience\nFor this episode, I used NotebookLM to generate audio content from MindMeld’s first three blog posts. I successfully prompted the hosts to introduce the podcast as “MindMeld Podcasts” and acknowledge their status as virtual hosts.\nHowever, several interesting challenges emerged during this experiment:\n\nDespite customization attempts, the hosts sometimes reverted to calling the podcast “DeepDive”\nCertain content was repeated unnecessarily\nThe system doesn’t recognize text formatting like strikethrough, leading to some misinterpretations\nEven when prompted about the site’s AI-generated nature, the hosts attributed much of the content and reviews to FRA\n\nDespite these limitations, the tool offers an intriguing way to transform written content into engaging audio formats."
+    "text": "Episode Background\nThis is an example of using notebookLM to generate a podcast episode on a book review of Bayesian Statistics. The episode is a review of the book Bayesian Statistics, which is a different approach to understanding Bayesian Statistics. The episode is 17 minutes and 18 seconds long and was released on January 18, 2024."
   },
   {
-    "objectID": "podcasts/episodes/001-intro-mindmeld.html#show-notes",
-    "href": "podcasts/episodes/001-intro-mindmeld.html#show-notes",
+    "objectID": "podcasts/episodes/002-bayes.html#show-notes",
+    "href": "podcasts/episodes/002-bayes.html#show-notes",
     "title": "MindMeld",
     "section": "Show Notes",
-    "text": "Show Notes\nThe Podcast was created by adding into whole website as a resource into NotebookLM, except for the one page on the podcast. Then I used the context window/customization with the following:\n\n\nSay “Welcome to MindMeld, a podcast series powered by NotebookLM. This first episode explains the purpose and expectations of the site.”\nShout-out to Fernando, the behind-the-scenes force making this series possible\nsay “we , for example , are the product of NotebookLM"
+    "text": "Show Notes\nThe Podcast was created using the book as only source. Then I used the context window/customization with the following:\n\n\nSay “Welcome to MindMeld, a podcast series powered by NotebookLM.”\nShout-out to Fernando, the behind-the-scenes force making this series possible"
   },
   {
-    "objectID": "podcasts/episodes/001-intro-mindmeld.html#resources-mentioned",
-    "href": "podcasts/episodes/001-intro-mindmeld.html#resources-mentioned",
+    "objectID": "podcasts/episodes/002-bayes.html#resources-mentioned",
+    "href": "podcasts/episodes/002-bayes.html#resources-mentioned",
     "title": "MindMeld",
     "section": "Resources Mentioned",
-    "text": "Resources Mentioned\n\nAI Tools\n\nNotebookLM"
+    "text": "Resources Mentioned\n\nAI Tools\n\nNotebookLM\nbayesian statistics"
   },
   {
-    "objectID": "podcasts/episodes/003-cre-stata.html#episode-background",
-    "href": "podcasts/episodes/003-cre-stata.html#episode-background",
+    "objectID": "podcasts/episodes/004-trends-econometrics.html#episode-background",
+    "href": "podcasts/episodes/004-trends-econometrics.html#episode-background",
     "title": "MindMeld",
     "section": "Episode Background",
-    "text": "Episode Background\nThis is an example of using OpenAI Text to Speach capabilities to generate a podcast episode. In this opportunity, I’m using a paper of mine as the subject, where the two “hosts” explain the paper and the method there in. Since I wrote the paper, it was easy to decide if the content was accurate before rendering the episode. The episode is 7 minutes and 22 seconds long and was released on November 19, 2024."
+    "text": "Episode Background\nSome time ago, I came by a series of papers/monographs on various topics in econometrics and applied economics. The paper that I was looking at at the time was “Non-parametric Econometrics: A Primer” by J. S. Racine. I was looking at this particular topic as I was developing an implementation of a semi-parametric model known as Smooth-varying coefficient model. Just recently, about a year or so, I look at the whole series of monographs created by the same publisher: Foundations and Trends in Econometrics.\nThey have a selected number of monographs on various topics in econometrics and applied economicsm with a handful being published every year. Having access to them via the library at work, I got few of them to read, and put few others on the to-read list. Unfortunately, they fell on the long list of readings that I have, and I never got to them.\nNow, thanks to NotebookLM, I decided to create a mini-series on few of their monographs. This one is the first episode of the mini-series, where I requested NotebookLM to generate a podcast episode to introduce the series, and hopefully, generate some interest in the topics that will be covered. I already have the “whole” series obtained, but I will only be posting them as I listen/read them, to make sure they provide good content."
   },
   {
-    "objectID": "podcasts/episodes/003-cre-stata.html#show-notes",
-    "href": "podcasts/episodes/003-cre-stata.html#show-notes",
+    "objectID": "podcasts/episodes/004-trends-econometrics.html#show-notes",
+    "href": "podcasts/episodes/004-trends-econometrics.html#show-notes",
     "title": "MindMeld",
     "section": "Show Notes",
-    "text": "Show Notes\nThe Podcast was created using the paper as only source. I asked OpenAI the following:\n\nRead paper carefully and then write a script explaining this in a podcast with two hosts for about 10-20 min. One host is the one asking the questions, the other one answering them.\n\nThe total duration of the episode was 7 minutes and 22 seconds. Half of what I asked for.\nFor the Podcast itself, I used a small script (that I will share at a later point) to generate the episode, by going back and forth between different voices."
+    "text": "Show Notes\nThe Podcast was created using all the monographs that will be part of the series. Then I used the context window/customization with the following:\n\n\n“Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources”\nThis should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.\nShout-out to Fernando, the behind-the-scenes force making these series possible.\n\n\nThere were so many “podcasts” generated that I hit the limit of audio overviews that I can generate in a single day."
   },
   {
-    "objectID": "podcasts/episodes/003-cre-stata.html#resources-mentioned",
-    "href": "podcasts/episodes/003-cre-stata.html#resources-mentioned",
+    "objectID": "podcasts/episodes/004-trends-econometrics.html#resources-mentioned",
+    "href": "podcasts/episodes/004-trends-econometrics.html#resources-mentioned",
     "title": "MindMeld",
     "section": "Resources Mentioned",
-    "text": "Resources Mentioned\n\nAI Tools\n\nOpen\nThe paper is available on request\nThe python script will be released soon"
+    "text": "Resources Mentioned\n\nAI Tools\n\nNotebookLM\nFoundations and Trends® in Econometrics"
   },
   {
-    "objectID": "podcasts/episodes/003-cre-stata.html#script",
-    "href": "podcasts/episodes/003-cre-stata.html#script",
-    "title": "MindMeld",
-    "section": "Script",
-    "text": "Script\nhost_1: “This podcast is powered by OpenAI Text-to-Speech. All voices are AI Generated”\nhost_1:\n“Welcome to Mindmeld, the podcast where we use AI to break down papers, create content, and use it for teaching purposes. Today, we’re discussing an exciting paper titled Simplifying the Estimation of Correlated Random Effects Models. With me to unpack this is my co-host and econometrics enthusiast, Jamie. Welcome, Jamie!”\nhost_2: “Thanks! It’s great to be here. This paper tackles a method that sits at the intersection of two well-known approaches in panel data analysis, offering researchers a way to address some long-standing challenges.”\nhost_1:\n“Let’s set the stage, Jamie. What exactly is panel data, and why is it so important in econometrics?”\nhost_2:\n“Panel data is a type of dataset where we track the same units—like individuals, firms, or countries—over multiple time periods. This structure allows researchers to control for unobserved characteristics that don’t change over time, which is incredibly valuable in isolating causal relationships.\nFor example, if we’re studying the effect of education on income, panel data lets us account for unmeasured factors like inherent ability or family background by observing the same person over several years.”\nhost_1:\n“Got it. So how do econometricians typically analyze panel data?”\nhost_2:\n“The two most common approaches are Fixed Effects (FE) and Random Effects (RE) models. Fixed Effects models control for unobserved time-invariant factors by essentially ‘subtracting out’ the averages within each unit. While this is great for consistent estimates of time-varying variables, it doesn’t let us estimate the effects of time-invariant variables, like gender or geographic location.\nRandom Effects models, on the other hand, do allow for time-invariant variables but assume that unobserved individual effects are uncorrelated with the explanatory variables—a strong assumption that’s often violated in practice.”\nhost_1:\n“So where do Correlated Random Effects, or CRE, come into play?”\nhost_2:\n“CRE models, first introduced by Mundlak in 1978 and expanded by Chamberlain in 1982, offer a middle ground. They explicitly account for correlation between unobserved individual effects and explanatory variables by including group-specific averages of the time-varying variables in the model.\nIn a sense, it’s like taking the benefits of both FE and RE models: you get consistent estimates for time-varying variables while also allowing time-invariant variables to remain in the analysis.”\nhost_1:\n“That sounds promising! But if CRE has been around for decades, why hasn’t it gained widespread adoption?”\nhost_2:\n“Great question. One reason is that implementing CRE models has historically been cumbersome. It requires manual steps, like calculating group averages for time-varying variables and restructuring the data, which can get complicated. That’s where Rios-Avila’s paper comes in—it introduces a Stata command called cre that automates these steps, making the approach far more accessible to researchers.”\nhost_1:\n“Let’s talk about the paper itself. What does Rios-Avila’s cre command bring to the table?”\nhost_2:\n“The cre command is a prefix command in Stata, meaning you can use it with existing estimation tools to implement CRE models easily. It works for both linear and nonlinear models and supports balanced and unbalanced panel data. This is important because real-world data often isn’t perfectly balanced, where each unit has observations for the same time periods.\nThe command calculates group-specific averages—known as Mundlak terms—for time-varying variables and includes them in the model automatically. It even extends CRE models to handle multiple fixed effects, like controlling for both individual and time-specific factors, which is a common requirement in panel data analysis.”\nhost_1:\n“That sounds versatile! Does the paper show how well this command performs?”\nhost_2:\n“It does. The paper includes a Monte Carlo simulation where the cre command is tested on both linear and nonlinear models, such as probit and poisson regressions. These simulations compare CRE to pooled estimators and fixed-effects models.\nThe results show that CRE provides unbiased and consistent estimates for both time-varying and time-invariant variables, even when unobserved effects are correlated with the predictors. The only trade-off is a slight increase in variance compared to idealized benchmarks, but the bias—arguably a bigger issue—is negligible.”\nhost_1:\n“What about nonlinear models? Aren’t those notoriously tricky for fixed effects?”\nhost_2:\n“Exactly. Nonlinear models like probit or tobit often face the ‘incidental parameter problem,’ which makes fixed-effects estimates unreliable or even impossible. CRE offers a workaround by including those Mundlak terms, which effectively control for unobserved heterogeneity. This makes the cre command especially valuable for researchers working with nonlinear outcomes, like binary or count data.”\nhost_1:\n“This sounds incredibly useful. What kinds of research questions could benefit the most from CRE models?”\nhost_2:\n“CRE models are particularly useful in fields like labor economics, health policy, and education. For instance, if you’re studying how health interventions affect long-term outcomes, CRE allows you to account for fixed individual traits while still including factors like geographic location or baseline characteristics.\nIt’s also great for cases where you want to study treatment effects in staggered adoption scenarios, like the rollout of a new policy across states.”\nhost_1:\n“Are there any challenges researchers should watch out for when using the cre command?”\nhost_2:\n“One challenge is correctly estimating standard errors. Since CRE involves a two-step process—calculating group means and then estimating the model—there’s added uncertainty. The paper suggests using robust or clustered standard errors and even bootstrapping in some cases to address this.\nAnother consideration is understanding the underlying theory. The cre command makes implementation easier, but researchers still need to interpret their results within the CRE framework. For instance, the inclusion of group means changes how we think about causal relationships.”\nhost_1:\n“So, Jamie, what’s your overall takeaway from this paper?”\nhost_2:\n“It’s a significant contribution. By simplifying the implementation of CRE models, Rios-Avila is empowering researchers to tackle complex panel data problems without sacrificing rigor. I think this command will see widespread use, especially in applied research.”\nhost_1:\n“And what’s next for CRE research?”\nhost_2:\n“I see opportunities to integrate CRE models with machine learning tools, especially for handling high-dimensional data or exploring interactions. Also, further work on refining standard error estimation for CRE models could make them even more robust.”\nhost_1:\n“That’s it for today’s episode of Deep Data Dive! We’ve explored Correlated Random Effects and how the cre command is making this powerful tool accessible to researchers. If you’re interested, check out the paper by Fernando Rios-Avila or try the cre command in your next project. Thanks for tuning in, and we’ll see you next time!”\nhost_2:\n“Thanks, everyone! Stay curious!”"
-  },
-  {
-    "objectID": "podcasts/episodes/005-montecarlo-simulation.html#episode-background",
-    "href": "podcasts/episodes/005-montecarlo-simulation.html#episode-background",
+    "objectID": "podcasts/episodes/006-dimension-reduction.html#episode-background",
+    "href": "podcasts/episodes/006-dimension-reduction.html#episode-background",
     "title": "MindMeld",
     "section": "Episode Background",
-    "text": "Episode Background\nMonte Carlo Simulation is one of those tools everybody seems to know about (in economics and econometrics), but few are thought how to use it. But why should you?\nOne of the main uses of Monte Carlo Simulation is to understand the performance of your estimators. That typically means that you are someone proposing a new estimator, or someone trying to understand how well an existing estimator performs under different conditions, but the typical applied researcher who simply ones to use it.\nInterestingly, Monte Carlo Simulation is not difficult. Its main idea is to simulate data from a known distribution (your assumptions), and apply your estimator to the data. After repeating the process quite few times, you can have good ideas of how the method, or estimator you are proposing or studying will perform. I find it a very good tool for teaching econometrics, and show how violations of assumptions can affect estimation of models.\nThis episode covers a monograph on this topic. And while some of the descriptions seem off to me. For example, the discussion suggests Monte Carlo Simulation can be used to simulate policy changes, which is not something I have seen. Nevertheless, the podcast does a good overview of the topic, emphasizing the general rules to produce good simulations."
+    "text": "Episode Background\nOne of the methodologies I have learned late in my during my undergraduate studies was Principal Component Analysis (PCA). As you may know, this is a technique that can be used to reduce the dimensionality of data, by using linear combinations of the original variables, such that few “principal components” can explain most of the variance in the data. Each “component” is independent of the others, and “latter” components explain less and less of the variance.\nThis technique is very useful. I have used it to demonstrate a simple approach for image compression, and to show that one does not need “all” the variables to “see” the “big” picture. However, the scenario where I have used this most is in the context of economics, and the creation of wealth indexes.\nThe idea is simple: you have a lot of variables say on asset ownership, education, home ownership, etc. You need an approximation for “wealth”, thus you can use PCA to create a “wealth index” that can be used in your analysis.\nWhile this is probably the simplest and most common use of dimension reduction, there are many other methods that can be used. This episode covers a review of methods that go beyond PCA, and that can be used in different scenarios. The book itself its quite technical, but the podcast does a good job of summarizing the main ideas."
   },
   {
-    "objectID": "podcasts/episodes/005-montecarlo-simulation.html#show-notes",
-    "href": "podcasts/episodes/005-montecarlo-simulation.html#show-notes",
+    "objectID": "podcasts/episodes/006-dimension-reduction.html#show-notes",
+    "href": "podcasts/episodes/006-dimension-reduction.html#show-notes",
     "title": "MindMeld",
     "section": "Show Notes",
-    "text": "Show Notes\nThe Podcast was created using only the Monograph on Monte Carlo Simulations. Then I used the context window/customization with the following:\n\n\n“Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources”\nThis should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.\nShout-out to Fernando, the behind-the-scenes force making these series possible."
+    "text": "Show Notes\nThe Podcast was created using only the Monograph on Dimension Reduction techniques. Then I used the context window/customization with the following:\n\n\n“Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources”\nThis should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.\nShout-out to Fernando, the behind-the-scenes force making these series possible."
   },
   {
-    "objectID": "podcasts/episodes/005-montecarlo-simulation.html#resources-mentioned",
-    "href": "podcasts/episodes/005-montecarlo-simulation.html#resources-mentioned",
+    "objectID": "podcasts/episodes/006-dimension-reduction.html#resources-mentioned",
+    "href": "podcasts/episodes/006-dimension-reduction.html#resources-mentioned",
     "title": "MindMeld",
     "section": "Resources Mentioned",
-    "text": "Resources Mentioned\n\nNotebookLM\nFoundations and Trends® in Econometrics\nMonte Carlo Simulation for Econometricians"
+    "text": "Resources Mentioned\n\nNotebookLM\nFoundations and Trends® in Machine Learning\nDimension Reduction: A guided Tour"
   },
   {
     "objectID": "podcasts/episodes/a-christmas-carol.html#episode-background",
@@ -698,26 +803,5 @@
     "title": "MindMeld",
     "section": "Resources Mentioned",
     "text": "Resources Mentioned\n\nNotebookLM"
-  },
-  {
-    "objectID": "podcasts/episodes/007-Inference-week-IV.html#episode-background",
-    "href": "podcasts/episodes/007-Inference-week-IV.html#episode-background",
-    "title": "MindMeld",
-    "section": "Episode Background",
-    "text": "Episode Background\nIn econometrics, whenever one is trying to look and identify for the elusive “causal effect”, one often encounters the problem of endogeneity. Factors beyond our control that may affect both the outcome and the variable of interest.\nOne of the first methodologies I learned back in undergrad to address this problem, was the use of instrumental variables. Instrumental variable are exogenous variables that explain the endogenous variable of interest but not the outcome. Thus it can be used to isolate the causal effect we are interested in.\nWhile this sounds like a great solution, it is not without its own set of problems. It is usually difficult to find a good instrumental variable. And often, what we end up with are only weakly related to the variable of interest. This is what we call weak instruments.\nBack in my day, and still used today as a basic rule to determine the strength of an instrument, is to look into the F-statistic of the first stage regression. If the F-statistic is less than 10, then the instrument is considered weak. More recently, some papers suggested that one would actually require an F-statistic that should be much larger.\nWhat I didn’t know back then was that with weak instruments, most bets are off. And we may end up with results that are worse than if no instruments were used at all.\nThis episode provides a brief overview of the problem and talks about some of the solutions that have been proposed in the literature (in 2013).\nIt has nice examples, and I hope you enjoy it."
-  },
-  {
-    "objectID": "podcasts/episodes/007-Inference-week-IV.html#show-notes",
-    "href": "podcasts/episodes/007-Inference-week-IV.html#show-notes",
-    "title": "MindMeld",
-    "section": "Show Notes",
-    "text": "Show Notes\nThe Podcast was created using only the Monograph on Inference with weak instruments. Then I used the context window/customization with the following:\n\n\n“Welcome to MindMeld, a podcast series powered by NotebookLM. Note: while we aim for accuracy, details may sometimes be incomplete or incorrect—listeners are encouraged to cross-check sources”\nThis should be an overview to entice listeners to listen into these mini-series of econometrics focus topics. Or read the papers themselves.\nShout-out to Fernando, the behind-the-scenes force making these series possible."
-  },
-  {
-    "objectID": "podcasts/episodes/007-Inference-week-IV.html#resources-mentioned",
-    "href": "podcasts/episodes/007-Inference-week-IV.html#resources-mentioned",
-    "title": "MindMeld",
-    "section": "Resources Mentioned",
-    "text": "Resources Mentioned\n\nNotebookLM\nFoundations and Trends® in Econometrics\nInference in the Presence of Weak Instruments: A Selected Survey"
   }
 ]

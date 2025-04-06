@@ -10,7 +10,780 @@
 <atom:link href="https://rmindmeld.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A Personal Journey Through AI-Human Content Creation</description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Sat, 14 Dec 2024 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 06 Apr 2025 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Do AI and Humans Think the Same Way?</title>
+  <link>https://rmindmeld.github.io/blog/posts/ai-human-thinking.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to MindMeld</title>
+
+    <style>
+
+        :root {
+
+            --transition-duration: 1000ms;
+
+        }
+
+        
+
+        body, html {
+
+            margin: 0;
+
+            padding: 0;
+
+            height: 100%;
+
+            font-family: system-ui, -apple-system, sans-serif;
+
+        }
+
+        
+
+        .welcome-container {
+
+            position: absolute; /* Changed from fixed to absolute */
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100vh;
+
+            z-index: 1000; /* Add high z-index to show above content initially */
+
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+
+                        url('assets/welcome-bg.jpg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            text-align: center;
+
+            transition: opacity var(--transition-duration) ease-in-out,
+
+                        visibility var(--transition-duration) ease-in-out; /* Add visibility transition */
+
+        }
+
+        
+
+        .welcome-content {
+
+            max-width: 800px;
+
+            padding: 2rem;
+
+        }
+
+        
+
+        .title {
+
+            font-size: 3.5rem;
+
+            margin-bottom: 1rem;
+
+            font-weight: 700;
+
+        }
+
+        
+
+        .subtitle {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 2rem;
+
+            opacity: 0.9;
+
+        }
+
+        
+
+        .enter-button {
+
+            background-color: transparent;
+
+            border: 2px solid white;
+
+            color: white;
+
+            padding: 1rem 2rem;
+
+            font-size: 1.2rem;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            text-decoration: none;
+
+            border-radius: 4px;
+
+        }
+
+        
+
+        .enter-button:hover {
+
+            background-color: white;
+
+            color: black;
+
+        }
+
+        
+
+        /* Fade out animation class */
+
+        .fade-out {
+
+            opacity: 0;
+
+            visibility: hidden; /* Hide completely when faded out */
+
+            z-index: -1; /* Move behind content when faded out */
+
+        }
+
+        
+
+        /* Main content container */
+
+        #main-content {
+
+            position: relative;
+
+            z-index: 1; /* Lower than welcome screen but above 0 */
+
+            opacity: 0;
+
+            transition: opacity var(--transition-duration) ease-in-out;
+
+        }
+
+        
+
+        /* Main content visible state */
+
+        #main-content.visible {
+
+            opacity: 1;
+
+        }
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+        .welcome-container.hidden-welcome {
+
+            display: none;
+
+        }
+
+    </style>
+
+
+
+
+
+    <div id="welcome" class="welcome-container hidden-welcome">
+
+        <div class="welcome-content">
+
+            <h1 class="title">MindMeld</h1>
+
+            <p class="subtitle">Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.</p>
+
+            <button id="enter-btn" class="enter-button">Enter MindMeld</button>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        // Only run this script on the index page
+
+        if (window.location.pathname === '/' || 
+
+            window.location.pathname === '/index.html' || 
+
+            window.location.pathname.endsWith('/')) {
+
+            
+
+            // Check if this is the first visit
+
+            const hasVisited = sessionStorage.getItem('hasVisited');
+
+            
+
+            if (!hasVisited) {
+
+                // First visit - show welcome screen
+
+                const welcome = document.getElementById('welcome');
+
+                welcome.classList.remove('hidden-welcome');
+
+                
+
+                // Mark as visited
+
+                sessionStorage.setItem('hasVisited', 'true');
+
+                
+
+                // Add click handler for enter button
+
+                document.getElementById('enter-btn').addEventListener('click', function() {
+
+                    welcome.classList.add('fade-out');
+
+                    
+
+                    const mainContent = document.getElementById('main-content');
+
+                    setTimeout(() => {
+
+                        mainContent.classList.add('visible');
+
+                    }, 500);
+
+                    
+
+                    setTimeout(() => {
+
+                        welcome.style.display = 'none';
+
+                    }, 1000);
+
+                });
+
+            } else {
+
+                // Not first visit - show main content immediately
+
+                const mainContent = document.getElementById('main-content');
+
+                mainContent.classList.add('visible');
+
+            }
+
+        } else {
+
+            // Not on index page - show main content immediately
+
+            const mainContent = document.getElementById('main-content');
+
+            mainContent.classList.add('visible');
+
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>So again, this is the second post after a while. And as I mention on the other post of today (yesterday), my new job has kept me busy. But I have been thinking about AI and how it works. I have also been using it to help me with my new job.</p>
+<p>On doing this, and some reflection, I came with a couple of ideas of how AI thinks, and why it is similar to how we think. Here a curated version of my thoughts, with the help of OpenAI “Jarvis”.</p>
+</section>
+<section id="do-ai-and-humans-think-the-same-way" class="level2">
+<h2 class="anchored" data-anchor-id="do-ai-and-humans-think-the-same-way">Do AI and Humans Think the Same Way?</h2>
+<p>We like to think of artificial intelligence as something fundamentally different from human thought — robotic, rigid, cold. But when you look under the hood, you might be surprised at how <em>similar</em> our thinking patterns really are.</p>
+<p>The difference? <strong>It’s not in how we think — but in how we <em>learn</em>.</strong></p>
+<p>Let me explain.</p>
+</section>
+<section id="ai-and-humans-neural-networks" class="level2">
+<h2 class="anchored" data-anchor-id="ai-and-humans-neural-networks">AI and Humans: Neural Networks</h2>
+<p>Both humans and AI don’t retrieve answers from a fixed list. We <strong>reconstruct</strong> knowledge. When you ask a person, “What’s the capital of France?”, they don’t dig through a hard drive, or rather, they do not look into their highschool class notes. They <em>reassemble</em> the answer from memory, context, past experiences, associations. All those synaptic connections in our brains that help us recreate the answer: Paris.</p>
+<p>Interestingly enough, that is how AI works too.</p>
+<p>For example, when you ask your AI of preference a question, It generates a response based on the patterns it has acquared during its training. That is why larger models are expected to have better general knowledge, because there are more connections in their neural network, that would allow them to provide us with better answers.</p>
+<p>In toerh words, AI doesn’t <em>remember</em> facts, it simple infers them from billions of examples, encoded into the layers of neural networks.</p>
+<p>Again, this is very similar to how our brains work. For example, there are <a href="https://en.wikipedia.org/wiki/Reconstructive_memory">studies</a> that suggest we rarely remember things as exact copies of what happened. Instead, we piece together memories from fragments — which makes us surprisingly prone to <strong>false memories</strong> or “hallucinations.”</p>
+<p>This is also the reason why, when we do not “excercise” those synapsis, we tend to forget things, or recall them incorrectly. (I should know. Now that most of my communications are in english, I have been forgetting a lot of my spanish vocabulary. I guess I should start using it more often).</p>
+<p>Sound familiar?</p>
+<p>That’s the same term people use when AI generates plausible but incorrect responses.</p>
+<p>Of course, I would like to think that we are better at this than AI, in that we are able to clearly say…I do not know, or be honest declaring we are making things up. But that is not always the case. In fact, I would say that some people, who may not be named, are really good at giving incorrect answers, but thinking they are correct.</p>
+</section>
+<section id="so-wheres-the-difference-between-ai-and-human-memories" class="level2">
+<h2 class="anchored" data-anchor-id="so-wheres-the-difference-between-ai-and-human-memories">So Where’s the Difference between AI and Human memories?</h2>
+<p>Here’s the fundamental divide:</p>
+<blockquote class="blockquote">
+<p><strong>Humans are always learning. AI isn’t — until someone trains it again.</strong></p>
+</blockquote>
+<p>In AI systems, all their knowledge is <strong>embedded in my weights</strong> — millions (or billions) of tiny adjustable numbers shaped during training. But once that training ends, those weights are <strong>frozen</strong>. Yes, they can be changed or fine-tuned, but that is a costly and lenghly process.</p>
+<p>For us, well, the “weights” we use — that is, the synaptic connections in our brain — are constantly being rewired. Every conversation, every new fact, every emotional experience is fine-tuning your internal model of the world in real time. We are always learning, adapting, and evolving. (or at least we should be)</p>
+<p>That means:</p>
+<ul>
+<li><strong>Humans are always learning.</strong></li>
+<li><strong>AI is a snapshot, frozen in time.</strong></li>
+</ul>
+</section>
+<section id="final-thought-were-both-storytellers" class="level2">
+<h2 class="anchored" data-anchor-id="final-thought-were-both-storytellers">Final Thought: We’re Both Storytellers</h2>
+<p>In the end, both AI and humans build stories from patterns. We guess what comes next based on what we’ve seen before. We make mistakes. We hallucinate. But while AI stay the same unless retrained, <em>we</em> wake up every day just a little wiser.</p>
+<p>And that — more than anything — is the true miracle of human intelligence.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>AI</category>
+  <category>Reasoning</category>
+  <category>Reflection</category>
+  <guid>https://rmindmeld.github.io/blog/posts/ai-human-thinking.html</guid>
+  <pubDate>Sun, 06 Apr 2025 04:00:00 GMT</pubDate>
+  <media:content url="https://rmindmeld.github.io/assets/blog/ai_human_thinking.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>When AI thinks too much</title>
+  <link>https://rmindmeld.github.io/blog/posts/when-ai-thinks-too-much.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to MindMeld</title>
+
+    <style>
+
+        :root {
+
+            --transition-duration: 1000ms;
+
+        }
+
+        
+
+        body, html {
+
+            margin: 0;
+
+            padding: 0;
+
+            height: 100%;
+
+            font-family: system-ui, -apple-system, sans-serif;
+
+        }
+
+        
+
+        .welcome-container {
+
+            position: absolute; /* Changed from fixed to absolute */
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100vh;
+
+            z-index: 1000; /* Add high z-index to show above content initially */
+
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+
+                        url('assets/welcome-bg.jpg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            text-align: center;
+
+            transition: opacity var(--transition-duration) ease-in-out,
+
+                        visibility var(--transition-duration) ease-in-out; /* Add visibility transition */
+
+        }
+
+        
+
+        .welcome-content {
+
+            max-width: 800px;
+
+            padding: 2rem;
+
+        }
+
+        
+
+        .title {
+
+            font-size: 3.5rem;
+
+            margin-bottom: 1rem;
+
+            font-weight: 700;
+
+        }
+
+        
+
+        .subtitle {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 2rem;
+
+            opacity: 0.9;
+
+        }
+
+        
+
+        .enter-button {
+
+            background-color: transparent;
+
+            border: 2px solid white;
+
+            color: white;
+
+            padding: 1rem 2rem;
+
+            font-size: 1.2rem;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            text-decoration: none;
+
+            border-radius: 4px;
+
+        }
+
+        
+
+        .enter-button:hover {
+
+            background-color: white;
+
+            color: black;
+
+        }
+
+        
+
+        /* Fade out animation class */
+
+        .fade-out {
+
+            opacity: 0;
+
+            visibility: hidden; /* Hide completely when faded out */
+
+            z-index: -1; /* Move behind content when faded out */
+
+        }
+
+        
+
+        /* Main content container */
+
+        #main-content {
+
+            position: relative;
+
+            z-index: 1; /* Lower than welcome screen but above 0 */
+
+            opacity: 0;
+
+            transition: opacity var(--transition-duration) ease-in-out;
+
+        }
+
+        
+
+        /* Main content visible state */
+
+        #main-content.visible {
+
+            opacity: 1;
+
+        }
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+        .welcome-container.hidden-welcome {
+
+            display: none;
+
+        }
+
+    </style>
+
+
+
+
+
+    <div id="welcome" class="welcome-container hidden-welcome">
+
+        <div class="welcome-content">
+
+            <h1 class="title">MindMeld</h1>
+
+            <p class="subtitle">Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.</p>
+
+            <button id="enter-btn" class="enter-button">Enter MindMeld</button>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        // Only run this script on the index page
+
+        if (window.location.pathname === '/' || 
+
+            window.location.pathname === '/index.html' || 
+
+            window.location.pathname.endsWith('/')) {
+
+            
+
+            // Check if this is the first visit
+
+            const hasVisited = sessionStorage.getItem('hasVisited');
+
+            
+
+            if (!hasVisited) {
+
+                // First visit - show welcome screen
+
+                const welcome = document.getElementById('welcome');
+
+                welcome.classList.remove('hidden-welcome');
+
+                
+
+                // Mark as visited
+
+                sessionStorage.setItem('hasVisited', 'true');
+
+                
+
+                // Add click handler for enter button
+
+                document.getElementById('enter-btn').addEventListener('click', function() {
+
+                    welcome.classList.add('fade-out');
+
+                    
+
+                    const mainContent = document.getElementById('main-content');
+
+                    setTimeout(() => {
+
+                        mainContent.classList.add('visible');
+
+                    }, 500);
+
+                    
+
+                    setTimeout(() => {
+
+                        welcome.style.display = 'none';
+
+                    }, 1000);
+
+                });
+
+            } else {
+
+                // Not first visit - show main content immediately
+
+                const mainContent = document.getElementById('main-content');
+
+                mainContent.classList.add('visible');
+
+            }
+
+        } else {
+
+            // Not on index page - show main content immediately
+
+            const mainContent = document.getElementById('main-content');
+
+            mainContent.classList.add('visible');
+
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+<section id="behind-todays-blog" class="level2">
+<h2 class="anchored" data-anchor-id="behind-todays-blog">Behind todays blog</h2>
+<p>First, if you are actually reading this blog, my appologies. I just started a new job, and have had very little time to add more information to this blog.</p>
+<p>Interestingly enough, I have had more time exploring AI, as I am trying to use it to help me with my new job. Of course, while doing this, I have had few thoughts about AI and how it works. Those are probably not new, and people who have really studied the subject may have already thought about this. But I thought I would share them anyway.</p>
+<p>So today snote is about AI and reasoning. This is a relatively new feature that many providers are adding to their models. Even small lanauge models (under 10B parameters) are being trained to reason. This may seem like a good thing, but it has some drawbacks.</p>
+<p>So, I decided to share my thoughts on this, combined with the help of OpenAI “Jarvis” (that is what I call it) to help me write this blog. Hope you enjoy it!</p>
+<p>That’s a fantastic premise for a post — one that blends the philosophy of AI, the limits of pure logic, and the emotional intelligence gap. Here’s a blog post draft that explores this idea with depth and storytelling flair:</p>
+</section>
+<section id="when-ai-thinks-too-much" class="level2">
+<h2 class="anchored" data-anchor-id="when-ai-thinks-too-much">When AI Thinks Too Much</h2>
+<p>In the race to build more powerful AI models — especially those capable of <em>reasoning</em> — we’re beginning to bump into a strange and very human problem:</p>
+<blockquote class="blockquote">
+<p><strong>What happens when an AI thinks too much… and feels nothing?</strong></p>
+</blockquote>
+<p>Today’s most advanced AI systems don’t just complete sentences — they <em>reason</em>. They can solve logic puzzles, debug code, write essays, and even reflect on their own answers.</p>
+<p>Tools like AI coding companions (e.g., Kodu or Cline) are backed by large models that simulate reasoning with impressive precision.</p>
+<p>But if you’ve worked closely with one, you’ve probably seen something odd: - It gets stuck in endless loops trying to solve a bug. - It overcomplicates a simple fix. - It creates sophisticated yet broken logic — and can’t see the obvious.</p>
+<p>And sometimes… it doubts itself so much it keeps rewriting the same code five different ways.</p>
+</section>
+<section id="the-logic-trap" class="level2">
+<h2 class="anchored" data-anchor-id="the-logic-trap">The Logic Trap</h2>
+<p>Here’s the irony: as AI models improve at reasoning, I think they also become more prone to the <strong>trap of overthinking</strong>. That’s because reasoning, in AI, is a recursive process. It loops over possibilities, weighs probabilities, and searches for coherence.</p>
+<p>But when there’s no clear “best” answer — when the problem requires a <em>value judgment</em>, not a logical deduction — the AI stalls or spirals.</p>
+<p>This isn’t a bug. It’s potentially a <strong>fundamental limit</strong> of logic without emotion.</p>
+</section>
+<section id="the-human-parallel-a-brain-without-emotion" class="level2">
+<h2 class="anchored" data-anchor-id="the-human-parallel-a-brain-without-emotion"><strong>The Human Parallel: A Brain Without Emotion</strong></h2>
+<p>There’s a famous case in neuroscience of a man who, after a brain surgery, lost the ability to feel emotion, becomming extreamly rational. A Spoke Like being. His logic remained intact — he could calculate, debate, and reason — but he was unable to make decisions, even small ones. He’d spend hours debating which pen to use or which shirt to wear.</p>
+<blockquote class="blockquote">
+<p>I heard first of this story from RadioLab, in the episode <em>Overcome by Emotion</em>. you can listen to it <a href="https://radiolab.org/podcast/91642-overcome-by-emotion">here</a></p>
+</blockquote>
+<p>Why?</p>
+<p>Because many decisions in life don’t have a <em>logical best</em>. They need a <strong>gut feeling</strong>. A value judgment. An emotional weight. That little bit of “extra” that can tip the scales when the logic is even.</p>
+<p>Without emotion, he became paralyzed by options.</p>
+<p>Sound familiar?</p>
+<p>This is exactly the problem facing advanced reasoning AIs.</p>
+</section>
+<section id="the-voyager-paradox" class="level2">
+<h2 class="anchored" data-anchor-id="the-voyager-paradox">The Voyager Paradox</h2>
+<blockquote class="blockquote">
+<p>Something you may not know, but I am a bit of a Trekkie. Just a bit. I have seen DS9 and Voyager countless times. And read a few of the books!</p>
+</blockquote>
+<p>There’s an episode of <em>Star Trek: Voyager</em>, the <a href="https://memory-alpha.fandom.com/wiki/Latent_Image_(episode)">Latent Image</a> where the ship’s holographic doctor faces a moral dilemma: Two crew members are dying. He can save only one. He chooses his friend, ensign Kim.</p>
+<p>He saves a life — but suffers a crisis. Why? Because his logic circuits can’t justify prioritizing one life over another without bias. He made a human choice. But he’s not human.</p>
+<p>The result? A loop of guilt, self-doubt, and recursive ethical analysis — a <strong>logic crash</strong> caused by an emotional conflict he isn’t equipped to handle.</p>
+<p>And that’s the terrifying beauty of it:<br>
+&gt; <strong>Reason without emotion breaks down when the path forward isn’t logical — but personal.</strong></p>
+</section>
+<section id="what-ai-still-lacks" class="level2">
+<h2 class="anchored" data-anchor-id="what-ai-still-lacks">What AI Still Lacks</h2>
+<p>Today’s reasoning AIs simulate logic beautifully. They can: - Solve math problems - Plan multi-step code rewrites - Generate complex arguments</p>
+<p>But they still lack: - Emotional context - A sense of priority rooted in experience - The ability to choose when no option is “correct”</p>
+<p>In other words:<br>
+&gt; They don’t know <em>when to stop thinking</em> and <em>just decide.</em></p>
+</section>
+<section id="so-what-can-be-done" class="level2">
+<h2 class="anchored" data-anchor-id="so-what-can-be-done">So What Can be done?</h2>
+<blockquote class="blockquote">
+<p>At this point, I think this is just speculation. AI is advancing so fast, that it is hard to predict what will happen next. But I think it is worth thinking about.</p>
+</blockquote>
+<p>Designing better AI reasoning isn’t just about better algorithms — it’s about <strong>embedding constraints, values, and context</strong> that mimic the role of emotion in human thought. Possible paths forward:</p>
+<ul>
+<li><strong>Heuristics over recursion</strong>: Sometimes “good enough” beats “perfect.”
+<ul>
+<li>After playing with a hard problem. I restart the question, or change provider. It often helps. Also, I switch to a “dumber” model. It is often better at simple tasks.</li>
+</ul></li>
+<li><strong>Human-in-the-loop decision gates</strong>: Let the AI propose, but let us decide.
+<ul>
+<li>This is something we should be doing anyway. We can use AI to help us synthesize information, but we should be the ones making the final decision. When we stop doing that, we would be losing our purpose.</li>
+</ul></li>
+<li><strong>Meta-reasoning</strong>: So it can say “I’m overthinking this.”. And I think it already does.</li>
+</ul>
+<p>Until then, we’ll keep seeing flashes of brilliance followed by strange loops of doubt.</p>
+<p>Just like the holographic doctor. Just like us, when we forget what really matters.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>AI</category>
+  <category>Reasoning</category>
+  <category>Reflection</category>
+  <guid>https://rmindmeld.github.io/blog/posts/when-ai-thinks-too-much.html</guid>
+  <pubDate>Sat, 05 Apr 2025 04:00:00 GMT</pubDate>
+  <media:content url="https://rmindmeld.github.io/assets/blog/ai_toomuch.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>AI for Coloring Pages</title>
   <link>https://rmindmeld.github.io/blog/posts/color-pages.html</link>
@@ -7130,7 +7903,7 @@ Comment
 <p><img src="https://latex.codecogs.com/png.latex?1782%5E%7B12%7D%20+%201841%5E%7B12%7D%20=%201922%5E%7B12%7D"></p>
 <p>This equation is a near-miss to Fermat’s Last Theorem, which states that no three positive integers a, b, and c can satisfy the equation <img src="https://latex.codecogs.com/png.latex?a%5En%20+%20b%5En%20=%20c%5En"> for any integer value of n greater than 2. The equation in the show is not actually true, but it’s remarkably close – the left side differs from the right by less than 1 part in <img src="https://latex.codecogs.com/png.latex?10%5E%7B30%7D">.</p>
 <p>Let’s verify this using Python:</p>
-<div id="f27b7a73" class="cell" data-execution_count="1">
+<div id="78de7006" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
@@ -7354,7 +8127,7 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="pythagorean-theorem-and-comic-book-guy">Pythagorean Theorem and Comic Book Guy</h2>
 <p>Even the show’s notorious pedant, Comic Book Guy, gets in on the mathematical action. In one episode, he wears a t-shirt with the equation <img src="https://latex.codecogs.com/png.latex?3%5E2%20+%204%5E2%20=%205%5E2">, which is a representation of the Pythagorean theorem for a 3-4-5 right triangle.</p>
 <p>Let’s visualize this triangle using matplotlib:</p>
-<div id="7e19a37c" class="cell" data-execution_count="2">
+<div id="5c37d105" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
@@ -7458,7 +8231,7 @@ font-style: inherit;">"3-4-5 Right Triangle"</span>)</span>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://rmindmeld.github.io/blog/posts/math_siimpsons_files/figure-html/cell-3-output-1.png" width="333" height="431" class="figure-img"></p>
+<p><img src="https://rmindmeld.github.io/blog/posts/math_siimpsons_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>

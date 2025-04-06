@@ -15,6 +15,8 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/posts/ai-human-thinking.html",
+      "/blog/posts/when-ai-thinks-too-much.html",
       "/blog/posts/color-pages.html",
       "/blog/posts/goodbye-sonnet.html",
       "/blog/posts/prog-with-ai.html",

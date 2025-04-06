@@ -1,0 +1,113 @@
+---
+title: "When AI thinks too much"
+subtitle: "The limits of Logic in Reasoning Machines"
+date: "2025-4-5"
+categories: 
+  - AI 
+  - Reasoning
+  - Reflection
+image: "../../assets/blog/ai_toomuch.jpg"
+execute: 
+  freeze: auto
+---
+
+## Behind todays blog
+
+First, if you are actually reading this blog, my appologies. I just started a new job, and have had very little time to add more information to this blog. 
+
+Interestingly enough, I have had more time exploring AI, as I am trying to use it to help me with my new job. Of course, while doing this, I have had few thoughts about AI and how it works. Those are probably not new, and people who have really studied the subject may have already thought about this. But I thought I would share them anyway.
+
+So today snote is about AI and reasoning. This is a relatively new feature that many providers are adding to their models. Even small lanauge models (under 10B parameters) are being trained to reason. This may seem like a good thing, but it has some drawbacks. 
+
+So, I decided to share my thoughts on this, combined with the help of OpenAI "Jarvis" (that is what I call it) to help me write this blog. Hope you enjoy it!
+
+That’s a fantastic premise for a post — one that blends the philosophy of AI, the limits of pure logic, and the emotional intelligence gap. Here's a blog post draft that explores this idea with depth and storytelling flair:
+
+
+## When AI Thinks Too Much
+
+In the race to build more powerful AI models — especially those capable of *reasoning* — we’re beginning to bump into a strange and very human problem:
+
+> **What happens when an AI thinks too much… and feels nothing?**
+
+Today’s most advanced AI systems don’t just complete sentences — they *reason*. They can solve logic puzzles, debug code, write essays, and even reflect on their own answers.
+
+Tools like AI coding companions (e.g., Kodu or Cline) are backed by large models that simulate reasoning with impressive precision.
+
+But if you’ve worked closely with one, you’ve probably seen something odd:
+- It gets stuck in endless loops trying to solve a bug.
+- It overcomplicates a simple fix.
+- It creates sophisticated yet broken logic — and can’t see the obvious.
+
+And sometimes… it doubts itself so much it keeps rewriting the same code five different ways.
+
+## The Logic Trap
+
+Here’s the irony: as AI models improve at reasoning, I think they also become more prone to the **trap of overthinking**. That’s because reasoning, in AI, is a recursive process. It loops over possibilities, weighs probabilities, and searches for coherence.
+
+But when there’s no clear “best” answer — when the problem requires a *value judgment*, not a logical deduction — the AI stalls or spirals.
+
+This isn’t a bug. It’s potentially a **fundamental limit** of logic without emotion.
+
+## **The Human Parallel: A Brain Without Emotion**
+
+There’s a famous case in neuroscience of a man who, after a brain surgery, lost the ability to feel emotion, becomming extreamly rational. A Spoke Like being. His logic remained intact — he could calculate, debate, and reason — but he was unable to make decisions, even small ones. He’d spend hours debating which pen to use or which shirt to wear. 
+
+> I heard first of this story from RadioLab, in the episode *Overcome by Emotion*. you can listen to it [here](https://radiolab.org/podcast/91642-overcome-by-emotion)
+
+Why?
+
+Because many decisions in life don’t have a *logical best*. They need a **gut feeling**. A value judgment. An emotional weight. That little bit of "extra" that can tip the scales when the logic is even.
+
+Without emotion, he became paralyzed by options.
+
+Sound familiar?
+
+This is exactly the problem facing advanced reasoning AIs.
+
+## The Voyager Paradox
+
+> Something you may not know, but I am a bit of a Trekkie. Just a bit. I have seen DS9 and Voyager countless times. And read a few of the books!
+
+There’s an episode of *Star Trek: Voyager*, the [Latent Image](https://memory-alpha.fandom.com/wiki/Latent_Image_(episode)) where the ship’s holographic doctor faces a moral dilemma: Two crew members are dying. He can save only one. He chooses his friend, ensign Kim.
+
+He saves a life — but suffers a crisis. Why? Because his logic circuits can’t justify prioritizing one life over another without bias. He made a human choice. But he’s not human.
+
+The result? A loop of guilt, self-doubt, and recursive ethical analysis — a **logic crash** caused by an emotional conflict he isn’t equipped to handle.
+
+And that’s the terrifying beauty of it:  
+> **Reason without emotion breaks down when the path forward isn’t logical — but personal.**
+
+
+## What AI Still Lacks
+
+Today’s reasoning AIs simulate logic beautifully. They can:
+- Solve math problems
+- Plan multi-step code rewrites
+- Generate complex arguments
+
+But they still lack:
+- Emotional context
+- A sense of priority rooted in experience
+- The ability to choose when no option is “correct”
+
+In other words:  
+> They don’t know *when to stop thinking* and *just decide.*
+
+
+## So What Can be done?
+
+> At this point, I think this is just speculation. AI is advancing so fast, that it is hard to predict what will happen next. But I think it is worth thinking about.
+
+Designing better AI reasoning isn’t just about better algorithms — it’s about **embedding constraints, values, and context** that mimic the role of emotion in human thought. Possible paths forward:
+
+- **Heuristics over recursion**: Sometimes “good enough” beats “perfect.”
+    - After playing with a hard problem. I restart the question, or change provider. It often helps. Also, I switch to a "dumber" model. It is often better at simple tasks.
+- **Human-in-the-loop decision gates**: Let the AI propose, but let us decide.
+    - This is something we should be doing anyway. We can use AI to help us synthesize information, but we should be the ones making the final decision. When we stop doing that, we would be losing our purpose.
+- **Meta-reasoning**: So it can say “I’m overthinking this.”. And I think it already does.
+
+Until then, we’ll keep seeing flashes of brilliance followed by strange loops of doubt.
+
+Just like the holographic doctor. Just like us, when we forget what really matters.
+

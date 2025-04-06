@@ -1,0 +1,67 @@
+---
+title: "Do AI and Humans Think the Same Way?"
+date: "2025-4-6"
+categories: 
+  - AI 
+  - Reasoning
+  - Reflection
+image: "../../assets/blog/ai_human_thinking.jpg"
+execute: 
+  freeze: auto
+---
+
+## Background
+
+So again, this is the second post after a while. And as I mention on the other post of today (yesterday), my new job has kept me busy. But I have been thinking about AI and how it works. I have also been using it to help me with my new job.
+
+On doing this, and some reflection, I came with a couple of ideas of how AI thinks, and why it is similar to how we think. Here a curated version of my thoughts, with the help of OpenAI "Jarvis".
+
+## Do AI and Humans Think the Same Way?
+
+We like to think of artificial intelligence as something fundamentally different from human thought — robotic, rigid, cold. But when you look under the hood, you might be surprised at how *similar* our thinking patterns really are.
+
+The difference? **It’s not in how we think — but in how we *learn*.**
+
+Let me explain.
+
+## AI and Humans: Neural Networks
+
+Both humans and AI don’t retrieve answers from a fixed list. We **reconstruct** knowledge. When you ask a person, “What’s the capital of France?”, they don’t dig through a hard drive, or rather, they do not look into their highschool class notes. They *reassemble* the answer from memory, context, past experiences, associations. All those synaptic connections in our brains that help us recreate the answer: Paris.
+
+Interestingly enough, that is how AI works too.
+
+For example, when you ask your AI of preference a question, It generates a response based on the patterns it has acquared during its training. That is why larger models are expected to have better general knowledge, because there are more connections in their neural network, that would allow them to provide us with better answers.
+
+In toerh words, AI doesn't *remember* facts, it simple infers them from billions of examples, encoded into the layers of neural networks.
+
+Again, this is very similar to how our brains work. For example, there are [studies](https://en.wikipedia.org/wiki/Reconstructive_memory) that suggest we rarely remember things as exact copies of what happened. Instead, we piece together memories from fragments — which makes us surprisingly prone to **false memories** or “hallucinations.”
+
+This is also the reason why, when we do not "excercise" those synapsis, we tend to forget things, or recall them incorrectly. (I should know. Now that most of my communications are in english, I have been forgetting a lot of my spanish vocabulary. I guess I should start using it more often).
+
+Sound familiar?
+
+That’s the same term people use when AI generates plausible but incorrect responses.
+
+Of course, I would like to think that we are better at this than AI, in that we are able to clearly say...I do not know, or be honest declaring we are making things up. But that is not always the case. In fact, I would say that some people, who may not be named, are really good at giving incorrect answers, but thinking they are correct. 
+
+## So Where’s the Difference between AI and Human memories?
+
+Here’s the fundamental divide:
+
+> **Humans are always learning. AI isn’t — until someone trains it again.**
+
+In AI systems, all their knowledge is **embedded in my weights** — millions (or billions) of tiny adjustable numbers shaped during training. But once that training ends, those weights are **frozen**. Yes, they can be changed or fine-tuned, but that is a costly and lenghly process.
+
+For us, well, the "weights" we use — that is, the synaptic connections in our brain — are constantly being rewired. Every conversation, every new fact, every emotional experience is fine-tuning your internal model of the world in real time. We are always learning, adapting, and evolving. (or at least we should be)
+
+That means:
+
+- **Humans are always learning.**
+- **AI is a snapshot, frozen in time.**
+
+## Final Thought: We’re Both Storytellers
+
+In the end, both AI and humans build stories from patterns. We guess what comes next based on what we’ve seen before. We make mistakes. We hallucinate. But while AI stay the same unless retrained, *we* wake up every day just a little wiser.
+
+And that — more than anything — is the true miracle of human intelligence.
+
