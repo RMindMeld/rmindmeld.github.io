@@ -1,0 +1,125 @@
+---
+title: "Podcast Maker 2.0: Using OpenAI Latest TTS model"
+description: "Upgrading my podcast creation tool with OpenAI's enhanced TTS capabilities"
+date: "2025-04-10"
+categories:
+   - AI Tools
+   - Podcasting
+   - Text-to-Speech
+image: "../../assets/blog/podcast-maker-2.jpg"
+---
+
+## Taking Podcast Creation to the Next Level
+
+A few months ago, I shared my homemade podcast creation tool that used OpenAI's text-to-speech API to transform written scripts into audio episodes. While that version worked well enough, it had some limitations - primarily the small selection of only 6 voices and the lack of emotional nuance in the delivery. Of course, that was beyond my control, as OpenAI TTS models did not allow for more.
+
+Not too long ago, OpenAI released a new TTS model (GPT4o-mini-tts) that added more voices (some I cannot access yet), ald allowed for more emotional nuance in the delivery. 
+I'm excited to announce that I've completely revamped the program to take advantage of OpenAI's latest TTS model. This update brings some impressive new capabilities that make our podcasts sound much more natural and engaging, using a very simple script format.
+
+Also, if you are asking, it seems that I was already doing "vibe-programming" before it was cool. I just didn't know it yet!
+
+## What's New in Version 2.0
+
+The biggest improvement is the option of provide instructions to ai for voice selection. This could give us more flexibility to create distinct character voices for dramatic readings or podcast panels.
+
+I also moved from depending on ffmpg to handle audio processing to using python directly. There is also a rebuilt of the interface, which should now look a bit better. 
+
+## How should the script look like?
+
+I tried to keep the script format as simple as possible. 
+
+- First, as before, its the voice. It will be identified using **[voice_name]:**  This is internally used to map the text to voice selection.
+   Everything after this will be read with the same voice, untile the next voice is specified.
+- Second are the intructions. You can add instructions for the voice, like "with authority" or "with a hint of sarcasm". This is done using **<Your instructions go here>**. 
+   The same instructions will be used for the entire text, until the next instruction is specified.
+- Finally, the actual text. This is the text that will be read by the voice.
+
+The format looks like this:
+
+```
+[voice_name]:
+
+<Emotional tone or speaking style instructions go here>
+
+The actual dialogue text goes here
+```
+
+This format allows us to seamlessly transition between different voices and emotional states throughout our podcast.
+
+## Installation Requirements
+
+You'll still need the same basic setup as before:
+- OpenAI API key with paid credits
+- NLTK
+- Pydub
+- Tkinter
+- Keyring
+
+But you'll need to update to the latest version of the OpenAI Python library to access the new TTS model features.
+
+You can download the updated code here: [Podcast Maker 2.0](../../assets/blog/podcast_maker_2.py)
+
+## Example: Who Shot First (Enhanced Edition)
+
+To demonstrate the new capabilities, I've recreated our "Who Shot First?" debate with enhanced emotional cues. Have a listen:
+
+<div class="audio-player">
+   <audio controls>
+   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/who-shot-first-enhanced.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+   </audio>
+</div>
+
+Here's a look at how the script was formatted to create this enhanced version:
+
+```
+[Sarah]:
+<Confident, slightly combative, speaking with authority as a longtime fan>
+Look, let's settle this Han Solo debate once and for all. In the original 1977 Star Wars, Han straight-up shot Greedo under that table. No question, no dodging, just pure survival instinct.
+
+[Marcus]:
+<Confused, slightly defensive, genuinely surprised>
+Wait, that can't be right. I just watched it on Disney+ last week - Greedo definitely shot first and missed somehow.
+
+[Elena]:
+<Condescending, eye-rolling, speaking with the weary patience of explaining something obvious>
+Oh, you sweet summer child. What you saw was the modified version. George Lucas went back and changed it in '97 because he thought it made Han look too ruthless.
+
+[David]:
+<Passionate, frustrated film buff who cares deeply about storytelling integrity>
+And that's exactly why the change ruins the whole character arc! Han was supposed to be this morally ambiguous smuggler who'd shoot first to save his own skin. That's what made his transformation into a hero so powerful.
+
+[Sarah]:
+<Excited agreement, speaking faster with enthusiasm>
+Exactly! The whole point is that he starts as this self-serving survivor and grows into someone who'd risk everything for the rebellion.
+
+[Marcus]:
+<Gradually understanding but still finding it absurd, slightly embarrassed>
+So you're telling me they digitally altered it to make Han dodge and shoot second? That's... kind of ridiculous.
+
+[Elena]:
+<Amused, sarcastic, with a touch of fandom exhaustion>
+Right? And Greedo missing from literally two feet away makes zero sense. He's supposed to be a professional bounty hunter!
+
+[Sarah]:
+<Exasperated, groaning with dramatic dread>
+Oh god, don't even get me started on that addition...
+
+[Elena]:
+<Conspiratorial tone, leaning in to speak directly to Marcus>
+Trust me, Marcus, you don't want to know. Let's just say they kept "improving" the scene over the years.
+```
+
+## The Results
+
+The difference is remarkable. The first version had some feeling, but this version sounds like a better heated debate between friends, making it more engaging and fun to listen to. 
+
+What I love most about this approach is how it lets me create distinct personality traits for each character without having to spell everything out in the dialogue itself. The instructions handle the "how" something is said, leaving the actual dialogue cleaner and more natural.
+
+## What's Next?
+
+No idea! I just keep playing and learning. but Ai is moving so fast...its hard to keep up!
+
+If you're interested in helping test these new features or have suggestions for improvements, let me know!
+
+Happy podcasting!

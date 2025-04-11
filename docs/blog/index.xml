@@ -10,7 +10,422 @@
 <atom:link href="https://rmindmeld.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A Personal Journey Through AI-Human Content Creation</description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Sun, 06 Apr 2025 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 10 Apr 2025 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Podcast Maker 2.0: Using OpenAI Latest TTS model</title>
+  <link>https://rmindmeld.github.io/blog/posts/who-shot-first-2.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to MindMeld</title>
+
+    <style>
+
+        :root {
+
+            --transition-duration: 1000ms;
+
+        }
+
+        
+
+        body, html {
+
+            margin: 0;
+
+            padding: 0;
+
+            height: 100%;
+
+            font-family: system-ui, -apple-system, sans-serif;
+
+        }
+
+        
+
+        .welcome-container {
+
+            position: absolute; /* Changed from fixed to absolute */
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100vh;
+
+            z-index: 1000; /* Add high z-index to show above content initially */
+
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+
+                        url('assets/welcome-bg.jpg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            text-align: center;
+
+            transition: opacity var(--transition-duration) ease-in-out,
+
+                        visibility var(--transition-duration) ease-in-out; /* Add visibility transition */
+
+        }
+
+        
+
+        .welcome-content {
+
+            max-width: 800px;
+
+            padding: 2rem;
+
+        }
+
+        
+
+        .title {
+
+            font-size: 3.5rem;
+
+            margin-bottom: 1rem;
+
+            font-weight: 700;
+
+        }
+
+        
+
+        .subtitle {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 2rem;
+
+            opacity: 0.9;
+
+        }
+
+        
+
+        .enter-button {
+
+            background-color: transparent;
+
+            border: 2px solid white;
+
+            color: white;
+
+            padding: 1rem 2rem;
+
+            font-size: 1.2rem;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            text-decoration: none;
+
+            border-radius: 4px;
+
+        }
+
+        
+
+        .enter-button:hover {
+
+            background-color: white;
+
+            color: black;
+
+        }
+
+        
+
+        /* Fade out animation class */
+
+        .fade-out {
+
+            opacity: 0;
+
+            visibility: hidden; /* Hide completely when faded out */
+
+            z-index: -1; /* Move behind content when faded out */
+
+        }
+
+        
+
+        /* Main content container */
+
+        #main-content {
+
+            position: relative;
+
+            z-index: 1; /* Lower than welcome screen but above 0 */
+
+            opacity: 0;
+
+            transition: opacity var(--transition-duration) ease-in-out;
+
+        }
+
+        
+
+        /* Main content visible state */
+
+        #main-content.visible {
+
+            opacity: 1;
+
+        }
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+        .welcome-container.hidden-welcome {
+
+            display: none;
+
+        }
+
+    </style>
+
+
+
+
+
+    <div id="welcome" class="welcome-container hidden-welcome">
+
+        <div class="welcome-content">
+
+            <h1 class="title">MindMeld</h1>
+
+            <p class="subtitle">Where AI-generated content meets human curation, creating a unique perspective on the future of digital creativity.</p>
+
+            <button id="enter-btn" class="enter-button">Enter MindMeld</button>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        // Only run this script on the index page
+
+        if (window.location.pathname === '/' || 
+
+            window.location.pathname === '/index.html' || 
+
+            window.location.pathname.endsWith('/')) {
+
+            
+
+            // Check if this is the first visit
+
+            const hasVisited = sessionStorage.getItem('hasVisited');
+
+            
+
+            if (!hasVisited) {
+
+                // First visit - show welcome screen
+
+                const welcome = document.getElementById('welcome');
+
+                welcome.classList.remove('hidden-welcome');
+
+                
+
+                // Mark as visited
+
+                sessionStorage.setItem('hasVisited', 'true');
+
+                
+
+                // Add click handler for enter button
+
+                document.getElementById('enter-btn').addEventListener('click', function() {
+
+                    welcome.classList.add('fade-out');
+
+                    
+
+                    const mainContent = document.getElementById('main-content');
+
+                    setTimeout(() => {
+
+                        mainContent.classList.add('visible');
+
+                    }, 500);
+
+                    
+
+                    setTimeout(() => {
+
+                        welcome.style.display = 'none';
+
+                    }, 1000);
+
+                });
+
+            } else {
+
+                // Not first visit - show main content immediately
+
+                const mainContent = document.getElementById('main-content');
+
+                mainContent.classList.add('visible');
+
+            }
+
+        } else {
+
+            // Not on index page - show main content immediately
+
+            const mainContent = document.getElementById('main-content');
+
+            mainContent.classList.add('visible');
+
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+<section id="taking-podcast-creation-to-the-next-level" class="level2">
+<h2 class="anchored" data-anchor-id="taking-podcast-creation-to-the-next-level">Taking Podcast Creation to the Next Level</h2>
+<p>A few months ago, I shared my homemade podcast creation tool that used OpenAI’s text-to-speech API to transform written scripts into audio episodes. While that version worked well enough, it had some limitations - primarily the small selection of only 6 voices and the lack of emotional nuance in the delivery. Of course, that was beyond my control, as OpenAI TTS models did not allow for more.</p>
+<p>Not too long ago, OpenAI released a new TTS model (GPT4o-mini-tts) that added more voices (some I cannot access yet), ald allowed for more emotional nuance in the delivery. I’m excited to announce that I’ve completely revamped the program to take advantage of OpenAI’s latest TTS model. This update brings some impressive new capabilities that make our podcasts sound much more natural and engaging, using a very simple script format.</p>
+<p>Also, if you are asking, it seems that I was already doing “vibe-programming” before it was cool. I just didn’t know it yet!</p>
+</section>
+<section id="whats-new-in-version-2.0" class="level2">
+<h2 class="anchored" data-anchor-id="whats-new-in-version-2.0">What’s New in Version 2.0</h2>
+<p>The biggest improvement is the option of provide instructions to ai for voice selection. This could give us more flexibility to create distinct character voices for dramatic readings or podcast panels.</p>
+<p>I also moved from depending on ffmpg to handle audio processing to using python directly. There is also a rebuilt of the interface, which should now look a bit better.</p>
+</section>
+<section id="how-should-the-script-look-like" class="level2">
+<h2 class="anchored" data-anchor-id="how-should-the-script-look-like">How should the script look like?</h2>
+<p>I tried to keep the script format as simple as possible.</p>
+<ul>
+<li>First, as before, its the voice. It will be identified using <strong>[voice_name]:</strong> This is internally used to map the text to voice selection. Everything after this will be read with the same voice, untile the next voice is specified.</li>
+<li>Second are the intructions. You can add instructions for the voice, like “with authority” or “with a hint of sarcasm”. This is done using <strong><your instructions="" go="" here=""></your></strong>. The same instructions will be used for the entire text, until the next instruction is specified.</li>
+<li>Finally, the actual text. This is the text that will be read by the voice.</li>
+</ul>
+<p>The format looks like this:</p>
+<pre><code>[voice_name]:
+
+&lt;Emotional tone or speaking style instructions go here&gt;
+
+The actual dialogue text goes here</code></pre>
+<p>This format allows us to seamlessly transition between different voices and emotional states throughout our podcast.</p>
+</section>
+<section id="installation-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="installation-requirements">Installation Requirements</h2>
+<p>You’ll still need the same basic setup as before: - OpenAI API key with paid credits - NLTK - Pydub - Tkinter - Keyring</p>
+<p>But you’ll need to update to the latest version of the OpenAI Python library to access the new TTS model features.</p>
+<p>You can download the updated code here: <a href="../../assets/blog/podcast_maker_2.py">Podcast Maker 2.0</a></p>
+</section>
+<section id="example-who-shot-first-enhanced-edition" class="level2">
+<h2 class="anchored" data-anchor-id="example-who-shot-first-enhanced-edition">Example: Who Shot First (Enhanced Edition)</h2>
+<p>To demonstrate the new capabilities, I’ve recreated our “Who Shot First?” debate with enhanced emotional cues. Have a listen:</p>
+<div class="audio-player">
+<p><audio controls=""> <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/who-shot-first-enhanced.mp3" type="audio/mpeg"> Your browser does not support the audio element. </audio></p>
+</div>
+<p>Here’s a look at how the script was formatted to create this enhanced version:</p>
+<pre><code>[Sarah]:
+&lt;Confident, slightly combative, speaking with authority as a longtime fan&gt;
+Look, let's settle this Han Solo debate once and for all. In the original 1977 Star Wars, Han straight-up shot Greedo under that table. No question, no dodging, just pure survival instinct.
+
+[Marcus]:
+&lt;Confused, slightly defensive, genuinely surprised&gt;
+Wait, that can't be right. I just watched it on Disney+ last week - Greedo definitely shot first and missed somehow.
+
+[Elena]:
+&lt;Condescending, eye-rolling, speaking with the weary patience of explaining something obvious&gt;
+Oh, you sweet summer child. What you saw was the modified version. George Lucas went back and changed it in '97 because he thought it made Han look too ruthless.
+
+[David]:
+&lt;Passionate, frustrated film buff who cares deeply about storytelling integrity&gt;
+And that's exactly why the change ruins the whole character arc! Han was supposed to be this morally ambiguous smuggler who'd shoot first to save his own skin. That's what made his transformation into a hero so powerful.
+
+[Sarah]:
+&lt;Excited agreement, speaking faster with enthusiasm&gt;
+Exactly! The whole point is that he starts as this self-serving survivor and grows into someone who'd risk everything for the rebellion.
+
+[Marcus]:
+&lt;Gradually understanding but still finding it absurd, slightly embarrassed&gt;
+So you're telling me they digitally altered it to make Han dodge and shoot second? That's... kind of ridiculous.
+
+[Elena]:
+&lt;Amused, sarcastic, with a touch of fandom exhaustion&gt;
+Right? And Greedo missing from literally two feet away makes zero sense. He's supposed to be a professional bounty hunter!
+
+[Sarah]:
+&lt;Exasperated, groaning with dramatic dread&gt;
+Oh god, don't even get me started on that addition...
+
+[Elena]:
+&lt;Conspiratorial tone, leaning in to speak directly to Marcus&gt;
+Trust me, Marcus, you don't want to know. Let's just say they kept "improving" the scene over the years.</code></pre>
+</section>
+<section id="the-results" class="level2">
+<h2 class="anchored" data-anchor-id="the-results">The Results</h2>
+<p>The difference is remarkable. The first version had some feeling, but this version sounds like a better heated debate between friends, making it more engaging and fun to listen to.</p>
+<p>What I love most about this approach is how it lets me create distinct personality traits for each character without having to spell everything out in the dialogue itself. The instructions handle the “how” something is said, leaving the actual dialogue cleaner and more natural.</p>
+</section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">What’s Next?</h2>
+<p>No idea! I just keep playing and learning. but Ai is moving so fast…its hard to keep up!</p>
+<p>If you’re interested in helping test these new features or have suggestions for improvements, let me know!</p>
+<p>Happy podcasting!</p>
+
+
+</section>
+
+ ]]></description>
+  <category>AI Tools</category>
+  <category>Podcasting</category>
+  <category>Text-to-Speech</category>
+  <guid>https://rmindmeld.github.io/blog/posts/who-shot-first-2.html</guid>
+  <pubDate>Thu, 10 Apr 2025 04:00:00 GMT</pubDate>
+  <media:content url="https://rmindmeld.github.io/assets/blog/podcast-maker-2.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Do AI and Humans Think the Same Way?</title>
   <link>https://rmindmeld.github.io/blog/posts/ai-human-thinking.html</link>
@@ -7903,7 +8318,7 @@ Comment
 <p><img src="https://latex.codecogs.com/png.latex?1782%5E%7B12%7D%20+%201841%5E%7B12%7D%20=%201922%5E%7B12%7D"></p>
 <p>This equation is a near-miss to Fermat’s Last Theorem, which states that no three positive integers a, b, and c can satisfy the equation <img src="https://latex.codecogs.com/png.latex?a%5En%20+%20b%5En%20=%20c%5En"> for any integer value of n greater than 2. The equation in the show is not actually true, but it’s remarkably close – the left side differs from the right by less than 1 part in <img src="https://latex.codecogs.com/png.latex?10%5E%7B30%7D">.</p>
 <p>Let’s verify this using Python:</p>
-<div id="78de7006" class="cell" data-execution_count="1">
+<div id="c15721dc" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
@@ -8127,7 +8542,7 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="pythagorean-theorem-and-comic-book-guy">Pythagorean Theorem and Comic Book Guy</h2>
 <p>Even the show’s notorious pedant, Comic Book Guy, gets in on the mathematical action. In one episode, he wears a t-shirt with the equation <img src="https://latex.codecogs.com/png.latex?3%5E2%20+%204%5E2%20=%205%5E2">, which is a representation of the Pythagorean theorem for a 3-4-5 right triangle.</p>
 <p>Let’s visualize this triangle using matplotlib:</p>
-<div id="5c37d105" class="cell" data-execution_count="2">
+<div id="996c6f05" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
