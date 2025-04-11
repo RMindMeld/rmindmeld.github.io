@@ -57,7 +57,7 @@ You'll still need the same basic setup as before:
 
 But you'll need to update to the latest version of the OpenAI Python library to access the new TTS model features.
 
-You can download the updated code here: [Podcast Maker 2.0](../../assets/blog/podcast_maker_2.py)
+You can download the updated code here: [Podcast Maker 2.0](../../assets/blog/podcast_maker_v2.py)
 
 ## Example: Who Shot First (Enhanced Edition)
 
@@ -65,7 +65,17 @@ To demonstrate the new capabilities, I've recreated our "Who Shot First?" debate
 
 <div class="audio-player">
    <audio controls>
-   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/who-shot-first-enhanced.mp3" type="audio/mpeg">
+   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/who-shot-first-2.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+   </audio>
+</div>
+
+Original
+
+
+<div class="audio-player">
+   <audio controls>
+   <source src="https://github.com/RMindMeld/podcast_asset/raw/refs/heads/main/who-shot-first.mp3" type="audio/mpeg">
    Your browser does not support the audio element.
    </audio>
 </div>
